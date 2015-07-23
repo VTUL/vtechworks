@@ -336,9 +336,7 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a href="{$context-path}/" class="navbar-brand">
-                            <img src="{$theme-path}/images/vt_logo_tm_320px.png" />
-                        </a>
+                        <a href="{$context-path}/" class="navbar-brand">images/VT_white_cmyk_invt.png</a>
 
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
