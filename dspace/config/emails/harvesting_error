@@ -6,7 +6,7 @@
 #             {3} Exception message
 #             {4} Exception stack trace
 #
-# See org.VTechWorks.core.Email for information on the format of this file.
+# See org.dspace.core.Email for information on the format of this file.
 #
 Subject: VTechWorks: Harvesting Error
 Collection {0} failed on harvest:
