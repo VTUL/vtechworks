@@ -3,7 +3,7 @@
 # Parameters: {0} is expanded to a special URL
 #             {1} configurable time (hours) an export file will be kept
 #
-# See org.dspace.core.Email for information on the format of this file.
+# See org.VTechWorks.core.Email for information on the format of this file.
 #
 Subject: VTechWorks - Item export requested is ready for download
 The item export you requested from the repository is now ready for download.

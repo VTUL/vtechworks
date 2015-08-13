@@ -8,7 +8,7 @@
 #             {5} User details
 #             {6} IP address
 #
-# See org.dspace.core.Email for information on the format of this file.
+# See org.VTechWorks.core.Email for information on the format of this file.
 #
 Subject: VTechWorks: Internal Server Error
 An internal server error occurred on {0}:

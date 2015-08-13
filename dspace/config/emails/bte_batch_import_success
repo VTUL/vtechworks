@@ -3,7 +3,7 @@
 # Parameters: {0} the filepath to the mapfile created by the batch import
 #          
 #
-# See org.dspace.core.Email for information on the format of this file.
+# See org.VTechWorks.core.Email for information on the format of this file.
 #
 Subject: VTechWorks - Batch import successfully completed
 The batch item import you initiated from the VTechWorks UI has completed successfully.

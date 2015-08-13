@@ -8,7 +8,7 @@
 #             {4} doi
 #             {5} reason
 #
-# See org.dspace.core.Email for information on the format of this file.
+# See org.VTechWorks.core.Email for information on the format of this file.
 #
 Subject: VTechWorks: Error {0} DOI {3}
 
