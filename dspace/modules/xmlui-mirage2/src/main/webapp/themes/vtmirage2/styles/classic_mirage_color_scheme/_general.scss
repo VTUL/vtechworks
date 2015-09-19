@@ -58,11 +58,13 @@ dl {
         margin-bottom: 0;
     }
 
-    .author,
-    .publisher-date
-    {
-        color: #999;
-    }
+    //deleted
+    //.author,
+    //.publisher-date
+    //{
+	//	color: #999;
+
+    //}
 }
 
 #aspect_artifactbrowser_CommunityBrowser_div_comunity-browser {
@@ -89,9 +91,10 @@ dl {
     margin-bottom: 5px;
 }
 
-.ds-artifact-list .artifact-info {
-    color: #999;
-}
+// deleted
+//.ds-artifact-list .artifact-info {
+//    color: #999;
+//}
 
 #aspect_artifactbrowser_ItemViewer_div_item-view {
     .item-summary-view-metadata {
@@ -235,11 +238,6 @@ header {
         margin-bottom: 0px;
         border: none;
     }
-    
-	.navbar-brand img{
-        // increase logo size
-		height: 50px;
-	}
 
     .navbar-default{
 
