@@ -215,8 +215,6 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterType" />
-                <ref bean="searchFilterIssued" />
-                <ref bean="searchFilterSubject" />
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
