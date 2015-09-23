@@ -253,7 +253,11 @@
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
+                                <!-- html encoding for abstracts -->
+                            	<!--
                                 <xsl:copy-of select="node()"/>
+                                -->
+                                <xsl:value-of select="node()" disable-output-escaping="yes" />
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:text>&#160;</xsl:text>
