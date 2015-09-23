@@ -46,7 +46,7 @@
         <xsl:if test="(./mets:fileSec/mets:fileGrp[@USE='CONTENT']/mets:file[@MIMETYPE='video/mp4']) and (./mets:fileSec/mets:fileGrp[@USE='CONTENT']/mets:file[@MIMETYPE='video/webm'])">
 
              <!-- V.T. Best guess at aspect ratio of most of our videos -->
-             <video controls="controls" preload="none" width="853" height="480" class="video-js vjs-default-skin" data-setup="">
+             <video controls="controls" preload="none" style="width:100%; max-width:853px;" width="auto" height="auto" class="video-js vjs-default-skin" data-setup="">
 
                  <xsl:if test="./mets:fileSec/mets:fileGrp[@USE='MOVIEPOSTER']">
                      <xsl:attribute name="poster">
