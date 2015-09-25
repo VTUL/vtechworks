@@ -7,6 +7,8 @@
  */
 package org.dspace.app.xmlui.utils;
 
+import org.jsoup.Jsoup;
+
 /**
  * Utilities that are needed in XSL transformations.
  *
@@ -52,5 +54,20 @@ public class XSLUtils {
 
         return string.substring(0, targetLength) + " ...";
 
+    }
+    
+    /*
+     * Remove html tags from String
+     */
+    public static String htmlToText(String htmlString) {
+    	return Jsoup.parse(htmlString).text();
+    }
+    
+    /*
+     * Remove html tags from String, and Cuts off the string at the space nearest to the targetLength if there is one within
+     * maxDeviation chars from the targetLength, or at the targetLength if no such space is found
+     */
+    public static String htmlToShortString(String htmlString, int targetLength, int maxDeviation) {
+    	return shortenString(htmlToText(htmlString), targetLength, maxDeviation);
     }
 }
