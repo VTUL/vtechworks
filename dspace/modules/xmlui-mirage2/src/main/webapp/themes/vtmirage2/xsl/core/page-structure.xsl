@@ -274,8 +274,6 @@
             <xsl:attribute name="href">http://vjs.zencdn.net/4.12/video-js.css</xsl:attribute>
             </link>
 
-            <script src="http://vjs.zencdn.net/4.1.2/video.js">&#160;</script>
-
             <!-- Add the title in -->
             <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title'][last()]" />
             <title>
