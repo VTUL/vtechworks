@@ -21,7 +21,14 @@
 		2) Some general keys which are specific to a particular aspect
 		   may be found at xmlui.<Aspect> without specifiying a
 		   particular java class.
-		-->
+		
+		Advanced Search related keys
+		Filter name:               xmlui.ArtifactBrowser.SimpleSearch.filter.author
+		Facet heading:             xmlui.ArtifactBrowser.AdvancedSearch.type_author
+		"Filter by" page heading:  xmlui.Discovery.AbstractSearch.type_author
+		
+		To overlay this file, copy it to [dspace-source]/dspace/modules/xmlui/src/main/resources/aspects/Discovery/i18n/messages.xml.
+	-->
 
 
     <!-- org.dspace.app.xmlui.artifactbrowser.AbstractSearch.java -->
@@ -31,7 +38,6 @@
 
     <!-- org.dspace.app.xmlui.artifactbrowser.AdvancedSearch.java -->
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.contributor.author_filter">Author</message>
-
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject_filter">Subject</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.type_filter">Content Type</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">Date Issued</message>
@@ -70,7 +76,6 @@
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Browsing by: Author</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Browsing by: Title</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Browsing by: Subject</message>
-        
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">Browsing by: Abstract</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">Browsing by: Series</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_sponsor_browse">Browsing by: Sponsor</message>
@@ -89,14 +94,10 @@
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">Browsing by: Department</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">Browsing by: Issue date</message>
 
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Author</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Title</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Date Issued</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Content Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.keyword">Keyword</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.abstract">Abstract</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.department">Department</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.series">Series</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.mime">Mime-Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.sponsor">Sponsor</message>
@@ -104,9 +105,6 @@
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Language (ISO)</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coverage">Coverage</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.trnumber">Technical Report No.</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel">ETD Level</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor">ETD Advisor</message>
-
 
     <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Now showing items {0}-{1}</message>
 
@@ -116,6 +114,18 @@
     <message key="xmlui.Discovery.AbstractSearch.type_subject">Filter by: Subject</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Subject</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_type">Filter by: Content Type</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Content Type</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type_type">Content Type</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_advisor">Filter by: ETD Advisor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor">ETD Advisor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor_filter">ETD Advisor</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_department">Filter by: Department</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.department">Department</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.department_filter">Department</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_etdlevel">Filter by: ETD Level</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel">ETD Level</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel_filter">ETD Level</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>
 
 
