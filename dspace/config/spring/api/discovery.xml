@@ -50,6 +50,8 @@
                <entry key="10919/11041" value-ref="etdConfiguration"/>
                <entry key="10919/9291" value-ref="etdConfiguration"/>
                <entry key="10919/51287" value-ref="etdConfiguration"/>
+               <entry key="10919/18725" value-ref="etdConfiguration"/>
+               <entry key="10919/18726" value-ref="etdConfiguration"/>
             </map>
         </property>
         <property name="toIgnoreMetadataFields">
