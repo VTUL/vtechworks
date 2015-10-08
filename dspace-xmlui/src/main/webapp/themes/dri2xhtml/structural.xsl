@@ -293,9 +293,12 @@
             <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']" />
             <title>
                 <xsl:choose>
+                    <!-- Unneccessary, removed -->
+                	<!--
                     <xsl:when test="starts-with($request-uri, 'page/about')">
                         <xsl:text>About This Repository</xsl:text>
                     </xsl:when>
+                    -->
                     <xsl:when test="not($page_title) or (string-length($page_title) &lt; 1)">
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                         </xsl:when>
@@ -348,9 +351,12 @@
             
             <ul id="ds-trail">
                 <xsl:choose>
+                		<!-- Unneccessary, removed -->
+                		<!--  
                         <xsl:when test="starts-with($request-uri, 'page/about')">
                             <xsl:text>About This Repository</xsl:text>
                         </xsl:when>
+                        -->
                         <xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) = 0">
                                 <li class="ds-trail-link first-link"> - </li>
                         </xsl:when>
@@ -578,6 +584,8 @@
             <!-- Check for the custom pages -->
 
             <xsl:choose>
+            	<!-- Unneccessary, removed -->
+            	<!--  
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div>
                         <h1>About This Repository</h1>
@@ -588,6 +596,7 @@
                             under the URI prefix of page/.</p>
                     </div>
                 </xsl:when>
+                -->
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
                     <xsl:apply-templates />
@@ -713,6 +722,7 @@
             
             <!-- Once the search box is built, the other parts of the options are added -->
             <xsl:apply-templates />
+            
 
             <!-- DS-984 Add RSS Links to Options Box -->
             <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
@@ -3492,8 +3502,6 @@
             </div>
         </xsl:for-each>
     </xsl:template>
-
-
 
     <!-- Add each RSS feed from meta to a list -->
     <xsl:template name="addRSSLinks">

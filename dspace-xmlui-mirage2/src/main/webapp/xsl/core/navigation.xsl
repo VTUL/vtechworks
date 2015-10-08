@@ -44,6 +44,15 @@
     <!-- TODO: figure out why i18n tags break the go button -->
     <xsl:template match="dri:options">
         <div id="ds-options" class="word-break hidden-print">
+        	<!-- Added static links -->
+			<div>
+				<h2 class="ds-option-set-head h6">
+					<i18n:text>xmlui.static.header</i18n:text>
+				</h2>
+               	<div id="ds-feed-option" class="ds-option-set list-group">
+                   	<xsl:call-template name="addStaticLinks"/>
+               	</div>
+			</div>
             <xsl:if test="not(contains(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'], 'discover'))">
                 <div id="ds-search-option" class="ds-option-set">
                     <!-- The form, complete with a text box and a button, all built from attributes referenced
@@ -136,6 +145,31 @@
 
             </xsl:if>
         </div>
+    </xsl:template>
+    
+    <!-- Add static page links to a list -->
+	<xsl:template name="addStaticLinks">
+		<a class="list-group-item">
+			<xsl:attribute name="href">
+				<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+				<xsl:text>/page/about</xsl:text>
+			</xsl:attribute>
+			<xsl:text>About</xsl:text>
+		</a>
+		<a class="list-group-item">
+			<xsl:attribute name="href">
+				<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+				<xsl:text>/page/policies</xsl:text>
+			</xsl:attribute>
+			<xsl:text>Policies</xsl:text>
+		</a>
+ 		<a class="list-group-item">
+			<xsl:attribute name="href">
+				<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+				<xsl:text>/page/help</xsl:text>
+			</xsl:attribute>
+			<xsl:text>Help</xsl:text>
+		</a>
     </xsl:template>
 
     <!-- Add each RSS feed from meta to a list -->

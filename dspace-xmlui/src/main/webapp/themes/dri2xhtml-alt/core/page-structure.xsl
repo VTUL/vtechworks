@@ -244,9 +244,12 @@
             <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']" />
             <title>
                 <xsl:choose>
+						<!-- Unneccessary, removed -->
+                		<!--
                         <xsl:when test="starts-with($request-uri, 'page/about')">
                                 <xsl:text>About This Repository</xsl:text>
                         </xsl:when>
+                        -->
                         <xsl:when test="not($page_title)">
                                 <xsl:text>  </xsl:text>
                         </xsl:when>
@@ -299,9 +302,12 @@
 
             <ul id="ds-trail">
                 <xsl:choose>
+                		<!-- Unneccessary, removed -->
+                		<!--
                         <xsl:when test="starts-with($request-uri, 'page/about')">
                             <xsl:text>About This Repository</xsl:text>
                         </xsl:when>
+                        -->
                         <xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) = 0">
                                 <li class="ds-trail-link first-link"> - </li>
                         </xsl:when>
@@ -522,6 +528,8 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
+            	<!-- Unneccessary, removed-->
+            	<!--  
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div>
                         <h1>About This Repository</h1>
@@ -532,6 +540,7 @@
                             under the URI prefix of page/.</p>
                     </div>
                 </xsl:when>
+                -->
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
                     <xsl:apply-templates />

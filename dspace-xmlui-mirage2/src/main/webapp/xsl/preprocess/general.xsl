@@ -108,7 +108,33 @@
                 <i18n:text catalogue="default">xmlui.general.dspace_home</i18n:text>
             </trail>
             <trail>
-                <xsl:text>About This Repository</xsl:text>
+                <xsl:text>About</xsl:text>
+            </trail>
+        </pageMeta>
+    </xsl:template>
+    
+    <!-- Added static pages -->
+	<xsl:template match="dri:pageMeta[dri:metadata[@element = 'request'][@qualifier = 'URI']/text() = 'page/policies']">
+        <pageMeta>
+            <xsl:call-template name="copy-attributes"/>
+            <xsl:apply-templates select="*[not(self::dri:trail)]"/>
+            <trail target="{$context-path}/">
+                <i18n:text catalogue="default">xmlui.general.dspace_home</i18n:text>
+            </trail>
+            <trail>
+                <xsl:text>Policies</xsl:text>
+            </trail>
+        </pageMeta>
+    </xsl:template>
+	<xsl:template match="dri:pageMeta[dri:metadata[@element = 'request'][@qualifier = 'URI']/text() = 'page/help']">
+        <pageMeta>
+            <xsl:call-template name="copy-attributes"/>
+            <xsl:apply-templates select="*[not(self::dri:trail)]"/>
+            <trail target="{$context-path}/">
+                <i18n:text catalogue="default">xmlui.general.dspace_home</i18n:text>
+            </trail>
+            <trail>
+                <xsl:text>Help</xsl:text>
             </trail>
         </pageMeta>
     </xsl:template>
