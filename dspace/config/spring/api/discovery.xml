@@ -102,8 +102,8 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterType" />
-                <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterAuthor" />
             </list>
         </property>
@@ -120,13 +120,12 @@
                 <ref bean="searchFilterAbstract" />
                 <ref bean="searchFilterSeries" />
                 <ref bean="searchFilterIdentifier" />
-                <ref bean="searchFilterMime" />
-                <ref bean="searchFilterCoverage" />
                 <ref bean="searchFilterSponsor" />
                 <ref bean="searchFilterLanguage" />
                 <ref bean="searchFilterTrnumber" />
                 <ref bean="searchFilterDepartment" />
                 <ref bean="searchFilterAdvisor" />
+                <ref bean="searchFilterCommitteemember" />
                 <ref bean="searchFilterEtdlevel" />
             </list>
         </property>
@@ -220,8 +219,8 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterType" />
-                <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" />
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -237,13 +236,12 @@
                 <ref bean="searchFilterAbstract" />
                 <ref bean="searchFilterSeries" />
                 <ref bean="searchFilterIdentifier" />
-                <ref bean="searchFilterMime" />
-                <ref bean="searchFilterCoverage" />
                 <ref bean="searchFilterSponsor" />
                 <ref bean="searchFilterLanguage" />
                 <ref bean="searchFilterTrnumber" />
                 <ref bean="searchFilterDepartment" />
                 <ref bean="searchFilterAdvisor" />
+                <ref bean="searchFilterCommitteemember" />
                 <ref bean="searchFilterEtdlevel" />
             </list>
         </property>
@@ -321,16 +319,14 @@
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
+                <ref bean="searchFilterDepartment" />
+                <ref bean="searchFilterAdvisor" />
+                <ref bean="searchFilterCommitteemember" />
+                <ref bean="searchFilterEtdlevel" />
                 <ref bean="searchFilterType" />          
                 <ref bean="searchFilterAbstract" />
                 <ref bean="searchFilterIdentifier" />
-                <ref bean="searchFilterMime" />
-                <ref bean="searchFilterCoverage" />
-                <ref bean="searchFilterSponsor" />
                 <ref bean="searchFilterLanguage" />
-                <ref bean="searchFilterDepartment" />
-                <ref bean="searchFilterAdvisor" />
-                <ref bean="searchFilterEtdlevel" />
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -518,6 +514,15 @@
         </property>
     </bean>
 
+    <bean id="searchFilterCommitteemember" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="committeemember"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.contributor.committeemember</value>
+            </list>
+        </property>
+    </bean>
+    
     <bean id="searchFilterCoverage" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
         <property name="indexFieldName" value="coverage"/>
         <property name="metadataFields">
@@ -541,6 +546,7 @@
         <property name="metadataFields">
             <list>
                 <value>dc.language.iso</value>
+                <value>dc.language</value>
             </list>
         </property>
     </bean>
@@ -586,6 +592,7 @@
         <property name="metadataFields">
             <list>
                 <value>dc.title</value>
+                <value>dc.title.alternative</value>
                 <!-- jing pu 4/20 #341 add series metadata to title search -->
                 <value>dc.relation.ispartofseries</value>
             </list>
@@ -598,6 +605,7 @@
         <property name="metadataFields">
             <list>
                 <value>dc.contributor.committeechair</value>
+                <value>dc.contributor.committeecochair</value>
                 <value>dc.contributor.advisor</value>
             </list>
         </property>
@@ -659,6 +667,7 @@
                 <value>dc.subject.cabt</value>
                 <value>dc.subject.lcsh</value>
                 <value>dc.subject.mesh</value>
+                <value>dc.subject.other</value>
             </list>
         </property>
         <property name="facetLimit" value="5"/>
