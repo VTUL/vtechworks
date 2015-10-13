@@ -43,9 +43,11 @@
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">Date Issued</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">Date Issued</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Content Type</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_advisor">ETD Advisor</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_etdlevel">ETD Level</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_advisor">Committee Chair</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_committeemember">Committee Member</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_etdlevel">Thesis Degree Level</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
 
     <!-- Site Leve Recently Added Content -->
     <message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Recently Added</message>
@@ -64,14 +66,10 @@
     <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by">Group Results By</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.none">None</message>
 
-
     <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.publication_grp">Publication</message>
 
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.comm">Community</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.coll">Collection</message>
-
-
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
 
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Browsing by: Author</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Browsing by: Title</message>
@@ -90,7 +88,7 @@
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_relation_browse">Browsing by: Relation</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_mime_browse">Browsing by: Mime-Type</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_other_browse">Browsing by: Other Contributor</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_advisor_browse">Browsing by: Advisor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_advisor_browse">Browsing by: Committee Chair</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">Browsing by: Department</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">Browsing by: Issue date</message>
 
@@ -105,6 +103,7 @@
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Language (ISO)</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coverage">Coverage</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.trnumber">Technical Report No.</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.committeemember">Committee Member</message>
 
     <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Now showing items {0}-{1}</message>
 
@@ -117,15 +116,15 @@
     <message key="xmlui.Discovery.AbstractSearch.type_type">Filter by: Content Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Content Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type_type">Content Type</message>
-    <message key="xmlui.Discovery.AbstractSearch.type_advisor">Filter by: ETD Advisor</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor">ETD Advisor</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor_filter">ETD Advisor</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_advisor">Filter by: Committee Chair</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor">Committee Chair</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor_filter">Committee Chair</message>
     <message key="xmlui.Discovery.AbstractSearch.type_department">Filter by: Department</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.department">Department</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.department_filter">Department</message>
-    <message key="xmlui.Discovery.AbstractSearch.type_etdlevel">Filter by: ETD Level</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel">ETD Level</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel_filter">ETD Level</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_etdlevel">Filter by: Thesis Degree Level</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel">Thesis Degree Level</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel_filter">Thesis Degree Level</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>
 
 
