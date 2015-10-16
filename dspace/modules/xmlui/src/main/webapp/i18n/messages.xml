@@ -61,6 +61,8 @@
     <message key="xmlui.utils.AuthenticationUtil.onlyAuthenticatedAdmins">Only authenticated users who are administrators may assume the login as another user.</message>
     <message key="xmlui.utils.AuthenticationUtil.notAnotherAdmin">You may not assume the login as another administrator.</message>
 
+	<!-- Jing Pu added -->
+	<message key="xmlui.static.header">VTechWorks</message>
 
 	<!--
 		This section is for feed syndications (RSS, atom, etc)
@@ -2494,12 +2496,63 @@
     <message key="xmlui.mirage2.forms.nonCompositeFieldSet.add">Add</message>
     <message key="xmlui.mirage2.forms.nonCompositeFieldSet.remove">Remove</message>
 
-    <message key="xmlui.mirage2.page-structure.aboutThisRepository">About This Repository</message>
+ 	<!-- Added static pages tag title -->
+    <message key="xmlui.mirage2.page-structure.aboutThisRepository">About</message>
+    <message key="xmlui.mirage2.page-structure.policiesThisRepository">Policies</message>
+    <message key="xmlui.mirage2.page-structure.helpThisRepository">Help</message>
+    
     <message key="xmlui.mirage2.page-structure.toggleNavigation">Toggle navigation</message>
 
+	<!-- Jing Pu modified -->
+	<!--  
+	<message key="xmlui.mirage2.page-structure.heroUnit.about.title8">8 About VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.about.content8">8 About To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	<message key="xmlui.mirage2.page-structure.heroUnit.about.title9">9 About VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.about.content9">9 About To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	<message key="xmlui.mirage2.page-structure.heroUnit.about.title10">10 About VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.about.content10">10 About To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	-->
+	<message key="xmlui.mirage2.page-structure.heroUnit.about.title11">11 About VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.about.content11">11 About To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	<!-- 
+	<message key="xmlui.mirage2.page-structure.heroUnit.about.title12">12 About VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.about.content12">12 About To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	-->
+	
+	<!--
+	<message key="xmlui.mirage2.page-structure.heroUnit.pol.title8">8 Policies VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.pol.content8">8 Policies To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	<message key="xmlui.mirage2.page-structure.heroUnit.pol.title9">9 Policies VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.pol.content9">9 Policies To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	<message key="xmlui.mirage2.page-structure.heroUnit.pol.title10">10 Policies VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.pol.content10">10 Policies To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	-->
+	<message key="xmlui.mirage2.page-structure.heroUnit.pol.title11">11 Policies VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.pol.content11">11 Policies To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	<!-- 
+	<message key="xmlui.mirage2.page-structure.heroUnit.pol.title12">12 Policies VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.pol.content12">12 Policies To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	-->
+	
+	<!--
+	<message key="xmlui.mirage2.page-structure.heroUnit.help.title8">8 Help VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.help.content8">8 Help To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	<message key="xmlui.mirage2.page-structure.heroUnit.help.title9">9 Help VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.help.content9">9 Help To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	<message key="xmlui.mirage2.page-structure.heroUnit.help.title10">10 Help VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.help.content10">10 Help To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	-->
+	<message key="xmlui.mirage2.page-structure.heroUnit.help.title11">11 Help VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.help.content11">11 Help To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	<!-- 
+	<message key="xmlui.mirage2.page-structure.heroUnit.help.title12">12 Help VTechWork Title </message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.help.content12">12 Help To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+	-->
+	
+	<!--
     <message key="xmlui.mirage2.page-structure.heroUnit.title">About This Repository</message>
     <message key="xmlui.mirage2.page-structure.heroUnit.content">To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
-
+	-->
     <message key="xmlui.mirage2.navigation.rss.feed">feed</message>
 
     <message key="xmlui.mirage2.choice-authority-control.loading">Loading...</message>
