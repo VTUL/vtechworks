@@ -242,7 +242,87 @@ public class AuthorizeManager
 
         return isAuthorized;
     }
+   
+    /**
+     * Whether a bitstream is restricted
+     * 
+     * @param c
+     * @param o
+     * @param a
+     * @return
+     * @throws SQLException
+     */
+    public static boolean restrictBitstreamBoolean (Context c, DSpaceObject o, int a, String restrictedGroupName)  throws SQLException 
+    {
 
+        if (o == null)
+        {
+            return true;
+        }
+
+        // is authorization disabled for this context?
+        if (c.ignoreAuthorization())
+        {
+        	return false;
+        }
+        
+        /*
+        // is eperson set? if not, userid = 0 (anonymous)
+        int userid = 0;
+        EPerson e = c.getCurrentUser();
+        if (e != null)
+        {
+            userid = e.getID();
+
+            // perform isAdmin check to see
+            // if user is an Admin on this object
+            DSpaceObject testObject =  o.getAdminObject(a);
+
+            if (isAdmin(c, testObject))
+            {
+                return false;
+            }
+        }
+        */
+
+        boolean isRestricted = false;
+    	
+        // In case the dso is an bitstream we must ignore custom 
+        // policies if it does not belong to at least one installed item (see 
+        // DS-2614).
+        boolean ignoreCustomPolicies = false;
+        if (o instanceof Bitstream)
+        {
+            Bitstream b = (Bitstream) o;
+            
+            // Ensure that this is not a collection or community logo
+            DSpaceObject parent = b.getParentObject();
+            if (!(parent instanceof Collection) && !(parent instanceof Community))
+            {
+                ignoreCustomPolicies = !isAnyItemInstalled(c, b.getBundles());
+            }
+            
+            /* http://vtechworks.lib.vt.edu/handle/10919/53851 */
+            for (ResourcePolicy rp : getPoliciesActionFilter(c, o, a)) 
+            {
+                if (ignoreCustomPolicies 
+                        && ResourcePolicy.TYPE_CUSTOM.equals(rp.getRpType()))
+                {
+            		isRestricted = true;
+            		break;
+                }
+
+            	if (rp.getGroup().getName().equals(restrictedGroupName)) 
+            	{
+            		isRestricted = true;
+            		break;
+            	} 
+            }
+        }
+        
+        return isRestricted;
+    }
+    
     /**
      * Check to see if the given user can perform the given action on the given
      * object. Always returns true if the ignore authorization flat is set in
@@ -305,7 +385,7 @@ public class AuthorizeManager
         if (o instanceof Bitstream)
         {
             Bitstream b = (Bitstream) o;
-
+            
             // Ensure that this is not a collection or community logo
             DSpaceObject parent = b.getParentObject();
             if (!(parent instanceof Collection) && !(parent instanceof Community))

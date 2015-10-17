@@ -68,6 +68,11 @@ public class XSLUtils {
      * maxDeviation chars from the targetLength, or at the targetLength if no such space is found
      */
     public static String htmlToShortString(String htmlString, int targetLength, int maxDeviation) {
-    	return shortenString(htmlToText(htmlString), targetLength, maxDeviation);
+    	if (-1 == targetLength && -1 == maxDeviation) {
+    		return htmlToText(htmlString);
+    	}
+    	else {
+    		return shortenString(htmlToText(htmlString), targetLength, maxDeviation);
+    	}
     }
 }
