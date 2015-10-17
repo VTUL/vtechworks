@@ -272,9 +272,12 @@
             <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title'][last()]" />
             <title>
                 <xsl:choose>
+                	<!-- unneccessary, removed-->
+                	<!--  
                     <xsl:when test="starts-with($request-uri, 'page/about')">
                         <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text>
                     </xsl:when>
+                    -->
                     <xsl:when test="not($page_title)">
                         <xsl:text>  </xsl:text>
                     </xsl:when>
@@ -336,7 +339,11 @@
                             <span class="icon-bar"></span>
                         </button>
 
+						<!-- changed home logo link  -->
+						<!--
                         <a href="{$context-path}/" class="navbar-brand">
+                        -->
+                        <a href="http://www.vt.edu/" class="navbar-brand">
                             <img src="{$theme-path}/images/DSpace-logo-line.svg" />
                         </a>
 
@@ -765,12 +772,15 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
+            	<!-- unneccessary, removed -->
+            	<!--  
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div class="hero-unit">
                         <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.title</i18n:text></h1>
                         <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.content</i18n:text></p>
                     </div>
                 </xsl:when>
+                -->
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
                     <xsl:apply-templates />

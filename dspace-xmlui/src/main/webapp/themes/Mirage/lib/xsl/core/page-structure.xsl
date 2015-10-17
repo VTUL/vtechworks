@@ -285,9 +285,12 @@
             <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']" />
             <title>
                 <xsl:choose>
+                        <!-- Unneccessary, removed -->
+                		<!--
                         <xsl:when test="starts-with($request-uri, 'page/about')">
                                 <xsl:text>About This Repository</xsl:text>
                         </xsl:when>
+                        -->
                         <xsl:when test="not($page_title)">
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                         </xsl:when>
@@ -417,9 +420,12 @@
         <div id="ds-trail-wrapper">
             <ul id="ds-trail">
                 <xsl:choose>
+                	<!-- Unneccessary, removed -->
+                	<!--  
                     <xsl:when test="starts-with($request-uri, 'page/about')">
                          <xsl:text>About This Repository</xsl:text>
                     </xsl:when>
+                    -->
                     <xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) = 0">
                         <li class="ds-trail-link first-link">-</li>
                     </xsl:when>
@@ -648,6 +654,8 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
+            	<!-- Unneccessary, removed -->
+            	<!--  
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div>
                         <h1>About This Repository</h1>
@@ -655,9 +663,10 @@
                             add your own content to the title, trail, and body. If you wish to add additional pages, you
                             will need to create an additional xsl:when block and match the request-uri to whatever page
                             you are adding. Currently, static pages created through altering XSL are only available
-                            under the URI prefix of page/.</p>
+                            under the URI prefix of page/. </p>
                     </div>
                 </xsl:when>
+                -->
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
                     <xsl:apply-templates />
