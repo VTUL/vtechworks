@@ -341,8 +341,12 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-
+						
+						<!-- Changed home logo link -->
+						<!-- 
                         <a href="{$context-path}/" class="navbar-brand">
+                        -->
+                        <a href="http://www.vt.edu" class="navbar-brand">
                             <img src="{$theme-path}/images/VT_white_cmyk_invt.png" />
                         </a>
 
