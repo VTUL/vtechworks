@@ -1084,15 +1084,20 @@ public class ItemAdapter extends AbstractAdapter
         
         url += "?sequence="+bitstream.getSequenceID();
 
-	// Test if we are allowed to see this item
-	String isAllowed = "n";
-	try {
-	    if (AuthorizeManager.authorizeActionBoolean(context, bitstream, Constants.READ)) {
-		isAllowed = "y";
-	    }
-	} catch (SQLException e) {/* Do nothing */}
-	
-	url += "&isAllowed=" + isAllowed;
+		// Test if we are allowed to see this item
+		String isAllowed = "n";
+		try {
+			// Group "VT_Campus" means this item is restricted?
+			// "Anonymous" or "VT_Campus"
+			String restrictedGroupName = "VT_Campus";
+			
+		    //if (AuthorizeManager.authorizeActionBoolean(context, bitstream, Constants.READ)) {
+			if (!AuthorizeManager.restrictBitstreamBoolean(context, bitstream, Constants.READ, restrictedGroupName)) {
+				isAllowed = "y";
+		    }
+		} catch (SQLException e) {/* Do nothing */}
+		
+		url += "&isAllowed=" + isAllowed;
 
         // //////////////////////
         // Start the file location
