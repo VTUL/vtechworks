@@ -22,6 +22,7 @@
     <!-- The 'additions' module must *always* be built, as it is included
          as a dependency in most other modules in [src]/dspace/modules -->
     <modules>
+		<module>api</module>
         <module>additions</module>
     </modules>
 
