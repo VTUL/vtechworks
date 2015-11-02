@@ -161,6 +161,8 @@
                             <xsl:call-template name="itemSummaryView-DIM-file-section"/>
                         </div>
                     </div>
+                    <!-- Added TR number to simple item display in Computer Science Technical Reports collection, http://vtechworks.lib.vt.edu/handle/10919/19372 -->
+                    <xsl:call-template name="itemSummaryView-DIM-tr-number"/>
                     <xsl:call-template name="itemSummaryView-DIM-date"/>
                     <xsl:call-template name="itemSummaryView-DIM-authors"/>
                     <xsl:if test="$ds_item_view_toggle_url != ''">
@@ -332,7 +334,21 @@
             </div>
         </xsl:if>
     </xsl:template>
-
+    
+    <!-- Added TR number -->
+    <xsl:template name="itemSummaryView-DIM-tr-number">
+		<xsl:if test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/19372/')">
+			<xsl:for-each select="dim:field[@element='identifier' and @qualifier='trnumber']">
+				<div class="simple-item-view-trnumber word-break item-page-field-wrapper table">
+					<h5>
+						<i18n:text>xmlui.dri2xhtml.METS-1.0.item-trnumber</i18n:text>
+					</h5>
+					<xsl:copy-of select="./node()"/>
+				</div>
+			</xsl:for-each>
+       </xsl:if>
+    </xsl:template>
+    
     <xsl:template name="itemSummaryView-DIM-date">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
             <div class="simple-item-view-date word-break item-page-field-wrapper table">
