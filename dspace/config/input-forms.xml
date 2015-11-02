@@ -235,29 +235,34 @@ it, please enter the types and the actual numbers or codes.</hint>
  <form-value-pairs>
    <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
      <pair>
-       <displayed-value>ISSN</displayed-value>
-       <stored-value>issn</stored-value>
+       <displayed-value>URL (web link)</displayed-value>
+       <stored-value>url</stored-value>
      </pair>
      <pair>
-       <displayed-value>Other</displayed-value>
-       <stored-value>other</stored-value>
+       <displayed-value>DOI (Digital Object Identifier)</displayed-value>
+       <stored-value>doi</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>ISBN</displayed-value>
+       <stored-value>isbn</stored-value>
      </pair>
      <pair>
        <displayed-value>ISMN</displayed-value>
        <stored-value>ismn</stored-value>
      </pair>
      <pair>
+       <displayed-value>ISSN</displayed-value>
+       <stored-value>issn</stored-value>
+     </pair>
+     <pair>
        <displayed-value>Gov't Doc #</displayed-value>
        <stored-value>govdoc</stored-value>
      </pair>
-     <pair>
-       <displayed-value>URI</displayed-value>
-       <stored-value>uri</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>ISBN</displayed-value>
-       <stored-value>isbn</stored-value>
-     </pair>
+        <pair>
+       <displayed-value>Other</displayed-value>
+       <stored-value>other</stored-value>
+     </pair>  
+     
    </value-pairs>
 
    <value-pairs value-pairs-name="common_types" dc-term="type">
