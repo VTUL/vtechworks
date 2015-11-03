@@ -72,10 +72,19 @@
    Runtime and Compile Time dependencies for DSpace.
    -->
    <dependencies>
+   
+		<dependency>
+            <groupId>org.dspace.modules</groupId>
+            <artifactId>api</artifactId>
+            <version>5.4-SNAPSHOT</version>
+        </dependency>
+   
+	<!-- 
       <dependency>
          <groupId>org.dspace</groupId>
          <artifactId>dspace-api</artifactId>
       </dependency>
+ 	-->
       <dependency>
          <groupId>org.dspace</groupId>
          <artifactId>dspace-api-lang</artifactId>

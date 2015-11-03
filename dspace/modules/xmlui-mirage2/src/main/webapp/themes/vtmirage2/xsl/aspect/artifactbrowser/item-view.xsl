@@ -764,6 +764,18 @@
     <xsl:template name="getFileIcon">
         <xsl:param name="mimetype"/>
             <i aria-hidden="true">
+                <!-- Added tooltip for lock symbol-->
+                <xsl:choose>
+                    <xsl:when test="contains(mets:FLocat[@LOCTYPE='URL']/@xlink:href,'isAllowed=n')">
+                        <xsl:attribute name="data-toggle">
+                        <xsl:text>tooltip</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="title">
+                        <xsl:text>This resource is restricted to Virginia Tech users only </xsl:text>
+                        </xsl:attribute>
+                    </xsl:when>
+                </xsl:choose>
+                
                 <xsl:attribute name="class">
                 <xsl:text>glyphicon </xsl:text>
                 <xsl:choose>
