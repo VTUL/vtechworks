@@ -43,6 +43,29 @@
     -->
     <!-- TODO: figure out why i18n tags break the go button -->
     <xsl:template match="dri:options">
+		<script type="text/javascript">
+			function writeOffCampusDiv(parentDiv) {
+				var div = document.createElement('div');
+                div.id = "off-campus-sign-in";
+                var a = document.createElement('a');
+                var img = document.createElement('img');
+                img.width = "215";
+                img.height = "100";
+                img.style = "margin-bottom:15px;";
+                if (document.domain.match(/ezproxy\.lib\.vt\.edu$/)) {
+                   img.src="/themes/vtmirage2//images/youAreSignedIn.gif";
+                   img.alt = "you are signed in";
+                   a.name = "offcampus";
+                } else {
+                   img.src="/themes/vtmirage2//images/offCampusSignIn.gif";
+                   img.alt = "use this button to access the library\'s restricted resources from off campus";
+                   a.href = "javascript:void(location.href=\'https://login.ezproxy.lib.vt.edu/login?qurl=\'+location.href);";
+                }
+                a.appendChild(img);
+                div.appendChild(a);
+                parentDiv.appendChild(div);
+			}
+		</script>
         <div id="ds-options" class="word-break hidden-print">
         	<!-- Added static links -->
         	<!-- 
@@ -142,6 +165,14 @@
 	                   	<xsl:call-template name="addStaticLinks"/>
 	               	</div>
 				</div>
+				<!-- Added off-campus sign-in link -->
+				<div id="ds-off-campus"></div>
+				<script type="text/javascript">writeOffCampusDiv(document.getElementById('ds-off-campus'));</script>
+            </xsl:if>
+			<!-- Added off-campus sign-in link in search page -->
+            <xsl:if test="contains(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'], 'discover')">	
+				<div id="ds-off-campus"></div>
+				<script type="text/javascript">writeOffCampusDiv(document.getElementById('ds-off-campus'));</script>
             </xsl:if>
             <xsl:apply-templates/>
             <!-- DS-984 Add RSS Links to Options Box -->
