@@ -154,7 +154,7 @@
 	                    <xsl:text>(</xsl:text>
 	                    <xsl:if test="dim:field[@element='publisher']">
 	                        <span class="publisher">
-	                        	<!-- Jing Pu modified -->
+	                        	<!-- Separates multiple publishers -->
 	                        	<!--
 	                            <xsl:copy-of select="dim:field[@element='publisher']/node()"/>
 	                            -->
