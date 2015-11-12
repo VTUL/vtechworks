@@ -525,7 +525,7 @@
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Forgot your password?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Sign in</message>
 	<message key="xmlui.EPerson.PasswordLogin.head2">Register new user</message>
-	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to subscribe to collections for email updates, and submit new items to VTechWorks.</message>
+	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to submit new items to VTechWorks and to subscribe to collections for email updates. Please note that any materials you upload here are by default public on the open web; please do not upload confidential or suppressed information.</message>
 	<message key="xmlui.EPerson.PasswordLogin.register_link">Click here to register.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
