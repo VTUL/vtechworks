@@ -94,8 +94,9 @@
                         <xsl:value-of select="$href"/>
                     </xsl:attribute>
                     <xsl:choose>
+                    	<!-- html encoding for 'title' filed -->
                         <xsl:when test="dim:field[@element='title']">
-                            <xsl:value-of select="dim:field[@element='title'][1]/node()"/>
+                            <xsl:value-of select="dim:field[@element='title'][1]/node()" disable-output-escaping="yes"/>
                         </xsl:when>
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
@@ -177,11 +178,11 @@
             <xsl:if test="dim:field[@element = 'description' and @qualifier='abstract']">
                 <xsl:variable name="abstract" select="dim:field[@element = 'description' and @qualifier='abstract']/node()"/>
                 <div class="artifact-abstract">
-                	<!-- remove html tags from abstract field in the item list view -->
-                	<!--
-                    <xsl:value-of select="util:shortenString($abstract, 220, 10)"/>
-                    -->
+                	<!-- enable html tags for abstract field in the item list view -->
+                    <xsl:value-of select="util:shortenString($abstract, 220, 10)" disable-output-escaping="yes"/>
+                    <!--
                     <xsl:value-of select="util:htmlToShortString($abstract, 220, 10)"/>
+                    -->
                     
                 </div>
             </xsl:if>
