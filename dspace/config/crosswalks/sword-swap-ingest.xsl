@@ -94,7 +94,7 @@
     			<xsl:attribute name="mdschema">dc</xsl:attribute>
     			<xsl:attribute name="element">identifier</xsl:attribute>
     			<xsl:if test="epdcx:valueString[@epdcx:sesURI='http://purl.org/dc/terms/URI']">
-    				<xsl:attribute name="qualifier">uri</xsl:attribute>
+    				<xsl:attribute name="qualifier">doi</xsl:attribute>
     			</xsl:if>
     			<xsl:value-of select="epdcx:valueString"/>
     		</xsl:element>
