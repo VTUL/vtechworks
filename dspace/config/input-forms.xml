@@ -296,11 +296,11 @@
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>committeechair</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Committee Chair</label>
-					<input-type>onebox</input-type>
-					<hint>Enter the committee chair of the item.</hint>
-					<required>You must enter a committee chair for this item.</required>
+					<repeatable>true</repeatable>
+					<label>Committee Chairs</label>
+					<input-type>name</input-type>
+					<hint>Enter the committee chair or comittee co-chair of the item.</hint>
+					<required>You must enter a committee chair  or comittee co-chair for this item.</required>
 				</field>
 				
 				<field>
@@ -309,7 +309,7 @@
 					<dc-qualifier>committeemember</dc-qualifier>
 					<repeatable>true</repeatable>
 					<label>Committee Members</label>
-					<input-type>twobox</input-type>
+					<input-type>name</input-type>
 					<hint>Enter committee members for this item. </hint>
 					<required>You must enter committee members for this item.</required>
 				</field>
@@ -324,6 +324,20 @@
 					<hint>Select the type(s) of content of the item. To select more
 						than one value in the list, you may have to hold down the "CTRL"
 						or "Shift" key.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>language</dc-element>
+					<dc-qualifier>iso</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Language</label>
+					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+					<hint>Select the language of the main content of the item. If the
+						language does not appear in the list, please select 'Other'. If
+						the content does not really have a language (for example, if it is
+						a dataset or an image) please select 'N/A'.</hint>
 					<required></required>
 				</field>
 				
@@ -404,14 +418,14 @@
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>subject</dc-element>
-					<dc-qualifier></dc-qualifier>
+					<dc-qualifier>cabt</dc-qualifier>
 					<!-- An input-type of twobox MUST be marked as repeatable -->
 					<repeatable>true</repeatable>
 					<label>Subject Keywords</label>
 					<input-type>twobox</input-type>
-					<hint>Enter appropriate subject keywords or phrases. </hint>
+					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus. </hint>
 					<required></required>
-					<vocabulary>srsc</vocabulary>
+					<vocabulary>cabt</vocabulary>
 				</field>
 
 				<field>

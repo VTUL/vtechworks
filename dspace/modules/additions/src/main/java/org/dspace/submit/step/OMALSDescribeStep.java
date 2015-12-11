@@ -633,7 +633,7 @@ public class OMALSDescribeStep extends AbstractProcessingStep
                     }
                     else
                     {
-                        item.addMetadata(schema, element, qualifier, null,
+                        item.addMetadata(schema, element, qualifier, "en_US", //item.addMetadata(schema, element, qualifier, null,
                                 new DCPersonName(l, f).toString(), authKey,
                                 (sconf != null && sconf.length() > 0) ?
                                         Choices.getConfidenceValue(sconf) : Choices.CF_ACCEPTED);
@@ -641,7 +641,7 @@ public class OMALSDescribeStep extends AbstractProcessingStep
                 }
                 else
                 {
-                    item.addMetadata(schema, element, qualifier, null,
+                    item.addMetadata(schema, element, qualifier, "en_US", //item.addMetadata(schema, element, qualifier, null,
                             new DCPersonName(l, f).toString());
                 }
             }
@@ -1041,21 +1041,21 @@ public class OMALSDescribeStep extends AbstractProcessingStep
     {
     	// dc.publisher, dc.rights, dc.description.degree, thesis.degree.name, thesis.degree.level, thesis.degree.grantor
     	item.clearMetadata("dc", "publisher", null, Item.ANY);
-        item.addMetadata("dc", "publisher", null, null, "Virginia Tech");
+        item.addMetadata("dc", "publisher", null, "en_US", "Virginia Tech");
         
         item.clearMetadata("dc", "rights", null, Item.ANY);
-        item.addMetadata("dc", "rights", null, null, "The authors of these projects and reports are the copyright owners. Virginia Tech's Digital Library and Archives has their permission to store and provide access to these works.");
+        item.addMetadata("dc", "rights", null, "en_US", "The authors of these projects and reports are the copyright owners. Virginia Tech's Digital Library and Archives has their permission to store and provide access to these works.");
         
         item.clearMetadata("dc", "description", "degree", Item.ANY);
-        item.addMetadata("dc", "description", "degree", null, "MALS");
+        item.addMetadata("dc", "description", "degree", "en_US", "MALS");
         
         item.clearMetadata("thesis", "degree", "name", Item.ANY);
-        item.addMetadata("thesis", "degree", "name", null, "Master of Agricultural and Life Sciences");
+        item.addMetadata("thesis", "degree", "name", "en_US", "Master of Agricultural and Life Sciences");
         
         item.clearMetadata("thesis", "degree", "level", Item.ANY);
-        item.addMetadata("thesis", "degree", "level", null, "masters");
+        item.addMetadata("thesis", "degree", "level", "en_US", "masters");
         
         item.clearMetadata("thesis", "degree", "grantor", Item.ANY);
-        item.addMetadata("thesis", "degree", "grantor", null, "Virginia Polytechnic Institute and State University");
+        item.addMetadata("thesis", "degree", "grantor", "en_US", "Virginia Polytechnic Institute and State University");
     }
 }
