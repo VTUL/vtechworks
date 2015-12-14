@@ -54,7 +54,6 @@
 	<message key="xmlui.PageNotFound.head">Page not found</message>
 	<message key="xmlui.PageNotFound.para1">We can't find the page you asked for.</message>
 
-
 	<!--
 	   The "utils" non-aspect
        -->
@@ -62,8 +61,10 @@
     <message key="xmlui.utils.AuthenticationUtil.onlyAuthenticatedAdmins">Only authenticated users who are administrators may log in as another user.</message>
     <message key="xmlui.utils.AuthenticationUtil.notAnotherAdmin">You may not log in as another administrator.</message>
 
-
-	<!--
+	<!-- Added sidebar static pages title -->
+	<message key="xmlui.static.header">VTechWorks</message>
+	
+		<!--
 		This section is for feed syndications (RSS, atom, etc)
 	-->
 	<message key="xmlui.feed.general_description">The VTechWorks digital repository system captures, stores, indexes, preserves, and distributes digital research material.</message>
@@ -914,29 +915,28 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.CCLicenseStep -->
         <message key="xmlui.Submission.submit.CCLicenseStep.ccws_error">An error occurred ... {0}</message>
         <message key="xmlui.Submission.submit.CCLicenseStep.head">License Your Work</message>
-        <message key="xmlui.Submission.submit.CCLicenseStep.info1"><p>Let people know whether and how they may use this work. Learn more about marks and licenses at <strong><a href="http://creativecommons.org">Creative Commons.</a></strong></p>
-<h3>Public Domain - no known copyright</h3>
-<p>The Public Domain mark indicates that neither you nor anyone else currently has rights to the work. Common reasons for a work to be in the public domain include because its copyright has expired, because it was created by a government body, or because it is factual and therefore does not meet the copyright standard for original creative expression. The Public Domain mark is most often appropriate for texts and images published before the early 20th century, government documents, datasets, graphs, and charts.</p>
-<h3>CC0 - no rights reserved</h3>
-<p>CC0 enables you to waive your rights in your works and thereby place them as completely as possible in the public domain, so that others may freely build upon, enhance and reuse your works for any purposes without restriction under copyright or database law.</p>
-<h3>Creative Commons - some rights reserved</h3>
-<p>Creative Commons licenses allow you to retain some rights: this option will let you decide and declare whether to allow or prevent commercial uses and modifications of your work.</p>
-<br />
-<h3>No license or mark</h3>
-<p>You need not mark or license the work you are uploading, but in that case, people who find the content online will not know whether or how they are permitted to use, share, redistribute, remix, tweak, and build upon your work.</p><br /></message>
+        <message key="xmlui.Submission.submit.CCLicenseStep.info1"><p>Let people know whether and how they may use this work. Learn more at <strong><a href="http://creativecommons.org" title="Creative Commons" target="_blank">Creative Commons.</a></strong></p>
+<h4>Public Domain - no known copyright</h4>
+<p>The Public Domain mark by Creative Commons indicates that neither you nor anyone else currently has rights to the work. Common reasons for a work to be in the public domain include because its copyright has expired, because it was created by a government body, or because it is factual and therefore does not meet the copyright standard for original creative expression. The Public Domain mark is most often appropriate for texts and images published before the early 20th century, government documents, datasets, graphs, and charts.</p>
+<h4>CC0 - no rights reserved</h4>
+<p>CC0 ("Creative Commons Zero") enables you to waive your rights in your works and thereby place them as completely as possible in the public domain, so that others may freely build upon, enhance, and reuse your works for any purposes without restriction under copyright or database law.</p>
+<h4>Creative Commons - some rights reserved</h4>
+<p>Creative Commons licenses allow you to retain some rights: this option will let you decide and declare whether to allow or refuse permission for commercial uses of your work, whether to allow or refuse permission to modify your work, or whether to allow modifications of your work only on the condition that modifiers also allow others to modify the new work ("ShareAlike").</p>
+<h4>No Creative Commons license</h4>
+<p>You need not specify a Creative Commons license or mark for the work you are uploading, but in that case, people who find the content online will not know whether or how they are permitted to use, share, redistribute, remix, tweak, and build upon your work.</p></message>
         <message key="xmlui.Submission.submit.CCLicenseStep.submit_choose_creative_commons">Choose a license</message>
         <message key="xmlui.Submission.submit.CCLicenseStep.submit_to_creative_commons">Proceed to Creative Commons website to select a license</message>
-        <!-- <message key="xmlui.Submission.submit.CCLicenseStep.license">License Type</message> -->
-        <!-- <message key="xmlui.Submission.submit.CCLicenseStep.select_change">Select or modify your license ...</message> -->
-        <message key="xmlui.Submission.submit.CCLicenseStep.no_license">No license or mark</message>
-        <!-- <message key="xmlui.Submission.submit.CCLicenseStep.save_changes">You must click Next to save your changes.</message> -->
+        <message key="xmlui.Submission.submit.CCLicenseStep.license">License Type</message>
+        <message key="xmlui.Submission.submit.CCLicenseStep.select_change">Select or modify your license ...</message>
+        <message key="xmlui.Submission.submit.CCLicenseStep.no_license"></message>
+        <message key="xmlui.Submission.submit.CCLicenseStep.save_changes">Click "Next" to save your changes.</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
 	<message key="xmlui.Submission.submit.LicenseStep.head">Virginia Tech University Libraries License</message>
-	<!-- <message key="xmlui.Submission.submit.LicenseStep.info1"><strong>There is one last step:</strong> In order for VTechWorks to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message> -->
-	<!-- <message key="xmlui.Submission.submit.LicenseStep.info2">Grant the standard distribution license by selecting 'I Grant the License'; and then click 'Complete Submission'.</message> -->
-	<message key="xmlui.Submission.submit.LicenseStep.info3">If you have questions regarding this license please write vtechworks@vt.edu.</message>
-	<!-- <message key="xmlui.Submission.submit.LicenseStep.decision_label">Distribution license</message> -->
+	<message key="xmlui.Submission.submit.LicenseStep.info1">In order for VTechWorks to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message> -->
+	<message key="xmlui.Submission.submit.LicenseStep.info2">Grant the standard distribution license by selecting 'I grant the distribution license'; and then click "Complete submission."</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info3">If you have questions regarding this license please write <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a>.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Decision</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">I grant the distribution license</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_error">You must grant this license to complete your submission. If you are unable to grant this license at this time you may save your work and return later or remove the submission by clicking the 'Save &amp; Exit' button below.</message>
 
