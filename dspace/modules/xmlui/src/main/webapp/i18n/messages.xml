@@ -542,10 +542,10 @@
 	<message key="xmlui.EPerson.LDAPLogin.submit">Sign in</message>
 
 	<!-- org.dspace.app.xmlui.eperson.Log inChooser.java -->
-	<message key="xmlui.EPerson.Log inChooser.title">Choose a way to log in</message>
-	<message key="xmlui.EPerson.Log inChooser.trail">Choose a way to log in</message>
-	<message key="xmlui.EPerson.Log inChooser.head1">Choose a way to log in</message>
-	<message key="xmlui.EPerson.Log inChooser.para1">Log in via:</message>
+	<message key="xmlui.EPerson.LoginChooser.title">Choose a way to log in</message>
+	<message key="xmlui.EPerson.LoginChooser.trail">Choose a way to log in</message>
+	<message key="xmlui.EPerson.LoginChooser.head1">Choose a way to log in</message>
+	<message key="xmlui.EPerson.LoginChooser.para1">Log in via:</message>
 	<message key="org.dspace.authenticate.ShibAuthentication.title">Shibboleth Authentication</message>
 	<message key="org.dspace.eperson.LDAPAuthentication.title">LDAP Authentication</message>
 	<message key="org.dspace.eperson.PasswordAuthentication.title">Password Authentication</message>
@@ -562,8 +562,8 @@
 	<!-- Log in xml files -->
 	<message key="xmlui.eperson.noAuthMethod.head">No authentication method was found.</message>
 	<message key="xmlui.eperson.noAuthMethod.p1">No authentication method was found. Please contact the site administrator.</message>
-	<message key="xmlui.eperson.shibbLog inFailure.head">Shibboleth authentication failed</message>
-	<message key="xmlui.eperson.shibbLog inFailure.p1">Shibboleth authentication not available at this time. Please contact the site administrator.</message>
+	<message key="xmlui.eperson.shibbLoginFailure.head">Shibboleth authentication failed</message>
+	<message key="xmlui.eperson.shibbLoginFailure.p1">Shibboleth authentication not available at this time. Please contact the site administrator.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.ProfileUpdated.java -->
 	<message key="xmlui.EPerson.ProfileUpdated.title">Profile updated</message>
@@ -1124,7 +1124,7 @@
 	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_reset_password">Reset Password</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.special_help">You may also permanently remove this E-Person from the system or reset his/her password. When resetting a password the user will be sent an email containing a special link they can follow to choose a new password.</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_delete">Delete E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_log in_as">Log in as E-Person</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_login_as">Log in as E-Person</message>
 
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint">This eperson is unable to be deleted because of the following constraint(s):</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.last_conjunction">and</message>
