@@ -39,7 +39,7 @@
         <message key="xmlui.general.queue">Queue</message>
 
         <!-- Keys which are used by exception2dri.xsl on error pages -->
-        <message key="xmlui.error.contact_msg">Please contact the site administrator if you wish to report this error. If possible, please provide details about what you were doing at the time this error occurred.</message>
+        <message key="xmlui.error.contact_msg">Please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a> if you wish to report this error. If possible, please provide details about what you were doing at the time this error occurred.</message>
         <message key="xmlui.error.contact">Contact site administrator</message>
         <message key="xmlui.error.show_stack">Show underlying error stack</message>
 
@@ -462,7 +462,7 @@
 	<!-- org.dspace.app.xmlui.eperson.CannotRegister.java -->
 	<message key="xmlui.EPerson.CannotRegister.title">Registration unavailable</message>
 	<message key="xmlui.EPerson.CannotRegister.head">Registration unavailable</message>
-	<message key="xmlui.EPerson.CannotRegister.para1">This repository does not allow registration in this context. Please contact the site administrator with questions or comments.</message>
+	<message key="xmlui.EPerson.CannotRegister.para1">This repository does not allow registration in this context. Please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a> with questions or comments.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
 	<message key="xmlui.EPerson.EditProfile.title_update">Update Profile</message>
@@ -561,9 +561,9 @@
 
 	<!-- Log in xml files -->
 	<message key="xmlui.eperson.noAuthMethod.head">No authentication method was found.</message>
-	<message key="xmlui.eperson.noAuthMethod.p1">No authentication method was found. Please contact the site administrator.</message>
+	<message key="xmlui.eperson.noAuthMethod.p1">No authentication method was found. Please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a>.</message>
 	<message key="xmlui.eperson.shibbLoginFailure.head">Shibboleth authentication failed</message>
-	<message key="xmlui.eperson.shibbLoginFailure.p1">Shibboleth authentication not available at this time. Please contact the site administrator.</message>
+	<message key="xmlui.eperson.shibbLoginFailure.p1">Shibboleth authentication not available at this time. Please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a>.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.ProfileUpdated.java -->
 	<message key="xmlui.EPerson.ProfileUpdated.title">Profile updated</message>
@@ -988,9 +988,9 @@
 	<!-- action-generated messages. These are referenced from the sitemap rather than a transformer -->
 
         <message key="xmlui.administrative.FlowCurationUtils.curate_success_notice">The task was completed successfully.</message>
-        <message key="xmlui.administrative.FlowCurationUtils.curate_failed_notice">The task exited unexpectedly or failed. For more information, please contact the site administrator or check your system logs.</message>
+        <message key="xmlui.administrative.FlowCurationUtils.curate_failed_notice">The task exited unexpectedly or failed. For more information, please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a> or check your system logs.</message>
         <message key="xmlui.administrative.FlowCurationUtils.queue_success_notice">The task was queued successfully.</message>
-        <message key="xmlui.administrative.FlowCurationUtils.queue_failed_notice">The task could not be queued. An error occurred. For more information, please contact the site administrator or check your system logs.</message>
+        <message key="xmlui.administrative.FlowCurationUtils.queue_failed_notice">The task could not be queued. An error occurred. For more information, please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a> or check your system logs.</message>
         <message key="xmlui.administrative.FlowEPersonUtils.add_eperson_success_notice">The user was added successfully.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.edit_eperson_success_notice">The user was edited successfully.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.reset_password_success_notice">An email message has been sent to the user containing a token that may be used to choose a new password.</message>
