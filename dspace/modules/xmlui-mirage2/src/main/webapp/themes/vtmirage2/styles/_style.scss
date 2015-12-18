@@ -34,3 +34,21 @@
 .navbar-toggle {
 padding: 2px;
 }
+
+// Removes word-break class so words don't break in the middle in abstracts 
+
+.ds-table-responsive {
+    @media (max-width: $screen-xs-max) {
+        overflow-x: auto;
+    }
+}
+
+.word-break {
+word-break:normal;
+-webkit-hyphens:none;
+-moz-hyphens:none;
+hyphens:none;
+text-align:justify;
+}
+
+

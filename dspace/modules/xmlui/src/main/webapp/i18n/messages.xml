@@ -61,6 +61,8 @@
     <message key="xmlui.utils.AuthenticationUtil.onlyAuthenticatedAdmins">Only authenticated users who are administrators may assume the login as another user.</message>
     <message key="xmlui.utils.AuthenticationUtil.notAnotherAdmin">You may not assume the login as another administrator.</message>
 
+	<!-- Added sidebar static pages title -->
+	<message key="xmlui.static.header">VTechWorks</message>
 
 	<!--
 		This section is for feed syndications (RSS, atom, etc)
@@ -129,7 +131,8 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">Keyword</message>
 
    <!--  some common other possibilities for Advanced Search Fields -->
-   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">Contributor</message>
+<!-- repeats of definitions in Discovery/i18n/messages.xml
+<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">Contributor</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_creator">Creator</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_description">Description</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_relation">Relation</message>
@@ -137,6 +140,7 @@
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_other">Other Contributor</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_advisor">Advisor</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
+-->
 
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_ANY">Full Text</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.and">AND</message>
@@ -2217,6 +2221,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
+        <message key="xmlui.dri2xhtml.METS-1.0.item-trnumber">TR number</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
@@ -2492,12 +2497,19 @@
     <message key="xmlui.mirage2.forms.nonCompositeFieldSet.add">Add</message>
     <message key="xmlui.mirage2.forms.nonCompositeFieldSet.remove">Remove</message>
 
-    <message key="xmlui.mirage2.page-structure.aboutThisRepository">About This Repository</message>
+ 	<!-- Added static pages tag title -->
+    <message key="xmlui.mirage2.page-structure.aboutThisRepository">About</message>
+    <message key="xmlui.mirage2.page-structure.policiesThisRepository">Policies</message>
+    <message key="xmlui.mirage2.page-structure.helpThisRepository">Help</message>
+    
     <message key="xmlui.mirage2.page-structure.toggleNavigation">Toggle navigation</message>
 
+	
+	<!-- Removed unneccessary messages -->
+	<!--
     <message key="xmlui.mirage2.page-structure.heroUnit.title">About This Repository</message>
     <message key="xmlui.mirage2.page-structure.heroUnit.content">To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
-
+	-->
     <message key="xmlui.mirage2.navigation.rss.feed">feed</message>
 
     <message key="xmlui.mirage2.choice-authority-control.loading">Loading...</message>

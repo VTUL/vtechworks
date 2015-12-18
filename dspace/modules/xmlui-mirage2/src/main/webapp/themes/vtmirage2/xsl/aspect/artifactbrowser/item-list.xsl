@@ -154,7 +154,16 @@
 	                    <xsl:text>(</xsl:text>
 	                    <xsl:if test="dim:field[@element='publisher']">
 	                        <span class="publisher">
+	                        	<!-- Separates multiple publishers -->
+	                        	<!--
 	                            <xsl:copy-of select="dim:field[@element='publisher']/node()"/>
+	                            -->
+								<xsl:for-each select="dim:field[@element='publisher']">
+									<xsl:copy-of select="node()"/>
+									<xsl:if test="count(following-sibling::dim:field[@element='publisher']) != 0">
+										<xsl:text>; </xsl:text>
+									</xsl:if>
+								</xsl:for-each>
 	                        </span>
 	                        <xsl:text>, </xsl:text>
 	                    </xsl:if>

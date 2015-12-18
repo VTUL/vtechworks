@@ -31,6 +31,9 @@
                 xmlns:dc="http://purl.org/dc/elements/1.1/"
                 xmlns:confman="org.dspace.core.ConfigurationManager"
                 exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman">
+                
+	<!-- Import external templates -->
+	<xsl:import href="staticpages.xsl"/>
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
@@ -274,15 +277,25 @@
             <xsl:attribute name="href">http://vjs.zencdn.net/4.12/video-js.css</xsl:attribute>
             </link>
 
-            <script src="http://vjs.zencdn.net/4.1.2/video.js">&#160;</script>
-
             <!-- Add the title in -->
             <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title'][last()]" />
             <title>
                 <xsl:choose>
+                    <!-- Added satic page tab title -->
+                	<xsl:when test="starts-with($request-uri, 'page/about')">
+                        <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/policies')">
+                        <i18n:text>xmlui.mirage2.page-structure.policiesThisRepository</i18n:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/help')">
+                        <i18n:text>xmlui.mirage2.page-structure.helpThisRepository</i18n:text>
+                    </xsl:when>
+                	<!--
                     <xsl:when test="starts-with($request-uri, 'page/about')">
                         <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text>
                     </xsl:when>
+                    -->
                     <xsl:when test="not($page_title)">
                         <xsl:text>  </xsl:text>
                     </xsl:when>
@@ -343,8 +356,12 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-
+						
+						<!-- Changed home logo link -->
+						<!-- 
                         <a href="{$context-path}/" class="navbar-brand">
+                        -->
+                        <a href="http://www.vt.edu" class="navbar-brand">
                             <img src="{$theme-path}/images/VT_white_cmyk_invt.png" />
                         </a>
 
@@ -757,10 +774,32 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
+            	<!-- Add static page contents -->
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div class="hero-unit">
-                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.title</i18n:text></h1>
-                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.content</i18n:text></p>
+                     	<xsl:call-template name="AboutStaticPage"/>
+                    	<!-- 
+                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.about.title</i18n:text></h1>
+                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.about.content</i18n:text></p>
+                        -->
+                    </div>
+                </xsl:when>
+				<xsl:when test="starts-with($request-uri, 'page/policies')">
+                    <div class="hero-unit">
+                    	<xsl:call-template name="PoliciesStaticPage"/>
+                    	<!-- 
+                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.pol.title</i18n:text></h1>
+                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.pol.content</i18n:text></p>
+                        -->
+                    </div>
+                </xsl:when>
+				<xsl:when test="starts-with($request-uri, 'page/help')">
+                    <div class="hero-unit">
+                    	<xsl:call-template name="HelpStaticPage"/>
+                    	<!--  
+                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.help.title</i18n:text></h1>
+                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.help.content</i18n:text></p>
+                        -->
                     </div>
                 </xsl:when>
                 <!-- Otherwise use default handling of body -->
@@ -771,7 +810,6 @@
 
         </div>
     </xsl:template>
-
 
     <!-- Currently the dri:meta element is not parsed directly. Instead, parts of it are referenced from inside
         other elements (like reference). The blank template below ends the execution of the meta branch -->
@@ -900,5 +938,5 @@
             </li>
         </xsl:if>
     </xsl:template>
-
+    
 </xsl:stylesheet>

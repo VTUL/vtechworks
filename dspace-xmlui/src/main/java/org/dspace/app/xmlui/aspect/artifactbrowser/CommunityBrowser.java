@@ -199,8 +199,7 @@ public class CommunityBrowser extends AbstractDSpaceTransformer implements Cache
     {
         Division division = body.addDivision("comunity-browser", "primary");
         division.setHead(T_head);
-        // remove "Select a community to browse its collections" from home page
-        //division.addPara(T_select);
+        division.addPara(T_select);
 
         TreeNode root = buildTree(Community.findAllTop(context));
         
