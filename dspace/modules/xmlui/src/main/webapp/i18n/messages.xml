@@ -541,7 +541,7 @@
 	<message key="xmlui.EPerson.LDAPLogin.password">Password</message>
 	<message key="xmlui.EPerson.LDAPLogin.submit">Sign in</message>
 
-	<!-- org.dspace.app.xmlui.eperson.Log inChooser.java -->
+	<!-- org.dspace.app.xmlui.eperson.LoginChooser.java -->
 	<message key="xmlui.EPerson.LoginChooser.title">Choose a way to log in</message>
 	<message key="xmlui.EPerson.LoginChooser.trail">Choose a way to log in</message>
 	<message key="xmlui.EPerson.LoginChooser.head1">Choose a way to log in</message>
@@ -2247,7 +2247,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.size-megabytes">Mb</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-gigabytes">Gb</message>
 
-	<!-- <message key="xmlui.dri2xhtml.METS-1.0.license-text">The following license files are associated with this item:</message> -->
+	<message key="xmlui.dri2xhtml.METS-1.0.license-text">License files:</message>
     <message key="xmlui.dri2xhtml.METS-1.0.cc-license-text">License: </message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.collection-not-implemented">
