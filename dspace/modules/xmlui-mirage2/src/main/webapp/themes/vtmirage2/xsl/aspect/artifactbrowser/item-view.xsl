@@ -252,7 +252,8 @@
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
             <div class="simple-item-view-description item-page-field-wrapper table">
                 <h5 class="visible-xs"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h5>
-                <div>
+                <!-- Show line break in abstract field. -->
+                <div class="line-break">
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
@@ -547,7 +548,8 @@
                     </xsl:if>
                 </td>
                 <!-- Item full view enabling html for all fields, e.g., abstract -->
-	            <td class="word-break">
+                <!-- Render abstract by line break -->
+	            <td class="word-break line-break">
 	              <!--  
 	              <xsl:copy-of select="./node()"/>
 	              -->
