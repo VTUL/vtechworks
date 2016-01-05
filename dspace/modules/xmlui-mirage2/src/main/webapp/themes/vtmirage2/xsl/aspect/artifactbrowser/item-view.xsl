@@ -447,7 +447,8 @@
         <xsl:param name="title" />
         <xsl:param name="label" />
         <xsl:param name="size" />
-        <div>
+        <!-- display of long file name -->
+		<div class="filename-word-break">
             <a>
                 <xsl:attribute name="href">
                     <xsl:value-of select="$href"/>
