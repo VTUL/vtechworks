@@ -273,6 +273,13 @@
                             <xsl:text>)</xsl:text>
                             </small></span>
                     </xsl:if>
+					<!-- Add tr number infomation -->
+					<xsl:if test="dri:list[@n=(concat($handle, ':dc.identifier.trnumber'))]">
+						<span class="trnumber h4"><small>
+							<xsl:text>, </xsl:text>
+							<xsl:value-of select="dri:list[@n=(concat($handle, ':dc.identifier.trnumber'))]/dri:item"/>
+						</small></span>	
+                	</xsl:if>
                     <xsl:choose>
                         <xsl:when test="dri:list[@n=(concat($handle, ':dc.description.abstract'))]/dri:item/dri:hi">
                             <div class="abstract">
