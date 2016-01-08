@@ -179,6 +179,13 @@
 	                    <xsl:text>)</xsl:text>
                         </small></span>
                 </xsl:if>
+                <!-- Add tr number infomation -->
+				<xsl:if test="dim:field[@element='identifier' and @qualifier='trnumber']">
+					<span class="trnumber h4"><small>
+						<xsl:text>, </xsl:text>
+						<xsl:value-of select="dim:field[@element='identifier' and @qualifier='trnumber']/node()"/>
+					</small></span>	
+                </xsl:if>
             </div>
             <xsl:if test="dim:field[@element = 'description' and @qualifier='abstract']">
                 <xsl:variable name="abstract" select="dim:field[@element = 'description' and @qualifier='abstract']/node()"/>
@@ -342,6 +349,13 @@
                             <xsl:text>)</xsl:text>
                         </span>
                     </xsl:if>
+					<!-- Add tr number infomation -->
+					<xsl:if test="dim:field[@element='identifier' and @qualifier='trnumber']">
+						<span class="trnumber h4"><small>
+							<xsl:text>, </xsl:text>
+							<xsl:value-of select="dim:field[@element='identifier' and @qualifier='trnumber']/node()"/>
+						</small></span>	
+                	</xsl:if>
                 </div>
             </div>
         </xsl:template>
