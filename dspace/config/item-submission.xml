@@ -286,13 +286,22 @@
 			<!--Step 2 will be to Describe the item. -->
 			<step>
 				<heading>submit.progressbar.describe</heading>
+				<processing-class>org.dspace.submit.step.DescribeStep</processing-class>
+				<!-- 
 				<processing-class>org.dspace.submit.step.OMALSDescribeStep</processing-class>
+				 -->
 				<jspui-binding>org.dspace.app.webui.submit.step.JSPDescribeStep</jspui-binding>
 				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.DescribeStep</xmlui-binding>
 				<!-- 
 				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.OMALSDescribeStep</xmlui-binding>
 				-->
 				<workflow-editable>true</workflow-editable>
+			</step>
+			
+			<!-- add Non-Interactive Step -->
+			<step>
+				<processing-class>org.dspace.submit.step.OMALSNonInteractiveStep</processing-class>
+				<workflow-editable>false</workflow-editable>
 			</step>
 
 			<!--Step 3 will be to Manage Item access. <step> <heading>submit.progressbar.access</heading> 
@@ -345,6 +354,8 @@
 				<workflow-editable>false</workflow-editable>
 			</step>
 		</submission-process>
+		
+
 
 	</submission-definitions>
 

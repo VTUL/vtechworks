@@ -242,7 +242,7 @@
 					<label>Authors</label>
 					<input-type>name</input-type>
 					<hint>Enter the names of the authors of this item.</hint>
-					<required></required>
+					<required>You must enter the author of this item.</required>
 				</field>
 
 				<field>
@@ -258,15 +258,24 @@
 				
 				<field>
 					<dc-schema>dc</dc-schema>
+					<dc-element>title</dc-element>
+					<dc-qualifier>alternative</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Other Titles</label>
+					<input-type>onebox</input-type>
+					<hint>If the item has any alternative titles, please enter them here.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
 					<dc-element>date</dc-element>
 					<dc-qualifier>issued</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Date of Issue</label>
 					<input-type>date</input-type>
-					<hint>Please give the date of previous publication or public
-						distribution.
-						You can leave out the day and/or month if they aren't
-						applicable.</hint>
+					<hint>Please give the date of previous publication or public distribution. 
+					You can leave out the day and/or month if they aren't applicable.</hint>
 					<required>You must enter at least the year.</required>
 				</field>
 				
@@ -276,9 +285,9 @@
 					<dc-qualifier>department</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Department</label>
-					<input-type>onebox</input-type>
-					<hint>Enter the contributor department of the item.</hint>
-					<required>You must enter a contributor department for this item.</required>
+					<input-type value-pairs-name="omals_department">dropdown</input-type>
+					<hint>Enter the contributing department of the item.</hint>
+					<required>You must enter a contributing department for this item.</required>
 				</field>
 				
 				<field>
@@ -288,7 +297,7 @@
 					<repeatable>false</repeatable>
 					<label>Discipline</label>
 					<input-type value-pairs-name="omals_disciplines">dropdown</input-type>
-					<hint>Select the discipline of content of the item. </hint>
+					<hint>Select the OMALS discipline of the item.</hint>
 					<required>You must select a discipline for this item.</required>
 				</field>
 				
@@ -297,10 +306,10 @@
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>committeechair</dc-qualifier>
 					<repeatable>true</repeatable>
-					<label>Committee Chairs</label>
+					<label>Committee Chair</label>
 					<input-type>name</input-type>
-					<hint>Enter the committee chair or comittee co-chair of the item.</hint>
-					<required>You must enter a committee chair  or comittee co-chair for this item.</required>
+					<hint>Enter the names of the committee chair or committee co-chairs of this item.</hint>
+					<required></required>
 				</field>
 				
 				<field>
@@ -308,10 +317,10 @@
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>committeemember</dc-qualifier>
 					<repeatable>true</repeatable>
-					<label>Committee Members</label>
+					<label>Committee Member</label>
 					<input-type>name</input-type>
-					<hint>Enter committee members for this item. </hint>
-					<required>You must enter committee members for this item.</required>
+					<hint>Enter the names of the committee members of this item.</hint>
+					<required>You must enter the committee members for this item.</required>
 				</field>
 				
 				<field>
@@ -338,6 +347,30 @@
 						language does not appear in the list, please select 'Other'. If
 						the content does not really have a language (for example, if it is
 						a dataset or an image) please select 'N/A'.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>subject</dc-element>
+					<dc-qualifier>cabt</dc-qualifier>
+					<!-- An input-type of twobox MUST be marked as repeatable -->
+					<repeatable>true</repeatable>
+					<label>Subject Keywords</label>
+					<input-type>twobox</input-type>
+					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus. </hint>
+					<required></required>
+					<vocabulary>cabt</vocabulary>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>abstract</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Abstract</label>
+					<input-type>textarea</input-type>
+					<hint>Enter the abstract of the item.</hint>
 					<required></required>
 				</field>
 				
@@ -411,33 +444,6 @@
 				</field>
 				-->
 	
-
-			</page>
-
-			<page number="2">
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>subject</dc-element>
-					<dc-qualifier>cabt</dc-qualifier>
-					<!-- An input-type of twobox MUST be marked as repeatable -->
-					<repeatable>true</repeatable>
-					<label>Subject Keywords</label>
-					<input-type>twobox</input-type>
-					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus. </hint>
-					<required></required>
-					<vocabulary>cabt</vocabulary>
-				</field>
-
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>description</dc-element>
-					<dc-qualifier>abstract</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Abstract</label>
-					<input-type>textarea</input-type>
-					<hint>Enter the abstract of the item. </hint>
-					<required></required>
-				</field>
 
 			</page>
 		</form>
@@ -631,34 +637,144 @@
 		<value-pairs value-pairs-name="omals_disciplines"
 			dc-term="thesis_degree_discipline">
 			<pair>
-				<displayed-value>Food Safety and Biosecurity</displayed-value>
-				<stored-value>Food Safety and Biosecurity</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Education and Leadership Studies</displayed-value>
-				<stored-value>Education and Leadership Studies</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Plant Science and Pest Management</displayed-value>
-				<stored-value>Plant Science and Pest Management</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Food Safety</displayed-value>
-				<stored-value>Food Safety</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Biosecurity, Bio-regulations, and Public Health</displayed-value>
-				<stored-value>Biosecurity, Bio-regulations, and Public Health</stored-value>
+				<displayed-value>Education</displayed-value>
+				<stored-value>Education</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Environmental Science</displayed-value>
 				<stored-value>Environmental Science</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Agricultural and Life Sciences</displayed-value>
-				<stored-value>Agricultural and Life Sciencess</stored-value>
+				<displayed-value>Food Safety and Biosecurity</displayed-value>
+				<stored-value>Food Safety and Biosecurity</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Leadership Studies</displayed-value>
+				<stored-value>Leadership Studies</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Plant Science and Pest Management</displayed-value>
+				<stored-value>Plant Science and Pest Management</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Biosecurity, Bio-regulations, and Public Health (discontinued)</displayed-value>
+				<stored-value>Biosecurity, Bio-regulations, and Public Health</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Education and Leadership Studies (discontinued)</displayed-value>
+				<stored-value>Education and Leadership Studies</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Food Safety (discontinued)</displayed-value>
+				<stored-value>Food Safety</stored-value>
 			</pair>
 		</value-pairs>
+		
+		<!-- Added options for omals dc.contributor.department -->
+		<value-pairs value-pairs-name="omals_department"
+			dc-term="contributor_department">
+			<pair>
+				<displayed-value>Agricultural and Applied Economics</displayed-value>
+				<stored-value>Agricultural and Applied Economics</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Agricultural, Leadership, and Community Education</displayed-value>
+				<stored-value>Agricultural, Leadership, and Community Education</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Agricultural Technology Program</displayed-value>
+				<stored-value>Agricultural Technology Program</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Animal and Poultry Sciences</displayed-value>
+				<stored-value>Animal and Poultry Sciences</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Biochemistry</displayed-value>
+				<stored-value>Biochemistry</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Biological Systems Engineering</displayed-value>
+				<stored-value>Biological Systems Engineering</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Crop and Soil Environmental Sciences</displayed-value>
+				<stored-value>Crop and Soil Environmental Sciences</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Dairy Science</displayed-value>
+				<stored-value>Dairy Science</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Entomology</displayed-value>
+				<stored-value>Entomology</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Food Science and Technology</displayed-value>
+				<stored-value>Food Science and Technology</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Horticulture</displayed-value>
+				<stored-value>Horticulture</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Human Nutrition, Foods, and Exercise</displayed-value>
+				<stored-value>Human Nutrition, Foods, and Exercise</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Plant Pathology, Physiology, and Weed Science</displayed-value>
+				<stored-value>Plant Pathology, Physiology, and Weed Science</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Virginia Agricultural Experiment Station</displayed-value>
+				<stored-value>Virginia Agricultural Experiment Station</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Alson H. Smith Jr. AREC</displayed-value>
+				<stored-value>Alson H. Smith Jr. AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Eastern Shore AREC</displayed-value>
+				<stored-value>Eastern Shore AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Eastern Virginia AREC</displayed-value>
+				<stored-value>Eastern Virginia AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Hampton Roads AREC</displayed-value>
+				<stored-value>Hampton Roads AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Middleburg AREC</displayed-value>
+				<stored-value>Middleburg AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Reynolds Homestead AREC</displayed-value>
+				<stored-value>Reynolds Homestead AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Shenandoah Valley AREC</displayed-value>
+				<stored-value>Shenandoah Valley AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Southern Piedmont AREC</displayed-value>
+				<stored-value>Southern Piedmont AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Southwest Virginia AREC</displayed-value>
+				<stored-value>Southwest Virginia AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Tidewater AREC</displayed-value>
+				<stored-value>Tidewater AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Virginia Seafood AREC</displayed-value>
+				<stored-value>Virginia Seafood AREC</stored-value>
+			</pair>
+		</value-pairs>
+		
 
 	</form-value-pairs>
 
