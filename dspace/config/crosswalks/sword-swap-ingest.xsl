@@ -88,13 +88,21 @@
     		</dim:field>
     	</xsl:if>
     	
-    	<!-- identifier element: dc.identifier.* -->
+    	<!-- identifier element: dc.identifier.* 
+              with special added handling for doi -->
     	<xsl:if test="./@epdcx:propertyURI='http://purl.org/dc/elements/1.1/identifier'">
     		<xsl:element name="dim:field">
     			<xsl:attribute name="mdschema">dc</xsl:attribute>
     			<xsl:attribute name="element">identifier</xsl:attribute>
     			<xsl:if test="epdcx:valueString[@epdcx:sesURI='http://purl.org/dc/terms/URI']">
-    				<xsl:attribute name="qualifier">uri</xsl:attribute>
+                          <xsl:choose>
+                            <xsl:when test="contains(epdcx:valueString,'dx.doi.org')">
+                                 <xsl:attribute name="qualifier">doi</xsl:attribute>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                 <xsl:attribute name="qualifier">url</xsl:attribute>
+                             </xsl:otherwise>
+                          </xsl:choose>    			
     			</xsl:if>
     			<xsl:value-of select="epdcx:valueString"/>
     		</xsl:element>

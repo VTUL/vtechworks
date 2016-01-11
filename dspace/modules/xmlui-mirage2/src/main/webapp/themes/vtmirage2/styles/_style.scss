@@ -51,4 +51,12 @@ hyphens:none;
 text-align:justify;
 }
 
+.line-break {
+white-space:pre-line;
+}
+
+.filename-word-break {
+word-break:break-all;
+width:200px;
+}
 
