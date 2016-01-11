@@ -637,6 +637,10 @@
 		<value-pairs value-pairs-name="omals_disciplines"
 			dc-term="thesis_degree_discipline">
 			<pair>
+				<displayed-value>Choose a discipline</displayed-value>
+				<stored-value></stored-value>
+			</pair>
+			<pair>
 				<displayed-value>Education</displayed-value>
 				<stored-value>Education</stored-value>
 			</pair>
@@ -673,6 +677,10 @@
 		<!-- Added options for omals dc.contributor.department -->
 		<value-pairs value-pairs-name="omals_department"
 			dc-term="contributor_department">
+			<pair>
+				<displayed-value>Choose a department</displayed-value>
+				<stored-value></stored-value>
+			</pair>
 			<pair>
 				<displayed-value>Agricultural and Applied Economics</displayed-value>
 				<stored-value>Agricultural and Applied Economics</stored-value>
