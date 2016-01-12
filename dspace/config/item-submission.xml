@@ -18,8 +18,13 @@
 	<!-- for handle "default". -->
 	<submission-map>
 		<name-map collection-handle="default" submission-name="traditional" />
+<<<<<<< HEAD
 		<!-- Added custom submission process to collection "NDLTD", http://vtechworks.lib.vt.edu/handle/10919/18725 -->
 		<name-map collection-handle="10919/18726" submission-name="ndltd" />
+=======
+		<!-- Added custom submission process to collection "OMALS", http://vtechworks.lib.vt.edu/handle/10919/51287 -->
+		<name-map collection-handle="10919/51287" submission-name="omals" />
+>>>>>>> vt_5_x_dev
 	</submission-map>
 
 
@@ -262,6 +267,7 @@
 
 
 		</submission-process>
+<<<<<<< HEAD
 		
 		<!-- Added this "ndltd" process defines the NDLTD item submission process -->
 		<submission-process name="ndltd">
@@ -269,6 +275,15 @@
 		<!--<step id="sample"/> -->
 
 		<!-- Step 1. Since DSpace 4.0, the initial questions has been disabled. 
+=======
+
+		<!-- Added this "omals" process defines the OMALS item submission process -->
+		<submission-process name="omals">
+			<!--Uncommment to display the SAMPLE step as your first step -->
+			<!--<step id="sample"/> -->
+
+			<!-- Step 1. Since DSpace 4.0, the initial questions has been disabled. 
+>>>>>>> vt_5_x_dev
 				Metadata are shown exactly as required in input-forms and items are assumed 
 				to have always multiple-files attached. If re-enable the initial questions 
 				step you should comment out this step -->
@@ -286,18 +301,34 @@
 			<!--Step 2 will be to Describe the item. -->
 			<step>
 				<heading>submit.progressbar.describe</heading>
+<<<<<<< HEAD
 				<!-- 
 				<processing-class>org.dspace.submit.step.NDLTDDescribeStep</processing-class>
 				 -->
 				<processing-class>org.dspace.submit.step.DescribeStep</processing-class>
 				<jspui-binding>org.dspace.app.webui.submit.step.JSPDescribeStep</jspui-binding>
 				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.DescribeStep</xmlui-binding>
+=======
+				<processing-class>org.dspace.submit.step.DescribeStep</processing-class>
+				<!-- 
+				<processing-class>org.dspace.submit.step.OMALSDescribeStep</processing-class>
+				 -->
+				<jspui-binding>org.dspace.app.webui.submit.step.JSPDescribeStep</jspui-binding>
+				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.DescribeStep</xmlui-binding>
+				<!-- 
+				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.OMALSDescribeStep</xmlui-binding>
+				-->
+>>>>>>> vt_5_x_dev
 				<workflow-editable>true</workflow-editable>
 			</step>
 			
 			<!-- add Non-Interactive Step -->
 			<step>
+<<<<<<< HEAD
 				<processing-class>org.dspace.submit.step.NDLTDNonInteractiveStep</processing-class>
+=======
+				<processing-class>org.dspace.submit.step.OMALSNonInteractiveStep</processing-class>
+>>>>>>> vt_5_x_dev
 				<workflow-editable>false</workflow-editable>
 			</step>
 
@@ -351,6 +382,11 @@
 				<workflow-editable>false</workflow-editable>
 			</step>
 		</submission-process>
+<<<<<<< HEAD
+=======
+		
+
+>>>>>>> vt_5_x_dev
 
 	</submission-definitions>
 

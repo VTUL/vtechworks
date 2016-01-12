@@ -15,8 +15,13 @@
 
 	<form-map>
 		<name-map collection-handle="default" form-name="traditional" />
+<<<<<<< HEAD
 		<!-- Added custom describe form to collection "NDLTD", http://vtechworks.lib.vt.edu/handle/10919/18726 -->
 		<name-map collection-handle="10919/18726" form-name="ndltd" />
+=======
+		<!-- Added custom describe form to collection "OMALS", http://vtechworks.lib.vt.edu/handle/10919/51287 -->
+		<name-map collection-handle="10919/51287" form-name="omals" />
+>>>>>>> vt_5_x_dev
 	</form-map>
 
 
@@ -230,9 +235,15 @@
 				</field>
 			</page>
 		</form>
+<<<<<<< HEAD
 		
 		<!-- Added custom describe form to collection "NDLTD" -->
 		<form name="ndltd">
+=======
+
+		<!-- Added custom describe form to collection "OMALS" -->
+		<form name="omals">
+>>>>>>> vt_5_x_dev
 			<page number="1">
 				<field>
 					<dc-schema>dc</dc-schema>
@@ -252,7 +263,11 @@
 					<repeatable>false</repeatable>
 					<label>Title</label>
 					<input-type>onebox</input-type>
+<<<<<<< HEAD
 					<hint>Enter the title of the work as it appears on the title page or equivalent.</hint>
+=======
+					<hint>Enter the main title of the item.</hint>
+>>>>>>> vt_5_x_dev
 					<required>You must enter a main title for this item.</required>
 				</field>
 				
@@ -274,7 +289,11 @@
 					<repeatable>false</repeatable>
 					<label>Date of Issue</label>
 					<input-type>date</input-type>
+<<<<<<< HEAD
 					<hint>Please give the date of previous publication or public distribution.
+=======
+					<hint>Please give the date of previous publication or public distribution. 
+>>>>>>> vt_5_x_dev
 					You can leave out the day and/or month if they aren't applicable.</hint>
 					<required>You must enter at least the year.</required>
 				</field>
@@ -282,6 +301,7 @@
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
+<<<<<<< HEAD
 					<dc-qualifier>committeechair</dc-qualifier>
 					<repeatable>true</repeatable>
 					<label>Committee Chair</label>
@@ -321,21 +341,39 @@
 					<input-type>onebox</input-type>
 					<hint>Enter the contributing department of the item.</hint>
 					<required>You must enter a contributor department for this item.</required>
+=======
+					<dc-qualifier>department</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Department</label>
+					<input-type value-pairs-name="omals_department">dropdown</input-type>
+					<hint>Enter the contributing department of the item.</hint>
+					<required>You must enter a contributing department for this item.</required>
+>>>>>>> vt_5_x_dev
 				</field>
 				
 				<field>
 					<dc-schema>thesis</dc-schema>
 					<dc-element>degree</dc-element>
+<<<<<<< HEAD
 					<dc-qualifier>grantor</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Institution Granting the Degree</label>
 					<input-type>onebox</input-type>
 					<hint>Enter the thesis degree grantor of the item.</hint>
 					<required>You must enter a thesis degree grantor for this item.</required>
+=======
+					<dc-qualifier>discipline</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Discipline</label>
+					<input-type value-pairs-name="omals_disciplines">dropdown</input-type>
+					<hint>Select the OMALS discipline of the item.</hint>
+					<required>You must select a discipline for this item.</required>
+>>>>>>> vt_5_x_dev
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
+<<<<<<< HEAD
 					<dc-element>publisher</dc-element>
 					<dc-qualifier></dc-qualifier>
 					<repeatable>false</repeatable>
@@ -354,10 +392,19 @@
 					<label>Degree</label>
 					<input-type value-pairs-name="ndltd_degree_levels">dropdown</input-type>
 					<hint>Level of education associated with the document.</hint>
+=======
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>committeechair</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Committee Chair</label>
+					<input-type>name</input-type>
+					<hint>Enter the names of the committee chair or committee co-chairs of this item.</hint>
+>>>>>>> vt_5_x_dev
 					<required></required>
 				</field>
 				
 				<field>
+<<<<<<< HEAD
 					<dc-schema>thesis</dc-schema>
 					<dc-element>degree</dc-element>
 					<dc-qualifier>name</dc-qualifier>
@@ -366,16 +413,35 @@
 					<input-type>onebox</input-type>
 					<hint>Name of the degree associated with the work as it appears within the work. (example: Masters in Operations Research)</hint>
 					<required></required>
+=======
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>committeemember</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Committee Member</label>
+					<input-type>name</input-type>
+					<hint>Enter the names of the committee members of this item.</hint>
+					<required>You must enter the committee members for this item.</required>
+>>>>>>> vt_5_x_dev
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>type</dc-element>
 					<dc-qualifier></dc-qualifier>
+<<<<<<< HEAD
 					<repeatable>false</repeatable>
 					<label>Type</label>
 					<input-type value-pairs-name="ndltd_types">dropdown</input-type>
 					<hint>Select the type(s) of content of the item.</hint>
+=======
+					<repeatable>true</repeatable>
+					<label>Type</label>
+					<input-type value-pairs-name="common_types">dropdown</input-type>
+					<hint>Select the type(s) of content of the item. To select more
+						than one value in the list, you may have to hold down the "CTRL"
+						or "Shift" key.</hint>
+>>>>>>> vt_5_x_dev
 					<required></required>
 				</field>
 				
@@ -393,6 +459,7 @@
 					<required></required>
 				</field>
 				
+<<<<<<< HEAD
 				<!-- copy value from dc.contributor.department or let user fill in? -->
 				<field>
 					<dc-schema>thesis</dc-schema>
@@ -409,12 +476,24 @@
 					<dc-schema>dc</dc-schema>
 					<dc-element>subject</dc-element>
 					<dc-qualifier></dc-qualifier>
+=======
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>subject</dc-element>
+					<dc-qualifier>cabt</dc-qualifier>
+>>>>>>> vt_5_x_dev
 					<!-- An input-type of twobox MUST be marked as repeatable -->
 					<repeatable>true</repeatable>
 					<label>Subject Keywords</label>
 					<input-type>twobox</input-type>
+<<<<<<< HEAD
 					<hint>Enter appropriate subject keywords or phrases. </hint>
 					<required>You must enter appropriate subject keywords or phrases.</required>
+=======
+					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus. </hint>
+					<required></required>
+					<vocabulary>cabt</vocabulary>
+>>>>>>> vt_5_x_dev
 				</field>
 				
 				<field>
@@ -424,6 +503,7 @@
 					<repeatable>false</repeatable>
 					<label>Abstract</label>
 					<input-type>textarea</input-type>
+<<<<<<< HEAD
 					<hint>Enter the full text of the abstract.</hint>
 					<required></required>
 				</field>
@@ -436,11 +516,29 @@
 					<label>Description</label>
 					<input-type>textarea</input-type>
 					<hint>Enter any other description or notes.</hint>
+=======
+					<hint>Enter the abstract of the item.</hint>
+					<required></required>
+				</field>
+				
+				<!-- default value -->
+				<!--  
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>publisher</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Publisher</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the name of the publisher of the previously issued
+						instance of this item.</hint>
+>>>>>>> vt_5_x_dev
 					<required></required>
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
+<<<<<<< HEAD
 					<dc-element>identifier</dc-element>
 					<dc-qualifier>other</dc-qualifier>
 					<repeatable>true</repeatable>
@@ -448,10 +546,20 @@
 					<input-type>onebox</input-type>
 					<hint>Enter any identifiers associated with the item such as DOI or exam number.</hint>
 					<required></required>
+=======
+					<dc-element>rights</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Rights</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the rights of the item.</hint>
+					<required>You must enter rights for this item.</required>
+>>>>>>> vt_5_x_dev
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
+<<<<<<< HEAD
 					<dc-element>identifier</dc-element>
 					<dc-qualifier>sourceurl</dc-qualifier>
 					<repeatable>false</repeatable>
@@ -485,6 +593,52 @@
 					<required>You must enter a description degree for this item.</required>
 				</field>			
 				-->
+=======
+					<dc-element>description</dc-element>
+					<dc-qualifier>degree</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Degree</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the degree of the item.</hint>
+					<required>You must enter a degree for this item.</required>
+				</field>
+				
+				<field>
+					<dc-schema>thesis</dc-schema>
+					<dc-element>degree</dc-element>
+					<dc-qualifier>name</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Degree</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the thesis degree name of the item.</hint>
+					<required>You must enter a thesis degree name for this item.</required>
+				</field>
+				
+				<field>
+					<dc-schema>thesis</dc-schema>
+					<dc-element>degree</dc-element>
+					<dc-qualifier>level</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Degree</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the thesis degree level of the item.</hint>
+					<required>You must enter a thesis degree level for this item.</required>
+				</field>
+				
+				<field>
+					<dc-schema>thesis</dc-schema>
+					<dc-element>degree</dc-element>
+					<dc-qualifier>grantor</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Degree</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the thesis degree grantor of the item.</hint>
+					<required>You must enter a thesis degree grantor for this item.</required>
+				</field>
+				-->
+	
+
+>>>>>>> vt_5_x_dev
 			</page>
 		</form>
 	</form-definitions>
@@ -673,6 +827,7 @@
 			</pair>
 		</value-pairs>
 		
+<<<<<<< HEAD
                 <!-- Added options for ndltd -->
 		<value-pairs value-pairs-name="ndltd_degree_levels"
 			dc-term="thesis_degree_level">
@@ -707,6 +862,159 @@
 			</pair>
 		</value-pairs>
 	
+=======
+		<!-- Added options for omals thesis.degree.discipline -->
+		<value-pairs value-pairs-name="omals_disciplines"
+			dc-term="thesis_degree_discipline">
+			<pair>
+				<displayed-value>Choose a discipline</displayed-value>
+				<stored-value></stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Education</displayed-value>
+				<stored-value>Education</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Environmental Science</displayed-value>
+				<stored-value>Environmental Science</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Food Safety and Biosecurity</displayed-value>
+				<stored-value>Food Safety and Biosecurity</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Leadership Studies</displayed-value>
+				<stored-value>Leadership Studies</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Plant Science and Pest Management</displayed-value>
+				<stored-value>Plant Science and Pest Management</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Biosecurity, Bio-regulations, and Public Health (discontinued)</displayed-value>
+				<stored-value>Biosecurity, Bio-regulations, and Public Health</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Education and Leadership Studies (discontinued)</displayed-value>
+				<stored-value>Education and Leadership Studies</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Food Safety (discontinued)</displayed-value>
+				<stored-value>Food Safety</stored-value>
+			</pair>
+		</value-pairs>
+		
+		<!-- Added options for omals dc.contributor.department -->
+		<value-pairs value-pairs-name="omals_department"
+			dc-term="contributor_department">
+			<pair>
+				<displayed-value>Choose a department</displayed-value>
+				<stored-value></stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Agricultural and Applied Economics</displayed-value>
+				<stored-value>Agricultural and Applied Economics</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Agricultural, Leadership, and Community Education</displayed-value>
+				<stored-value>Agricultural, Leadership, and Community Education</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Agricultural Technology Program</displayed-value>
+				<stored-value>Agricultural Technology Program</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Animal and Poultry Sciences</displayed-value>
+				<stored-value>Animal and Poultry Sciences</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Biochemistry</displayed-value>
+				<stored-value>Biochemistry</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Biological Systems Engineering</displayed-value>
+				<stored-value>Biological Systems Engineering</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Crop and Soil Environmental Sciences</displayed-value>
+				<stored-value>Crop and Soil Environmental Sciences</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Dairy Science</displayed-value>
+				<stored-value>Dairy Science</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Entomology</displayed-value>
+				<stored-value>Entomology</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Food Science and Technology</displayed-value>
+				<stored-value>Food Science and Technology</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Horticulture</displayed-value>
+				<stored-value>Horticulture</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Human Nutrition, Foods, and Exercise</displayed-value>
+				<stored-value>Human Nutrition, Foods, and Exercise</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Plant Pathology, Physiology, and Weed Science</displayed-value>
+				<stored-value>Plant Pathology, Physiology, and Weed Science</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Virginia Agricultural Experiment Station</displayed-value>
+				<stored-value>Virginia Agricultural Experiment Station</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Alson H. Smith Jr. AREC</displayed-value>
+				<stored-value>Alson H. Smith Jr. AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Eastern Shore AREC</displayed-value>
+				<stored-value>Eastern Shore AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Eastern Virginia AREC</displayed-value>
+				<stored-value>Eastern Virginia AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Hampton Roads AREC</displayed-value>
+				<stored-value>Hampton Roads AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Middleburg AREC</displayed-value>
+				<stored-value>Middleburg AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Reynolds Homestead AREC</displayed-value>
+				<stored-value>Reynolds Homestead AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Shenandoah Valley AREC</displayed-value>
+				<stored-value>Shenandoah Valley AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Southern Piedmont AREC</displayed-value>
+				<stored-value>Southern Piedmont AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Southwest Virginia AREC</displayed-value>
+				<stored-value>Southwest Virginia AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Tidewater AREC</displayed-value>
+				<stored-value>Tidewater AREC</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Virginia Seafood AREC</displayed-value>
+				<stored-value>Virginia Seafood AREC</stored-value>
+			</pair>
+		</value-pairs>
+		
+
+>>>>>>> vt_5_x_dev
 	</form-value-pairs>
 
 </input-forms>
