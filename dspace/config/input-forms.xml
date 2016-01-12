@@ -242,7 +242,7 @@
 					<label>Authors</label>
 					<input-type>name</input-type>
 					<hint>Enter the names of the authors of this item.</hint>
-					<required></required>
+					<required>You must enter the author of this item.</required>
 				</field>
 
 				<field>
@@ -252,8 +252,19 @@
 					<repeatable>false</repeatable>
 					<label>Title</label>
 					<input-type>onebox</input-type>
-					<hint>Enter the main title of the item.</hint>
+					<hint>Enter the title of the work as it appears on the title page or equivalent.</hint>
 					<required>You must enter a main title for this item.</required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>title</dc-element>
+					<dc-qualifier>alternative</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Other Titles</label>
+					<input-type>onebox</input-type>
+					<hint>If the item has any alternative titles, please enter them here.</hint>
+					<required></required>
 				</field>
 				
 				<field>
@@ -263,44 +274,31 @@
 					<repeatable>false</repeatable>
 					<label>Date of Issue</label>
 					<input-type>date</input-type>
-					<hint>Please give the date of previous publication or public
-						distribution.
-						You can leave out the day and/or month if they aren't
-						applicable.</hint>
+					<hint>Please give the date of previous publication or public distribution.
+					You can leave out the day and/or month if they aren't applicable.</hint>
 					<required>You must enter at least the year.</required>
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
-					<dc-qualifier>department</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Department</label>
-					<input-type>onebox</input-type>
-					<hint>Enter the contributor department of the item.</hint>
-					<required>You must enter a contributor department for this item.</required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>contributor</dc-element>
 					<dc-qualifier>committeechair</dc-qualifier>
-					<repeatable>false</repeatable>
+					<repeatable>true</repeatable>
 					<label>Committee Chair</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of the committee chairs of this item.</hint>
-					<required>You must enter committee chairs for this item.</required>
+					<hint>Enter the names of the committee chair of this item.</hint>
+					<required></required>
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>committeecochair</dc-qualifier>
-					<repeatable>false</repeatable>
+					<repeatable>true</repeatable>
 					<label>Committee Co-Chair</label>
 					<input-type>name</input-type>
-					<hint>Enter committee co-chair for this item. </hint>
-					<required>You must enter committee co-chairs for this item.</required>
+					<hint>Enter the names of the committee co-chairs of this item.</hint>
+					<required></required>
 				</field>
 				
 				<field>
@@ -310,8 +308,42 @@
 					<repeatable>true</repeatable>
 					<label>Committee Members</label>
 					<input-type>name</input-type>
-					<hint>Enter committee members for this item. </hint>
-					<required>You must enter committee members for this item.</required>
+					<hint>Enter the names of the committee members for this item.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>department</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Department</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the contributing department of the item.</hint>
+					<required>You must enter a contributor department for this item.</required>
+				</field>
+				
+				<field>
+					<dc-schema>thesis</dc-schema>
+					<dc-element>degree</dc-element>
+					<dc-qualifier>grantor</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Institution Granting the Degree</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the thesis degree grantor of the item.</hint>
+					<required>You must enter a thesis degree grantor for this item.</required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>publisher</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Publisher</label>
+					<input-type>onebox</input-type>
+					<hint>List the entity responsible for making the resource available. 
+					This is typically the group most directly responsible for digitizing and/or archiving the work.</hint>
+					<required></required>
 				</field>
 				
 				<field>
@@ -321,8 +353,8 @@
 					<repeatable>false</repeatable>
 					<label>Degree</label>
 					<input-type value-pairs-name="ndltd_degree_levels">dropdown</input-type>
-					<hint>Select the thesis degree level of the item.</hint>
-					<required>You must select a thesis degree level for this item.</required>
+					<hint>Level of education associated with the document.</hint>
+					<required></required>
 				</field>
 				
 				<field>
@@ -332,19 +364,8 @@
 					<repeatable>false</repeatable>
 					<label>Degree Name</label>
 					<input-type>onebox</input-type>
-					<hint>Enter the thesis degree name of the item.</hint>
-					<required>You must enter a thesis degree name for this item.</required>
-				</field>
-				
-				<field>
-					<dc-schema>thesis</dc-schema>
-					<dc-element>degree</dc-element>
-					<dc-qualifier>grantor</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Degree Grantor</label>
-					<input-type>onebox</input-type>
-					<hint>Enter the thesis degree grantor of the item.</hint>
-					<required>You must enter a thesis degree grantor for this item.</required>
+					<hint>Name of the degree associated with the work as it appears within the work. (example: Masters in Operations Research)</hint>
+					<required></required>
 				</field>
 				
 				<field>
@@ -354,9 +375,7 @@
 					<repeatable>false</repeatable>
 					<label>Type</label>
 					<input-type value-pairs-name="ndltd_types">dropdown</input-type>
-					<hint>Select the type(s) of content of the item. To select more
-						than one value in the list, you may have to hold down the "CTRL"
-						or "Shift" key.</hint>
+					<hint>Select the type(s) of content of the item.</hint>
 					<required></required>
 				</field>
 				
@@ -373,7 +392,75 @@
 						a dataset or an image) please select 'N/A'.</hint>
 					<required></required>
 				</field>
-							
+				
+				<!-- copy value from dc.contributor.department or let user fill in? -->
+				<field>
+					<dc-schema>thesis</dc-schema>
+					<dc-element>degree</dc-element>
+					<dc-qualifier>discipline</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Subject Discipline</label>
+					<input-type>onebox</input-type>
+					<hint>Enter area of study. Usually, this will be the name of a program or department.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>subject</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<!-- An input-type of twobox MUST be marked as repeatable -->
+					<repeatable>true</repeatable>
+					<label>Subject Keywords</label>
+					<input-type>twobox</input-type>
+					<hint>Enter appropriate subject keywords or phrases. </hint>
+					<required>You must enter appropriate subject keywords or phrases.</required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>abstract</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Abstract</label>
+					<input-type>textarea</input-type>
+					<hint>Enter the full text of the abstract.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Description</label>
+					<input-type>textarea</input-type>
+					<hint>Enter any other description or notes.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>identifier</dc-element>
+					<dc-qualifier>other</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Identifier</label>
+					<input-type>onebox</input-type>
+					<hint>Enter any identifiers associated with the item such as DOI or exam number.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>identifier</dc-element>
+					<dc-qualifier>sourceurl</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Source URL</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the source URL of the item, if applicable.</hint>
+					<required></required>
+				</field>
+				
 				<!-- automatic value -->
 				<!--  
 				<field>
@@ -385,35 +472,7 @@
 					<input-type>onebox</input-type>
 					<hint>Enter the thesis degree discipline of this item.</hint>
 					<required></required>
-				</field>				
-				-->
-
-			</page>
-
-			<page number="2">
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>subject</dc-element>
-					<dc-qualifier></dc-qualifier>
-					<!-- An input-type of twobox MUST be marked as repeatable -->
-					<repeatable>true</repeatable>
-					<label>Subject Keywords</label>
-					<input-type>twobox</input-type>
-					<hint>Enter appropriate subject keywords or phrases. </hint>
-					<required></required>
-					<vocabulary>srsc</vocabulary>
-				</field>
-
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>description</dc-element>
-					<dc-qualifier>abstract</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Abstract</label>
-					<input-type>textarea</input-type>
-					<hint>Enter the abstract of the item. </hint>
-					<required></required>
-				</field>
+				</field>	
 				
 				<field>
 					<dc-schema>dc</dc-schema>
@@ -424,30 +483,8 @@
 					<input-type>onebox</input-type>
 					<hint>Enter the description degree of the item.</hint>
 					<required>You must enter a description degree for this item.</required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>identifier</dc-element>
-					<dc-qualifier>other</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Other</label>
-					<input-type>onebox</input-type>
-					<hint>Enter the identifier type of the item.</hint>
-					<required></required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>identifier</dc-element>
-					<dc-qualifier>sourceurl</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Source URL</label>
-					<input-type>onebox</input-type>
-					<hint>Enter the source url of the item.</hint>
-					<required></required>
-				</field>
-
+				</field>			
+				-->
 			</page>
 		</form>
 	</form-definitions>
@@ -636,20 +673,22 @@
 			</pair>
 		</value-pairs>
 		
+                <!-- Added options for ndltd -->
 		<value-pairs value-pairs-name="ndltd_degree_levels"
 			dc-term="thesis_degree_level">
 			<pair>
-				<displayed-value>doctoral</displayed-value>
-				<stored-value>doctoral</stored-value>
+				<displayed-value>undergraduate (pre-masters)</displayed-value>
+				<stored-value>undergraduate</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>masters</displayed-value>
+				<displayed-value>masters (pre-doctoral)</displayed-value>
 				<stored-value>masters</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>other</displayed-value>
-				<stored-value>other</stored-value>
+				<displayed-value>doctoral (includes post-doctoral)</displayed-value>
+				<stored-value>doctoral</stored-value>
 			</pair>
+
 		</value-pairs>
 		
 		<value-pairs value-pairs-name="ndltd_types"
