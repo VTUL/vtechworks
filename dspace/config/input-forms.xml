@@ -516,7 +516,7 @@
 					<repeatable>true</repeatable>
 					<label>Committee Co-Chair</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of committee chairs of this item.</hint>
+					<hint>Enter the names of committee co-chairs of this item.</hint>
 					<required></required>
 				</field>
 				
