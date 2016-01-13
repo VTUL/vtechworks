@@ -505,7 +505,7 @@
 					<repeatable>true</repeatable>
 					<label>Committee Chair</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of the committee chair of this item.</hint>
+					<hint>Enter the names of committee chairs of this item.</hint>
 					<required></required>
 				</field>
 				
@@ -516,7 +516,7 @@
 					<repeatable>true</repeatable>
 					<label>Committee Co-Chair</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of the committee co-chairs of this item.</hint>
+					<hint>Enter the names of committee chairs of this item.</hint>
 					<required></required>
 				</field>
 				
@@ -527,7 +527,7 @@
 					<repeatable>true</repeatable>
 					<label>Committee Members</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of the committee members for this item.</hint>
+					<hint>Enter the names of committee members for this item.</hint>
 					<required></required>
 				</field>
 				
@@ -538,7 +538,7 @@
 					<repeatable>false</repeatable>
 					<label>Department</label>
 					<input-type>onebox</input-type>
-					<hint>Enter the contributing department of the item.</hint>
+					<hint>Enter the contributing academic department of the item.</hint>
 					<required>You must enter a contributor department for this item.</required>
 				</field>
 				
@@ -1046,6 +1046,9 @@
 		<value-pairs value-pairs-name="ndltd_degree_levels"
 			dc-term="thesis_degree_level">
 			<pair>
+				<displayed-value>select degree level</displayed-value>
+				<stored-value></stored-value>
+			</pair><pair>
 				<displayed-value>undergraduate (pre-masters)</displayed-value>
 				<stored-value>undergraduate</stored-value>
 			</pair>
@@ -1062,6 +1065,10 @@
 		
 		<value-pairs value-pairs-name="ndltd_types"
 			dc-term="type">
+			<pair>
+				<displayed-value>select content type</displayed-value>
+				<stored-value></stored-value>
+			</pair>
 			<pair>
 				<displayed-value>thesis</displayed-value>
 				<stored-value>thesis</stored-value>
