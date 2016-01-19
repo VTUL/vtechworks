@@ -179,16 +179,17 @@
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-title">
+    	<!-- html encoding for 'title' filed -->
         <xsl:choose>
             <xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) &gt; 1">
                 <h2 class="page-header first-page-header">
-                    <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/>
+                    <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()" disable-output-escaping="yes" />
                 </h2>
                 <div class="simple-item-view-other">
                     <p class="lead">
                         <xsl:for-each select="dim:field[@element='title'][not(@qualifier)]">
                             <xsl:if test="not(position() = 1)">
-                                <xsl:value-of select="./node()"/>
+                                <xsl:value-of select="./node()" disable-output-escaping="yes"/>
                                 <xsl:if test="count(following-sibling::dim:field[@element='title'][not(@qualifier)]) != 0">
                                     <xsl:text>; </xsl:text>
                                     <br/>
@@ -201,7 +202,7 @@
             </xsl:when>
             <xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) = 1">
                 <h2 class="page-header first-page-header">
-                    <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/>
+                    <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()" disable-output-escaping="yes"/>
                 </h2>
             </xsl:when>
             <xsl:otherwise>
@@ -251,7 +252,8 @@
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
             <div class="simple-item-view-description item-page-field-wrapper table">
                 <h5 class="visible-xs"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h5>
-                <div>
+                <!-- Show line break in abstract field. -->
+                <div class="line-break">
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
@@ -446,7 +448,8 @@
         <xsl:param name="title" />
         <xsl:param name="label" />
         <xsl:param name="size" />
-        <div>
+        <!-- display of long file name -->
+		<div class="filename-word-break">
             <a>
                 <xsl:attribute name="href">
                     <xsl:value-of select="$href"/>
@@ -545,14 +548,16 @@
                         <xsl:value-of select="./@qualifier"/>
                     </xsl:if>
                 </td>
-                <!-- Item full view remove html tags from fields, e.g., abstract -->
-	            <td class="word-break">
+                <!-- Item full view enabling html for all fields, e.g., abstract -->
+                <!-- Render abstract by line break -->
+	            <td class="word-break line-break">
 	              <!--  
 	              <xsl:copy-of select="./node()"/>
-	              
-	              <xsl:value-of select="./node()" disable-output-escaping="yes" />
 	              -->
+	              <xsl:value-of select="./node()" disable-output-escaping="yes" />
+	              <!--  
 	              <xsl:value-of select="util:htmlToShortString(./node(), -1, -1)"/>
+	              -->
 	            </td>
                 <td><xsl:value-of select="./@language"/></td>
             </tr>
