@@ -1162,7 +1162,7 @@ public class DescribeStep extends AbstractSubmissionStep
             		// Customize "dc.subject.cabt" for OMALS collection
             		String vocabularyUrl = "http://www.cabi.org/cabthesaurus/";
             		String characters = null;
-            		item.addXref(vocabularyUrl, characters, null, "omals-browser-link").addContent(T_vocabulary_cabt_link);
+            		item.addXref(vocabularyUrl, characters, null, "blank-browser-link").addContent(T_vocabulary_cabt_link);
             	}
             	else 
             	{
