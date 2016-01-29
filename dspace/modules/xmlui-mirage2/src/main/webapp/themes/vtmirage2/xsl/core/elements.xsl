@@ -504,7 +504,9 @@
             <xsl:if test="@target">
                 <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
                 <!-- Jing Pu modified add target attribute -->
-            	<xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:if test="@n='omals-browser-link'">
+            		<xsl:attribute name="target">_blank</xsl:attribute>
+            	</xsl:if>
             </xsl:if>
             
             <xsl:if test="@rend">
