@@ -1161,7 +1161,8 @@ public class DescribeStep extends AbstractSubmissionStep
             	if (dcInput.getVocabulary().equals("cabt")) {
             		// Customize "dc.subject.cabt" for OMALS collection
             		String vocabularyUrl = "http://www.cabi.org/cabthesaurus/";
-            		item.addXref(vocabularyUrl).addContent(T_vocabulary_cabt_link);
+            		String characters = null;
+            		item.addXref(vocabularyUrl, characters, null, "blank-browser-link").addContent(T_vocabulary_cabt_link);
             	}
             	else 
             	{
