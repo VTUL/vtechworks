@@ -103,17 +103,15 @@
 	<xsl:template name="HelpStaticPage">
 		<h1>VTechWorks Help</h1>
 		<p>
-			<ul style="list-style-type:square">
-				<li>
-					Ask library staff to help with determining the rights status of your scholarly work, with creating accounts and collections, and more at 
+Ask library staff to help with determining the rights status of your scholarly work, with creating accounts and collections, and more at 
 					<a>
 						<xsl:attribute name="href">
 							<xsl:text>http://j.mp/vtechworks-service</xsl:text>
 						</xsl:attribute>
 						<xsl:text>http://j.mp/vtechworks-service</xsl:text>
 					</a>
-				</li>
-				<li>
+				<br />
+				<br />
 					Sign up for VTechWorks News at 
 					<a>
 						<xsl:attribute name="href">
@@ -121,9 +119,21 @@
 						</xsl:attribute>
 						<xsl:text>https://groups.google.com/a/vt.edu/forum/#!forum/vtechworks-g/join</xsl:text>
 					</a>
-					 to get monthly reports of planned features and new content. 
-				</li>
-			</ul>
+					 to get monthly reports of planned features and new content.
+			
 		</p>
-	</xsl:template>
+		  <h1>VTechWorks Metadata</h1>
+
+  <p>VTechWorks uses the <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> and <a href="http://www.ndltd.org/standards/metadata">NDLTD</a> metadata standards to enhance the discoverability, accessibility, and use of VTechWorks resources. VTechWorks has also developed custom metadata fields, as well as leveraged encoding guidelines from the Texas Digital Library and the <a href="https://www.loc.gov/standards/mods/mods-outline-3-5.html">MODS</a> standard, to improve the description of VTechWorks resources.</p>
+<p>
+  To access VTechWorks' descriptive, technical, and administrative metadata encoding guidelines, visit the following links :
+  <br />
+  <ul style="list-style-type:square">
+  <li>
+<a href="https://docs.google.com/spreadsheets/d/1Ftr-LmBVEmbPkqxTZGjOj7NkTlsSkTcOhsL0veGk61c/pub?output=pdf">VTechWorks Metadata Guidelines - PDF</a></li>
+   <br />
+<li><a href="https://docs.google.com/spreadsheets/d/1dPmw5xIFHAzASZ8JiVxcu6SMMPHFgOs0XR_qazOrGKg/pub?output=csv">VTechWorks Metadata Guidelines - CSV</a></li>
+</ul>
+These guidelines are updated regularly; for questions or comments, please contact <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a>.</p>
+  </xsl:template>
 </xsl:stylesheet>
