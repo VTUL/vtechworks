@@ -27,8 +27,5 @@ META-INF/
 /*.properties
 !/build.properties
 
-## Ignore dspace.cfg
-dspace/config/dspace.cfg
-
 ##Mac noise
 .DS_Store
