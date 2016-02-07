@@ -108,7 +108,10 @@
             <a href="{$metsDoc/mets:METS/@OBJID}">
                 <xsl:choose>
                     <xsl:when test="dri:list[@n=(concat($handle, ':dc.title')) and descendant::text()]">
+                    	<!--
                         <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                        -->
+                        <xsl:value-of select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item" disable-output-escaping="yes"/>
                     </xsl:when>
                     <xsl:otherwise>
                         <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
@@ -179,7 +182,10 @@
                     <h4>
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
+                            	<!--
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                                -->
+                                <xsl:value-of select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item" disable-output-escaping="yes"/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
