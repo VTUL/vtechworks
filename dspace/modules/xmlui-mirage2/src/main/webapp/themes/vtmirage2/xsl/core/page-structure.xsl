@@ -333,7 +333,9 @@
                 </script>
                 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&#160;</script>
             </xsl:if>
-
+            
+            <!-- Add Altmetric support -->
+			<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'>&#160;</script>
         </head>
     </xsl:template>
 
@@ -712,6 +714,23 @@
                  <xsl:value-of select="$ccLicenseName"/>
              </xsl:attribute>
         </img>
+    </xsl:template>
+    
+	<!-- Altmetric -->
+	<xsl:template name="altmetric">
+		<xsl:variable name="citationAbsHtmlUrl"
+						select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='citation_abstract_html_url']"
+		/>
+
+        <xsl:if test="$citationAbsHtmlUrl">
+            <div class="row">
+            	<div class="col-sm-3 col-xs-12">
+                	<div class="altmetric-embed" data-badge-type="2" data-badge-details="right">
+                		<xsl:attribute name="data-handle"><xsl:value-of select="substring-after($citationAbsHtmlUrl, 'handle/')"/></xsl:attribute>
+                	</div>
+               </div>
+            </div>
+        </xsl:if>
     </xsl:template>
 
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
