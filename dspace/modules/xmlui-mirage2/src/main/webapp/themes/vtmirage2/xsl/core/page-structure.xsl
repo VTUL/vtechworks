@@ -725,7 +725,7 @@
         <xsl:if test="$citationAbsHtmlUrl">
             <div class="row">
             	<div class="col-sm-3 col-xs-12">
-                	<div class="altmetric-embed" data-badge-type="2" data-badge-details="right">
+                	<div class="altmetric-embed" data-badge-type="medium-donut" data-badge-details="right">
                 		<xsl:attribute name="data-handle"><xsl:value-of select="substring-after($citationAbsHtmlUrl, 'handle/')"/></xsl:attribute>
                 	</div>
                </div>
