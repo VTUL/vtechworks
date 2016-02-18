@@ -72,6 +72,7 @@
             <xsl:call-template name="cc-license">
                 <xsl:with-param name="metadataURL" select="./dri:referenceSet/dri:reference/@url"/>
             </xsl:call-template>
+            <xsl:call-template name="altmetric" />
         </xsl:if>
         <xsl:apply-templates select="@pagination">
             <xsl:with-param name="position">bottom</xsl:with-param>
