@@ -27,7 +27,7 @@
 
 .control-label.required::after {
     content: "*";
-    color: red;
+    color: $burnt-orange;
 }
 
 .submission .ds-add-button {
