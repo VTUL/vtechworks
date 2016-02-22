@@ -768,7 +768,7 @@
 	<message key="xmlui.Submission.submit.DescribeStep.unknown_field">Error: Unknown field type</message>
 	<message key="xmlui.Submission.submit.DescribeStep.required_field">This field is required</message>
 	<message key="xmlui.Submission.submit.DescribeStep.last_name_help">Last name, <i>e.g., Kennedy</i></message>
-	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">First name(s) + "Jr", <i>e.g., John F. Jr.</i></message>
+	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">First name(s) + initial(s), <i>e.g., John F. Jr.</i></message>
 	<message key="xmlui.Submission.submit.DescribeStep.year">Year</message>
 	<message key="xmlui.Submission.submit.DescribeStep.month">Month</message>
 	<message key="xmlui.Submission.submit.DescribeStep.day">Day</message>
