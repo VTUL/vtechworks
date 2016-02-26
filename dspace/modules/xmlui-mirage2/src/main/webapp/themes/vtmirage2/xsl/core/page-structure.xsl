@@ -718,15 +718,15 @@
     
 	<!-- Altmetric -->
 	<xsl:template name="altmetric">
-		<xsl:variable name="citationAbsHtmlUrl"
-						select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='citation_abstract_html_url']"
+		<xsl:variable name="altmetricHandle"
+						select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='identifier' and @qualifier='handle']"
 		/>
 
-        <xsl:if test="$citationAbsHtmlUrl">
+        <xsl:if test="$altmetricHandle">
             <div class="row">
             	<div class="col-sm-3 col-xs-12">
-                	<div class="altmetric-embed" data-badge-type="medium-donut" data-badge-details="right">
-                		<xsl:attribute name="data-handle"><xsl:value-of select="substring-after($citationAbsHtmlUrl, 'handle/')"/></xsl:attribute>
+                	<div class="altmetric-embed" data-badge-type="medium-donut" data-badge-details="right" data-link-target="_blank">
+                		<xsl:attribute name="data-handle"><xsl:value-of select="$altmetricHandle"/></xsl:attribute>
                 	</div>
                </div>
             </div>
