@@ -620,6 +620,10 @@
                             </map:read>
                     </map:match>
 
+                    <!-- block arbitrary file url w/ themes -->
+                    <map:match pattern="themes/**file:**">
+                       <map:redirect-to uri="{request:contextPath}/error" permanent="yes"/>
+                    </map:match>
 
                     <!-- handle common theme resources, such as dri2xhtml -->
                     <map:match pattern="themes/*">
