@@ -725,7 +725,7 @@
         <xsl:if test="$altmetricHandle">
             <div class="row">
             	<div class="col-sm-3 col-xs-12">
-                	<div class="altmetric-embed" data-badge-type="medium-donut" data-badge-details="right" data-link-target="_blank">
+                	<div class="altmetric-embed" data-badge-type="medium-donut" data-badge-details="right" data-hide-no-mentions="true" data-link-target="_blank">
                 		<xsl:attribute name="data-handle"><xsl:value-of select="$altmetricHandle"/></xsl:attribute>
                 	</div>
                </div>
