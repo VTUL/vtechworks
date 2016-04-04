@@ -45,7 +45,7 @@
         <crosswalks:mapping dspace="dc.identifier.issn" elements="issn" />
         <crosswalks:mapping dspace="dc.language" elements="language" />
         <crosswalks:mapping dspace="dc.publisher" elements="publisher" />
-        <crosswalks:mapping dspace="dc.relation.isPartOf" elements="name-of-conference,parent-title,series" />
+        <crosswalks:mapping dspace="dc.relation.ispartof" elements="name-of-conference,parent-title,series" />
         <crosswalks:mapping dspace="dc.title.serial" elements="journal" />
         <crosswalks:mapping dspace="dc.identifier.volume" elements="volume" />
         <crosswalks:mapping dspace="dc.identifier.issue" elements="issue" />
