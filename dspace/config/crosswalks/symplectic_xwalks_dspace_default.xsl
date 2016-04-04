@@ -74,6 +74,7 @@
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
         <crosswalks:mapping dspace="pubs.publisher-url" elements="publisher-url" />
         <crosswalks:mapping dspace="pubs.publication-status" elements="publication-status" />
+        <crosswalks:mapping dspace="pubs.repository-status" elements="repository-status" />
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
     </crosswalks:mappings>
     
