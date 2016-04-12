@@ -53,7 +53,8 @@
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
         <!--<crosswalks:mapping dspace="dc.date.accessioned" elements="acceptance-date" />-->
-        <crosswalks:mapping dspace="dc.description.notes" elements="addresses,fulltext-comment,confidential-files-reason,notes" />
+        <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,confidential-files-reason,notes" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses, pii" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
@@ -68,7 +69,7 @@
         <crosswalks:mapping dspace="pubs.is-embargoed" elements="is-embargoed" />
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
-        <crosswalks:mapping dspace="pubs.pii" elements="pii" />
+        <!--<crosswalks:mapping dspace="pubs.pii" elements="pii" />-->
         <crosswalks:mapping dspace="pubs.patent-number" elements="patent-number" />
         <crosswalks:mapping dspace="pubs.patent-status" elements="patent-status" />
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
