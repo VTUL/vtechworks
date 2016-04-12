@@ -53,8 +53,8 @@
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
         <!--<crosswalks:mapping dspace="dc.date.accessioned" elements="acceptance-date" />-->
-        <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,confidential-files-reason,notes" />
-        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses, pii" />
+        <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,pii,confidential-files-reason" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
