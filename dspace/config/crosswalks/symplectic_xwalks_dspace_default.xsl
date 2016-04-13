@@ -65,7 +65,7 @@
         <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
         <crosswalks:mapping dspace="pubs.confidential" elements="confidential" />
         <crosswalks:mapping dspace="pubs.edition" elements="edition" />
-        <crosswalks:mapping dspace="pubs.embargo-release-date" elements="embargo-release-date" />
+        <!--<crosswalks:mapping dspace="pubs.embargo-release-date" elements="embargo-release-date" />-->
         <crosswalks:mapping dspace="pubs.is-embargoed" elements="is-embargoed" />
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
@@ -85,8 +85,8 @@
         Map values from the publication fields into repository fields
     -->
     <crosswalks:object-mappings for="dspace">
-        <crosswalks:mapping dspace="pubs.requested-embargo-period" elements="p-requested-embargo-period" />
-        <!--<crosswalks:mapping dspace="pubs.notes" elements="p-requested-embargo-period" />
+        <!--<crosswalks:mapping dspace="pubs.requested-embargo-period" elements="p-requested-embargo-period" />
+            <crosswalks:mapping dspace="pubs.notes" elements="p-requested-embargo-period" />
             <crosswalks:mapping dspace="pubs.notes" elements="fulltext-comment" />
             These mappings are for the OA location selection
             <crosswalks:mapping dspace="dc.identifier.uri" elements="p-oa-location" />
