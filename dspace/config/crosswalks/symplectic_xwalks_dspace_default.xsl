@@ -92,6 +92,9 @@
             <crosswalks:mapping dspace="dc.identifier.uri" elements="p-oa-location" />
             <crosswalks:mapping dspace="dc.description.version" elements="p-oa-location-file-version" />
         -->
+        <crosswalks:mapping dspace="dc.rights" elements="p-author-license" />
+        <crosswalks:mapping dspace="dc.rights.uri" elements="p-author-license" />
+        <!--Added to allow mapping to customized Creative Commons 4.0 license text, as well as to add associated Creative Commons 4.0 URIs-->
     </crosswalks:object-mappings>
     
     <!--
@@ -137,6 +140,23 @@
             <crosswalks:entry elements="http://www.symplectic.co.uk/publications/atom-terms/1.0/thesis-or-dissertation" dspace="thesis" />
         </crosswalks:dictionary>
     </crosswalks:dictionaries>
+    
+    <crosswalks:dictionary dspace="dc.rights" mapped-only="true">
+        <crosswalks:entry elements="CC BY" dspace="Attribution 4.0 International" />
+        <crosswalks:entry elements="CC BY-ND" dspace="Attribution-NoDerivatives 4.0 International" />
+        <crosswalks:entry elements="CC BY-SA" dspace="Attribution-ShareAlike 4.0 International" />
+        <crosswalks:entry elements="CC BY-NC" dspace="Attribution-NonCommercial 4.0 International" />
+        <crosswalks:entry elements="CC BY-NC-ND" dspace="Attribution-NonCommercial-NoDerivatives 4.0 International" />
+        <crosswalks:entry elements="CC BY-NC-SA" dspace="Attribution-NonCommercial-ShareAlike 4.0 International" />
+    </crosswalks:dictionary>
+    <crosswalks:dictionary dspace="dc.rights.uri" mapped-only="true">
+        <crosswalks:entry elements="CC BY" dspace="http://creativecommons.org/licenses/by/4.0/" />
+        <crosswalks:entry elements="CC BY-ND" dspace="http://creativecommons.org/licenses/by-nd/4.0/" />
+        <crosswalks:entry elements="CC BY-SA" dspace="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <crosswalks:entry elements="CC BY-NC" dspace="http://creativecommons.org/licenses/by-nc/4.0/" />
+        <crosswalks:entry elements="CC BY-NC-ND" dspace="http://creativecommons.org/licenses/by-nc-nd/4.0/" />
+        <crosswalks:entry elements="CC BY-NC-SA" dspace="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+    </crosswalks:dictionary>
     
     
     <!--
