@@ -63,10 +63,10 @@
         <!-- <crosswalks:mapping dspace="pubs.are-files-confidential" elements="are-files-confidential" /> -->
         <crosswalks:mapping dspace="pubs.awarded-date" elements="awarded-date" />
         <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
-        <crosswalks:mapping dspace="pubs.confidential" elements="confidential" />
+        <!-- <crosswalks:mapping dspace="pubs.confidential" elements="confidential" /> -->
         <crosswalks:mapping dspace="pubs.edition" elements="edition" />
-        <!--<crosswalks:mapping dspace="pubs.embargo-release-date" elements="embargo-release-date" />-->
-        <crosswalks:mapping dspace="pubs.is-embargoed" elements="is-embargoed" />
+        <!-- <crosswalks:mapping dspace="pubs.embargo-release-date" elements="embargo-release-date" />-->
+        <!-- <crosswalks:mapping dspace="pubs.is-embargoed" elements="is-embargoed" /> -->
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
         <!--<crosswalks:mapping dspace="pubs.pii" elements="pii" />-->
