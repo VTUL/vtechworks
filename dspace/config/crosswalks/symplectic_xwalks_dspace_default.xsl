@@ -139,7 +139,6 @@
             <crosswalks:entry elements="http://www.symplectic.co.uk/publications/atom-terms/1.0/software"               dspace="software" />
             <crosswalks:entry elements="http://www.symplectic.co.uk/publications/atom-terms/1.0/thesis-or-dissertation" dspace="thesis" />
         </crosswalks:dictionary>
-    </crosswalks:dictionaries>
     
     <crosswalks:dictionary dspace="dc.rights" mapped-only="true">
         <crosswalks:entry elements="CC BY" dspace="Attribution 4.0 International" />
@@ -157,7 +156,7 @@
         <crosswalks:entry elements="CC BY-NC-ND" dspace="http://creativecommons.org/licenses/by-nc-nd/4.0/" />
         <crosswalks:entry elements="CC BY-NC-SA" dspace="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
     </crosswalks:dictionary>
-    
+    </crosswalks:dictionaries>
     
     <!--
         Data Source Precedences
