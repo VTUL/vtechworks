@@ -142,7 +142,7 @@
             <crosswalks:entry elements="http://www.symplectic.co.uk/publications/atom-terms/1.0/thesis-or-dissertation" dspace="thesis" />
         </crosswalks:dictionary>
     
-    <crosswalks:dictionary dspace="dc.rights[*]" mapped-only="true">
+    <crosswalks:dictionary dspace="dc.rights" mapped-only="true">
         <crosswalks:entry elements="CC BY" dspace="Attribution 4.0 International" />
         <crosswalks:entry elements="CC BY-ND" dspace="Attribution-NoDerivatives 4.0 International" />
         <crosswalks:entry elements="CC BY-SA" dspace="Attribution-ShareAlike 4.0 International" />
@@ -150,7 +150,7 @@
         <crosswalks:entry elements="CC BY-NC-ND" dspace="Attribution-NonCommercial-NoDerivatives 4.0 International" />
         <crosswalks:entry elements="CC BY-NC-SA" dspace="Attribution-NonCommercial-ShareAlike 4.0 International" />
     </crosswalks:dictionary>
-    <crosswalks:dictionary dspace="dc.rights.uri[*]" mapped-only="true">
+    <crosswalks:dictionary dspace="dc.rights.uri" mapped-only="true">
         <crosswalks:entry elements="CC BY" dspace="http://creativecommons.org/licenses/by/4.0/" />
         <crosswalks:entry elements="CC BY-ND" dspace="http://creativecommons.org/licenses/by-nd/4.0/" />
         <crosswalks:entry elements="CC BY-SA" dspace="http://creativecommons.org/licenses/by-sa/4.0/" />
