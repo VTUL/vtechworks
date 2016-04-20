@@ -27,6 +27,7 @@
     <crosswalks:mappings for="dspace">
         <!-- Default mappings -->
         <crosswalks:mapping dspace="dc.type" feed-elements="category" />
+        <crosswalks:mapping dspace="dc.type.other" elements="types" />
         <!--<crosswalks:mapping dspace="dc.identifier.citation" format-elements="[$journal], [$parent-title], [$publication-date:date(yyyy)], [$edition], [$volume] ~([$issue])~, ~pp. [$pagination]~" />
         -->
         <crosswalks:mapping dspace="dc.contributor.author" elements="authors,associated-authors" />
