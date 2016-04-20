@@ -32,9 +32,8 @@
         <crosswalks:mapping dspace="dc.contributor.author" elements="authors,associated-authors" />
         <crosswalks:mapping dspace="dc.contributor.editor" elements="editors" />
         <crosswalks:mapping dspace="dc.coverage.spatial" elements="location" />
-        <crosswalks:mapping dspace="dc.date.available" elements="online-publication-date" />
         <!--<crosswalks:mapping dspace="dc.date.created" elements="record-created-at-source-date" />-->
-        <crosswalks:mapping dspace="dc.date.issued" elements="publication-date" />
+        <crosswalks:mapping dspace="dc.date.issued" elements="publication-date,online-publication-date" />
         <crosswalks:mapping dspace="dc.description.abstract" elements="abstract" />
         <crosswalks:mapping dspace="dc.format" elements="medium" />
         <!-- <crosswalks:mapping dspace="dc.format.extent" format-elements="number-of-pieces,pagination" /> -->
