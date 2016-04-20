@@ -93,7 +93,7 @@
             <crosswalks:mapping dspace="pubs.notes" elements="p-requested-embargo-period" /> -->
             <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment" />
             These mappings are for the OA location selection
-            <crosswalks:mapping dspace="dc.identifier.uri" elements="p-oa-location" />
+        <!--<crosswalks:mapping dspace="dc.identifier.uri" elements="p-oa-location" /> -->
             <crosswalks:mapping dspace="dc.description.version" elements="p-oa-location-file-version" />
         <crosswalks:mapping dspace="dc.rights" elements="p-author-license" />
         <crosswalks:mapping dspace="dc.rights.uri" elements="p-author-license" />
