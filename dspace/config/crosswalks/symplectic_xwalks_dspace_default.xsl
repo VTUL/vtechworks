@@ -60,7 +60,7 @@
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,pii,confidential-files-reason" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
-        <crosswalks:mapping dspace="dc.description.version" elements="version" />
+        <crosswalks:mapping dspace="dc.description.version" elements="~[$version] (version)" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
         <crosswalks:mapping dspace="pubs.author-url" elements="author-url" />
