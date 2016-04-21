@@ -52,7 +52,7 @@
         <crosswalks:mapping dspace="dc.relation.ispartof" elements="name-of-conference,parent-title,series" />
         <crosswalks:mapping dspace="dc.title.serial" elements="journal" />
         <crosswalks:mapping dspace="dc.identifier.volume" format-elements="~[$volume] (volume)~" />
-        <crosswalks:mapping dspace="dc.identifier.issue" elements="issue" />
+        <crosswalks:mapping dspace="dc.identifier.issue" format-elements="~[$issue] (issue)~" />
         <!--<crosswalks:mapping dspace="dc.source" elements="name-of-conference" />-->
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
@@ -60,7 +60,7 @@
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,pii,confidential-files-reason" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
-        <crosswalks:mapping dspace="dc.description.version" elements="~[$version] (version)" />
+        <crosswalks:mapping dspace="dc.description.version" format-elements="~[$version] (version)" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
         <crosswalks:mapping dspace="pubs.author-url" elements="author-url" />
@@ -69,7 +69,7 @@
         <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
         <!-- <crosswalks:mapping dspace="pubs.confidential" elements="confidential" /> -->
         <!-- <crosswalks:mapping dspace="pubs.edition" elements="edition" /> -->
-        <crosswalks:mapping dspace="dc.description.version" elements="~[$edition] (edition)~" />
+        <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (edition)~" />
         <!-- <crosswalks:mapping dspace="pubs.embargo-release-date" elements="embargo-release-date" />-->
         <!-- <crosswalks:mapping dspace="pubs.is-embargoed" elements="is-embargoed" /> -->
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
