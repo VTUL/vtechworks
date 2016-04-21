@@ -51,8 +51,8 @@
         <crosswalks:mapping dspace="dc.publisher" elements="publisher" />
         <crosswalks:mapping dspace="dc.relation.ispartof" elements="name-of-conference,parent-title,series" />
         <crosswalks:mapping dspace="dc.title.serial" elements="journal" />
-        <crosswalks:mapping dspace="dc.identifier.volume" format-elements="~[$volume] (volume)~" />
-        <crosswalks:mapping dspace="dc.identifier.issue" format-elements="~[$issue] (issue)~" />
+        <crosswalks:mapping dspace="dc.identifier.volume" elements="volume" />
+        <crosswalks:mapping dspace="dc.identifier.issue" elements="issue" />
         <!--<crosswalks:mapping dspace="dc.source" elements="name-of-conference" />-->
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
@@ -60,7 +60,7 @@
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,pii,confidential-files-reason" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
-        <crosswalks:mapping dspace="dc.description.version" format-elements="~[$version] (version)" />
+        <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
         <crosswalks:mapping dspace="pubs.author-url" elements="author-url" />
