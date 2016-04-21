@@ -36,7 +36,7 @@
         <!--<crosswalks:mapping dspace="dc.date.created" elements="record-created-at-source-date" />-->
         <crosswalks:mapping dspace="dc.date.issued" elements="publication-date,online-publication-date" />
         <crosswalks:mapping dspace="dc.description.abstract" elements="abstract" />
-        <crosswalks:mapping dspace="dc.format" elements="medium" />
+        <crosswalks:mapping dspace="dc.format.medium" elements="medium" />
         <!-- <crosswalks:mapping dspace="dc.format.extent" format-elements="number-of-pieces,pagination" /> -->
         <!-- <crosswalks:mapping dspace="dc.format.extent" format-elements="number-of-pieces" /> -->
         <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] pages(s)~" />
