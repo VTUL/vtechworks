@@ -44,6 +44,7 @@
         <crosswalks:mapping dspace="dc.format.extent"	format-elements="~[$number-of-pieces] chapter(s)~" /> 
         <!-- <crosswalks:mapping dspace="dc.format.extent"	elements="pagination" /> -->
         <crosswalks:mapping dspace="dc.identifier.other" elements="number" />
+        <crosswalks:mapping dspace="dc.identifier.other" elements="~[$pii] (Publisher Item Identifier)~" />
         <crosswalks:mapping dspace="dc.identifier.doi" elements="doi" />
         <crosswalks:mapping dspace="dc.identifier.eissn" elements="eissn" />
         <crosswalks:mapping dspace="dc.identifier.isbn" elements="isbn-10,isbn-13" />
@@ -59,7 +60,7 @@
         <crosswalks:mapping dspace="dc.title" elements="title" />
         <!--<crosswalks:mapping dspace="dc.date.accessioned" elements="acceptance-date" />-->
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
-        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,pii,confidential-files-reason" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,confidential-files-reason" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
