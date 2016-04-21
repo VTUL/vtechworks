@@ -38,13 +38,13 @@
         <crosswalks:mapping dspace="dc.date.available" elements="online-publication-date" />
         <crosswalks:mapping dspace="dc.description.abstract" elements="abstract" />
         <crosswalks:mapping dspace="dc.format.medium" elements="medium" />
-        <!-- <crosswalks:mapping dspace="dc.format.extent" format-elements="number-of-pieces,pagination" /> -->
-        <!-- <crosswalks:mapping dspace="dc.format.extent" format-elements="number-of-pieces" /> -->
+        <!-- <crosswalks:mapping dspace="dc.format.extent" elements="number-of-pieces,pagination" /> -->
+        <!-- <crosswalks:mapping dspace="dc.format.extent" elements="number-of-pieces" /> -->
         <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] pages(s)~" />
         <crosswalks:mapping dspace="dc.format.extent"	format-elements="~[$number-of-pieces] chapter(s)~" /> 
         <!-- <crosswalks:mapping dspace="dc.format.extent"	elements="pagination" /> -->
         <crosswalks:mapping dspace="dc.identifier.other" elements="number" />
-        <crosswalks:mapping dspace="dc.identifier.other" elements="~[$pii] (Publisher Item Identifier)~" />
+        <crosswalks:mapping dspace="dc.identifier.other" format-elements="~[$pii] (Publisher Item Identifier)~" />
         <crosswalks:mapping dspace="dc.identifier.doi" elements="doi" />
         <crosswalks:mapping dspace="dc.identifier.eissn" elements="eissn" />
         <crosswalks:mapping dspace="dc.identifier.isbn" elements="isbn-10,isbn-13" />
@@ -60,6 +60,7 @@
         <crosswalks:mapping dspace="dc.title" elements="title" />
         <!--<crosswalks:mapping dspace="dc.date.accessioned" elements="acceptance-date" />-->
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
+        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,confidential-files-reason" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
@@ -81,7 +82,7 @@
         <crosswalks:mapping dspace="pubs.patent-status" elements="patent-status" />
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
         <crosswalks:mapping dspace="pubs.publisher-url" elements="publisher-url" />
-        <crosswalks:mapping dspace="pubs.publication-status" elements="publication-status" />
+   <!-- <crosswalks:mapping dspace="pubs.publication-status" elements="publication-status" /> -->
         <crosswalks:mapping dspace="pubs.repository-status" elements="repository-status" />
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
     </crosswalks:mappings>
