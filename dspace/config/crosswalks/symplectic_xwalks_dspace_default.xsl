@@ -51,7 +51,7 @@
         <crosswalks:mapping dspace="dc.publisher" elements="publisher" />
         <crosswalks:mapping dspace="dc.relation.ispartof" elements="name-of-conference,parent-title,series" />
         <crosswalks:mapping dspace="dc.title.serial" elements="journal" />
-        <crosswalks:mapping dspace="dc.identifier.volume" elements="volume" />
+        <crosswalks:mapping dspace="dc.identifier.volume" format-elements="~[$volume] (volume number)~" />
         <crosswalks:mapping dspace="dc.identifier.issue" elements="issue" />
         <!--<crosswalks:mapping dspace="dc.source" elements="name-of-conference" />-->
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
