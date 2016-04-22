@@ -66,13 +66,14 @@
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
-        <crosswalks:mapping dspace="pubs.author-url" elements="author-url" />
+        <!-- <crosswalks:mapping dspace="pubs.author-url" elements="author-url" /> -->
+        <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url" />
         <!-- <crosswalks:mapping dspace="pubs.are-files-confidential" elements="are-files-confidential" /> -->
         <crosswalks:mapping dspace="pubs.awarded-date" elements="awarded-date" />
         <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
         <!-- <crosswalks:mapping dspace="pubs.confidential" elements="confidential" /> -->
         <!-- <crosswalks:mapping dspace="pubs.edition" elements="edition" /> -->
-        <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (edition)~" />
+        <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (Edition)~" />
         <!-- <crosswalks:mapping dspace="pubs.embargo-release-date" elements="embargo-release-date" />-->
         <!-- <crosswalks:mapping dspace="pubs.is-embargoed" elements="is-embargoed" /> -->
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
@@ -81,7 +82,7 @@
         <crosswalks:mapping dspace="pubs.patent-number" elements="patent-number" />
         <crosswalks:mapping dspace="pubs.patent-status" elements="patent-status" />
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
-        <crosswalks:mapping dspace="pubs.publisher-url" elements="publisher-url" />
+   <!-- <crosswalks:mapping dspace="pubs.publisher-url" elements="publisher-url" /> -->
    <!-- <crosswalks:mapping dspace="pubs.publication-status" elements="publication-status" /> -->
         <crosswalks:mapping dspace="pubs.repository-status" elements="repository-status" />
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
