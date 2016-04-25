@@ -43,8 +43,7 @@
         <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] pages(s)~" />
         <crosswalks:mapping dspace="dc.format.extent"	format-elements="~[$number-of-pieces] chapter(s)~" /> 
         <!-- <crosswalks:mapping dspace="dc.format.extent"	elements="pagination" /> -->
-        <crosswalks:mapping dspace="dc.identifier.other" elements="number" />
-        <crosswalks:mapping dspace="dc.identifier.other" format-elements="pii" />
+        <crosswalks:mapping dspace="dc.identifier.other" format-elements="pii,number,associated-identifiers" />
         <crosswalks:mapping dspace="dc.identifier.doi" elements="doi" />
         <crosswalks:mapping dspace="dc.identifier.eissn" elements="eissn" />
         <crosswalks:mapping dspace="dc.identifier.isbn" elements="isbn-10,isbn-13" />
@@ -63,11 +62,14 @@
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,confidential-files-reason" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
+        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-name" />
+        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-reference" />
+        <crosswalks:mapping dspace="dc.description.sponsorship" elements="institution-reference" />
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
         <!-- <crosswalks:mapping dspace="pubs.author-url" elements="author-url" /> -->
-        <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url" />
+        <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url,url" />
         <!-- <crosswalks:mapping dspace="pubs.are-files-confidential" elements="are-files-confidential" /> -->
         <crosswalks:mapping dspace="pubs.awarded-date" elements="awarded-date" />
         <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
