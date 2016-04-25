@@ -54,13 +54,14 @@
         <!-- Apply mapping options to labels -->
         <xsl:apply-templates select="pubs:all-labels" />
     </xsl:template>
-    
+ <!--   
     <xsl:template match="pubs:organisational-details/pubs:group" mode="feed">
     <dim:dim mdschema="pubs" element="organisational-group" qualifier="">
         <!-- replaces '/' with blank space -->
-        <xsl:value-of select="translate(., '/', ' ')" />
-    </dim:dim>
+        <!-- <xsl:value-of select="translate(., '/', ' ')" /> -->
+    <!-- </dim:dim>
     </xsl:template>
+    -->
 
 
     <!-- Select and output the mappings for a datasource, when supplied the full atom feed -->
