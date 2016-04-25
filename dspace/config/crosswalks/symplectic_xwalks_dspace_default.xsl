@@ -40,7 +40,7 @@
         <crosswalks:mapping dspace="dc.format.medium" elements="medium" />
         <!-- <crosswalks:mapping dspace="dc.format.extent" elements="number-of-pieces,pagination" /> -->
         <!-- <crosswalks:mapping dspace="dc.format.extent" elements="number-of-pieces" /> -->
-        <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] pages(s)~" />
+        <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] page(s)~" />
         <crosswalks:mapping dspace="dc.format.extent"	format-elements="~[$number-of-pieces] chapter(s)~" /> 
         <!-- <crosswalks:mapping dspace="dc.format.extent"	elements="pagination" /> -->
         <crosswalks:mapping dspace="dc.identifier.other" format-elements="pii,number,associated-identifiers" />
