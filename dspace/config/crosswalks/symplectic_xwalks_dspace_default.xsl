@@ -43,8 +43,8 @@
         <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] pages(s)~" />
         <crosswalks:mapping dspace="dc.format.extent"	format-elements="~[$number-of-pieces] chapter(s)~" /> 
         <!-- <crosswalks:mapping dspace="dc.format.extent"	elements="pagination" /> -->
-        <crosswalks:mapping dspace="dc.identifier.other" elements="~[$number] (Article number)~" />
-        <crosswalks:mapping dspace="dc.identifier.other" format-elements="~[$pii] (Publisher Item Identifier)~" />
+        <crosswalks:mapping dspace="dc.identifier.other" elements="number" />
+        <crosswalks:mapping dspace="dc.identifier.other" format-elements="pii" />
         <crosswalks:mapping dspace="dc.identifier.doi" elements="doi" />
         <crosswalks:mapping dspace="dc.identifier.eissn" elements="eissn" />
         <crosswalks:mapping dspace="dc.identifier.isbn" elements="isbn-10,isbn-13" />
