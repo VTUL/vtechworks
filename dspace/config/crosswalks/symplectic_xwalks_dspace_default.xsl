@@ -88,6 +88,11 @@
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
     </crosswalks:mappings>
     
+    <dim:field mdschema="pubs" element="organisational-group" qualifier="">
+        <!-- replaces '/' with blank space -->
+        <xsl:value-of select="translate(., '/', ' ')" />
+    </dim:field>
+    
     <!--
         Object level field mappings
         ===========================
