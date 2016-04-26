@@ -85,6 +85,28 @@
 					<hint>Examples: Foreign Affairs, PLOS One, Nature</hint>
 					<required></required>
 				</field>
+								
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>identifier</dc-element>
+					<dc-qualifier>volume</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Volume</label>
+					<input-type>onebox</input-type>
+					<hint>Examples: 29, XVI, 1999</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>identifier</dc-element>
+					<dc-qualifier>issue</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Issue</label>
+					<input-type>onebox</input-type>
+					<hint>Examples: 4, 2, Summer</hint>
+					<required></required>
+				</field>			
 				
 				<field>
 					<dc-schema>dc</dc-schema>
@@ -93,7 +115,7 @@
 					<repeatable>false</repeatable>
 					<label>Date</label>
 					<input-type>date</input-type>
-					<hint>Enter date of publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
+					<hint>Enter date of previous publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
 					<required>You must enter at least the year.</required>
 				</field>
 				
