@@ -134,8 +134,8 @@
 				
 				<field>
 					<dc-schema>dc</dc-schema>
-					<dc-element>description</dc-element>
-					<dc-qualifier>notes</dc-qualifier>
+					<dc-element>relation</dc-element>
+					<dc-qualifier>ispartof</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Conference Title</label>
 					<input-type>onebox</input-type>
