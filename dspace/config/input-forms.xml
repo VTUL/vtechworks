@@ -150,7 +150,7 @@
 					<repeatable>false</repeatable>
 					<label>Journal Title</label>
 					<input-type>onebox</input-type>
-					<hint>Examples: Foreign Affairs, PLOS One, Nature; </hint>
+					<hint>Examples: Foreign Affairs, PLOS One, Nature</hint>
 					<required></required>
 				</field>
 								
