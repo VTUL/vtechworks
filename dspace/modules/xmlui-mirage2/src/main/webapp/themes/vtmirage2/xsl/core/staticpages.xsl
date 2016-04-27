@@ -102,36 +102,97 @@
 	
 	<xsl:template name="HelpStaticPage">
 		<h1>VTechWorks Help</h1>
+		<h2>General Help</h2>
 		<p>
-Ask library staff to help with determining the rights status of your scholarly work, with creating accounts and collections, and more at 
-					<a>
-						<xsl:attribute name="href">
-							<xsl:text>http://j.mp/vtechworks-service</xsl:text>
-						</xsl:attribute>
-						<xsl:text>http://j.mp/vtechworks-service</xsl:text>
-					</a>
-				<br />
-				<br />
-					Sign up for VTechWorks News at 
-					<a>
-						<xsl:attribute name="href">
-							<xsl:text>https://groups.google.com/a/vt.edu/forum/#!forum/vtechworks-g/join</xsl:text>
-						</xsl:attribute>
-						<xsl:text>https://groups.google.com/a/vt.edu/forum/#!forum/vtechworks-g/join</xsl:text>
-					</a>
-					 to get monthly reports of planned features and new content.
-			
+For help with any and all questions with depositing or accessing VTechWorks content, write VTechWorks Support at <strong><a>			<xsl:attribute name="href"><xsl:text>mailto:vtechworks@vt.edu</xsl:text></xsl:attribute><xsl:text>vtechworks@vt.edu</xsl:text></a></strong>. VTechWorks support staff will help you deposit content yourself or will deposit it for you and will help you access existing work. 		
 		</p>
-		  <h1>VTechWorks Metadata</h1>
-
-  <p>VTechWorks uses the <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> and <a href="http://www.ndltd.org/standards/metadata">NDLTD</a> metadata standards to enhance the discoverability, comprehensibility, and use of VTechWorks resources. VTechWorks has also developed custom metadata fields, as well as leveraged encoding guidelines from the <a href="http://www.tdl.org/wp-content/uploads/2009/04/tdl-descriptive-metadata-guidelines-for-etd-v1.pdf">Texas Digital Library</a> and <a href="https://www.loc.gov/standards/mods/mods-outline-3-5.html">MODS</a> metadata standards, to improve the description of VTechWorks resources.</p>
-<p>
-  To access VTechWorks' descriptive, technical, and administrative metadata encoding guidelines, visit the link below:
-  <br />
-  <br />
-<a href="http://hdl.handle.net/10919/64779">VTechWorks Metadata Guidelines</a>
-<br />
-<br />
-These guidelines are updated regularly; for questions or comments, please contact <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a>.</p>
+		<h2>What to Deposit</h2>
+		<p>
+		VTechWorks accepts complete, finished scholarly works created by Virginia Tech faculty, students, and staff: journal articles, conference presentations, dissertations, theses, technical reports, and more. VTechWorks accepts only items that the depositor has the right to deposit, usually because s/he is the creator of the work and has not relinquished to a third party (such as a publisher) the right to post a full copy of the work online. VTechWorks requires that at least one file with the full content of the work be attached to every submission: as a general rule we do not accept metadata-only records, since our purpose is to preserve and provide access to the full text of scholarly works. See the <a href="http://vtechworks.lib.vt.edu/page/policies">Policies</a> page for the full VTechWorks Content Policy.		
+		</p>		
+		<h2>Who Can Deposit</h2>
+		<p>
+		Faculty, students, and staff of Virginia Tech will be given permission to deposit their own work -- that is, work they have created and for which they or Virginia Tech own the copyrights. Authorized representatives of particular Virginia Tech units will also be given permission to deposit work on behalf of their unit, and Virginia Tech Libraries faculty, staff, and students are also often given permission to create and add to collections on behalf of various Virginia Tech units (for instance, the Virginia Tech Cooperative Extension). In some cases, people who do not work or study at Virginia Tech may also be given permission to add content: VTechWorks staff will consider such requests on a case by case basis. 
+		</p>
+		<h2>Right to Deposit</h2>
+		<p>	
+		If you would like to deposit an item you authored that has been previously published, such as a journal article, you should check your publishing contract to see if you have retained the right to deposit (or “self-archive”) the work in an institutional repository. You can also visit the <a href="http://www.sherpa.ac.uk/romeo/search.php">Sherpa/RoMEO database</a> to find out the deposit policies of your journal or publisher. If you are in doubt as to whether you may deposit a work, write <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a> for a consultation. 
+		</p>
+		<h2>Registering for an Account</h2>
+		<p>
+		Currently, you must <a href="https://vtechworks.lib.vt.edu/register">register for a VTechWorks account</a> in order to deposit content, and after you have registered, you must also write <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a> to obtain permission to deposit materials to a particular collection. We hope soon that all Virginia Tech users will be able to log in with their Virginia Tech email address and upload content immediately to the collection of their choice. 
+		</p>
+		<h2>Choosing a Collection</h2>
+		<p>
+		VTechWorks is organized around Communities, Sub-Communities, and Collections. Communities in VTechWorks are usually Virginia Tech colleges, institutes, and large organizational units (e.g., the College of Science, the Biocomplexity Institute, and the University Libraries). Sub-Communities are usually Virginia Tech departments (e.g., Computer Science, Religion and Culture, and Entomology). Collections are sets of related content within Communities or Sub-Communities (e.g., Research Articles, Technical Reports, Conference Proceedings). Generally, you will want to ask for permission to upload material to one or more existing collections in your own department. You may also ask VTechWorks Support to create a new collection for a particular conference, course, lab, or project. Write <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a> for permission to add content to a particular collection or to have a new collection created.		
+		</p>
+		<p>
+		Faculty may also choose to have a collection under their own name in the Faculty Research community (e.g., Charles Darwin, Marie Curie, George Washington Carver). VTechWorks staff can assist in cross-listing this content in departmental or institute collections. 
+		</p>
+		<h2>File Names, Sizes, and Formats</h2>
+		<h3>File Names</h3>
+		<p>	
+		Filenames for documents you deposit must be 50 characters or less, including the file extension (.pdf, .docx, .xlsx, .csv). Filenames may not include spaces or special characters. 
+		</p>
+		<h3>File Sizes</h3>
+		<p>
+		VTechWorks has no restrictions on file sizes. However, we do recommend that files over 60Mb (megabytes) be compressed if possible in order to save space and increase ease access for content viewers: PDFs and images in particular can often be optimized for size in a desktop application (such as Adobe Acrobat or Adobe Photoshop) before upload. Files over 2GB (gigabytes) may also be difficult to upload through the web interface: large files can be given to VTechWorks staff on flash drives or hard drives for command-line upload. Write <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a> for help.
+		</p>
+		<h3>File Formats</h3>
+		<p>
+		VTechWorks accepts more than 75 common file formats. For text documents, the archival PDF/A format is preferred: in Acrobat Pro, for instance, you can choose File --> Save As Other --> Archival PDF (PDF/A) to save your text in the approved format for long-term preservation. 
+		</p>
+		<h2>Describing Your Work (Metadata)</h2>
+		<p>
+		We strongly recommend that you add as much accurate and specific information about your submission as you can, since this will enable others to find it. Different collections and item types may have different fields available in the web submission form. Some tips for the most important fields for all item types: 
+		</p>
+		<h3>Title</h3>
+		<p>
+		Enter the title or name of the item. If a title is not provided, create one that appropriately describes the item. <em>Examples: Extended Boolean Information Retrieval, Ossian and the Genres of Culture, Chemistry of Arsenic Removal During Coagulation and Fe-Mn Oxidation</em>
+		</p>
+		<h3>Author(s)/Creator(s)</h3>
+		<p>	
+		Enter the name of each author or creator. <em>Examples: Faulkner, William; Einstein, Albert; Lovelace, Ada</em>
+		</p>
+		<h3>Date</h3>
+		<p>
+		Enter the date of previous publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. <em>Examples: 2010, 1969 July 01, 1995 August</em>
+		</p>
+		<h3>Identifiers</h3>
+		<p>
+		If the item has any identification numbers or codes associated with it, please enter them. <em>Examples: DOI 10.1056/NEJMoa1510991, URL http://www.johncairns.net/ebook2.htm, ISSN 0272-3638</em>
+		</p>
+		<h3>Abstract</h3>
+		<p>
+		Enter a brief summary of the item. Preferred length is a single paragraph or about 300 words, although you may enter an abstract of any length. 		
+		</p>
+		<h3>Notes</h3>
+		<p>
+		Any information that you feel could improve users’ ability to discover, understand, and use the publication that doesn’t fit into an existing field in the submission form can go in the “Notes” field. 		
+		</p>
+		<p>
+		More thorough information for metadata professionals can be found in the <a href="http://hdl.handle.net/10919/64779">VTechWorks Metadata Guidelines</a>. 
+		</p>					
+		<h2>Allowing Others to Read and Reuse Your Work</h2>
+		<h3>Licenses</h3>
+		<p>
+		We strongly recommend that you choose a <a href="https://creativecommons.org">Creative Commons license or mark</a> that will let others know under what conditions they may use your work. Available options in the submission process include: 
+		</p>
+		<h4>Public Domain - no known copyright</h4>
+		<p>
+		The Public Domain mark by Creative Commons indicates that neither you nor anyone else currently has rights to the work. Common reasons for a work to be in the public domain include because its copyright has expired, because it was created by a government body, or because it is factual and therefore does not meet the copyright standard for original creative expression. The Public Domain mark is most often appropriate for texts and images published before the early 20th century, government documents, datasets, graphs, and charts.	
+		</p>
+		<h4>CC0 - no rights reserved</h4>
+		<p>
+		CC0 ("Creative Commons Zero") enables you to waive your rights in your works and thereby place them as completely as possible in the public domain, so that others may freely build upon, enhance, and reuse your works for any purposes without restriction under copyright or database law.		
+		</p>
+		<h4>Creative Commons - some rights reserved</h4>
+		<p>
+		Creative Commons licenses allow you to retain some rights: this option will let you decide and declare whether to allow or refuse permission for commercial uses of your work, whether to allow or refuse permission to modify your work, or whether to allow modifications of your work only on the condition that modifiers also allow others to modify the new work ("ShareAlike").
+		</p>
+		<h4>No Creative Commons license</h4>
+		<p>
+		You need not specify a Creative Commons license or mark for the work you are uploading, but in that case, people who find the content online will not know whether or how they are permitted to use, share, redistribute, remix, tweak, and build upon your work.
+		</p>						
   </xsl:template>
 </xsl:stylesheet>
