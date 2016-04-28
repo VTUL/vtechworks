@@ -4,21 +4,21 @@
     Symplectic Crosswalks Toolkit: version 1.4.0
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:crosswalks="info:symplectic/crosswalks"
-                xmlns:atom="http://www.w3.org/2005/Atom"
-                xmlns:pubs="http://www.symplectic.co.uk/publications/atom-api"
-                exclude-result-prefixes="atom pubs crosswalks"
-                version="1.0">
+    xmlns:crosswalks="info:symplectic/crosswalks"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:pubs="http://www.symplectic.co.uk/publications/atom-api"
+    exclude-result-prefixes="atom pubs crosswalks"
+    version="1.0">
     <!-- Required for all crosswalks - import the standard toolkit -->
     <xsl:import href="symplectic_xwalks_toolkit.xsl" />
-
+    
     <!-- Required for all crosswalks - load the data islands from the crosswalk stylesheet -->
     <xsl:variable name="crosswalk-mappings" select="document('')//crosswalks:mappings" />
     <xsl:variable name="crosswalk-object-mappings" select="document('')//crosswalks:object-mappings" />
     <!-- xsl:variable name="crosswalk-label-mappings" select="document('')//crosswalks:label-mappings" / -->
     <xsl:variable name="crosswalk-dictionaries" select="document('')//crosswalks:dictionaries" />
     <xsl:variable name="crosswalk-datasource-precedences" select="document('')//crosswalks:datasource-precedences" />
-
+    
     <!--
         Data Source Mappings
         ====================
@@ -27,59 +27,93 @@
     <crosswalks:mappings for="dspace">
         <!-- Default mappings -->
         <crosswalks:mapping dspace="dc.type" feed-elements="category" />
-        <crosswalks:mapping dspace="dc.identifier.citation" format-elements="[$journal], [$parent-title], [$publication-date:date(yyyy)], [$edition], [$volume] ~([$issue])~, ~pp. [$pagination]~" />
-
-        <crosswalks:mapping dspace="dc.contributor.author" elements="authors" />
+        <crosswalks:mapping dspace="dc.type.other" elements="types" />
+        <!--<crosswalks:mapping dspace="dc.identifier.citation" format-elements="[$journal], [$parent-title], [$publication-date:date(yyyy)], [$edition], [$volume] ~([$issue])~, ~pp. [$pagination]~" />
+        -->
+        <crosswalks:mapping dspace="dc.contributor.author" elements="authors,associated-authors" />
         <crosswalks:mapping dspace="dc.contributor.editor" elements="editors" />
-        <crosswalks:mapping dspace="dc.contributor.other" elements="associated-authors" />
         <crosswalks:mapping dspace="dc.coverage.spatial" elements="location" />
+        <!--<crosswalks:mapping dspace="dc.date.created" elements="record-created-at-source-date" />-->
         <crosswalks:mapping dspace="dc.date.issued" elements="publication-date" />
+        <crosswalks:mapping dspace="dc.date.available" elements="online-publication-date" />
         <crosswalks:mapping dspace="dc.description.abstract" elements="abstract" />
-        <crosswalks:mapping dspace="dc.format" elements="medium" />
-        <crosswalks:mapping dspace="dc.format.extent" elements="number-of-pieces,pagination" />
-        <crosswalks:mapping dspace="dc.identifier" elements="author-url,number,patent-number,pii" />
+        <crosswalks:mapping dspace="dc.format.medium" elements="medium" />
+        <!-- <crosswalks:mapping dspace="dc.format.extent" elements="number-of-pieces,pagination" /> -->
+        <!-- <crosswalks:mapping dspace="dc.format.extent" elements="number-of-pieces" /> -->
+        <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] page(s)~" />
+        <crosswalks:mapping dspace="dc.format.extent"	format-elements="~[$number-of-pieces] chapter(s)~" /> 
+        <!-- <crosswalks:mapping dspace="dc.format.extent"	elements="pagination" /> -->
+        <crosswalks:mapping dspace="dc.identifier.other" format-elements="pii,number,external-identifiers" />
         <crosswalks:mapping dspace="dc.identifier.doi" elements="doi" />
         <crosswalks:mapping dspace="dc.identifier.eissn" elements="eissn" />
         <crosswalks:mapping dspace="dc.identifier.isbn" elements="isbn-10,isbn-13" />
         <crosswalks:mapping dspace="dc.identifier.issn" elements="issn" />
         <crosswalks:mapping dspace="dc.language" elements="language" />
         <crosswalks:mapping dspace="dc.publisher" elements="publisher" />
-        <crosswalks:mapping dspace="dc.relation.isPartOf" elements="journal,parent-title,series" />
-        <crosswalks:mapping dspace="dc.source" elements="name-of-conference" />
+        <crosswalks:mapping dspace="dc.relation.ispartof" elements="name-of-conference,parent-title,series" />
+        <crosswalks:mapping dspace="dc.title.serial" elements="journal" />
+        <crosswalks:mapping dspace="dc.identifier.volume" elements="volume" />
+        <crosswalks:mapping dspace="dc.identifier.issue" elements="issue" />
+        <!--<crosswalks:mapping dspace="dc.source" elements="name-of-conference" />-->
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
+        <!--<crosswalks:mapping dspace="dc.date.accessioned" elements="acceptance-date" />-->
+        <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
+        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
+        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-invited] (Invited?)~" />
+        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type] (Peer reviewed?)~" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,confidential-files-reason" />
+        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
+        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-name" />
+        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-reference" />
+        <crosswalks:mapping dspace="dc.description.sponsorship" elements="institution-reference" />
+        <crosswalks:mapping dspace="dc.description.version" elements="version" />
+        <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
+        <crosswalks:mapping dspace="dcterms.references" elements="references" />
+        <!-- <crosswalks:mapping dspace="pubs.author-url" elements="author-url" /> -->
+        <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url,url" />
+        <!-- <crosswalks:mapping dspace="pubs.are-files-confidential" elements="are-files-confidential" /> -->
         <crosswalks:mapping dspace="pubs.awarded-date" elements="awarded-date" />
         <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
-        <crosswalks:mapping dspace="pubs.confidential" elements="confidential" />
-        <crosswalks:mapping dspace="pubs.edition" elements="edition" />
+        <!-- <crosswalks:mapping dspace="pubs.confidential" elements="confidential" /> -->
+        <!-- <crosswalks:mapping dspace="pubs.edition" elements="edition" /> -->
+        <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (Edition)~" />
+        <!-- <crosswalks:mapping dspace="pubs.embargo-release-date" elements="embargo-release-date" />-->
+        <!-- <crosswalks:mapping dspace="pubs.is-embargoed" elements="is-embargoed" /> -->
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
-        <crosswalks:mapping dspace="pubs.issue" elements="issue" />
-        <crosswalks:mapping dspace="pubs.notes" elements="notes" />
+        <!--<crosswalks:mapping dspace="pubs.pii" elements="pii" />-->
+        <crosswalks:mapping dspace="pubs.patent-number" elements="patent-number" />
         <crosswalks:mapping dspace="pubs.patent-status" elements="patent-status" />
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
-        <crosswalks:mapping dspace="pubs.publication-status" elements="publication-status" />
+   <!-- <crosswalks:mapping dspace="pubs.publisher-url" elements="publisher-url" /> -->
+   <!-- <crosswalks:mapping dspace="pubs.publication-status" elements="publication-status" /> -->
+        <crosswalks:mapping dspace="pubs.repository-status" elements="repository-status" />
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
-        <crosswalks:mapping dspace="pubs.version" elements="version" />
-        <crosswalks:mapping dspace="pubs.volume" elements="volume" />
     </crosswalks:mappings>
-
+    
+   <!-- <dim:field mdschema="pubs" element="organisational-group" qualifier="">
+        replaces '/' with blank space
+        <xsl:value-of select="translate(., '/', ' ')" />
+    </dim:field> -->
+    
     <!--
         Object level field mappings
         ===========================
         Map values from the publication fields into repository fields
     -->
     <crosswalks:object-mappings for="dspace">
-        <crosswalks:mapping dspace="dc.date.available" elements="acceptance-date" />
-        <crosswalks:mapping dspace="pubs.notes" elements="p-requested-embargo-period" />
-        <crosswalks:mapping dspace="pubs.notes" elements="fulltext-comment" />
-        <!--
+        <!--<crosswalks:mapping dspace="pubs.requested-embargo-period" elements="p-requested-embargo-period" />
+            <crosswalks:mapping dspace="pubs.notes" elements="p-requested-embargo-period" /> -->
+            <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment" />
             These mappings are for the OA location selection
-            <crosswalks:mapping dspace="dc.identifier.uri" elements="p-oa-location" />
+        <!--<crosswalks:mapping dspace="dc.identifier.uri" elements="p-oa-location" /> -->
             <crosswalks:mapping dspace="dc.description.version" elements="p-oa-location-file-version" />
-        -->
+        <crosswalks:mapping dspace="dc.rights" elements="p-author-license" />
+        <crosswalks:mapping dspace="dc.rights.uri" elements="p-author-license" />
+        <!--Added to allow mapping to customized Creative Commons 4.0 license text, as well as to add associated Creative Commons 4.0 URIs-->
     </crosswalks:object-mappings>
-
+    
     <!--
         Label mappings
         ==============
@@ -96,7 +130,7 @@
             <crosswalks:label-mapping dspace="dc.subject" />
         </crosswalks:label-mappings>
     -->
-
+    
     <!--
         Data Dictionaries
         =================
@@ -122,9 +156,25 @@
             <crosswalks:entry elements="http://www.symplectic.co.uk/publications/atom-terms/1.0/software"               dspace="software" />
             <crosswalks:entry elements="http://www.symplectic.co.uk/publications/atom-terms/1.0/thesis-or-dissertation" dspace="thesis" />
         </crosswalks:dictionary>
+    
+    <crosswalks:dictionary dspace="dc.rights" mapped-only="true">
+        <crosswalks:entry elements="CC BY" dspace="Attribution 4.0 International" />
+        <crosswalks:entry elements="CC BY-ND" dspace="Attribution-NoDerivatives 4.0 International" />
+        <crosswalks:entry elements="CC BY-SA" dspace="Attribution-ShareAlike 4.0 International" />
+        <crosswalks:entry elements="CC BY-NC" dspace="Attribution-NonCommercial 4.0 International" />
+        <crosswalks:entry elements="CC BY-NC-ND" dspace="Attribution-NonCommercial-NoDerivatives 4.0 International" />
+        <crosswalks:entry elements="CC BY-NC-SA" dspace="Attribution-NonCommercial-ShareAlike 4.0 International" />
+    </crosswalks:dictionary>
+    <crosswalks:dictionary dspace="dc.rights.uri" mapped-only="true">
+        <crosswalks:entry elements="CC BY" dspace="http://creativecommons.org/licenses/by/4.0/" />
+        <crosswalks:entry elements="CC BY-ND" dspace="http://creativecommons.org/licenses/by-nd/4.0/" />
+        <crosswalks:entry elements="CC BY-SA" dspace="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <crosswalks:entry elements="CC BY-NC" dspace="http://creativecommons.org/licenses/by-nc/4.0/" />
+        <crosswalks:entry elements="CC BY-NC-ND" dspace="http://creativecommons.org/licenses/by-nc-nd/4.0/" />
+        <crosswalks:entry elements="CC BY-NC-SA" dspace="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+    </crosswalks:dictionary>
     </crosswalks:dictionaries>
-
-
+    
     <!--
         Data Source Precedences
         =======================
