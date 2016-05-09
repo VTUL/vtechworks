@@ -36,11 +36,8 @@
         <crosswalks:mapping dspace="dc.date.available" elements="online-publication-date" />
         <crosswalks:mapping dspace="dc.description.abstract" elements="abstract" />
         <crosswalks:mapping dspace="dc.format.medium" elements="medium" />
-        <!-- <crosswalks:mapping dspace="dc.format.extent" elements="number-of-pieces,pagination" /> -->
-        <!-- <crosswalks:mapping dspace="dc.format.extent" elements="number-of-pieces" /> -->
         <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] page(s)~" />
         <crosswalks:mapping dspace="dc.format.extent"	format-elements="~[$number-of-pieces] chapter(s)~" /> 
-        <!-- <crosswalks:mapping dspace="dc.format.extent"	elements="pagination" /> -->
         <crosswalks:mapping dspace="dc.identifier.other" format-elements="pii,number,external-identifiers" />
         <crosswalks:mapping dspace="dc.identifier.doi" elements="doi" />
         <crosswalks:mapping dspace="dc.identifier.eissn" elements="eissn" />
@@ -52,7 +49,6 @@
         <crosswalks:mapping dspace="dc.title.serial" elements="journal" />
         <crosswalks:mapping dspace="dc.identifier.volume" elements="volume" />
         <crosswalks:mapping dspace="dc.identifier.issue" elements="issue" />
-        <!--<crosswalks:mapping dspace="dc.source" elements="name-of-conference" />-->
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
         <!--<crosswalks:mapping dspace="dc.date.accessioned" elements="acceptance-date" />-->
@@ -68,32 +64,21 @@
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
-        <!-- <crosswalks:mapping dspace="pubs.author-url" elements="author-url" /> -->
         <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url,url" />
         <!-- <crosswalks:mapping dspace="pubs.are-files-confidential" elements="are-files-confidential" /> -->
         <crosswalks:mapping dspace="pubs.awarded-date" elements="awarded-date" />
         <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
         <!-- <crosswalks:mapping dspace="pubs.confidential" elements="confidential" /> -->
-        <!-- <crosswalks:mapping dspace="pubs.edition" elements="edition" /> -->
         <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (Edition)~" />
-        <!-- <crosswalks:mapping dspace="pubs.embargo-release-date" elements="embargo-release-date" />-->
-        <!-- <crosswalks:mapping dspace="pubs.is-embargoed" elements="is-embargoed" /> -->
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
-        <!--<crosswalks:mapping dspace="pubs.pii" elements="pii" />-->
         <crosswalks:mapping dspace="pubs.patent-number" elements="patent-number" />
         <crosswalks:mapping dspace="pubs.patent-status" elements="patent-status" />
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
-   <!-- <crosswalks:mapping dspace="pubs.publisher-url" elements="publisher-url" /> -->
-   <!-- <crosswalks:mapping dspace="pubs.publication-status" elements="publication-status" /> -->
         <crosswalks:mapping dspace="pubs.repository-status" elements="repository-status" />
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
     </crosswalks:mappings>
     
-   <!-- <dim:field mdschema="pubs" element="organisational-group" qualifier="">
-        replaces '/' with blank space
-        <xsl:value-of select="translate(., '/', ' ')" />
-    </dim:field> -->
     
     <!--
         Object level field mappings
@@ -101,8 +86,6 @@
         Map values from the publication fields into repository fields
     -->
     <crosswalks:object-mappings for="dspace">
-        <!--<crosswalks:mapping dspace="pubs.requested-embargo-period" elements="p-requested-embargo-period" />
-            <crosswalks:mapping dspace="pubs.notes" elements="p-requested-embargo-period" /> -->
             <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment" />
             These mappings are for the OA location selection
         <!--<crosswalks:mapping dspace="dc.identifier.uri" elements="p-oa-location" /> -->
