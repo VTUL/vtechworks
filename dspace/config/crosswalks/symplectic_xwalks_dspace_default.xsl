@@ -51,7 +51,7 @@
         <crosswalks:mapping dspace="dc.identifier.issue" elements="issue" />
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
-        <!--<crosswalks:mapping dspace="dc.date.accessioned" elements="acceptance-date" />-->
+        <crosswalks:mapping dspace="dc.description.provenance" elements="acceptance-date" />
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-invited] (Invited?)~" />
