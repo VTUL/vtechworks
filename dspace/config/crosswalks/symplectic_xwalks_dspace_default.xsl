@@ -33,6 +33,7 @@
         <crosswalks:mapping dspace="dc.coverage.spatial" elements="location" />
         <crosswalks:mapping dspace="dc.date.issued" elements="publication-date" />
         <crosswalks:mapping dspace="dc.date.available" elements="online-publication-date" />
+        <crosswalks:mapping dspace="dc.date.accepted" elements="acceptance-date" />
         <crosswalks:mapping dspace="dc.description.abstract" elements="abstract" />
         <crosswalks:mapping dspace="dc.format.medium" elements="medium" />
         <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] page(s)~" />
@@ -54,7 +55,7 @@
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-invited] (Invited?)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type] (Peer reviewed?)~" />
-        <crosswalks:mapping dspace="dc.description.provenance" elements="acceptance-date,addresses,are-files-confidential,confidential,confidential-files-reason,record-created-at-source-date" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,are-files-confidential,confidential,confidential-files-reason,record-created-at-source-date" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-name" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-reference" />
