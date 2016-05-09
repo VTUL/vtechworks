@@ -31,7 +31,6 @@
         <crosswalks:mapping dspace="dc.contributor.author" elements="authors,associated-authors" />
         <crosswalks:mapping dspace="dc.contributor.editor" elements="editors" />
         <crosswalks:mapping dspace="dc.coverage.spatial" elements="location" />
-        <crosswalks:mapping dspace="dc.description.provenance" elements="record-created-at-source-date" />
         <crosswalks:mapping dspace="dc.date.issued" elements="publication-date" />
         <crosswalks:mapping dspace="dc.date.available" elements="online-publication-date" />
         <crosswalks:mapping dspace="dc.description.abstract" elements="abstract" />
@@ -51,12 +50,11 @@
         <crosswalks:mapping dspace="dc.identifier.issue" elements="issue" />
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
-        <crosswalks:mapping dspace="dc.description.provenance" elements="acceptance-date" />
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-invited] (Invited?)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type] (Peer reviewed?)~" />
-        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,confidential-files-reason" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="acceptance-date,addresses,are-files-confidential,confidential,confidential-files-reason,record-created-at-source-date" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-name" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-reference" />
@@ -65,10 +63,8 @@
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
         <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url,url" />
-        <crosswalks:mapping dspace="dc.description.provenance" elements="are-files-confidential" />
         <crosswalks:mapping dspace="pubs.awarded-date" elements="awarded-date" />
         <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
-        <crosswalks:mapping dspace="dc.description.provenance" elements="confidential" />
         <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (Edition)~" />
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
