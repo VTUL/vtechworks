@@ -56,10 +56,7 @@
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-invited] (Invited?)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type] (Peer reviewed?)~" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,are-files-confidential,confidential,confidential-files-reason,record-created-at-source-date" />
-        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements" />
-        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-name" />
-        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funder-reference" />
-        <crosswalks:mapping dspace="dc.description.sponsorship" elements="institution-reference" />
+        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements,funder-name,funder-reference,institution-reference" />
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
