@@ -65,10 +65,10 @@
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
         <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url,url" />
-        <!-- <crosswalks:mapping dspace="pubs.are-files-confidential" elements="are-files-confidential" /> -->
+        <crosswalks:mapping dspace="pubs.are-files-confidential" elements="are-files-confidential" />
         <crosswalks:mapping dspace="pubs.awarded-date" elements="awarded-date" />
         <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
-        <!-- <crosswalks:mapping dspace="pubs.confidential" elements="confidential" /> -->
+        <crosswalks:mapping dspace="pubs.confidential" elements="confidential" />
         <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (Edition)~" />
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
