@@ -83,6 +83,7 @@
     -->
     <crosswalks:object-mappings for="dspace">
             <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment" />
+            <crosswalks:mapping dspace="dc.description.notes" elements="c-invited" />
             These mappings are for the OA location selection
             <crosswalks:mapping dspace="dc.identifier.url" elements="p-oa-location" />
             <crosswalks:mapping dspace="dc.description.version" elements="p-oa-location-file-version" />
