@@ -55,7 +55,10 @@
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-invited] (Invited?)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type] (Peer reviewed?)~" />
-        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,are-files-confidential,confidential,confidential-files-reason,record-created-at-source-date" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,record-created-at-source-date" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="~[$are-files-confidential] (Are files confidential?)" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="~[$confidential] (Confidential?)" />
+        <crosswalks:mapping dspace="dc.description.provenance" elements="~[$confidential-files-reason] (Reason for confidentiality)" />
         <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements,funder-name,funder-reference,institution-reference" />
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
