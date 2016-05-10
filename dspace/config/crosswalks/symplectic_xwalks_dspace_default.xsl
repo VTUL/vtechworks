@@ -33,7 +33,7 @@
         <crosswalks:mapping dspace="dc.coverage.spatial" elements="location" />
         <crosswalks:mapping dspace="dc.date.issued" elements="publication-date" />
         <crosswalks:mapping dspace="dc.date.available" elements="online-publication-date" />
-        <crosswalks:mapping dspace="dc.date.accepted" elements="acceptance-date" />
+        <crosswalks:mapping dspace="dcterms.dateAccepted" elements="acceptance-date" />
         <crosswalks:mapping dspace="dc.description.abstract" elements="abstract" />
         <crosswalks:mapping dspace="dc.format.medium" elements="medium" />
         <crosswalks:mapping dspace="dc.format.extent" format-elements="~[$pagination] page(s)~" />
