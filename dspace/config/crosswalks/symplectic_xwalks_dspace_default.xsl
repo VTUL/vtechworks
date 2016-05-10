@@ -53,7 +53,6 @@
         <crosswalks:mapping dspace="dc.title" elements="title" />
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
-        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-invited] (Invited?)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type] (Peer reviewed?)~" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,record-created-at-source-date" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$are-files-confidential] (Are files confidential?)" />
@@ -145,6 +144,7 @@
         <crosswalks:entry elements="Publisher's own licence" dspace="Publisher's own licence" />
         <crosswalks:entry elements="Unknown" dspace="Unknown" />
     </crosswalks:dictionary>
+    
     <crosswalks:dictionary dspace="dc.rights.uri" mapped-only="true">
         <crosswalks:entry elements="CC BY" dspace="http://creativecommons.org/licenses/by/4.0/" />
         <crosswalks:entry elements="CC BY-ND" dspace="http://creativecommons.org/licenses/by-nd/4.0/" />
@@ -153,6 +153,11 @@
         <crosswalks:entry elements="CC BY-NC-ND" dspace="http://creativecommons.org/licenses/by-nc-nd/4.0/" />
         <crosswalks:entry elements="CC BY-NC-SA" dspace="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
     </crosswalks:dictionary>
+    
+    <crosswalks:dictionary dspace="c-invited" mapped-only="true">
+        <crosswalks:entry elements="true" dspace="Invited publication" />
+    </crosswalks:dictionary>
+    
     </crosswalks:dictionaries>
     
     <!--
