@@ -84,8 +84,8 @@
             These mappings are for the OA location selection
             <crosswalks:mapping dspace="dc.identifier.url" elements="p-oa-location" />
             <crosswalks:mapping dspace="dc.description.version" elements="p-oa-location-file-version" />
-        <crosswalks:mapping dspace="dc.rights" elements="p-author-license" />
-        <crosswalks:mapping dspace="dc.rights.uri" elements="p-author-license" />
+        <crosswalks:mapping dspace="dc.rights" elements="p-author-license,p-publisher-licence" />
+        <crosswalks:mapping dspace="dc.rights.uri" elements="p-author-license,p-publisher-licence" />
         <!--Added to allow mapping to customized Creative Commons 4.0 license text, as well as to add associated Creative Commons 4.0 URIs-->
     </crosswalks:object-mappings>
     
@@ -139,6 +139,8 @@
         <crosswalks:entry elements="CC BY-NC" dspace="Attribution-NonCommercial 4.0 International" />
         <crosswalks:entry elements="CC BY-NC-ND" dspace="Attribution-NonCommercial-NoDerivatives 4.0 International" />
         <crosswalks:entry elements="CC BY-NC-SA" dspace="Attribution-NonCommercial-ShareAlike 4.0 International" />
+        <crosswalks:entry elements="Publisher's own licence" dspace="Publisher's own licence" />
+        <crosswalks:entry elements="Unknown" dspace="Unknown" />
     </crosswalks:dictionary>
     <crosswalks:dictionary dspace="dc.rights.uri" mapped-only="true">
         <crosswalks:entry elements="CC BY" dspace="http://creativecommons.org/licenses/by/4.0/" />
