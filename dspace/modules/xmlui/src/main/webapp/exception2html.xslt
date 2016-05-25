@@ -88,7 +88,7 @@ Scott Phillips adapted it for Manakin's need.
 
         <h1><xsl:value-of select="$pageTitle"/></h1>
         <p class="home">
-          <a><xsl:attribute name="href"><xsl:value-of select="$contextPath"/>/</xsl:attribute><i18n:text>xmlui.general.go_home</i18n:text></a>
+          <a><xsl:attribute name="href"><xsl:value-of select="'/'"/></xsl:attribute><i18n:text>xmlui.general.go_home</i18n:text></a>
         </p>
 
         <p class="message">
