@@ -427,8 +427,8 @@
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <li>
-                                        <form style="display: inline" action="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='loginURL']}" method="get">
+                                        <form style="display: inline" action="/login"
+ method="get">
                                             <button class="navbar-toggle navbar-link">
                                             <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
                                             </button>
@@ -479,8 +479,8 @@
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <li>
-                                        <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='loginURL']}">
+                                        <a href="/login"
+                           >
                                             <span class="hidden-xs">
                                                 <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
                                             </span>
@@ -725,7 +725,7 @@
         <xsl:if test="$altmetricHandle">
             <div class="row">
             	<div class="col-sm-3 col-xs-12">
-                	<div class="altmetric-embed" data-badge-type="medium-donut" data-badge-details="right" data-link-target="_blank">
+                	<div class="altmetric-embed" data-badge-type="medium-donut" data-badge-details="right" data-hide-no-mentions="true" data-link-target="_blank">
                 		<xsl:attribute name="data-handle"><xsl:value-of select="$altmetricHandle"/></xsl:attribute>
                 	</div>
                </div>
