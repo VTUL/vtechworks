@@ -116,7 +116,23 @@ For help with any and all questions with depositing or accessing VTechWorks cont
 		</p>
 		<h2>Right to Deposit</h2>
 		<p>	
-		If you would like to deposit an item you authored that has been previously published, such as a journal article, you should check your publishing contract to see if you have retained the right to deposit (or “self-archive”) the work in an institutional repository. You can also visit the <a href="http://www.sherpa.ac.uk/romeo/search.php">Sherpa/RoMEO database</a> to find out the deposit policies of your journal or publisher. If you are in doubt as to whether you may deposit a work, write <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a> for a consultation. 
+		If you would like to deposit an item you authored that has been previously published, such as a journal article, you should check your publishing contract to see if you have retained the right to deposit (or “self-archive”) the work in an institutional repository. You can also visit the <a href="http://www.sherpa.ac.uk/romeo/search.php">Sherpa/RoMEO database</a> to find out the deposit policies of your journal or publisher.</p> 
+		<h3>Some Definitions of Versions</h3>		
+		<ul>
+		<li>Draft Version = A work in preparation that has not yet been submitted to a scholarly publisher</li>
+		<li>Submitted Version = A work submitted to a scholarly publisher that has not yet been refereed or peer-reviewed: a "pre-print"</li>
+		<li>Accepted Version = A work accepted for publication by a scholarly publisher that has been refereed or peer-reviewed: a "post-print"</li>
+		<li>Publisher's Version = A work that has been refereed or peer-reviewed, copy-edited, typeset, and formatted by a scholarly publisher: an "offprint," "reprint," or "proof"</li>
+		</ul>
+		<h3>Some Definitions of SHERPA/RoMEO Journal and Publisher Policies</h3>
+		<ul>
+		<li>"Green" journals and publishers allow you to deposit a draft version, submitted version (pre peer review), or accepted version (post peer review) of your work; you may also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
+		<li>"Blue" journals and publishers allow you to deposit an accepted version (post peer review) of your work; you may also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
+		<li>"Yellow" journals and publishers allow you to deposit a draft version or submitted version (pre peer review) of your work</li>
+		<li>"White" journals and publishers do not allow you to deposit any version of your work</li>	
+		<li>"Gray" journals and publishers are those whose policies concerning deposit are unknown</li>			
+		</ul>
+		<p>If you are in doubt as to whether you may deposit a work, write <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a> for a consultation. 
 		</p>
 		<h2>Registering for an Account</h2>
 		<p>

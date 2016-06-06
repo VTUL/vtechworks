@@ -84,9 +84,9 @@
                  from under pageMeta. -->
                     <form id="ds-search-form" class="" method="post">
                         <xsl:attribute name="action">
-                            <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+                            
                             <xsl:value-of
-                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+                                    select="'/discover'"/>
                         </xsl:attribute>
                         <fieldset>
                             <div class="input-group">
@@ -113,7 +113,7 @@
                                                     select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
                                             <xsl:text>/handle/&quot; + radio.value + &quot;</xsl:text>
                                             <xsl:value-of
-                                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+                                                    select="'/discover'"/>
                                             <xsl:text>&quot; ; </xsl:text>
                                                     <xsl:text>
                                                         }

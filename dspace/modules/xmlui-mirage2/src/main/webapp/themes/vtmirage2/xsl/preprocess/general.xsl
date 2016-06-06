@@ -105,7 +105,7 @@
         <pageMeta>
             <xsl:call-template name="copy-attributes"/>
             <xsl:apply-templates select="*[not(self::dri:trail)]"/>
-            <trail target="{$context-path}/">
+            <trail target="'/'">
                 <i18n:text catalogue="default">xmlui.general.dspace_home</i18n:text>
             </trail>
             <trail>
@@ -117,7 +117,7 @@
         <pageMeta>
             <xsl:call-template name="copy-attributes"/>
             <xsl:apply-templates select="*[not(self::dri:trail)]"/>
-            <trail target="{$context-path}/">
+            <trail target="'/'">
                 <i18n:text catalogue="default">xmlui.general.dspace_home</i18n:text>
             </trail>
             <trail>
@@ -129,7 +129,7 @@
         <pageMeta>
             <xsl:call-template name="copy-attributes"/>
             <xsl:apply-templates select="*[not(self::dri:trail)]"/>
-            <trail target="{$context-path}/">
+            <trail target="'/'">
                 <i18n:text catalogue="default">xmlui.general.dspace_home</i18n:text>
             </trail>
             <trail>
@@ -146,7 +146,7 @@
             <metadata element="framing" qualifier="modal">true</metadata>
         </xsl:if>
         <xsl:if test="not(dri:trail)">
-            <trail target="{$context-path}/">
+            <trail target="'/'">
                 <i18n:text catalogue="default">xmlui.general.dspace_home</i18n:text>
             </trail>
             <trail>
