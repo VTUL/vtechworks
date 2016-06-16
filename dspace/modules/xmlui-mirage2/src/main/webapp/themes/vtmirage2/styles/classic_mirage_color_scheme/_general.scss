@@ -235,7 +235,7 @@ header {
         margin-bottom: 0px;
         border: none;
     }
-    
+
 	.navbar-brand img{
         // increase logo size
 		height: 50px;
@@ -329,7 +329,9 @@ header {
     .breadcrumb{
         background-color: transparent;
         margin-bottom: 0;
-
+        > a  {
+            color: white;
+        }
         > li {
             color: white;
             > a  {
