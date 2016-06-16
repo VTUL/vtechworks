@@ -245,9 +245,9 @@
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>author</dc-qualifier>
 					<repeatable>true</repeatable>
-					<label>Authors</label>
+					<label>Author(s)/Creator(s)</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of the authors of this item.</hint>
+					<hint>Enter the name(s) of the author(s) or creator(s). Enter each name individually, then click "Add." To use VTechWorks' name lookup function, click "Lookup" and you will be directed to an index of VTechWorks' creator and contributor names. Examples: Faulkner, William; Einstein, Albert; Lovelace, Ada</hint>
 					<required>You must enter the author of this item.</required>
 				</field>
 
@@ -258,7 +258,7 @@
 					<repeatable>false</repeatable>
 					<label>Title</label>
 					<input-type>onebox</input-type>
-					<hint>Enter the main title of the item.</hint>
+					<hint>Enter the title or name of the item. If a title is not provided, create one that appropriately describes the item. Examples: Extended Boolean Information Retrieval, Ossian and the Genres of Culture, Chemistry of Arsenic Removal During Coagulation and Fe-Mn Oxidation</hint>
 					<required>You must enter a main title for this item.</required>
 				</field>
 				
@@ -269,7 +269,7 @@
 					<repeatable>true</repeatable>
 					<label>Other Titles</label>
 					<input-type>onebox</input-type>
-					<hint>If the item has any alternative titles, please enter them here.</hint>
+					<hint>Enter date of publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
 					<required></required>
 				</field>
 				
@@ -278,10 +278,9 @@
 					<dc-element>date</dc-element>
 					<dc-qualifier>issued</dc-qualifier>
 					<repeatable>false</repeatable>
-					<label>Date of Issue</label>
+					<label>Date</label>
 					<input-type>date</input-type>
-					<hint>Please give the date of previous publication or public distribution. 
-					You can leave out the day and/or month if they aren't applicable.</hint>
+					<hint>Enter date of publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
 					<required>You must enter at least the year.</required>
 				</field>
 				
@@ -334,11 +333,9 @@
 					<dc-element>type</dc-element>
 					<dc-qualifier></dc-qualifier>
 					<repeatable>true</repeatable>
-					<label>Type</label>
+					<label>Item Type</label>
 					<input-type value-pairs-name="common_types">dropdown</input-type>
-					<hint>Select the type(s) of content of the item. To select more
-						than one value in the list, you may have to hold down the "CTRL"
-						or "Shift" or "COMMAND" key.</hint>
+					<hint>Select the type(s) of content you are depositing. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" or "COMMAND" key. Examples: Article, Learning Object, Video Recording and Presentation.</hint>
 					<required></required>
 				</field>
 				
@@ -349,10 +346,7 @@
 					<repeatable>false</repeatable>
 					<label>Language</label>
 					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-					<hint>Select the language of the main content of the item. If the
-						language does not appear in the list, please select 'Other'. If
-						the content does not really have a language (for example, if it is
-						a dataset or an image) please select 'N/A'.</hint>
+					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select "N/A." Examples: English, French, Chinese</hint>
 					<required></required>
 				</field>
 				
@@ -364,7 +358,7 @@
 					<repeatable>true</repeatable>
 					<label>Subject Keywords</label>
 					<input-type>twobox</input-type>
-					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus. </hint>
+					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus.</hint>
 					<required></required>
 					<vocabulary>cabt</vocabulary>
 				</field>
@@ -376,7 +370,7 @@
 					<repeatable>false</repeatable>
 					<label>Abstract</label>
 					<input-type>textarea</input-type>
-					<hint>Enter the abstract of the item.</hint>
+					<hint>Enter a brief summary of the item. Preferred length is a single paragraph or about 300 words, although you may enter an abstract of any length.</hint>
 					<required></required>
 				</field>
 				
@@ -462,9 +456,9 @@
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>author</dc-qualifier>
 					<repeatable>true</repeatable>
-					<label>Authors</label>
+					<label>Author(s)/Creator(s)</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of the authors of this item.</hint>
+					<hint>Enter the name(s) of the author(s) or creator(s). Enter each name individually, then click "Add." To use VTechWorks' name lookup function, click "Lookup" and you will be directed to an index of VTechWorks' creator and contributor names. Examples: Faulkner, William; Einstein, Albert; Lovelace, Ada</hint>
 					<required>You must enter the author of this item.</required>
 				</field>
 
@@ -475,7 +469,7 @@
 					<repeatable>false</repeatable>
 					<label>Title</label>
 					<input-type>onebox</input-type>
-					<hint>Enter the title of the work as it appears on the title page or equivalent.</hint>
+					<hint>Enter the title or name of the item. If a title is not provided, create one that appropriately describes the item. Examples: Extended Boolean Information Retrieval, Ossian and the Genres of Culture, Chemistry of Arsenic Removal During Coagulation and Fe-Mn Oxidation</hint>
 					<required>You must enter a main title for this item.</required>
 				</field>
 				
@@ -495,10 +489,9 @@
 					<dc-element>date</dc-element>
 					<dc-qualifier>issued</dc-qualifier>
 					<repeatable>false</repeatable>
-					<label>Date of Issue</label>
+					<label>Date</label>
 					<input-type>date</input-type>
-					<hint>Please give the date of previous publication or public distribution.
-					You can leave out the day and/or month if they aren't applicable.</hint>
+					<hint>Enter date of publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
 					<required>You must enter at least the year.</required>
 				</field>
 				
@@ -564,8 +557,7 @@
 					<repeatable>false</repeatable>
 					<label>Publisher</label>
 					<input-type>onebox</input-type>
-					<hint>List the entity responsible for making the resource available. 
-					This is typically the group most directly responsible for digitizing and/or archiving the work.</hint>
+					<hint>If the item has been published or accepted for publication, enter the publisher. If the item has not been published, enter "Virginia Tech." Examples: Wiley, Cornell University Press, Taylor &amp; Francis</hint>
 					<required></required>
 				</field>
 				
@@ -596,9 +588,9 @@
 					<dc-element>type</dc-element>
 					<dc-qualifier></dc-qualifier>
 					<repeatable>false</repeatable>
-					<label>Type</label>
+					<label>Item Type</label>
 					<input-type value-pairs-name="ndltd_types">dropdown</input-type>
-					<hint>Select the type(s) of content of the item.</hint>
+					<hint>Select the type(s) of content you are depositing. </hint>
 					<required></required>
 				</field>
 				
@@ -609,10 +601,7 @@
 					<repeatable>false</repeatable>
 					<label>Language</label>
 					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-					<hint>Select the language of the main content of the item. If the
-						language does not appear in the list, please select 'Other'. If
-						the content does not really have a language (for example, if it is
-						a dataset or an image) please select 'N/A'.</hint>
+					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select "N/A." Examples: English, French, Chinese</hint>
 					<required></required>
 				</field>
 				
@@ -636,7 +625,7 @@
 					<repeatable>true</repeatable>
 					<label>Subject Keywords</label>
 					<input-type>twobox</input-type>
-					<hint>Enter appropriate subject keywords or phrases. </hint>
+					<hint>Enter any keywords or phrases that describe the item's content. Enter each keyword or phrase separately, then click "Add." Repeat for all keywords or phrases. Examples: New River Valley, VA [Add], remote sensing [Add], photogrammetry [Add]</hint>
 					<required>You must enter appropriate subject keywords or phrases.</required>
 				</field>
 				
@@ -647,7 +636,7 @@
 					<repeatable>false</repeatable>
 					<label>Abstract</label>
 					<input-type>textarea</input-type>
-					<hint>Enter the full text of the abstract.</hint>
+					<hint>Enter a brief summary of the item. Preferred length is a single paragraph or about 300 words, although you may enter an abstract of any length.</hint>
 					<required></required>
 				</field>
 				
