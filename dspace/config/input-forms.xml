@@ -269,7 +269,7 @@
 					<repeatable>true</repeatable>
 					<label>Other Titles</label>
 					<input-type>onebox</input-type>
-					<hint>Enter date of publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
+					<hint>If the item has any alternative titles, please enter them here.</hint>
 					<required></required>
 				</field>
 				
@@ -358,7 +358,7 @@
 					<repeatable>true</repeatable>
 					<label>Subject Keywords</label>
 					<input-type>twobox</input-type>
-					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus.</hint>
+					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus. Enter each keyword or phrase separately, then click "Add." Repeat for all keywords or phrases. Examples: New River Valley, VA [Add], remote sensing [Add], photogrammetry [Add]</hint>
 					<required></required>
 					<vocabulary>cabt</vocabulary>
 				</field>
@@ -590,7 +590,7 @@
 					<repeatable>false</repeatable>
 					<label>Item Type</label>
 					<input-type value-pairs-name="ndltd_types">dropdown</input-type>
-					<hint>Select the type(s) of content you are depositing. </hint>
+					<hint>Select the type(s) of content you are depositing. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" or "COMMAND" key. Examples: Article, Learning Object, Video Recording and Presentation. </hint>
 					<required></required>
 				</field>
 				
@@ -643,25 +643,26 @@
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>description</dc-element>
-					<dc-qualifier></dc-qualifier>
+					<dc-qualifier>notes</dc-qualifier>
 					<repeatable>false</repeatable>
-					<label>Description</label>
+					<label>Notes</label>
 					<input-type>textarea</input-type>
-					<hint>Enter any other description or notes.</hint>
+					<hint>Enter any additional information that will help describe the item.</hint>
 					<required></required>
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>identifier</dc-element>
-					<dc-qualifier>other</dc-qualifier>
+					<dc-qualifier></dc-qualifier>
+					<!-- An input-type of qualdrop_value MUST be marked as repeatable -->
 					<repeatable>true</repeatable>
-					<label>Identifier</label>
-					<input-type>onebox</input-type>
-					<hint>Enter any identifiers associated with the item such as DOI or exam number.</hint>
+					<label>Identifiers</label>
+					<input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+					<hint>If the item has any identification numbers or codes associated with it, please enter them. Examples: DOI 10.1056/NEJMoa1510991, exam number VT5653, URL http://www.johncairns.net/ebook2.htm</hint>
 					<required></required>
 				</field>
-				
+
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>identifier</dc-element>
