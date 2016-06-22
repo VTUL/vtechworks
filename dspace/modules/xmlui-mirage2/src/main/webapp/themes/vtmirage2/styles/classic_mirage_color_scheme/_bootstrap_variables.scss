@@ -13,7 +13,14 @@
 $chicago-maroon: #660000;
 $burnt-orange: #ff6600;
 
+// Web accessibility 2.0 compatible colors
+$gray-on-almost-white-aim: #494949;
+$gray-on-white-aim: #4c4c4c;
+
 $brand-primary: $chicago-maroon;
 
-$navbar-inverse-bg: $chicago-maroon; 
+$navbar-inverse-bg: $chicago-maroon;
 $navbar-inverse-link-color: white;
+
+$text-muted: $gray-on-white-aim;
+$gray-light: $gray-on-white-aim;
