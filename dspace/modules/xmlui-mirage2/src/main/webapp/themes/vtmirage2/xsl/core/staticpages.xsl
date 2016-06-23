@@ -126,8 +126,8 @@ For help with any and all questions with depositing or accessing VTechWorks cont
 		</ul>
 		<h3>Some Definitions of SHERPA/RoMEO Journal and Publisher Policies</h3>
 		<ul>
-		<li>"Green" journals and publishers allow you to deposit a draft version, submitted version (pre peer review), or accepted version (post peer review) of your work; you may also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
-		<li>"Blue" journals and publishers allow you to deposit an accepted version (post peer review) of your work; you may also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
+		<li>"Green" journals and publishers allow you to deposit a draft version, submitted version (pre peer review), or accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
+		<li>"Blue" journals and publishers allow you to deposit an accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
 		<li>"Yellow" journals and publishers allow you to deposit a draft version or submitted version (pre peer review) of your work</li>
 		<li>"White" journals and publishers do not allow you to deposit any version of your work</li>	
 		<li>"Gray" journals and publishers are those whose policies concerning deposit are unknown</li>			
