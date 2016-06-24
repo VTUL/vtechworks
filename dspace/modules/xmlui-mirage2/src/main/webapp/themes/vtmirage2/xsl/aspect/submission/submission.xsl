@@ -111,12 +111,35 @@
             </xsl:attribute>
 
             <i18n:text>
-                <xsl:value-of select="."/>
+                <xsl:if test="contains(@rend,'white')">
+                    <xsl:text>white</xsl:text>
+                </xsl:if>
+                <xsl:if test="contains(@rend,'blue')">
+                    <xsl:text>blue</xsl:text>
+                </xsl:if>
+                <xsl:if test="contains(@rend,'yellow')">
+                    <xsl:text>yellow</xsl:text>
+                </xsl:if>
+                <xsl:if test="contains(@rend,'green')">
+                    <xsl:text>green</xsl:text>
+                </xsl:if>
+                <xsl:if test="contains(@rend,'gray')">
+                    <xsl:text>gray</xsl:text>
+                </xsl:if>                
             </i18n:text>
         </span>
+        
+        <div>
+            <i18n:text>
+                <xsl:value-of select="."/>
+            </i18n:text>
+        </div>
+
+   
+       
         <span><xsl:text> </xsl:text></span>
     </xsl:template>
-
+       
     <xsl:template match="dri:list[@rend='sherpaList']/dri:item/dri:figure" priority="2" >
         <a>
             <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
