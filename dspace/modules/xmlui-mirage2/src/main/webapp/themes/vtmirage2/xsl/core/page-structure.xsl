@@ -31,7 +31,7 @@
                 xmlns:dc="http://purl.org/dc/elements/1.1/"
                 xmlns:confman="org.dspace.core.ConfigurationManager"
                 exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman">
-                
+
 	<!-- Import external templates -->
 	<xsl:import href="staticpages.xsl"/>
 
@@ -333,7 +333,7 @@
                 </script>
                 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&#160;</script>
             </xsl:if>
-            
+
             <!-- Add Altmetric support -->
 			<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'>&#160;</script>
         </head>
@@ -358,9 +358,9 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-						
+
 						<!-- Changed home logo link -->
-						<!-- 
+						<!--
                         <a href="{$context-path}/" class="navbar-brand">
                         -->
                         <a href="http://www.vt.edu" class="navbar-brand">
@@ -715,7 +715,7 @@
              </xsl:attribute>
         </img>
     </xsl:template>
-    
+
 	<!-- Altmetric -->
 	<xsl:template name="altmetric">
 		<xsl:variable name="altmetricHandle"
@@ -741,7 +741,7 @@
                     <div class="col-xs-7 col-sm-8">
                         <div class="hidden-print">
                              <a href="http://www.vt.edu">
-                             Virginia Tech    
+                             Virginia Tech
                              </a>
                             <xsl:text> | </xsl:text>
                             <a href="http://www.lib.vt.edu">
@@ -785,7 +785,7 @@
     <xsl:template match="dri:body">
         <div>
             <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']">
-                <div class="alert">
+                <div class="alert alert-warning">
                     <button type="button" class="close" data-dismiss="alert">&#215;</button>
                     <xsl:copy-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']/node()"/>
                 </div>
@@ -797,7 +797,7 @@
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div class="hero-unit">
                      	<xsl:call-template name="AboutStaticPage"/>
-                    	<!-- 
+                    	<!--
                         <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.about.title</i18n:text></h1>
                         <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.about.content</i18n:text></p>
                         -->
@@ -806,7 +806,7 @@
 				<xsl:when test="starts-with($request-uri, 'page/policies')">
                     <div class="hero-unit">
                     	<xsl:call-template name="PoliciesStaticPage"/>
-                    	<!-- 
+                    	<!--
                         <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.pol.title</i18n:text></h1>
                         <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.pol.content</i18n:text></p>
                         -->
@@ -815,7 +815,7 @@
 				<xsl:when test="starts-with($request-uri, 'page/help')">
                     <div class="hero-unit">
                     	<xsl:call-template name="HelpStaticPage"/>
-                    	<!--  
+                    	<!--
                         <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.help.title</i18n:text></h1>
                         <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.help.content</i18n:text></p>
                         -->
@@ -957,5 +957,5 @@
             </li>
         </xsl:if>
     </xsl:template>
-    
+
 </xsl:stylesheet>

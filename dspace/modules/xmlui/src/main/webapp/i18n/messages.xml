@@ -2484,9 +2484,9 @@
     <message key="xmlui.aspect.sherpa.submission.publisher">Publisher information: </message>
     <message key="xmlui.aspect.sherpa.submission.colour">RoMEO Colour: </message>
     <message key="xmlui.aspect.sherpa.submission.more">(More info)</message>
-    <message key="xmlui.aspect.sherpa.submission.green">green - you may deposit any version of your work</message>
-    <message key="xmlui.aspect.sherpa.submission.blue">blue - you may deposit a draft of your work that has been refereed (peer-reviewed)</message>
-    <message key="xmlui.aspect.sherpa.submission.yellow">yellow - you may deposit a draft of your work that has not yet been refereed (peer-reviewed)</message>
+    <message key="xmlui.aspect.sherpa.submission.green">green - you may deposit a draft version, submitted version (pre peer review), or accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</message>
+    <message key="xmlui.aspect.sherpa.submission.blue">blue - you may deposit an accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</message>
+    <message key="xmlui.aspect.sherpa.submission.yellow">yellow - you may deposit a draft version or submitted version (pre peer review) of your work</message>
     <message key="xmlui.aspect.sherpa.submission.white">white - you may not deposit any version of your work</message>
     <message key="xmlui.aspect.sherpa.submission.gray">gray - deposit policies are unknown</message>
 
