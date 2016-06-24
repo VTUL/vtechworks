@@ -2395,6 +2395,11 @@
   <!-- Choice Lookup - sample config for dc.publisher field -->
   <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.help">Name of Publisher</message>
   <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.title">Look up Publisher</message>
+  
+    <!-- Choice Lookup - config for dc.title.serial -->
+  <message key="xmlui.ChoiceLookupTransformer.field.dc_title_serial.help">Name of Journal</message>
+  <message key="xmlui.ChoiceLookupTransformer.field.dc_title_serial.title">Look up Journal</message>
+  
   <!-- Params are: search-value -->
   <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.nonauthority">Non-authority value: @1@</message>
 
@@ -2484,8 +2489,8 @@
     <message key="xmlui.aspect.sherpa.submission.publisher">Publisher information: </message>
     <message key="xmlui.aspect.sherpa.submission.colour">RoMEO Colour: </message>
     <message key="xmlui.aspect.sherpa.submission.more">(More info)</message>
-    <message key="xmlui.aspect.sherpa.submission.green">green - you may deposit a draft version, submitted version (pre peer review), or accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</message>
-    <message key="xmlui.aspect.sherpa.submission.blue">blue - you may deposit an accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</message>
+    <message key="xmlui.aspect.sherpa.submission.green">green - you may deposit a draft version, submitted version (pre peer review), or accepted version (post peer review) of your work; you may also be allowed or required to deposit the publisher's version (final typeset PDF)</message>
+    <message key="xmlui.aspect.sherpa.submission.blue">blue - you may deposit an accepted version (post peer review) of your work; you may also be allowed or required to deposit the publisher's version (final typeset PDF)</message>
     <message key="xmlui.aspect.sherpa.submission.yellow">yellow - you may deposit a draft version or submitted version (pre peer review) of your work</message>
     <message key="xmlui.aspect.sherpa.submission.white">white - you may not deposit any version of your work</message>
     <message key="xmlui.aspect.sherpa.submission.gray">gray - deposit policies are unknown</message>
