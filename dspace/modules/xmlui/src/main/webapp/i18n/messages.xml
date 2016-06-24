@@ -39,7 +39,7 @@
         <message key="xmlui.general.queue">Queue</message>
 
         <!-- Keys which are used by exception2dri.xsl on error pages -->
-        <message key="xmlui.error.contact_msg">Please contact the site administrator if you wish to report this error. If possible, please  provide details about what you were doing at the time this error occurred.</message>
+        <message key="xmlui.error.contact_msg">Please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a> if you wish to report this error. If possible, please provide details about what you were doing at the time this error occurred.</message>
         <message key="xmlui.error.contact">Contact site administrator</message>
         <message key="xmlui.error.show_stack">Show underlying error stack</message>
 
@@ -57,10 +57,12 @@
 	<!--
 	   The "utils" non-aspect
        -->
-    <message key="xmlui.utils.AuthenticationUtil.onlyAdmins">Only site administrators may assume login as another user.</message>
-    <message key="xmlui.utils.AuthenticationUtil.onlyAuthenticatedAdmins">Only authenticated users who are administrators may assume the login as another user.</message>
-    <message key="xmlui.utils.AuthenticationUtil.notAnotherAdmin">You may not assume the login as another administrator.</message>
+    <message key="xmlui.utils.AuthenticationUtil.onlyAdmins">Only site administrators may log in as another user.</message>
+    <message key="xmlui.utils.AuthenticationUtil.onlyAuthenticatedAdmins">Only authenticated users who are administrators may log in as another user.</message>
+    <message key="xmlui.utils.AuthenticationUtil.notAnotherAdmin">You may not log in as another administrator.</message>
 
+	<!-- Added sidebar static pages title -->
+	<message key="xmlui.static.header">VTechWorks</message>
 
 	<!--
 		This section is for feed syndications (RSS, atom, etc)
@@ -129,7 +131,8 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">Keyword</message>
 
    <!--  some common other possibilities for Advanced Search Fields -->
-   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">Contributor</message>
+<!-- repeats of definitions in Discovery/i18n/messages.xml
+<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">Contributor</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_creator">Creator</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_description">Description</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_relation">Relation</message>
@@ -137,6 +140,7 @@
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_other">Other Contributor</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_advisor">Advisor</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
+-->
 
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_ANY">Full Text</message>
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.and">AND</message>
@@ -308,16 +312,16 @@
 	<message key="xmlui.ArtifactBrowser.RestrictedItem.type_item">item</message>
 	<message key="xmlui.ArtifactBrowser.RestrictedItem.type_resource">resource</message>
 	<message key="xmlui.ArtifactBrowser.RestrictedItem.unknown">unknown</message>
-        <message key="xmlui.ArtifactBrowser.RestrictedItem.login">Proceed to login screen</message>
+        <message key="xmlui.ArtifactBrowser.RestrictedItem.login">Proceed to log in screen</message>
 
         <message key="xmlui.ArtifactBrowser.RestrictedItem.head_item_withdrawn">This item is withdrawn</message>
         <message key="xmlui.ArtifactBrowser.RestrictedItem.para_item_withdrawn">The selected item is withdrawn and is no longer available.</message>
-        <message key="xmlui.ArtifactBrowser.RestrictedItem.para_item_restricted_auth">The selected item is access restricted and requires credentials to view. Please login to access the item.</message>
-        <message key="xmlui.ArtifactBrowser.RestrictedItem.para_item_restricted">Your user account does not have the credentials to view this item. Please contact the system administrator if you have any questions.</message>
+        <message key="xmlui.ArtifactBrowser.RestrictedItem.para_item_restricted_auth">The selected item is access restricted and requires credentials to view. Please log in to access the item.</message>
+        <message key="xmlui.ArtifactBrowser.RestrictedItem.para_item_restricted">Your user account does not have the credentials to view this item. Please <a href="mailto:vtechworks@vt.edu">contact the system administrator</a> if you have any questions.</message>
         
-	<!-- Authentication messages used at the top of the login page:  -->
+	<!-- Authentication messages used at the top of the log in page:  -->
 	<message key="xmlui.ArtifactBrowser.RestrictedItem.auth_header">The item is restricted</message>
-	<message key="xmlui.ArtifactBrowser.RestrictedItem.auth_message">The item you are attempting to access is a restricted item and requires credentials to view. Please login below to access the item.</message>
+	<message key="xmlui.ArtifactBrowser.RestrictedItem.auth_message">The item you are attempting to access is a restricted item and requires credentials to view. Please log in below to access the item.</message>
 
     <message key="xmlui.ArtifactBrowser.StatisticsViewer.choose_month">Monthly Reports</message>
     <message key="xmlui.ArtifactBrowser.StatisticsViewer.report.title">Statistical Summary</message>
@@ -327,11 +331,11 @@
 
     <!-- Authentication messages used for bitstream authentication -->
 	<message key="xmlui.BitstreamReader.auth_header">The file is restricted</message>
-	<message key="xmlui.BitstreamReader.auth_message">The file you are attempting to access is a restricted file and requires credentials to view. Please login below to access the file.</message>
+	<message key="xmlui.BitstreamReader.auth_message">The file you are attempting to access is a restricted file and requires credentials to view. Please log in below to access the file.</message>
 
 	<!-- Export Archive download messages -->
 	<message key="xmlui.ItemExportDownloadReader.auth_header">This export archive is restricted.</message>
-	<message key="xmlui.ItemExportDownloadReader.auth_message">The export archive you are attempting to access is a restricted resource and requires credentials to view. Please login below to access the export archive.</message>
+	<message key="xmlui.ItemExportDownloadReader.auth_message">The export archive you are attempting to access is a restricted resource and requires credentials to view. Please log in below to access the export archive.</message>
 
 
 	<!-- REQUEST COPY -->
@@ -339,17 +343,17 @@
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.title">Request a copy of the document</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.trail">Request a copy of the document</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.head">Request a copy of the document</message>
-    <message key="xmlui.ArtifactBrowser.ItemRequestForm.login_para">Users of this system, can login to view this document.</message>
-    <message key="xmlui.ArtifactBrowser.ItemRequestForm.login">Login</message>
+    <message key="xmlui.ArtifactBrowser.ItemRequestForm.login_para">Log in to view this document.</message>
+    <message key="xmlui.ArtifactBrowser.ItemRequestForm.login">Log in</message>
     <message key="xmlui.ArtifactBrowser.ItemRequestForm.para1">Enter the following information to request a copy of the document from the responsible person.</message>
-	<message key="xmlui.ArtifactBrowser.ItemRequestForm.requesterEmail">Your e-mail address</message>
+	<message key="xmlui.ArtifactBrowser.ItemRequestForm.requesterEmail">Your email address</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.requesterEmail_help">This email address is used for sending the document.</message>
-	<message key="xmlui.ArtifactBrowser.ItemRequestForm.requesterEmail.error">E-mail is mandatory</message>
+	<message key="xmlui.ArtifactBrowser.ItemRequestForm.requesterEmail.error">Email is mandatory</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.message">Message</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.message.error">Message is mandatory</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.files">Files</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.allFiles">All files (of this document) in restricted access.</message>
-	<message key="xmlui.ArtifactBrowser.ItemRequestForm.notAllFiles">Only The requested file.</message>
+	<message key="xmlui.ArtifactBrowser.ItemRequestForm.notAllFiles">Only the requested file.</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.requesterName">Name</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.requesterName.error">Name is required</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestForm.submit">Request copy</message>
@@ -364,10 +368,10 @@
 	<message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.title">Document copy request</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.trail">Document copy request</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.head">Document copy request</message>
-	<message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.para1">IF YOU ARE THE AUTHOR (OR AN AUTHOR) OF DOCUMENT "{0}" use the buttons to answer the user's request.</message>
+	<message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.para1">If you are an author of document "{0}" use the buttons to answer the user's request.</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.para2">This repository will propose an appropriate model reply, which you may edit.</message>
     <message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.contactRequester">Initial reply to requester</message>
-    <message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.contactAuthor"> Author permission request</message>
+    <message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.contactAuthor">Author permission request</message>
     <message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.send">Send copy</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.dontSend">Don't send copy</message>
 
@@ -395,11 +399,11 @@
 	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.title">Change permissions request</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.trail">Change permissions request</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.head">Change permissions request</message>
-	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.para1">You may use this occasion to reconsider the access restrictions on the document (to avoid having to respond to these requests), if there is no reason to keep it restricted. To do so, after inserting your name and e-mail (for authentication), click the button "Change to Open Access".</message>
+	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.para1">You may use this occasion to reconsider the access restrictions on the document (to avoid having to respond to these requests), if there is no reason to keep it restricted. To do so, after inserting your name and email (for authentication), click the button "Change to Open Access".</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.name">Name</message>
-	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.email">E-mail</message>
+	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.email">Email</message>
     <message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.name.error">The name is required</message>
-	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.email.error">The e-mail address is required</message>
+	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.email.error">The email address is required</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestChangeStatusForm.changeToOpen">Change to open access</message>
 	        
 	<!-- org.dspace.app.xmlui.artifactbrowser.ItemRequestResponseFalseForm.java -->
@@ -458,7 +462,7 @@
 	<!-- org.dspace.app.xmlui.eperson.CannotRegister.java -->
 	<message key="xmlui.EPerson.CannotRegister.title">Registration unavailable</message>
 	<message key="xmlui.EPerson.CannotRegister.head">Registration unavailable</message>
-	<message key="xmlui.EPerson.CannotRegister.para1">The configuration of this DSpace repository does not allow registration in this context. Please contact the <a href="../contact">site administrator</a> with questions or comments.</message>
+	<message key="xmlui.EPerson.CannotRegister.para1">This repository does not allow registration in this context. Please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a> with questions or comments.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
 	<message key="xmlui.EPerson.EditProfile.title_update">Update Profile</message>
@@ -472,7 +476,7 @@
 	<message key="xmlui.EPerson.EditProfile.telephone">Contact Telephone</message>
         <message key="xmlui.EPerson.EditProfile.Language">Language</message>
 	<message key="xmlui.EPerson.EditProfile.subscriptions">Subscriptions</message>
-	<message key="xmlui.EPerson.EditProfile.subscriptions_help">You may subscribe to collections to receive daily e-mail alerts of new items added. You can subscribe to as many or as few collections as you wish. Another alternative to daily e-mail alerts is to use the RSS feeds available for all collections.</message>
+	<message key="xmlui.EPerson.EditProfile.subscriptions_help">You may subscribe to collections to receive daily email alerts of new items added. You can subscribe to as many or as few collections as you wish. Another alternative to daily email alerts is to use the RSS feeds available for all collections.</message>
 	<message key="xmlui.EPerson.EditProfile.email_subscriptions">Email Subscriptions</message>
 	<message key="xmlui.EPerson.EditProfile.select_collection">( Select Collection )</message>
 	<message key="xmlui.EPerson.EditProfile.update_password_instructions">Optionally, you can enter a new password in the box below, and confirm it by typing it again into the second box. It should be at least six characters long.</message>
@@ -511,8 +515,8 @@
 	<!-- org.dspace.app.xmlui.eperson.Navigation.java -->
 	<message key="xmlui.EPerson.Navigation.my_account">My Account</message>
 	<message key="xmlui.EPerson.Navigation.profile">Profile</message>
-	<message key="xmlui.EPerson.Navigation.logout">Logout</message>
-	<message key="xmlui.EPerson.Navigation.login">Login</message>
+	<message key="xmlui.EPerson.Navigation.logout">Log out</message>
+	<message key="xmlui.EPerson.Navigation.login">Log in</message>
 	<message key="xmlui.EPerson.Navigation.register">Register</message>
 
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
@@ -525,7 +529,7 @@
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Forgot your password?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Sign in</message>
 	<message key="xmlui.EPerson.PasswordLogin.head2">Register new user</message>
-	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to subscribe to collections for email updates, and submit new items to VTechWorks.</message>
+	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to upload items to VTechWorks. Items you upload are public by default; please make sure not to upload material containing information you wish to keep confidential, such as your email address.</message>
 	<message key="xmlui.EPerson.PasswordLogin.register_link">Click here to register.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
@@ -538,9 +542,9 @@
 	<message key="xmlui.EPerson.LDAPLogin.submit">Sign in</message>
 
 	<!-- org.dspace.app.xmlui.eperson.LoginChooser.java -->
-	<message key="xmlui.EPerson.LoginChooser.title">Choose a Login Method</message>
-	<message key="xmlui.EPerson.LoginChooser.trail">Choose Login</message>
-	<message key="xmlui.EPerson.LoginChooser.head1">Choose a Login Method</message>
+	<message key="xmlui.EPerson.LoginChooser.title">Choose a way to log in</message>
+	<message key="xmlui.EPerson.LoginChooser.trail">Choose a way to log in</message>
+	<message key="xmlui.EPerson.LoginChooser.head1">Choose a way to log in</message>
 	<message key="xmlui.EPerson.LoginChooser.para1">Log in via:</message>
 	<message key="org.dspace.authenticate.ShibAuthentication.title">Shibboleth Authentication</message>
 	<message key="org.dspace.eperson.LDAPAuthentication.title">LDAP Authentication</message>
@@ -555,11 +559,11 @@
     <message key="xmlui.EPerson.FailedAuthentication.trail">Failed Authentication</message>
     <message key="xmlui.EPerson.FailedAuthentication.h1">Authentication Failed</message>
 
-	<!-- Login xml files -->
-	<message key="xmlui.eperson.noAuthMethod.head">No Authentication Method Found</message>
-	<message key="xmlui.eperson.noAuthMethod.p1">No authentication method was found.  Please contact the site administrator.</message>
-	<message key="xmlui.eperson.shibbLoginFailure.head">Shibboleth Login Failed</message>
-	<message key="xmlui.eperson.shibbLoginFailure.p1">Shibboleth authentication not available at this time. Please contact the site administrator.</message>
+	<!-- Log in xml files -->
+	<message key="xmlui.eperson.noAuthMethod.head">No authentication method was found.</message>
+	<message key="xmlui.eperson.noAuthMethod.p1">No authentication method was found. Please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a>.</message>
+	<message key="xmlui.eperson.shibbLoginFailure.head">Shibboleth authentication failed</message>
+	<message key="xmlui.eperson.shibbLoginFailure.p1">Shibboleth authentication not available at this time. Please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a>.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.ProfileUpdated.java -->
 	<message key="xmlui.EPerson.ProfileUpdated.title">Profile updated</message>
@@ -601,7 +605,7 @@
 	<message key="xmlui.EPerson.StartRegistration.head2">New user registration</message>
 	<message key="xmlui.EPerson.StartRegistration.para2">Register an account to subscribe to collections for email updates, and submit new items to VTechWorks.</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address">Email Address</message>
-	<message key="xmlui.EPerson.StartRegistration.email_address_help">This address will be verified and used as your login name.</message>
+	<message key="xmlui.EPerson.StartRegistration.email_address_help">This address will be verified and used as your log in name.</message>
 	<message key="xmlui.EPerson.StartRegistration.error_bad_email">Unable to send email to this address.</message>
 	<message key="xmlui.EPerson.StartRegistration.submit_register">Register</message>
 
@@ -722,7 +726,7 @@
 	<message key="xmlui.Submission.submit.progressbar.verify">Review</message>
 	<message key="xmlui.Submission.submit.progressbar.creative-commons">Creative Commons</message>
 	<message key="xmlui.Submission.submit.progressbar.CClicense">CC License</message>
-    <message key="xmlui.Submission.submit.progressbar.license">License</message>
+    <message key="xmlui.Submission.submit.progressbar.license">VTUL License</message>
 	<message key="xmlui.Submission.submit.progressbar.complete">Complete</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.ResumeStep -->
@@ -736,7 +740,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.SaveOrRemoveStep -->
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.head">Save or cancel your submission?</message>
-	<message key="xmlui.Submission.submit.SaveOrRemoveStep.info1">Do you want the submission removed, or do you want to carry on working on it later?  You may return to the submission process if you clicked Exit by accident.</message>
+	<message key="xmlui.Submission.submit.SaveOrRemoveStep.info1">Do you want the submission removed, or do you want to keep working on it later?  You may return to the submission process if you clicked Exit by accident.</message>
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.submit_back">Oops, continue submission</message>
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.submit_save">Save it, I'll work on it later</message>
 	<message key="xmlui.Submission.submit.SaveOrRemoveStep.submit_remove">Remove the submission</message>
@@ -763,32 +767,34 @@
 	<message key="xmlui.Submission.submit.DescribeStep.head">Describe Item</message>
 	<message key="xmlui.Submission.submit.DescribeStep.unknown_field">Error: Unknown field type</message>
 	<message key="xmlui.Submission.submit.DescribeStep.required_field">This field is required</message>
-	<message key="xmlui.Submission.submit.DescribeStep.last_name_help">Last name, <i>e.g. Smith</i></message>
-	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">First name(s) + "Jr", <i>e.g. Donald Jr</i></message>
+	<message key="xmlui.Submission.submit.DescribeStep.last_name_help">Last name, <i>e.g., Kennedy</i></message>
+	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">First name(s) + initial(s), <i>e.g., John F. Jr.</i></message>
 	<message key="xmlui.Submission.submit.DescribeStep.year">Year</message>
 	<message key="xmlui.Submission.submit.DescribeStep.month">Month</message>
 	<message key="xmlui.Submission.submit.DescribeStep.day">Day</message>
-	<message key="xmlui.Submission.submit.DescribeStep.series_name">Series Name</message>
-	<message key="xmlui.Submission.submit.DescribeStep.report_no">Report or paper No.</message>
+	<message key="xmlui.Submission.submit.DescribeStep.series_name">Series Name, <i>e.g., NSTSCE</i></message>
+	<message key="xmlui.Submission.submit.DescribeStep.report_no">Report or paper number, <i>e.g., 16-UO-042</i></message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Subject Categories</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Subject Categories</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter subjects</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filter</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Please wait while the controlled vocabulary is loading.</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">There was an issue when loading the controlled vocabulary, please try again later.</message>
+	<!-- Add vocabulary link for OMALS collection -->
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.cabtlink">CAB Agricultural and Environmental Thesaurus</message>
 
 
     <!-- org.dspace.app.xmlui.Submission.submit.AccessStep -->
     <message key="xmlui.Submission.submit.AccessStep.head">Access Settings</message>
     <message key="xmlui.Submission.submit.AccessStep.access_settings">Visible to a group of selected users (no selection needed for Anonymous)</message>
     <message key="xmlui.Submission.submit.AccessStep.open_access">Allow access once item is accepted into archive</message>
-    <message key="xmlui.Submission.submit.AccessStep.embargo">Embargo until specific date</message>
+    <message key="xmlui.Submission.submit.AccessStep.embargo">Embargo this file until a specific date</message>
     <message key="xmlui.Submission.submit.AccessStep.embargo_visible">Access for selected group</message>
     <message key="xmlui.Submission.submit.AccessStep.name">Policy name</message>
     <message key="xmlui.Submission.submit.AccessStep.name_help">A short, descriptive name for the policy (up to 30 characters). May be shown to end users. Example: "Staff-only". Optional but recommended.</message>
     <message key="xmlui.Submission.submit.AccessStep.description">Description</message>
     <message key="xmlui.Submission.submit.AccessStep.reason">Embargo reason</message>
-    <message key="xmlui.Submission.submit.AccessStep.reason_help">The reason for the embargo, typically for internal use only. Optional.</message>
+    <message key="xmlui.Submission.submit.AccessStep.reason_help">The reason you would like the file to remain private for a certain period (embargoed). The embargo reason is not shown anywhere in the public record of the item: it is for administrator use only. Examples: Awaiting publication, Applying for a patent, File contains personally identifiable information.</message>
     <message key="xmlui.Submission.submit.AccessStep.submit_add_policy">Confirm Policy &amp; add another</message>
     <message key="xmlui.Submission.submit.AccessStep.list_assigned_groups">Group</message>
     <message key="xmlui.Submission.submit.AccessStep.error_format_date">Error format date</message>
@@ -808,7 +814,7 @@
     <message key="xmlui.Submission.submit.AccessStep.column4">End Date</message>
     <message key="xmlui.Submission.submit.AccessStep.table_edit_button">Edit</message>
     <message key="xmlui.Submission.submit.AccessStep.table_delete_button">Remove</message>
-    <message key="xmlui.administrative.authorization.AccessStep.label_date_help">The first day from which access is allowed. Accepted format: yyyy, yyyy-mm, yyyy-mm-dd</message>
+    <message key="xmlui.administrative.authorization.AccessStep.label_date_help">To keep this file private until a certain date (embargoed), enter the date on which it should become public. Each file you add can have a different embargo period. Note that the item record with such information as title, author, and abstract will be public: only the associated file will be inaccessible. Use the pop-up calendar to pick a date or type the date in manually. Examples: 2020-04-01 (file will become public on April 1, 2020); 2020-04 (file will become public on April 1, 2020); or 2020 (file will become public on January 1, 2020). </message>
     <message key="xmlui.Submission.submit.AccessStep.review_policy_line">Name: {0}; action: {1}, group: {2}, start date: {3}, end date: {4}</message>
     <message key="xmlui.Submission.submit.AccessStep.review_public_item">The item will be searchable</message>
     <message key="xmlui.Submission.submit.AccessStep.review_private_item">The item will not be searchable</message>
@@ -821,11 +827,11 @@
     <!-- org.dspace.app.xmlui.Submission.submit.UploadStep -->
 	<message key="xmlui.Submission.submit.UploadStep.head">Upload File(s)</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">File</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_help">Please enter the full path of the file on your computer corresponding to your item. If you click "Browse...", a new window will allow you to select the file from your computer.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_help">Click "Browse..." to select a file from your computer. All common file types are accepted. For documents, the archival format PDF/A is preferred.</message>
 	<message key="xmlui.Submission.submit.UploadStep.file_error">The item must contain at least one file.</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_error">There was a problem uploading your file.  Either the filename you entered was incorrect, there was a network problem which prevented the file from reaching us correctly, or you have attempted to upload a file format marked for internal system use only.  Please try again.</message>
-	<message key="xmlui.Submission.submit.UploadStep.virus_error">The file has not been uploaded as it appears to contain a virus. Please contact the system administrator.</message>
-    <message key="xmlui.Submission.submit.UploadStep.virus_checker_error">A technical problem was encountered whilst attempting to scan the file for viruses. Please contact the system administrator.</message>
+	<message key="xmlui.Submission.submit.UploadStep.virus_error">The file has not been uploaded as it appears to contain a virus. Please <a href="mailto:vtechworks@vt.edu">contact the system administrator</a>.</message>
+    <message key="xmlui.Submission.submit.UploadStep.virus_checker_error">A technical problem was encountered while attempting to scan the file for viruses. Please <a href="mailto:vtechworks@vt.edu">contact the system administrator</a>.</message>
     <message key="xmlui.Submission.submit.UploadStep.description">File Description</message>
 	<message key="xmlui.Submission.submit.UploadStep.description_help">Optionally, provide a brief description of the file, for example "<i>Main article</i>", or "<i>Experiment data readings</i>".</message>
 	<message key="xmlui.Submission.submit.UploadStep.submit_upload">Upload file &amp; add another</message>
@@ -850,11 +856,11 @@
 
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.head">Upload File(s)</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.file">File</message>
-    <message key="xmlui.Submission.submit.UploadWithEmbargoStep.file_help">Please enter the full path of the file on your computer corresponding to your item. If you click "Browse...", a new window will allow you to select the file from your computer.</message>
+    <message key="xmlui.Submission.submit.UploadWithEmbargoStep.file_help">Click "Browse..." to select a file from your computer. All common file types are accepted. For documents, the archival format PDF/A is preferred.</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.file_error">The item must contain at least one file.</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.upload_error">There was a problem uploading your file. Either the filename you entered was incorrect, there was a network problem which prevented the file from reaching us correctly, or you have attempted to upload a file format marked for internal system use only. Please try again.</message>
-    <message key="xmlui.Submission.submit.UploadWithEmbargoStep.virus_error">The file has not been uploaded as it appears to contain a virus. Please contact the system administrator.</message>
-    <message key="xmlui.Submission.submit.UploadWithEmbargoStep.virus_checker_error">A technical problem was encountered whilst attempting to scan the file for viruses. Please contact the system administrator.</message>
+    <message key="xmlui.Submission.submit.UploadWithEmbargoStep.virus_error">The file has not been uploaded as it appears to contain a virus. Please <a href="mailto:vtechworks@vt.edu">contact the system administrator</a>.</message>
+    <message key="xmlui.Submission.submit.UploadWithEmbargoStep.virus_checker_error">A technical problem was encountered while attempting to scan the file for viruses. Please <a href="mailto:vtechworks@vt.edu">contact the system administrator</a>.</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.description">File Description</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.description_help">Optionally, provide a brief description of the file, for example "<i>Main article</i>", or "<i>Experiment data readings</i>".</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.submit_upload">Upload file &amp; add another</message>
@@ -913,7 +919,15 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.CCLicenseStep -->
         <message key="xmlui.Submission.submit.CCLicenseStep.ccws_error">An error occurred ... {0}</message>
         <message key="xmlui.Submission.submit.CCLicenseStep.head">License Your Work</message>
-        <message key="xmlui.Submission.submit.CCLicenseStep.info1">If you wish, you may add a <a href="http://creativecommons.org/">Creative Commons</a> License to your item. <strong>Creative Commons licenses govern what people who read your work may then do with it.</strong></message>
+<message key="xmlui.Submission.submit.CCLicenseStep.info1"><p>Let people know whether and how they may use this work. Learn more at <strong><a href="http://creativecommons.org" title="Creative Commons" target="_blank">Creative Commons.</a></strong></p>
+<h4>Public Domain - no known copyright</h4>
+<p>The Public Domain mark by Creative Commons indicates that neither you nor anyone else currently has rights to the work. Common reasons for a work to be in the public domain include because its copyright has expired, because it was created by a government body, or because it is factual and therefore does not meet the copyright standard for original creative expression. The Public Domain mark is most often appropriate for texts and images published before the early 20th century, government documents, datasets, graphs, and charts.</p>
+<h4>CC0 - no rights reserved</h4>
+<p>CC0 ("Creative Commons Zero") enables you to waive your rights in your works and thereby place them as completely as possible in the public domain, so that others may freely build upon, enhance, and reuse your works for any purposes without restriction under copyright or database law.</p>
+<h4>Creative Commons - some rights reserved</h4>
+<p>Creative Commons licenses allow you to retain some rights: this option will let you decide and declare whether to allow or refuse permission for commercial uses of your work, whether to allow or refuse permission to modify your work, or whether to allow modifications of your work only on the condition that modifiers also allow others to modify the new work ("ShareAlike").</p>
+<h4>No Creative Commons license</h4>
+<p>You need not specify a Creative Commons license or mark for the work you are uploading, but in that case, people who find the content online will not know whether or how they are permitted to use, share, redistribute, remix, tweak, and build upon your work.</p></message>
         <message key="xmlui.Submission.submit.CCLicenseStep.submit_choose_creative_commons">Choose a license</message>
         <message key="xmlui.Submission.submit.CCLicenseStep.submit_to_creative_commons">Proceed to Creative Commons website to select a license</message>
         <message key="xmlui.Submission.submit.CCLicenseStep.license">License Type</message>
@@ -922,12 +936,12 @@
         <message key="xmlui.Submission.submit.CCLicenseStep.save_changes">You must click Next to save your changes.</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
-	<message key="xmlui.Submission.submit.LicenseStep.head">Distribution License</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>There is one last step:</strong> In order for VTechWorks to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info2">Grant the standard distribution license by selecting 'I Grant the License'; and then click 'Complete Submission'.</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info3">If you have questions regarding this license please contact the system administrators.</message>
-	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Distribution license</message>
-	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">I Grant the License</message>
+	<message key="xmlui.Submission.submit.LicenseStep.head">Virginia Tech University Libraries License</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info1">In order for VTechWorks to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info2">Grant the standard distribution license by selecting 'I grant the license'; and then click Complete Submission.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info3">If you have questions regarding this license please <a href="mailto:vtechworks@vt.edu">contact the system administrator</a>.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Decision</message>
+	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">I grant the license</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_error">You must grant this license to complete your submission. If you are unable to grant this license at this time you may save your work and return later or remove the submission by clicking the 'Save &amp; Exit' button below.</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.RemovedStep -->
@@ -937,7 +951,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.CompletedStep -->
 	<message key="xmlui.Submission.submit.CompletedStep.head">Submission complete</message>
-	<message key="xmlui.Submission.submit.CompletedStep.info1">Your submission will now go through the review process for this collection. You will receive e-mail notification as soon as your submission has joined the collection, or if there is a problem with your submission. You may also check on the status of your submission by visiting your submissions page.</message>
+	<message key="xmlui.Submission.submit.CompletedStep.info1">Your submission will now go through the review process for this collection. You will receive email notification as soon as your submission has joined the collection, or if there is a problem with your submission. You may also check on the status of your submission by visiting your Submissions page.</message>
 	<message key="xmlui.Submission.submit.CompletedStep.go_submission">Go to the Submissions page</message>
 	<message key="xmlui.Submission.submit.CompletedStep.submit_again">Submit another item</message>
 
@@ -976,9 +990,9 @@
 	<!-- action-generated messages. These are referenced from the sitemap rather than a transformer -->
 
         <message key="xmlui.administrative.FlowCurationUtils.curate_success_notice">The task was completed successfully.</message>
-        <message key="xmlui.administrative.FlowCurationUtils.curate_failed_notice">The task exited unexpectedly or failed. For more information, please contact the site administrator or check your system logs.</message>
+        <message key="xmlui.administrative.FlowCurationUtils.curate_failed_notice">The task exited unexpectedly or failed. For more information, please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a> or check your system logs.</message>
         <message key="xmlui.administrative.FlowCurationUtils.queue_success_notice">The task was queued successfully.</message>
-        <message key="xmlui.administrative.FlowCurationUtils.queue_failed_notice">The task could not be queued. An error occurred. For more information, please contact the site administrator or check your system logs.</message>
+        <message key="xmlui.administrative.FlowCurationUtils.queue_failed_notice">The task could not be queued. An error occurred. For more information, please <a href="mailto:vtechworks@vt.edu">contact the site administrator</a> or check your system logs.</message>
         <message key="xmlui.administrative.FlowEPersonUtils.add_eperson_success_notice">The user was added successfully.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.edit_eperson_success_notice">The user was edited successfully.</message>
 	<message key="xmlui.administrative.FlowEPersonUtils.reset_password_success_notice">An email message has been sent to the user containing a token that may be used to choose a new password.</message>
@@ -1056,9 +1070,9 @@
 	<message key="xmlui.administrative.ItemExport.item.not.found">The item requested was not found.</message>
 	<message key="xmlui.administrative.ItemExport.collection.not.found">The collection requested was not found.</message>
 	<message key="xmlui.administrative.ItemExport.community.not.found">The community requested was not found.</message>
-	<message key="xmlui.administrative.ItemExport.item.success">The item was exported successfully.  You should receive an e-mail when the archive is ready for download.  You can also use the 'My Exports' link to view a list of your available archives.</message>
-	<message key="xmlui.administrative.ItemExport.collection.success">The collection was exported successfully.  You should receive an e-mail when the archive is ready for download.  You can also use the 'My Exports' link to view a list of your available archives.</message>
-	<message key="xmlui.administrative.ItemExport.community.success">The community was exported successfully.  You should receive an e-mail when the archive is ready for download.  You can also use the 'My Exports' link to view a list of your available archives.</message>
+	<message key="xmlui.administrative.ItemExport.item.success">The item was exported successfully.  You should receive an email when the archive is ready for download.  You can also use the 'My Exports' link to view a list of your available archives.</message>
+	<message key="xmlui.administrative.ItemExport.collection.success">The collection was exported successfully.  You should receive an email when the archive is ready for download.  You can also use the 'My Exports' link to view a list of your available archives.</message>
+	<message key="xmlui.administrative.ItemExport.community.success">The community was exported successfully.  You should receive an email when the archive is ready for download.  You can also use the 'My Exports' link to view a list of your available archives.</message>
 	<message key="xmlui.administrative.ItemExport.available.head">Available export archives for download:</message>
 
 
@@ -1112,7 +1126,7 @@
 	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_reset_password">Reset Password</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.special_help">You may also permanently remove this E-Person from the system or reset his/her password. When resetting a password the user will be sent an email containing a special link they can follow to choose a new password.</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_delete">Delete E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_login_as">Login as E-Person</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_login_as">Log in as E-Person</message>
 
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint">This eperson is unable to be deleted because of the following constraint(s):</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.last_conjunction">and</message>
@@ -1514,6 +1528,7 @@
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.ORIGINAL">Content Files (default)</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.METADATA">Metadata Files</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.THUMBNAIL">Thumbnails</message>
+        <message key="xmlui.administrative.item.AddBitstreamForm.bundle.MOVIEPOSTER">Movie Posters</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.LICENSE">Licenses</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.bundle.CC-LICENSE">Creative Commons Licenses</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.file_label">File</message>
@@ -2004,13 +2019,13 @@
 	<message key="xmlui.administrative.ControlPanel.db_maxwait">Max DB Wait Time</message>
 	<message key="xmlui.administrative.ControlPanel.db_maxidle">Max Idle Connections</message>
 	<message key="xmlui.administrative.ControlPanel.mail_server">SMTP Mail Server</message>
-	<message key="xmlui.administrative.ControlPanel.mail_from_address">From E-mail Address</message>
+	<message key="xmlui.administrative.ControlPanel.mail_from_address">From Email Address</message>
 	<message key="xmlui.administrative.ControlPanel.mail_feedback_recipient">Feedback Recipient</message>
-	<message key="xmlui.administrative.ControlPanel.mail_admin">General Site Administration E-mail</message>
+	<message key="xmlui.administrative.ControlPanel.mail_admin">General Site Administration Email</message>
 	<message key="xmlui.administrative.ControlPanel.alerts_head">System-wide Alerts</message>
 	<message key="xmlui.administrative.ControlPanel.alerts_warning"><strong>Warning for load balanced systems</strong>: System-wide alerts are only effective for the node on which it is activated. You need to ensure that each node in the set receives the activate alert command.</message>
 	<message key="xmlui.administrative.ControlPanel.alerts_message_label">Alert message</message>
-	<message key="xmlui.administrative.ControlPanel.alerts_message_default">The system will be going down for regular maintenance. Please save your work and logout.</message>
+	<message key="xmlui.administrative.ControlPanel.alerts_message_default">The system will be going down for regular maintenance. Please save your work and log out.</message>
 	<message key="xmlui.administrative.ControlPanel.alerts_countdown_label">Count down</message>
 	<message key="xmlui.administrative.ControlPanel.alerts_countdown_none">No count down timer</message>
 	<message key="xmlui.administrative.ControlPanel.alerts_countdown_5">5 minutes</message>
@@ -2050,7 +2065,7 @@
 	<message key="xmlui.administrative.NotAuthorized.para1a">Your account has insufficient privileges to perform the requested action. If you feel this is an error or have questions about your privileges, please contact the site's </message>
 	<message key="xmlui.administrative.NotAuthorized.para1b">system administrators</message>
 	<message key="xmlui.administrative.NotAuthorized.para1c">.</message>
-	<message key="xmlui.administrative.NotAuthorized.para2">Login as another user</message>
+	<message key="xmlui.administrative.NotAuthorized.para2">Log in as another user</message>
         
         <!-- System-wide Curation Tasks form (org.dspace.app.xmlui.aspect.administrative.CurateForm) -->
         <message key="xmlui.administrative.CurateForm.title">System Curation Tasks</message>
@@ -2178,8 +2193,8 @@
 	<message key="xmlui.dri2xhtml.structural.head-subtitle">VTechWorks Repository</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profile: </message>
-	<message key="xmlui.dri2xhtml.structural.logout">Logout</message>
-	<message key="xmlui.dri2xhtml.structural.login">Login</message>
+	<message key="xmlui.dri2xhtml.structural.logout">Log out</message>
+	<message key="xmlui.dri2xhtml.structural.login">Log in</message>
 
 	<message key="xmlui.dri2xhtml.structural.search">Search VTechWorks</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Advanced Search</message>
@@ -2216,6 +2231,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
+        <message key="xmlui.dri2xhtml.METS-1.0.item-trnumber">TR number</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
@@ -2233,8 +2249,8 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.size-megabytes">Mb</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-gigabytes">Gb</message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.license-text">The following license files are associated with this item:</message>
-    <message key="xmlui.dri2xhtml.METS-1.0.cc-license-text">Except where otherwise noted, this item's license is described as </message>
+	<message key="xmlui.dri2xhtml.METS-1.0.license-text">License files:</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.cc-license-text">License: </message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.collection-not-implemented">
 		The summaryView of a collection is not currently used or implemented. This can be fixed
@@ -2424,8 +2440,8 @@
     <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.title">Confirm Deletion</message>
     <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.trail">Confirm deletion</message>
     <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.head1">Confirm Deletion(s)</message>
-    <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.para1">Are you sure you want to delete these versions. </message>
-    <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.para2">PLEASE NOTE: That by deleting these versions, the associated items will no longer be accessible.</message>
+    <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.para1">Are you sure you want to delete these versions? </message>
+    <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.para2">Please note that by deleting these versions, the associated items will no longer be accessible.</message>
     <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.column1">Version</message>
     <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.column2">Item</message>
     <message key="xmlui.aspect.versioning.DeleteVersionsConfirm.column3">Editor</message>
@@ -2462,16 +2478,18 @@
     <message key="xmlui.aspect.versioning.VersionNoticeTransformer.notice.workflow_version_head">Notice</message>
     <message key="xmlui.aspect.versioning.VersionNoticeTransformer.notice.workflow_version_help">A more recent version of this item is in the Workflow.</message>
 
-    <message key="xmlui.aspect.sherpa.submission.consult">To check the copyright and self-archiving policies per journal or publisher, please consult <a href="http://www.sherpa.ac.uk/">SHERPA/RoMEO</a>.</message>
+    <message key="xmlui.aspect.sherpa.submission.consult">To learn whether your journal or publisher allows you to deposit a version of your published work in this institutional repository, please consult the comprehensive <a href="http://www.sherpa.ac.uk/">SHERPA/RoMEO</a> database of publisher copyright and self-archiving policies.</message>
     <message key="xmlui.aspect.sherpa.submission.title">Publisher information</message>
     <message key="xmlui.aspect.sherpa.submission.journal">Journal: </message>
     <message key="xmlui.aspect.sherpa.submission.publisher">Publisher information: </message>
     <message key="xmlui.aspect.sherpa.submission.colour">RoMEO Colour: </message>
     <message key="xmlui.aspect.sherpa.submission.more">(More info)</message>
-    <message key="xmlui.aspect.sherpa.submission.green">green</message>
-    <message key="xmlui.aspect.sherpa.submission.blue">blue</message>
-    <message key="xmlui.aspect.sherpa.submission.white">white</message>
-    <message key="xmlui.aspect.sherpa.submission.yellow">yellow</message>
+    <message key="xmlui.aspect.sherpa.submission.green">You may deposit a draft version, submitted version (pre peer review), or accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</message>
+    <message key="xmlui.aspect.sherpa.submission.blue">You may deposit an accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</message>
+    <message key="xmlui.aspect.sherpa.submission.yellow">You may deposit a draft version or submitted version (pre peer review) of your work</message>
+    <message key="xmlui.aspect.sherpa.submission.white">You may not deposit any version of your work</message>
+    <message key="xmlui.aspect.sherpa.submission.gray">Deposit policies are unknown</message>
+
     <!-- End Versioning -->
 
 
@@ -2491,12 +2509,19 @@
     <message key="xmlui.mirage2.forms.nonCompositeFieldSet.add">Add</message>
     <message key="xmlui.mirage2.forms.nonCompositeFieldSet.remove">Remove</message>
 
-    <message key="xmlui.mirage2.page-structure.aboutThisRepository">About This Repository</message>
+ 	<!-- Added static pages tag title -->
+    <message key="xmlui.mirage2.page-structure.aboutThisRepository">About</message>
+    <message key="xmlui.mirage2.page-structure.policiesThisRepository">Policies</message>
+    <message key="xmlui.mirage2.page-structure.helpThisRepository">Help</message>
+    
     <message key="xmlui.mirage2.page-structure.toggleNavigation">Toggle navigation</message>
 
+	
+	<!-- Removed unneccessary messages -->
+	<!--
     <message key="xmlui.mirage2.page-structure.heroUnit.title">About This Repository</message>
     <message key="xmlui.mirage2.page-structure.heroUnit.content">To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
-
+	-->
     <message key="xmlui.mirage2.navigation.rss.feed">feed</message>
 
     <message key="xmlui.mirage2.choice-authority-control.loading">Loading...</message>

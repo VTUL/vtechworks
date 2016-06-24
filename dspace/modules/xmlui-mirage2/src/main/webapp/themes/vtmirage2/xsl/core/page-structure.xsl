@@ -32,6 +32,9 @@
                 xmlns:confman="org.dspace.core.ConfigurationManager"
                 exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman">
 
+	<!-- Import external templates -->
+	<xsl:import href="staticpages.xsl"/>
+
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
     <!--
@@ -268,13 +271,31 @@
             <!-- Modernizr enables HTML5 elements & feature detects -->
             <script src="{concat($theme-path, 'vendor/modernizr/modernizr.js')}">&#160;</script>
 
+            <!-- include css and javascript for video playback -->
+
+            <link type="text/css" rel="stylesheet">
+            <xsl:attribute name="href">http://vjs.zencdn.net/4.12/video-js.css</xsl:attribute>
+            </link>
+
             <!-- Add the title in -->
             <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title'][last()]" />
             <title>
                 <xsl:choose>
+                    <!-- Added satic page tab title -->
+                	<xsl:when test="starts-with($request-uri, 'page/about')">
+                        <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/policies')">
+                        <i18n:text>xmlui.mirage2.page-structure.policiesThisRepository</i18n:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/help')">
+                        <i18n:text>xmlui.mirage2.page-structure.helpThisRepository</i18n:text>
+                    </xsl:when>
+                	<!--
                     <xsl:when test="starts-with($request-uri, 'page/about')">
                         <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text>
                     </xsl:when>
+                    -->
                     <xsl:when test="not($page_title)">
                         <xsl:text>  </xsl:text>
                     </xsl:when>
@@ -313,6 +334,8 @@
                 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&#160;</script>
             </xsl:if>
 
+            <!-- Add Altmetric support -->
+			<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'>&#160;</script>
         </head>
     </xsl:template>
 
@@ -336,7 +359,11 @@
                             <span class="icon-bar"></span>
                         </button>
 
+						<!-- Changed home logo link -->
+						<!--
                         <a href="{$context-path}/" class="navbar-brand">
+                        -->
+                        <a href="http://www.vt.edu" class="navbar-brand">
                             <img src="{$theme-path}/images/VT_white_cmyk_invt.png" />
                         </a>
 
@@ -400,8 +427,8 @@
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <li>
-                                        <form style="display: inline" action="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='loginURL']}" method="get">
+                                        <form style="display: inline" action="/login"
+ method="get">
                                             <button class="navbar-toggle navbar-link">
                                             <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
                                             </button>
@@ -452,8 +479,8 @@
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <li>
-                                        <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='loginURL']}">
+                                        <a href="/login"
+                           >
                                             <span class="hidden-xs">
                                                 <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
                                             </span>
@@ -689,6 +716,23 @@
         </img>
     </xsl:template>
 
+	<!-- Altmetric -->
+	<xsl:template name="altmetric">
+		<xsl:variable name="altmetricHandle"
+						select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='identifier' and @qualifier='handle']"
+		/>
+
+        <xsl:if test="$altmetricHandle">
+            <div class="row">
+            	<div class="col-sm-3 col-xs-12">
+                	<div class="altmetric-embed" data-badge-type="medium-donut" data-badge-details="right" data-hide-no-mentions="true" data-link-target="_blank">
+                		<xsl:attribute name="data-handle"><xsl:value-of select="$altmetricHandle"/></xsl:attribute>
+                	</div>
+               </div>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
     <xsl:template name="buildFooter">
         <footer>
@@ -697,7 +741,7 @@
                     <div class="col-xs-7 col-sm-8">
                         <div class="hidden-print">
                              <a href="http://www.vt.edu">
-                             Virginia Tech    
+                             Virginia Tech
                              </a>
                             <xsl:text> | </xsl:text>
                             <a href="http://www.lib.vt.edu">
@@ -741,7 +785,7 @@
     <xsl:template match="dri:body">
         <div>
             <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']">
-                <div class="alert">
+                <div class="alert alert-warning">
                     <button type="button" class="close" data-dismiss="alert">&#215;</button>
                     <xsl:copy-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']/node()"/>
                 </div>
@@ -749,10 +793,32 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
+            	<!-- Add static page contents -->
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div class="hero-unit">
-                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.title</i18n:text></h1>
-                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.content</i18n:text></p>
+                     	<xsl:call-template name="AboutStaticPage"/>
+                    	<!--
+                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.about.title</i18n:text></h1>
+                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.about.content</i18n:text></p>
+                        -->
+                    </div>
+                </xsl:when>
+				<xsl:when test="starts-with($request-uri, 'page/policies')">
+                    <div class="hero-unit">
+                    	<xsl:call-template name="PoliciesStaticPage"/>
+                    	<!--
+                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.pol.title</i18n:text></h1>
+                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.pol.content</i18n:text></p>
+                        -->
+                    </div>
+                </xsl:when>
+				<xsl:when test="starts-with($request-uri, 'page/help')">
+                    <div class="hero-unit">
+                    	<xsl:call-template name="HelpStaticPage"/>
+                    	<!--
+                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.help.title</i18n:text></h1>
+                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.help.content</i18n:text></p>
+                        -->
                     </div>
                 </xsl:when>
                 <!-- Otherwise use default handling of body -->
@@ -763,7 +829,6 @@
 
         </div>
     </xsl:template>
-
 
     <!-- Currently the dri:meta element is not parsed directly. Instead, parts of it are referenced from inside
         other elements (like reference). The blank template below ends the execution of the meta branch -->

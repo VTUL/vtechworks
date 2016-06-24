@@ -5,6 +5,10 @@
  *
  * http://www.dspace.org/license/
  */
+
+body {
+  color:#1a1a1a;
+}
 .first-page-header {
     margin-top: 0;
 }
@@ -16,7 +20,9 @@
 dl {
     margin: 0;
 }
-
+#aspect_browseArtifacts_CommunityBrowse_div_community-browse h3, #aspect_browseArtifacts_CollectionBrowse_div_collection-browse h3 {
+    color: $gray-light !important;
+}
 #ds-options h1,
 #ds-options h2,
 #ds-options h3,
@@ -236,6 +242,11 @@ header {
         border: none;
     }
 
+	.navbar-brand img{
+        // increase logo size
+		height: 50px;
+	}
+
     .navbar-default{
 
         background-color: $navbar-inverse-bg;
@@ -324,7 +335,9 @@ header {
     .breadcrumb{
         background-color: transparent;
         margin-bottom: 0;
-
+        > a  {
+            color: white;
+        }
         > li {
             color: white;
             > a  {
@@ -461,4 +474,10 @@ header {
     a {
         font-weight: bold;
     }
+}
+
+@media print {
+	a[href]:after {
+		content: none !important;
+	}
 }
