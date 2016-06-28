@@ -76,6 +76,19 @@
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
     </crosswalks:mappings>
     
+  <!-- Override the boolean mapping template -->
+	<xsl:template match="pubs:boolean">
+		  <xsl:param name="name" />
+		  <xsl:param name="repo_field" />
+ 
+		<!-- Custom XSL: Only map booleans when they are for a field other than c-invited, or are not equal to true. -->
+		<xsl:if test="$name != 'c-invited' or . != 'false'">
+			<xsl:apply-templates select="." mode="render_with_dictionary">
+				<xsl:with-param name="dictionary-name" select="$name" />
+				<xsl:with-param name="dictionary-target" select="$repo_field" />
+			</xsl:apply-templates>
+		</xsl:if>
+	</xsl:template>
     
     <!--
         Object level field mappings
