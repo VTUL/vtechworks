@@ -256,8 +256,8 @@ For help with any and all questions with depositing or accessing VTechWorks cont
 <ul> 
 <li>Be sure to share the link in the item record that appears in this format: <a href="http://hdl.handle.net/10919/71357">http://hdl.handle.net/10919/71357</a> This link is guaranteed to be permanent and stable, even if VTechWorks moves or changes its domain name in the future.</li> 
 <li>Direct links to files (such as <a href="http://vtechworks.lib.vt.edu/bitstream/handle/10919/56486/40246_2015_Article_42.pdf">http://vtechworks.lib.vt.edu/bitstream/handle/10919/56486/40246_2015_Article_42.pdf</a>) are relatively stable but are not guaranteed to persist, since the depositor might choose to delete the file or change its name, which will change the URL. We discourage depositors from deleting files or changing file names, but it has been known to happen.</li> 
-<li>Do not copy and share the link from your browser’s address bar; these links (which might include “vtechworks.lib.vt.edu”) are relatively stable but are not guaranteed to resolve if VTechWorks moves or changes to its domain name.</li>
-<li>Be especially sure not to copy and share the link from your browser’s address bar if you have signed in from off-campus; such links contain the word “ezprozy,” which indicates that you have signed in as a Virginia Tech user in order to access restricted resources. Non-Virginia Tech users will not be able to see these items.</li> 
+<li>Do not copy and share the link from your browser’s address bar; these links (which might include “vtechworks.lib.vt.edu”) are relatively stable but are not guaranteed to resolve if VTechWorks moves or makes changes to its domain name.</li>
+<li>Be especially sure not to copy and share the link from your browser’s address bar if you have signed in from off-campus; such links contain the word “ezproxy,” which indicates that you have signed in as a Virginia Tech user in order to access restricted resources. Non-Virginia Tech users will not be able to see these items.</li> 
 
 </ul>
 		
