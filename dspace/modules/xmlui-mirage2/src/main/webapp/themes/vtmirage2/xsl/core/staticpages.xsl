@@ -86,16 +86,15 @@
 
 <h2>Copyright, Proxies, and Licensing</h2>
 
-<ul>
-<li>It is the responsibility of the depositor to ensure that s/he has the legal right to deposit a work in VTechWorks under the terms of U.S. copyright law and under the terms of any existing contracts related to the work. Authors of a work automatically own copyright in that work once it exists in a fixed form, but as a condition of publication many journals, publishers, and conference proceedings make contractual restrictions on which version of a published work can be deposited in an institutional repository such as VTechWorks. Authors should therefore not assume that they have the right to deposit their own published work in VTechWorks. See <a href="http://vtechworks.lib.vt.edu/page/help">http://vtechworks.lib.vt.edu/page/help</a> and <a href="http://www.lib.vt.edu/copyright/">http://www.lib.vt.edu/copyright/</a> for help with rights. </li>
-<li>Virginia Tech faculty and students own copyright in the works they have created as described in VT Policy 13000, available at <a href="http://www.policies.vt.edu/13000.pdf">http://www.policies.vt.edu/13000.pdf</a>. According to this policy, for “the traditional results of academic scholarship, i.e., textbooks, literary works, artistic creations and artifacts” -- that is, the kinds of works most commonly deposited  in VTechWorks -- “the IP rights remain with the author(s)” and is not claimed by Virginia Tech. </li>
-<li>For a work with multiple authors, every author owns the copyright to the entire work and therefore may deposit the work in VTechWorks without needing to ask permission of the work’s other authors.</li>
-<li>Virginia Tech itself owns the copyright in most administrative documents produced by Virginia Tech staff in the normal course of their duties (e.g., reports, policies, news releases); the individual staff member does not usually own the copyright to such material. Such material may be deposited in VTechWorks by any member of the Virginia Tech community. </li>
-<li>Authors may ask others to deposit works in VTechWorks on their behalf, and these depositors shall be considered proxies for the author. VTechWorks staff and Virginia Tech librarians are de facto proxies for any and all members of the Virginia Tech community.</li>
-<li>Proxies who deposit content for authors should make every effort to determine whether the work can legally be deposited in VTechWorks. Proxies need not deposit content if they believe the work should not be deposited because of copyright law or contractual restrictions.</li>
-<li>All depositors must agree to the non-exclusive distribution license given below before VTechWorks will host their works. This license grants Virginia Tech the right to host the work without affecting the author’s right to host the work elsewhere. </li>
-<li>Copyright owners and their proxies may also elect to license their work with a <a href="http://creativecommons.org">Creative Commons</a> license so that members of the public who find the work online can copy it under certain conditions; copyright owners may also donate their work to the public domain in perpetuity by giving it a “CC Zero (CC0)” mark. Some work, such as older publications, government documents, or strictly factual data, might already be in the public domain and therefore have no copyright owner; such work can be given the “Public Domain” mark by the depositor. These options are available as part of the submission process.</li>
-</ul>
+<p>It is the responsibility of the depositor to ensure that s/he has the legal right to deposit a work in VTechWorks under the terms of U.S. copyright law and under the terms of any existing contracts related to the work. Authors of a work automatically own copyright in that work once it exists in a fixed form, but as a condition of publication many journals, publishers, and conference proceedings make contractual restrictions on which version of a published work can be deposited in an institutional repository such as VTechWorks. Authors should therefore not assume that they have the right to deposit their own published work in VTechWorks. See <a href="http://vtechworks.lib.vt.edu/page/help">http://vtechworks.lib.vt.edu/page/help</a> and <a href="http://www.lib.vt.edu/copyright/">http://www.lib.vt.edu/copyright/</a> for help with rights. </p>
+<p>Virginia Tech faculty and students own copyright in the works they have created as described in VT Policy 13000, available at <a href="http://www.policies.vt.edu/13000.pdf">http://www.policies.vt.edu/13000.pdf</a>. According to this policy, for “the traditional results of academic scholarship, i.e., textbooks, literary works, artistic creations and artifacts” -- that is, the kinds of works most commonly deposited  in VTechWorks -- “the IP rights remain with the author(s)” and are not claimed by Virginia Tech. </p>
+<p>For a work with multiple authors, every author owns the copyright to the entire work and therefore may deposit the work in VTechWorks without needing to ask permission of the work’s other authors.</p>
+<p>Virginia Tech itself owns the copyright in most administrative documents produced by Virginia Tech staff in the normal course of their duties (e.g., reports, policies, news releases); the individual staff member does not usually own the copyright to such material. Such material may be deposited in VTechWorks by any member of the Virginia Tech community. </p>
+<p>Authors may ask others to deposit works in VTechWorks on their behalf, and these depositors shall be considered proxies for the author. VTechWorks staff and Virginia Tech librarians are de facto proxies for any and all members of the Virginia Tech community.</p>
+<p>Proxies who deposit content for authors should make every effort to determine whether the work can legally be deposited in VTechWorks. Proxies need not deposit content if they believe the work should not be deposited because of copyright law or contractual restrictions.</p>
+<p>All depositors must agree to the non-exclusive distribution license given below before VTechWorks will host their works. This license grants Virginia Tech the right to host the work without affecting the author’s right to host the work elsewhere. </p>
+<p>Copyright owners and their proxies may also elect to license their work with a <a href="http://creativecommons.org">Creative Commons</a> license so that members of the public who find the work online can copy it under certain conditions; copyright owners may also donate their work to the public domain in perpetuity by giving it a “CC Zero (CC0)” mark. Some work, such as older publications, government documents, or strictly factual data, might already be in the public domain and therefore have no copyright owner; such work can be given the “Public Domain” mark by the depositor. These options are available as part of the submission process.</p>
+
 
 <h2>VTechWorks Distribution License</h2>
 
@@ -121,11 +120,10 @@
 
 <p>VTechWorks contains images and video recordings of Virginia Tech presentations and events. The following policies govern reproduction of a person’s likeness. </p>
 
-<ul>
-<li>Virginia Tech faculty, staff, and students automatically agree to let Virginia Tech capture their likenesses under their agreements with the university upon employment and matriculation. Therefore, permission to film members of the Virginia Tech community is not required at university-related events, although such permission can be requested as a courtesy. </li>
-<li>For events including non-Virginia Tech individuals, release forms signed by any speaker who features prominently on the recording must be deposited with the recording itself. Any such recording unaccompanied by a release form will be withdrawn from VTechWorks.</li>
-<li>For non-Virginia Tech individuals who are minors, a completed media release form must be on file before any medium is created. The minor’s parent or legal guardian must sign the media release form along with the minor.</li>
-</ul>
+<p>Virginia Tech faculty, staff, and students automatically agree to let Virginia Tech capture their likenesses under their agreements with the university upon employment and matriculation. Therefore, permission to film members of the Virginia Tech community is not required at university-related events, although such permission can be requested as a courtesy. </p>
+<p>For events including non-Virginia Tech individuals, release forms signed by any speaker who features prominently on the recording must be deposited with the recording itself. Any such recording unaccompanied by a release form will be withdrawn from VTechWorks.</p>
+<p>For non-Virginia Tech individuals who are minors, a completed media release form must be on file before any medium is created. The minor’s parent or legal guardian must sign the media release form along with the minor.</p>
+
 
 <h2>File Size Policies</h2>
 
@@ -133,11 +131,10 @@
 
 <h2>Amendment and Withdrawal Policies</h2>
 
-<ul>
-<li>If you would like to make a change to an item you yourself have deposited, you can do so at any time. We recommend, however, that you add an errata note or create a new version of the file instead of deleting the original file; this will ensure that any links to your original file do not break and that all versions of all files are preserved. </li>
-<li>File names should never be changed after files are uploaded to VTechWorks, as this will change the URL to that file. </li>
-<li>Theses and dissertations in VTechWorks have been approved for deposit by the graduate school and cannot be changed, withdrawn, or embargoed after deposit without the approval of the dean: write <a href="mailto:grads@vt.edu">grads@vt.edu</a> to request the change.</li>
-</ul>
+<p>If you would like to make a change to an item you yourself have deposited, you can do so at any time. We recommend, however, that you add an errata note or create a new version of the file instead of deleting the original file; this will ensure that any links to your original file do not break and that all versions of all files are preserved. </p>
+<p>File names should never be changed after files are uploaded to VTechWorks, as this will change the URL to that file. </p>
+<p>Theses and dissertations in VTechWorks have been approved for deposit by the graduate school and cannot be changed, withdrawn, or embargoed after deposit without the approval of the dean: write <a href="mailto:grads@vt.edu">grads@vt.edu</a> to request the change.</p>
+
 
 	</xsl:template>
 	
