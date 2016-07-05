@@ -15,7 +15,7 @@
 	<xsl:template name="AboutStaticPage">
 		<h1>About VTechWorks</h1>
 		<p>
-			VTechWorks, Virginia Tech's open access institutional repository, publicizes and preserves the scholarly work of Virginia Tech faculty, students, and staff: journal articles, books, theses, dissertations, conference papers, slide presentations, technical reports, working papers, administrative documents, videos, images, data sets, and more. Most content is recent, published within the last 15 years, but there is also a great deal of older and historical content. The full text of all documents is available, often in PDF format, and all entries are indexed by search engines such as Google Scholar and Summon. Any member of the Virginia Tech community can upload material to VTechWorks.
+			VTechWorks, Virginia Tech's open access institutional repository, publicizes and preserves the scholarly work of Virginia Tech faculty, students, and staff: journal articles, books, theses, dissertations, conference papers, slide presentations, technical reports, working papers, administrative documents, videos, images, datasets, and more. Most content is recent, published within the last 15 years, but there is also a great deal of older and historical content. The full text of all documents is available, often in PDF format, and all entries are indexed by search engines such as Google Scholar and Summon. Any member of the Virginia Tech community can upload material to VTechWorks.
 		</p>
 		<p>
 			VTechWorks supports a hierarchical structure composed of Communities and Collections. Communities include colleges, departments, research centers, institutes, or other entities. Communities contain Collections and sub-communities, and Collections hold the digital works.	VTechWorks was launched in 2012 and runs on the widely-used DSpace preservation platform. VTechWorks is managed by the Virginia Tech Libraries for the purpose of stewarding the intellectual output of the university in its land-grant mission to serve the Commonwealth of Virginia, the nation, and the world community through the discovery and dissemination of new knowledge.
@@ -79,7 +79,7 @@
 
 <ul>
 <li>Primary sources such as historical images (unless related to the history of Virginia Tech).</li>
-<li>Data sets that are published independently for reuse by other researchers as a separate publication; such data may be deposited in Virginia Tech’s data repository at <a href="http://data.lib.vt.edu">http://data.lib.vt.edu</a>. Data that supports a particular thesis, dissertation, report, article, or book may be deposited in VTechWorks along with that piece of writing as part of a single item record with multiple files.</li>
+<li>Datasets that are published independently for reuse by other researchers as a separate publication; such data may be deposited in Virginia Tech’s data repository at <a href="http://data.lib.vt.edu">http://data.lib.vt.edu</a>. Data that supports a particular thesis, dissertation, report, article, or book may be deposited in VTechWorks along with that piece of writing as part of a single item record with multiple files.</li>
 <li>Material not produced by a member of the Virginia Tech community. One notable exception is the Networked Library of Theses and Dissertations, which contains theses and dissertations produced at institutions around the world which have no digital repository of their own.</li>
 <li>Works that the depositor does not have the legal right to deposit. </li>
 </ul>
