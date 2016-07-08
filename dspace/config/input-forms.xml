@@ -900,12 +900,12 @@
 
 		<value-pairs value-pairs-name="common_types" dc-term="type">
 			<pair>
-				<displayed-value>Audio recording</displayed-value>
-				<stored-value>Audio recording</stored-value>
-			</pair>
-			<pair>
 				<displayed-value>Article</displayed-value>
 				<stored-value>Article</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Audio recording</displayed-value>
+				<stored-value>Audio recording</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Book</displayed-value>
