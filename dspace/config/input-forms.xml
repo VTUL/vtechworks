@@ -77,17 +77,6 @@
 				
 				<field>
 					<dc-schema>dc</dc-schema>
-					<dc-element>title</dc-element>
-					<dc-qualifier>serial</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Journal Title</label>
-					<input-type>onebox</input-type>
-					<hint>Examples: Foreign Affairs, PLOS One, Nature</hint>
-					<required></required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
 					<dc-element>date</dc-element>
 					<dc-qualifier>issued</dc-qualifier>
 					<repeatable>false</repeatable>
@@ -96,6 +85,96 @@
 					<hint>Enter date of previous publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
 					<required>You must enter at least the year.</required>
 				</field>				
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>abstract</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Abstract</label>
+					<input-type>textarea</input-type>
+					<hint>Enter a brief summary of the item. Preferred length is a single paragraph or about 300 words, although you may enter an abstract of any length.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>subject</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<!-- An input-type of twobox MUST be marked as repeatable -->
+					<repeatable>true</repeatable>
+					<label>Subject Keywords</label>
+					<input-type>twobox</input-type>
+					<hint>Enter any keywords or phrases that describe the item's content, especially any that do not appear in the Abstract. Enter each keyword or phrase separately, then click "Add." Repeat for all keywords or phrases. Examples: New River Valley, VA [Add], remote sensing [Add], photogrammetry [Add]</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>identifier</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+					<repeatable>true</repeatable>
+					<label>Identifiers</label>
+					<input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+					<hint>If the item has any identification numbers or codes associated with it, please enter them. Examples: DOI 10.1056/NEJMoa1510991, URL http://www.johncairns.net/ebook2.htm, ISSN 0272-3638</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>language</dc-element>
+					<dc-qualifier>iso</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Language</label>
+					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select "N/A." Examples: English, French, Chinese</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>relation</dc-element>
+					<dc-qualifier>ispartof</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Conference Title</label>
+					<input-type>onebox</input-type>
+					<hint>Examples: Modern Language Association Annual Meeting, 2016 IEEE International Symposium on Circuits and Systems, Veterans in Society 2015.</hint>
+					<required></required>
+				</field>
+			
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>title</dc-element>
+					<dc-qualifier>serial</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Journal Title</label>
+					<input-type>onebox</input-type>
+					<hint>Examples: Foreign Affairs, PLOS One, Nature</hint>
+					<required></required>
+				</field>
+								
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>identifier</dc-element>
+					<dc-qualifier>volume</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Volume</label>
+					<input-type>onebox</input-type>
+					<hint>Examples: 29, XVI, 1999</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>identifier</dc-element>
+					<dc-qualifier>issue</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Issue</label>
+					<input-type>onebox</input-type>
+					<hint>Examples: 4, 2, Summer</hint>
+					<required></required>
+				</field>			
 				
 				<field>
 					<dc-schema>dc</dc-schema>
@@ -118,53 +197,7 @@
 					<hint>Enter the series and number assigned to this item. Examples: Virginia Cooperative Extension BSE-51NP, Airport Cooperative Research Program 124, TMC75-07-H-00008</hint>
 					<required></required>
 				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>identifier</dc-element>
-					<dc-qualifier></dc-qualifier>
-					<!-- An input-type of qualdrop_value MUST be marked as repeatable -->
-					<repeatable>true</repeatable>
-					<label>Identifiers</label>
-					<input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-					<hint>If the item has any identification numbers or codes associated with it, please enter them. Examples: ISSN 0272-3638, DOI 10.1056/NEJMoa1510991, URL http://www.johncairns.net/ebook2.htm</hint>
-					<required></required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>language</dc-element>
-					<dc-qualifier>iso</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Language</label>
-					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select "N/A." Examples: English, French, Chinese</hint>
-					<required></required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>subject</dc-element>
-					<dc-qualifier></dc-qualifier>
-					<!-- An input-type of twobox MUST be marked as repeatable -->
-					<repeatable>true</repeatable>
-					<label>Subject Keywords</label>
-					<input-type>twobox</input-type>
-					<hint>Enter any keywords or phrases that describe the item's content. Enter each keyword or phrase separately, then click "Add." Repeat for all keywords or phrases. Examples: New River Valley, VA [Add], remote sensing [Add], photogrammetry [Add]</hint>
-					<required></required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>description</dc-element>
-					<dc-qualifier>abstract</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Abstract</label>
-					<input-type>textarea</input-type>
-					<hint>Enter a brief summary of the item. Preferred length is a single paragraph or about 300 words, although you may enter an abstract of any length.</hint>
-					<required></required>
-				</field>
-				
+
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>description</dc-element>
@@ -186,31 +219,7 @@
 					<hint>Enter any additional information that will help describe the item.</hint>
 					<required></required>
 				</field>
-				
-				<!--
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>identifier</dc-element>
-					<dc-qualifier>volume</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Volume</label>
-					<input-type>onebox</input-type>
-					<hint>Examples: 29, XVI, 1999</hint>
-					<required></required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>identifier</dc-element>
-					<dc-qualifier>issue</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Issue</label>
-					<input-type>onebox</input-type>
-					<hint>Examples: 4, 2, Summer</hint>
-					<required></required>
-				</field>	
-				 -->
-			</page>
+</page>
 			
 			<page number="2">
 				<field>
@@ -269,7 +278,7 @@
 					<label>Director(s)</label>
 					<type-bind>Audio recording,Video recording</type-bind>
 					<input-type>name</input-type>
-					<hint>Enter the name of the person(s) responsible for the general management and supervision of a filmed performance, a radio or television program, etc.</hint>
+					<hint>Enter the name of the person(s) responsible for the general management and supervision of a filmed performance, radio or television program, etc.</hint>
 					<required></required>
 				</field>
 				
@@ -329,7 +338,7 @@
 					<label>Duration</label>
 					<type-bind>Audio recording,Video recording</type-bind>
 					<input-type>onebox</input-type>
-					<hint>Enter the length or duration of the resource. Represents the playback time. Format: HH:MM:SS (Example: 02:33:53 for a film that is 2 hours, 33 minutes, and 53 seconds.</hint>
+					<hint>Enter the length or duration of the resource. Represents the playback time. Format: HH:MM:SS (Example: 02:33:53 for a film that is 2 hours, 33 minutes, and 53 seconds)</hint>
 					<required></required>
 				</field>
 				
@@ -342,18 +351,6 @@
 					<type-bind>Audio recording,Video recording</type-bind>
 					<input-type>textarea</input-type>
 					<hint>If available, provide a textual transcription of the item.</hint>
-					<required></required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>rights</dc-element>
-					<dc-qualifier></dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Rights Statement</label>
-					<type-bind>Audio recording,Video recording</type-bind>
-					<input-type value-pairs-name="common_rights">dropdown</input-type>
-					<hint>Select the rights statement that describes the copyright status of the item you are submitting.</hint>
 					<required></required>
 				</field>
 				
@@ -1202,49 +1199,7 @@
 				<stored-value>other</stored-value>
 			</pair>
 		</value-pairs>
-		
 
-
-
-
-
-
-
-
-
-
-		
-		<value-pairs value-pairs-name="common_rights"
-			dc-term="rights">
-			<pair>
-				<displayed-value>select rights statement</displayed-value>
-				<stored-value></stored-value>
-			</pair>
-			<pair>
-				<displayed-value>In Copyright</displayed-value>
-				<stored-value>In Copyright</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>In Copyright - Copyright Holder Unknown</displayed-value>
-				<stored-value>In Copyright - Copyright Holder Unknown</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>No Rights Reserved (CC0 1.0 Universal)</displayed-value>
-				<stored-value>No Rights Reserved (CC0 1.0 Universal)</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Public Domain</displayed-value>
-				<stored-value>Public Domain</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>No Known Copyright (NKC)</displayed-value>
-				<stored-value>No Known Copyright (NKC)</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Copyright Not Evaluated</displayed-value>
-				<stored-value>Copyright Not Evaluated</stored-value>
-			</pair>
-		</value-pairs>
 		
 	</form-value-pairs>
 
