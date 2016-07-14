@@ -122,14 +122,30 @@ dl {
     font-weight: bold;
 }
 
+
 .ds-table-responsive {
+    
     @media (max-width: $screen-xs-max) {
         overflow-x: auto;
         .word-break {
             min-width: 300px;
         }
     }
+    table {
+        width: 100%;
+        table-layout: fixed;
+        tr {
+            td {
+            
+                overflow:hidden;
+                word-wrap:break-word;
+                white-space:pre-wrap
+            }
+        }
+    }
+     
 }
+
 
 .table legend {
     display: none;
