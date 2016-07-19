@@ -314,7 +314,7 @@ public class AuthorizeManager
                 }
 
                 Group group = rp.getGroup(); 
-            	if (group != null && restrictedGroupName.equals(rp.getGroup().getName())) 
+            	if (group != null && restrictedGroupName.equals(group.getName())) 
             	{
             		isRestricted = true;
             		break;
