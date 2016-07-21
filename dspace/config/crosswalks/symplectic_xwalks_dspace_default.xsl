@@ -27,6 +27,7 @@
     <crosswalks:mappings for="dspace">
         <!-- Default mappings -->
         <crosswalks:mapping dspace="dc.type" feed-elements="category" />
+        <crosswalks:mapping dspace="dc.type.other" elements="types" />
         <crosswalks:mapping dspace="dc.contributor.author" elements="authors,associated-authors" />
         <crosswalks:mapping dspace="dc.contributor.editor" elements="editors" />
         <crosswalks:mapping dspace="dc.coverage.spatial" elements="location" />
@@ -50,7 +51,7 @@
         <crosswalks:mapping dspace="dc.identifier.issue" elements="issue" />
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
-        <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,types,notes" />
+        <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type:list(, )] (Peer reviewed?)~" />
         <crosswalks:mapping dspace="dc.description.notes" elements="c-invited" />
