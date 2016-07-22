@@ -15,19 +15,10 @@
 	<xsl:template name="AboutStaticPage">
 		<h1>About VTechWorks</h1>
 		<p>
-			VTechWorks, Virginia Tech's open access institutional repository, publicizes and preserves the scholarly work of Virginia Tech faculty, 
-			students, and staff: journal articles, books, theses, dissertations, conference papers, slide presentations, technical reports, working 
-			papers, administrative documents, videos, images, data sets, and more. Most content is recent, published within the last 15 years, but 
-			there is also a great deal of older and historical content. The full text of all documents is available, often in PDF format, and all 
-			entries are indexed by search engines such as Google Scholar and Summon. Any member of the Virginia Tech community can upload material 
-			to VTechWorks.
+			VTechWorks, Virginia Tech's open access institutional repository, publicizes and preserves the scholarly work of Virginia Tech faculty, students, and staff: journal articles, books, theses, dissertations, conference papers, slide presentations, technical reports, working papers, administrative documents, videos, images, datasets, and more. Most content is recent, published within the last 15 years, but there is also a great deal of older and historical content. The full text of all documents is available, often in PDF format, and all entries are indexed by search engines such as Google Scholar and Summon. Any member of the Virginia Tech community can upload material to VTechWorks.
 		</p>
 		<p>
-			VTechWorks supports a hierarchical structure composed of Communities and Collections. Communities include colleges, departments, research 
-			centers, institutes, or other entities. Communities contain Collections and sub-communities, and Collections hold the digital works.
-			VTechWorks was launched in 2012 and runs on the widely-used DSpace preservation platform. VTechWorks is managed by the Virginia Tech Libraries 
-			for the purpose of stewarding the intellectual output of the university in its land-grant mission to serve the Commonwealth of Virginia, 
-			the nation, and the world community through the discovery and dissemination of new knowledge.
+			VTechWorks supports a hierarchical structure composed of Communities and Collections. Communities include colleges, departments, research centers, institutes, or other entities. Communities contain Collections and sub-communities, and Collections hold the digital works.	VTechWorks was launched in 2012 and runs on the widely-used DSpace preservation platform. VTechWorks is managed by the Virginia Tech Libraries for the purpose of stewarding the intellectual output of the university in its land-grant mission to serve the Commonwealth of Virginia, the nation, and the world community through the discovery and dissemination of new knowledge.
 		</p>
 		
 		<h1>How VTechWorks benefits researchers</h1>
@@ -36,7 +27,7 @@
 				<li>Research in VTechWorks is widely disseminated, free to anyone in the world with an Internet connection.</li>
 				<li>Research in VTechWorks is easily discovered, since it is indexed in Google Scholar, WorldCat, the Virginia Tech website, and the University Libraries' Summon. </li>
 				<li>Research in VTechWorks has increased impact: many studies show that openly accessible research is more frequently cited by journalists and scholars than research published in journals and books that must be paid for.</li>
-				<li>Research in VTechWorks has a persistent, stable link ("handle") that won't change even when current servers are replaced, which makes it more reliable for others to cite and to share on social media.</li>
+				<li>Research in VTechWorks has a persistent, stable link to the item record ("handle") that won't change, which makes it more reliable for others to cite and to share on social media.</li>
 				<li>Research in VTechWorks will be preserved by the University Libraries for decades or even centuries, unlike research posted on a personal web page or published by a company that might go out of business.</li>
 				<li>Research in VTechWorks is preserved even if a researcher leaves Virginia Tech, but it can always be posted or published elsewhere, since Virginia Tech does not claim any unnecessary or additional rights to the material.</li>
 			</ul>
@@ -44,58 +35,105 @@
 	</xsl:template>
 	
 	<xsl:template name="PoliciesStaticPage">
-		<h1>VTechWorks Policies, Procedures, and Guidelines</h1>
-		<h2>Content Policies</h2>
-		<h3>Criteria for works in VTechWorks </h3>
-		<p>
-			<ul style="list-style-type:square">
-				<li>The work is produced, submitted, or sponsored by Virginia Tech faculty, staff, administrators, alumni, or students.</li>
-				<li>The work is related to education, research, service, or extension activities, or the work has historical value to the Virginia Tech community</li>
-				<li>
-					The author/owner must be willing and able to grant Virginia Tech the non-exclusive right to preserve and provide online access to the work. 
-					The authors and copyright owners determine if their works will be in VTechWorks exclusively or will made available through additional online 
-					platforms.
-				</li>
-				<li>
-					The complete text, image, audio, or video of the work is stored in VTechWorks, even if the file is not publicly available. VTechWorks is a 
-					content repository and does not accept metadata-only records.
-				</li>
-				<li>The work is appropriate for inclusion in the Collection to which it is submitted.</li>
-				<li>The work exists in a recommended file format that will facilitate long-term access and preservation, although any digital format will be accepted.</li>
-				<li>If the work is part of a series, other works in the series should also be deposited so that VTechWorks can offer as full a set as possible.</li>
-				<li>The work is static content, not a live data stream.  It is not possible to execute files or run software through VTechWorks.</li>
-			</ul>
-		</p>
+<h1>VTechWorks Policies</h1>
 
-		<h3>Types of content in VTechWorks </h3>
-		<p>Types of content in VTechWorks include (but are not limited to) 
-			<ul style="list-style-type:square">
-				<li>Journal articles, pre-prints, and post-prints, i.e., versions of peer-reviewed articles accepted for publication</li>
-				<li>Books, including scholarly monographs and textbooks</li>
-				<li>Technical reports</li>
-				<li>White papers</li>
-				<li>Extension materials, e.g., content created by Virginia Cooperative Extension</li>
-				<li>Learning objects, e.g., modules, syllabi, lecture videos, etc.</li>
-				<li>Presentations, including lecture notes, slides, and videos of scholarly talks</li>
-				<li>Posters, e.g., digital files of posters that were presented at conferences or symposia</li>
-				<li>Conference proceedings, especially symposia hosted or sponsored by Virginia Tech</li>
-				<li>Creative endeavors including media, art, music</li>
-				<li>Performances, e.g., audio or video recordings of recitals, dramatic readings, and the like</li>
-				<li>Research and statistical data, including surveys, censuses, voting records, field recordings, management plans, etc.</li>
-				<li>
-					Administrative documents, including policies, rulings, official statements, strategic and operational plans, annual reports, 
-					newslettes, and other materials generated by colleges and departments that document the history and intellectual life of Virginia Tech
-				</li>
-				<li>News articles and press releases produced by University Relations or other Virginia Tech news outlets</li>
-				<li>Historical material and primary sources, including historic photographs, manuscripts, and rare books</li>
-			</ul> 
-		</p>
-		<h3>File size guidelines </h3>
-		<p>
-			VTechWorks does not currently place restrictions on file size or the number of files that can be deposited. However, VTechWorks reserves the 
-			right to refuse to ingest materials whose volume would present a strain on its resources. In many cases, grant- or department-funded projects 
-			provide a budget for storage, preservation and access; in these cases, VTechWorks may be able to provide more storage for a nominal fee.
-		</p>
+<h2>General Content Policies</h2>
+
+<p>Content in VTechWorks must as a rule meet the following criteria, although exceptions can be granted. Write <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a> to discuss exceptions.</p>
+
+<ul>
+<li>The work is produced, submitted, or sponsored by Virginia Tech faculty, staff, administrators, alumni, or students.</li>
+<li>The work is related to education, research, service, or extension activities, or the work has historical value to the Virginia Tech community.</li>
+<li>The author/owner must be willing and able to grant Virginia Tech the non-exclusive right to preserve and provide online access to the work. The authors and copyright owners determine if their works will be in VTechWorks exclusively or will made available through additional online platforms. </li>
+<li>The complete text, image, audio, or video of the work is stored in VTechWorks, even if the file is not publicly available. VTechWorks is a content repository and does not accept metadata-only records. </li>
+<li>The work is appropriate for inclusion in the Collection to which it is submitted. </li>
+<li>The work exists in a recommended file format that will facilitate long-term access and preservation, although any digital format will be accepted. </li>
+<li>If the work is part of a series, other works in the series should also be deposited so that VTechWorks can offer as full a set as possible.</li>
+<li>The work is static content, not a live data stream.  It is not possible to execute files or run software through VTechWorks.</li>
+</ul>
+
+<h2>Types of Content Allowed</h2>
+
+<p>In general, content in VTechWorks is meant to capture the intellectual output of Virginia Tech in all its variety. Types of content in VTechWorks include (but are not limited to) the following: </p>
+
+<ul>
+<li>Journal articles, pre-prints, and post-prints, i.e., versions of scholarly and peer-reviewed articles accepted for publication </li>
+<li>Books, including scholarly monographs and textbooks</li>
+<li>Theses, dissertations, and other student works</li>
+<li>Technical reports and white papers</li>
+<li>Presentations, including lecture notes, slides, and videos of scholarly talks</li>
+<li>Posters, e.g., digital files of posters that were presented at conferences or symposia</li>
+<li>Conference proceedings, especially symposia hosted or sponsored by Virginia Tech</li>
+<li>Extension materials, e.g., content created by Virginia Cooperative Extension</li>
+<li>Learning objects, e.g., modules, syllabi, lecture videos, etc., especially when deposited for preservation purposes</li>
+<li>Creative endeavors including media, art, and music</li>
+<li>Performances, e.g., audio or video recordings of recitals, dramatic readings, and the like</li>
+<li>Patents and other intellectual property documents</li>
+<li>Administrative documents, including policies, rulings, official statements, strategic and operational plans, annual reports, newsletters, and other materials generated by colleges and departments that document the history of Virginia Tech</li>
+<li>News articles and press releases produced by University Relations or other Virginia Tech news outlets</li>
+</ul>
+
+<h2>Types of Content Not Allowed</h2>
+
+<p>Content that is generally not appropriate for VTechWorks includes the following: </p>
+
+<ul>
+<li>Primary sources such as historical images (unless related to the history of Virginia Tech).</li>
+<li>Datasets that are published independently for reuse by other researchers as a separate publication; such data may be deposited in Virginia Tech’s data repository at <a href="http://data.lib.vt.edu">http://data.lib.vt.edu</a>. Data that supports a particular thesis, dissertation, report, article, or book may be deposited in VTechWorks along with that piece of writing as part of a single item record with multiple files.</li>
+<li>Material not produced by a member of the Virginia Tech community. One notable exception is the Networked Library of Theses and Dissertations, which contains theses and dissertations produced at institutions around the world which have no digital repository of their own.</li>
+<li>Works that the depositor does not have the legal right to deposit. </li>
+</ul>
+
+<h2>Copyright, Proxies, and Licensing</h2>
+
+<p>It is the responsibility of the depositor to ensure that s/he has the legal right to deposit a work in VTechWorks under the terms of copyright law and under the terms of any existing contracts related to the work. Authors of a work automatically own copyright in that work once it exists in a fixed form, but as a condition of publication many journals, publishers, and conference proceedings make contractual restrictions on which version of a published work can be deposited in an institutional repository such as VTechWorks. Authors should therefore not assume that they have the right to deposit their own published work in VTechWorks. See <a href="http://vtechworks.lib.vt.edu/page/help">http://vtechworks.lib.vt.edu/page/help</a> and <a href="http://www.lib.vt.edu/copyright/">http://www.lib.vt.edu/copyright/</a> for help with rights. </p>
+<p>Virginia Tech faculty and students own copyright in the works they have created as described in VT Policy 13000, available at <a href="http://www.policies.vt.edu/13000.pdf">http://www.policies.vt.edu/13000.pdf</a>. According to this policy, for “the traditional results of academic scholarship, i.e., textbooks, literary works, artistic creations and artifacts” -- that is, the kinds of works most commonly deposited  in VTechWorks -- “the IP rights remain with the author(s)” and are not claimed by Virginia Tech. </p>
+<p>For a work with multiple authors, every author owns the copyright to the entire work and therefore may deposit the work in VTechWorks without needing to ask permission of the work’s other authors.</p>
+<p>Virginia Tech itself owns the copyright in most administrative documents produced by Virginia Tech staff in the normal course of their duties (e.g., reports, policies, news releases); the individual staff member does not usually own the copyright to such material. Such material may be deposited in VTechWorks by any member of the Virginia Tech community. </p>
+<p>Authors may ask others to deposit works in VTechWorks on their behalf, and these depositors shall be considered proxies for the author. VTechWorks staff and Virginia Tech librarians are de facto proxies for any and all members of the Virginia Tech community.</p>
+<p>Proxies who deposit content for authors should make every effort to determine whether the work can legally be deposited in VTechWorks. Proxies need not deposit content if they believe the work should not be deposited because of copyright law or contractual restrictions.</p>
+<p>All depositors must agree to the non-exclusive distribution license given below before VTechWorks will host their works. This license grants Virginia Tech the right to host the work without affecting the author’s right to host the work elsewhere. </p>
+<p>Copyright owners and their proxies may also elect to license their work with a <a href="http://creativecommons.org">Creative Commons</a> license so that members of the public who find the work online can copy it under certain conditions; copyright owners may also donate their work to the public domain in perpetuity by giving it a “CC Zero (CC0)” mark. Some work, such as older publications, government documents, or strictly factual data, might already be in the public domain and therefore have no copyright owner; such work can be given the “Public Domain” mark by the depositor. These options are available as part of the submission process.</p>
+
+
+<h2>VTechWorks Distribution License</h2>
+
+<p>In order for VTechWorks to reproduce, translate, and distribute your submission worldwide, you must agree to the following terms.</p>
+
+<p>NON-EXCLUSIVE DISTRIBUTION LICENSE</p>
+
+<p>By signing and submitting this license, you (the author(s) or copyright owner) grant to Virginia Tech&#39;s University Libraries (VTUL) permission to store and provide access to your submission (including the abstract).</p>
+
+<p>You agree that VTUL may, without changing the content, translate the submission to any medium or format for the purpose of preservation.</p>
+
+<p>You also agree that VTUL may keep more than one copy of this submission for purposes of security, backup and preservation.</p>
+
+<p>You represent that the submission is your original work, and that you have the right to grant the rights contained in this license. You also represent that your submission does not, to the best of your knowledge, infringe upon anyone&#39;s copyright.</p>
+
+<p>If the submission contains material for which you do not hold copyright, you represent that you have obtained the unrestricted permission of the copyright owner to grant VTUL the rights required by this license, and that such third-party owned material is clearly identified and acknowledged within the text or content of the submission.</p>
+
+<p>If the submission is based upon work that has been sponsored or supported by an agency or organization other than Virginia Tech, you represent that you have fulfilled any right of review or other obligations required by such contract or agreement.</p>
+
+<p>VTUL will clearly identify your name(s) as the author(s) or owner(s) of the submission, and will not make any alteration, other than as allowed by this license, to your submission.</p>
+
+<h2>Permissions to Reproduce a Likeness</h2>
+
+<p>VTechWorks contains images and video recordings of Virginia Tech presentations and events. The following policies govern reproduction of a person’s likeness. </p>
+
+<p>Virginia Tech faculty, staff, and students automatically agree to let Virginia Tech capture their likenesses under their agreements with the university upon employment and matriculation. Therefore, permission to film members of the Virginia Tech community is not required at university-related events, although such permission can be requested as a courtesy. </p>
+<p>For events including non-Virginia Tech individuals, release forms signed by any speaker who features prominently on the recording must be deposited with the recording itself. Any such recording unaccompanied by a release form will be withdrawn from VTechWorks.</p>
+<p>For non-Virginia Tech individuals who are minors, a completed media release form must be on file before any medium is created. The minor’s parent or legal guardian must sign the media release form along with the minor.</p>
+
+
+<h2>File Size Policies</h2>
+
+<p>VTechWorks does not currently place restrictions on file size or the number of files that can be deposited. However, VTechWorks reserves the right to refuse to ingest materials whose volume would present a strain on its resources. In many cases, grant- or department-funded projects provide a budget for storage, preservation and access; in these cases, VTechWorks may be able to provide more storage for a nominal fee.</p>
+
+<h2>Amendment and Withdrawal Policies</h2>
+
+<p>If you would like to make a change to an item you yourself have deposited, you can do so at any time. We recommend, however, that you add an errata note or create a new version of the file instead of deleting the original file; this will ensure that any links to your original file do not break and that all versions of all files are preserved. </p>
+<p>File names should never be changed after files are uploaded to VTechWorks, as this will change the URL to that file. </p>
+<p>Theses and dissertations in VTechWorks have been approved for deposit by the graduate school and cannot be changed, withdrawn, or embargoed after deposit without the approval of the dean: write <a href="mailto:grads@vt.edu">grads@vt.edu</a> to request the change.</p>
 
 
 	</xsl:template>
@@ -126,8 +164,8 @@ For help with any and all questions with depositing or accessing VTechWorks cont
 		</ul>
 		<h3>Some Definitions of SHERPA/RoMEO Journal and Publisher Policies</h3>
 		<ul>
-		<li>"Green" journals and publishers allow you to deposit a draft version, submitted version (pre peer review), or accepted version (post peer review) of your work; you may also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
-		<li>"Blue" journals and publishers allow you to deposit an accepted version (post peer review) of your work; you may also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
+		<li>"Green" journals and publishers allow you to deposit a draft version, submitted version (pre peer review), or accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
+		<li>"Blue" journals and publishers allow you to deposit an accepted version (post peer review) of your work; you might also be allowed or required to deposit the publisher's version (final typeset PDF)</li>
 		<li>"Yellow" journals and publishers allow you to deposit a draft version or submitted version (pre peer review) of your work</li>
 		<li>"White" journals and publishers do not allow you to deposit any version of your work</li>	
 		<li>"Gray" journals and publishers are those whose policies concerning deposit are unknown</li>			
@@ -209,6 +247,20 @@ For help with any and all questions with depositing or accessing VTechWorks cont
 		<h4>No Creative Commons license</h4>
 		<p>
 		You need not specify a Creative Commons license or mark for the work you are uploading, but in that case, people who find the content online will not know whether or how they are permitted to use, share, redistribute, remix, tweak, and build upon your work.
-		</p>						
+		</p>
+		
+<h2>Linking to Work</h2> 
+
+<p>One of the key benefits of VTechWorks is that it provides stable, permanent links (“handles”) to research. Here’s how to share stable links to your work.</p>
+
+<ul> 
+<li>Be sure to share the link in the item record that appears in this format: <a href="http://hdl.handle.net/10919/71357">http://hdl.handle.net/10919/71357</a> This link is guaranteed to be permanent and stable, even if VTechWorks moves or changes its domain name in the future.</li> 
+<li>Direct links to files (such as <a href="http://vtechworks.lib.vt.edu/bitstream/handle/10919/56486/40246_2015_Article_42.pdf">http://vtechworks.lib.vt.edu/bitstream/handle/10919/56486/40246_2015_Article_42.pdf</a>) are relatively stable but are not guaranteed to persist, since the depositor might choose to delete the file or change its name, which will change the URL. We discourage depositors from deleting files or changing file names, but it has been known to happen.</li> 
+<li>Do not copy and share the link from your browser’s address bar; these links (which might include “vtechworks.lib.vt.edu”) are relatively stable but are not guaranteed to resolve if VTechWorks moves or makes changes to its domain name.</li>
+<li>Be especially sure not to copy and share the link from your browser’s address bar if you have signed in from off-campus; such links contain the word “ezproxy,” which indicates that you have signed in as a Virginia Tech user in order to access restricted resources. Non-Virginia Tech users will not be able to see these items.</li> 
+
+</ul>
+		
+								
   </xsl:template>
 </xsl:stylesheet>
