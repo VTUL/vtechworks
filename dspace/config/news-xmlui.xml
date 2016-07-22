@@ -3,7 +3,11 @@
 <body>
 <div id="file.news.div.news" n="news" rend="primary">
 <head>VTechWorks</head>
-<p>VTechWorks publicizes and preserves the scholarly work of Virginia Tech faculty, students, and staff: journal articles, books, theses, dissertations, conference papers, slide presentations, technical reports, working papers, administrative documents, videos, images, and more. Write <xref target="mailto:vtechworks@vt.edu" rend="a-bold">vtechworks@vt.edu</xref> to get help adding your content to VTechWorks or <xref target="https://blogs.lt.vt.edu/openvt/">visit the Open@VT blog</xref> to learn about current VTechWorks activities.</p> 
+<p>VTechWorks publicizes and preserves the scholarly work of Virginia Tech faculty, students, and staff: journal articles, books, theses, dissertations, conference papers, slide presentations, technical reports, working papers, administrative documents, videos, images, and more. Write <xref target="mailto:vtechworks@vt.edu" rend="a-bold">vtechworks@vt.edu</xref> to get help adding your content to VTechWorks or visit the <xref target="https://blogs.lt.vt.edu/openvt/" rend="a-bold">Open@VT blog</xref> to learn about current VTechWorks activities.</p> 
+
+<p>Want to publish a standalone dataset? Visit <xref target="https://data.lib.vt.edu/" rend="a-bold">VTechData</xref>.</p>
+
+<p><strong>NEWS:</strong> Faculty can now deposit items to VTechWorks from the Electronic Faculty Activity Reporting System (EFARS). Visit the Provost's <xref target="http://provost.vt.edu/faculty_affairs/efars/index.html" rend="a-bold">EFARS page</xref> to learn more and to log in to EFARS.</p>
 </div>
 </body>
 <options/>
