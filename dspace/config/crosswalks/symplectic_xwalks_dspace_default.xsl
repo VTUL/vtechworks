@@ -54,7 +54,7 @@
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type:list(, )] (Peer reviewed?)~" />
-        <crosswalks:mapping dspace="dc.description.notes" elements="c-invited" />
+        <crosswalks:mapping dspace="dc.description.notes" elements="~[c-invited] (invited?)" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,record-created-at-source-date" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$are-files-confidential] (Are files confidential?)" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$confidential] (Confidential?)" />
