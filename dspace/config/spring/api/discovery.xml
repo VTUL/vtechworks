@@ -679,7 +679,7 @@
         <property name="indexFieldName" value="type"/>
         <property name="metadataFields">
             <list>
-                <value>dc.type.*</value>
+                <value>dc.type</value>
             </list>
         </property>
         <property name="sortOrder" value="COUNT"/>

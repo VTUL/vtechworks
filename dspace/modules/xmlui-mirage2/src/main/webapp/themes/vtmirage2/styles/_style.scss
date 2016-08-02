@@ -41,6 +41,9 @@ padding: 2px;
     @media (max-width: $screen-xs-max) {
         overflow-x: auto;
     }
+    .word-break {
+        word-break:break-word;
+    }
 }
 
 .word-break {

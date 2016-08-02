@@ -193,19 +193,12 @@ public class OMALSNonInteractiveStep extends AbstractProcessingStep
     */
    protected void addDefaultData(Item item) throws SQLException
    {
-	   // dc.description.degree, dc.publisher, dc.rights, dc.rights.uri, thesis.degree.name, thesis.degree.level, thesis.degree.grantor
+	   // dc.description.degree, dc.publisher, thesis.degree.name, thesis.degree.level, thesis.degree.grantor
        item.clearMetadata("dc", "description", "degree", Item.ANY);
        item.addMetadata("dc", "description", "degree", "en_US", "MALS");
 	   
 	   item.clearMetadata("dc", "publisher", null, Item.ANY);
        item.addMetadata("dc", "publisher", null, "en_US", "Virginia Tech");
-       
-       item.clearMetadata("dc", "rights", null, Item.ANY);
-       item.addMetadata("dc", "rights", null, "en_US", "In Copyright (InC)");
-       item.addMetadata("dc", "rights", null, "en_US", "This Item is protected by copyright and/or related rights. Some uses of this Item may be deemed fair and permitted by law even without permission from the rights holder(s). For other uses, you need to obtain permission from the rights holder(s).");
-       
-       item.clearMetadata("dc", "rights", "uri", Item.ANY);
-       item.addMetadata("dc", "rights", "uri", null, "http://rightsstatements.org/vocab/InC/1.0/");
        
        item.clearMetadata("thesis", "degree", "name", Item.ANY);
        item.addMetadata("thesis", "degree", "name", "en_US", "Master of Agricultural and Life Sciences");
@@ -215,6 +208,16 @@ public class OMALSNonInteractiveStep extends AbstractProcessingStep
        
        item.clearMetadata("thesis", "degree", "grantor", Item.ANY);
        item.addMetadata("thesis", "degree", "grantor", "en_US", "Virginia Polytechnic Institute and State University");
+       
+       /*
+	   // remove dc.rights, dc.rights.uri
+       item.clearMetadata("dc", "rights", null, Item.ANY);
+       item.addMetadata("dc", "rights", null, "en_US", "In Copyright (InC)");
+       item.addMetadata("dc", "rights", null, "en_US", "This Item is protected by copyright and/or related rights. Some uses of this Item may be deemed fair and permitted by law even without permission from the rights holder(s). For other uses, you need to obtain permission from the rights holder(s).");
+       
+       item.clearMetadata("dc", "rights", "uri", Item.ANY);
+       item.addMetadata("dc", "rights", "uri", null, "http://rightsstatements.org/vocab/InC/1.0/");
+       */
    }
 
 }

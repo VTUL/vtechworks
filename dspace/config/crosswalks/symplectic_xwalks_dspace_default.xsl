@@ -53,7 +53,8 @@
         <crosswalks:mapping dspace="dc.title" elements="title" />
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
-        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type] (Peer reviewed?)~" />
+        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type:list(, )] (Peer reviewed?)~" />
+        <crosswalks:mapping dspace="dc.description.notes" elements="c-invited" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,record-created-at-source-date" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$are-files-confidential] (Are files confidential?)" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$confidential] (Confidential?)" />
@@ -75,6 +76,19 @@
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
     </crosswalks:mappings>
     
+  <!-- Override the boolean mapping template -->
+	<xsl:template match="pubs:boolean">
+		  <xsl:param name="name" />
+		  <xsl:param name="repo_field" />
+ 
+		<!-- Custom XSL: Only map booleans when they are for a field other than c-invited, or are not equal to true. -->
+		<xsl:if test="$name != 'c-invited' or . != 'false'">
+			<xsl:apply-templates select="." mode="render_with_dictionary">
+				<xsl:with-param name="dictionary-name" select="$name" />
+				<xsl:with-param name="dictionary-target" select="$repo_field" />
+			</xsl:apply-templates>
+		</xsl:if>
+	</xsl:template>
     
     <!--
         Object level field mappings
@@ -83,7 +97,6 @@
     -->
     <crosswalks:object-mappings for="dspace">
             <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment" />
-            <crosswalks:mapping dspace="dc.description.notes" elements="c-invited" />
             These mappings are for the OA location selection
             <crosswalks:mapping dspace="dc.identifier.url" elements="p-oa-location" />
             <crosswalks:mapping dspace="dc.description.version" elements="p-oa-location-file-version" />
