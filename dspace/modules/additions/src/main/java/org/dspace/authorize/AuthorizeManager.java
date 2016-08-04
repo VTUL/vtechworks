@@ -39,6 +39,8 @@ import org.dspace.workflow.WorkflowItem;
  */
 public class AuthorizeManager
 {
+
+
     /**
      * Utility method, checks that the current user of the given context can
      * perform all of the specified actions on the given object. An
@@ -311,7 +313,8 @@ public class AuthorizeManager
             		break;
                 }
 
-            	if (rp.getGroup().getName().equals(restrictedGroupName)) 
+                Group group = rp.getGroup(); 
+            	if (group != null && restrictedGroupName.equals(group.getName())) 
             	{
             		isRestricted = true;
             		break;

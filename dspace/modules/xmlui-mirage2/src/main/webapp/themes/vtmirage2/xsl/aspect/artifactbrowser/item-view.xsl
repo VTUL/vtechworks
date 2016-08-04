@@ -550,7 +550,7 @@
                 </td>
                 <!-- Item full view enabling html for all fields, e.g., abstract -->
                 <!-- Render abstract by line break -->
-	            <td class="word-break line-break">
+	            <td class="word-break">
 	              <!--  
 	              <xsl:copy-of select="./node()"/>
 	              -->

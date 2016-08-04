@@ -128,17 +128,19 @@ public class NDLTDNonInteractiveStep extends AbstractProcessingStep
         item.addMetadata("dc", "description", "degree", "en_US", 
         		item.getMetadataFirstValue("thesis", "degree", "name", Item.ANY));
         
-        // dc.format.medium, dc.rights, dc.rights.uri
+        // dc.format.medium
         item.clearMetadata("dc", "format", "medium", Item.ANY);
         item.addMetadata("dc", "format", "medium", "en_US", "ETD");
         
+        /*
+         // remove dc.rights, dc.rights.uri
         item.clearMetadata("dc", "rights", null, Item.ANY);
         item.addMetadata("dc", "rights", null, "en_US", "In Copyright (InC)");
         item.addMetadata("dc", "rights", null, "en_US", "This Item is protected by copyright and/or related rights. Some uses of this Item may be deemed fair and permitted by law even without permission from the rights holder(s). For other uses, you need to obtain permission from the rights holder(s).");
         
         item.clearMetadata("dc", "rights", "uri", Item.ANY);
         item.addMetadata("dc", "rights", "uri", null, "http://rightsstatements.org/vocab/InC/1.0/");
-        
+        */
         
         /*
         // thesis.degree.discipline ("dc.contributor.department")

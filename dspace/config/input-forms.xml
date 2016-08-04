@@ -52,7 +52,7 @@
 					<hint>Select the type(s) of content you are depositing. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" or "COMMAND" key. Examples: Article, Learning Object, Video Recording and Presentation. </hint>
 					<required></required>
 				</field>
-			
+
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
@@ -63,7 +63,7 @@
 					<hint>Enter the name(s) of the author(s) or creator(s). Enter each name individually, then click "Add". To use VTechWorks' name lookup function, click "Lookup" and you will be directed to an index of VTechWorks' creator and contributor names. Examples: Faulkner, William; Einstein, Albert; Lovelace, Ada</hint>
 					<required></required>
 				</field>
-				
+
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>title</dc-element>
@@ -74,7 +74,7 @@
 					<hint>Enter the title or name of the item. If a title is not provided, create one that appropriately describes the item. Examples: Extended Boolean Information Retrieval, Ossian and the Genres of Culture, Chemistry of Arsenic Removal During Coagulation and Fe-Mn Oxidation</hint>
 					<required>You must enter a main title for this item.</required>
 				</field>
-				
+
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>date</dc-element>
@@ -84,8 +84,77 @@
 					<input-type>date</input-type>
 					<hint>Enter date of previous publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
 					<required>You must enter at least the year.</required>
-				</field>				
-				
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>identifier</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+					<repeatable>true</repeatable>
+					<label>Identifiers</label>
+					<input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+					<hint>If the item has any identification numbers or codes associated with it, please enter them. Examples: DOI 10.1056/NEJMoa1510991, URL http://www.johncairns.net/ebook2.htm, ISSN 0272-3638</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>language</dc-element>
+					<dc-qualifier>iso</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Language</label>
+					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select "N/A." Examples: English, French, Chinese</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>relation</dc-element>
+					<dc-qualifier>ispartof</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Conference Title</label>
+					<input-type>onebox</input-type>
+					<hint>Examples: Modern Language Association Annual Meeting, 2016 IEEE International Symposium on Circuits and Systems, Veterans in Society 2015.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>publisher</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Publisher</label>
+					<input-type>onebox</input-type>
+					<hint>If the item has been published or accepted for publication, enter the publisher. If the item has not been published, enter "Virginia Tech." Examples: Wiley, Cornell University Press, Taylor &amp; Francis</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>relation</dc-element>
+					<dc-qualifier>ispartofseries</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Series/Report Number</label>
+					<input-type>series</input-type>
+					<hint>Enter the series and number assigned to this item. Examples: Virginia Cooperative Extension BSE-51NP, Airport Cooperative Research Program 124, TMC75-07-H-00008</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>sponsorship</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Funding</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the names of any funders and/or grant numbers. Enter each funder name or grant number separately, then click "Add." Examples: National Science Foundation [Add], NSF: DMR-01-02277 [Add]</hint>
+					<required></required>
+				</field>
+			</page>
+
+			<page number="2">
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>description</dc-element>
@@ -111,104 +180,40 @@
 
 				<field>
 					<dc-schema>dc</dc-schema>
-					<dc-element>identifier</dc-element>
-					<dc-qualifier></dc-qualifier>
-					<!-- An input-type of qualdrop_value MUST be marked as repeatable -->
-					<repeatable>true</repeatable>
-					<label>Identifiers</label>
-					<input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-					<hint>If the item has any identification numbers or codes associated with it, please enter them. Examples: DOI 10.1056/NEJMoa1510991, URL http://www.johncairns.net/ebook2.htm, ISSN 0272-3638</hint>
-					<required></required>
-				</field>
-
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>language</dc-element>
-					<dc-qualifier>iso</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Language</label>
-					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select "N/A." Examples: English, French, Chinese</hint>
-					<required></required>
-				</field>
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>relation</dc-element>
-					<dc-qualifier>ispartof</dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Conference Title</label>
-					<input-type>onebox</input-type>
-					<hint>Examples: Modern Language Association Annual Meeting, 2016 IEEE International Symposium on Circuits and Systems, Veterans in Society 2015.</hint>
-					<required></required>
-				</field>
-			
-				<field>
-					<dc-schema>dc</dc-schema>
 					<dc-element>title</dc-element>
 					<dc-qualifier>serial</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Journal Title</label>
+					<type-bind>Article</type-bind>
 					<input-type>onebox</input-type>
 					<hint>Examples: Foreign Affairs, PLOS One, Nature</hint>
 					<required></required>
 				</field>
-								
+
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>identifier</dc-element>
 					<dc-qualifier>volume</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Volume</label>
+					<type-bind>Article</type-bind>
 					<input-type>onebox</input-type>
 					<hint>Examples: 29, XVI, 1999</hint>
 					<required></required>
 				</field>
-				
+
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>identifier</dc-element>
 					<dc-qualifier>issue</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Issue</label>
+					<type-bind>Article</type-bind>
 					<input-type>onebox</input-type>
 					<hint>Examples: 4, 2, Summer</hint>
 					<required></required>
-				</field>			
-				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>publisher</dc-element>
-					<dc-qualifier></dc-qualifier>
-					<repeatable>false</repeatable>
-					<label>Publisher</label>
-					<input-type>onebox</input-type>
-					<hint>If the item has been published or accepted for publication, enter the publisher. If the item has not been published, enter "Virginia Tech." Examples: Wiley, Cornell University Press, Taylor &amp; Francis</hint>
-					<required></required>
 				</field>
 				
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>relation</dc-element>
-					<dc-qualifier>ispartofseries</dc-qualifier>
-					<repeatable>true</repeatable>
-					<label>Series/Report Number</label>
-					<input-type>series</input-type>
-					<hint>Enter the series and number assigned to this item. Examples: Virginia Cooperative Extension BSE-51NP, Airport Cooperative Research Program 124, TMC75-07-H-00008</hint>
-					<required></required>
-				</field>
-
-				<field>
-					<dc-schema>dc</dc-schema>
-					<dc-element>description</dc-element>
-					<dc-qualifier>sponsorship</dc-qualifier>
-					<repeatable>true</repeatable>
-					<label>Funding</label>
-					<input-type>onebox</input-type>
-					<hint>Enter the names of any funders and/or grant numbers. Enter each funder name or grant number separately, then click "Add." Examples: National Science Foundation [Add], NSF: DMR-01-02277 [Add]</hint>
-					<required></required>
-				</field>
-									
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>description</dc-element>
@@ -217,6 +222,150 @@
 					<label>Notes</label>
 					<input-type>textarea</input-type>
 					<hint>Enter any additional information that will help describe the item.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>title</dc-element>
+					<dc-qualifier>alternative</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Other Titles</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>onebox</input-type>
+					<hint>If the item has any alternative titles, please enter them here.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>identifier</dc-element>
+					<dc-qualifier>citation</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Citation</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>onebox</input-type>
+					<hint>Enter the standard citation for the previously issued instance of this item.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>relation</dc-element>
+					<dc-qualifier>ispartof</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Episode Title</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>onebox</input-type>
+					<hint>If the item is an episode in a series or compilation, enter the item's episode title here.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>date</dc-element>
+					<dc-qualifier>created</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Creation Date</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>date</input-type>
+					<hint>Enter the date when the item was created. For interview, enter the date when the raw interview was conducted.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>director</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Director(s)</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>name</input-type>
+					<hint>Enter the name of the person(s) responsible for the general management and supervision of a filmed performance, radio or television program, etc.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>editor</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Editor(s)</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>name</input-type>
+					<hint>Enter the name of the person or organization responsible for assembling, arranging, and trimming film, video, or other moving image formats, including both visual and audio components.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Interviewee(s)</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>name</input-type>
+					<hint>For interviews, enter the name of the person who was interviewed.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Interviewer(s)</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>name</input-type>
+					<hint>For interviews, enter the name of the person(s) who conducted the interview.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Contributor - Other</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>name</input-type>
+					<hint>Enter the name(s) of an entity or entities responsible for making contributions to the resource.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>format</dc-element>
+					<dc-qualifier>extent</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Duration</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>onebox</input-type>
+					<hint>Enter the length or duration of the resource. Represents the playback time. Format: HH:MM:SS (Example: 02:33:53 for a film that is 2 hours, 33 minutes, and 53 seconds)</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>notes</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Transcription</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>textarea</input-type>
+					<hint>If available, provide a textual transcription of the item.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>rights</dc-element>
+					<dc-qualifier>holder</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Rights Holder</label>
+					<type-bind>Audio recording,Video recording</type-bind>
+					<input-type>name</input-type>
+					<hint>Enter the name of the person or organization that owns or manages rights over the item you are submitting. Enter organization names in the "Last Name" field.</hint>
 					<required></required>
 				</field>
 			</page>
@@ -245,9 +394,9 @@
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>author</dc-qualifier>
 					<repeatable>true</repeatable>
-					<label>Authors</label>
+					<label>Author(s)/Creator(s)</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of the authors of this item.</hint>
+					<hint>Enter the name(s) of the author(s) or creator(s). Enter each name individually, then click "Add." To use VTechWorks' name lookup function, click "Lookup" and you will be directed to an index of VTechWorks' creator and contributor names. Examples: Faulkner, William; Einstein, Albert; Lovelace, Ada</hint>
 					<required>You must enter the author of this item.</required>
 				</field>
 
@@ -258,7 +407,7 @@
 					<repeatable>false</repeatable>
 					<label>Title</label>
 					<input-type>onebox</input-type>
-					<hint>Enter the main title of the item.</hint>
+					<hint>Enter the title or name of the item. If a title is not provided, create one that appropriately describes the item. Examples: Extended Boolean Information Retrieval, Ossian and the Genres of Culture, Chemistry of Arsenic Removal During Coagulation and Fe-Mn Oxidation</hint>
 					<required>You must enter a main title for this item.</required>
 				</field>
 				
@@ -278,10 +427,9 @@
 					<dc-element>date</dc-element>
 					<dc-qualifier>issued</dc-qualifier>
 					<repeatable>false</repeatable>
-					<label>Date of Issue</label>
+					<label>Date</label>
 					<input-type>date</input-type>
-					<hint>Please give the date of previous publication or public distribution. 
-					You can leave out the day and/or month if they aren't applicable.</hint>
+					<hint>Enter date of publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
 					<required>You must enter at least the year.</required>
 				</field>
 				
@@ -334,11 +482,9 @@
 					<dc-element>type</dc-element>
 					<dc-qualifier></dc-qualifier>
 					<repeatable>true</repeatable>
-					<label>Type</label>
+					<label>Item Type</label>
 					<input-type value-pairs-name="common_types">dropdown</input-type>
-					<hint>Select the type(s) of content of the item. To select more
-						than one value in the list, you may have to hold down the "CTRL"
-						or "Shift" or "COMMAND" key.</hint>
+					<hint>Select the type(s) of content you are depositing. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" or "COMMAND" key. Examples: Article, Learning Object, Video Recording and Presentation.</hint>
 					<required></required>
 				</field>
 				
@@ -349,10 +495,7 @@
 					<repeatable>false</repeatable>
 					<label>Language</label>
 					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-					<hint>Select the language of the main content of the item. If the
-						language does not appear in the list, please select 'Other'. If
-						the content does not really have a language (for example, if it is
-						a dataset or an image) please select 'N/A'.</hint>
+					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select "N/A." Examples: English, French, Chinese</hint>
 					<required></required>
 				</field>
 				
@@ -364,7 +507,7 @@
 					<repeatable>true</repeatable>
 					<label>Subject Keywords</label>
 					<input-type>twobox</input-type>
-					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus. </hint>
+					<hint>Enter appropriate subject keywords or phrases from the CAB Agricultural and Environmental Thesaurus. Enter each keyword or phrase separately, then click "Add." Repeat for all keywords or phrases. Examples: New River Valley, VA [Add], remote sensing [Add], photogrammetry [Add]</hint>
 					<required></required>
 					<vocabulary>cabt</vocabulary>
 				</field>
@@ -376,7 +519,7 @@
 					<repeatable>false</repeatable>
 					<label>Abstract</label>
 					<input-type>textarea</input-type>
-					<hint>Enter the abstract of the item.</hint>
+					<hint>Enter a brief summary of the item. Preferred length is a single paragraph or about 300 words, although you may enter an abstract of any length.</hint>
 					<required></required>
 				</field>
 				
@@ -462,9 +605,9 @@
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>author</dc-qualifier>
 					<repeatable>true</repeatable>
-					<label>Authors</label>
+					<label>Author(s)/Creator(s)</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of the authors of this item.</hint>
+					<hint>Enter the name(s) of the author(s) or creator(s). Enter each name individually, then click "Add." To use VTechWorks' name lookup function, click "Lookup" and you will be directed to an index of VTechWorks' creator and contributor names. Examples: Faulkner, William; Einstein, Albert; Lovelace, Ada</hint>
 					<required>You must enter the author of this item.</required>
 				</field>
 
@@ -475,7 +618,7 @@
 					<repeatable>false</repeatable>
 					<label>Title</label>
 					<input-type>onebox</input-type>
-					<hint>Enter the title of the work as it appears on the title page or equivalent.</hint>
+					<hint>Enter the title or name of the item. If a title is not provided, create one that appropriately describes the item. Examples: Extended Boolean Information Retrieval, Ossian and the Genres of Culture, Chemistry of Arsenic Removal During Coagulation and Fe-Mn Oxidation</hint>
 					<required>You must enter a main title for this item.</required>
 				</field>
 				
@@ -495,10 +638,9 @@
 					<dc-element>date</dc-element>
 					<dc-qualifier>issued</dc-qualifier>
 					<repeatable>false</repeatable>
-					<label>Date of Issue</label>
+					<label>Date</label>
 					<input-type>date</input-type>
-					<hint>Please give the date of previous publication or public distribution.
-					You can leave out the day and/or month if they aren't applicable.</hint>
+					<hint>Enter date of publication or public distribution. A year is required, but month and day are optional. If the item has not been previously published, enter today's date. Examples: 2010, 1969 July 01, 1995 August</hint>
 					<required>You must enter at least the year.</required>
 				</field>
 				
@@ -564,8 +706,7 @@
 					<repeatable>false</repeatable>
 					<label>Publisher</label>
 					<input-type>onebox</input-type>
-					<hint>List the entity responsible for making the resource available. 
-					This is typically the group most directly responsible for digitizing and/or archiving the work.</hint>
+					<hint>If the item has been published or accepted for publication, enter the publisher. If the item has not been published, enter "Virginia Tech." Examples: Wiley, Cornell University Press, Taylor &amp; Francis</hint>
 					<required></required>
 				</field>
 				
@@ -596,9 +737,9 @@
 					<dc-element>type</dc-element>
 					<dc-qualifier></dc-qualifier>
 					<repeatable>false</repeatable>
-					<label>Type</label>
+					<label>Item Type</label>
 					<input-type value-pairs-name="ndltd_types">dropdown</input-type>
-					<hint>Select the type(s) of content of the item.</hint>
+					<hint>Select the type(s) of content you are depositing. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" or "COMMAND" key. Examples: Article, Learning Object, Video Recording and Presentation. </hint>
 					<required></required>
 				</field>
 				
@@ -609,10 +750,7 @@
 					<repeatable>false</repeatable>
 					<label>Language</label>
 					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-					<hint>Select the language of the main content of the item. If the
-						language does not appear in the list, please select 'Other'. If
-						the content does not really have a language (for example, if it is
-						a dataset or an image) please select 'N/A'.</hint>
+					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select "N/A." Examples: English, French, Chinese</hint>
 					<required></required>
 				</field>
 				
@@ -636,7 +774,7 @@
 					<repeatable>true</repeatable>
 					<label>Subject Keywords</label>
 					<input-type>twobox</input-type>
-					<hint>Enter appropriate subject keywords or phrases. </hint>
+					<hint>Enter any keywords or phrases that describe the item's content. Enter each keyword or phrase separately, then click "Add." Repeat for all keywords or phrases. Examples: New River Valley, VA [Add], remote sensing [Add], photogrammetry [Add]</hint>
 					<required>You must enter appropriate subject keywords or phrases.</required>
 				</field>
 				
@@ -647,32 +785,33 @@
 					<repeatable>false</repeatable>
 					<label>Abstract</label>
 					<input-type>textarea</input-type>
-					<hint>Enter the full text of the abstract.</hint>
+					<hint>Enter a brief summary of the item. Preferred length is a single paragraph or about 300 words, although you may enter an abstract of any length.</hint>
 					<required></required>
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>description</dc-element>
-					<dc-qualifier></dc-qualifier>
+					<dc-qualifier>notes</dc-qualifier>
 					<repeatable>false</repeatable>
-					<label>Description</label>
+					<label>Notes</label>
 					<input-type>textarea</input-type>
-					<hint>Enter any other description or notes.</hint>
+					<hint>Enter any additional information that will help describe the item.</hint>
 					<required></required>
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>identifier</dc-element>
-					<dc-qualifier>other</dc-qualifier>
+					<dc-qualifier></dc-qualifier>
+					<!-- An input-type of qualdrop_value MUST be marked as repeatable -->
 					<repeatable>true</repeatable>
-					<label>Identifier</label>
-					<input-type>onebox</input-type>
-					<hint>Enter any identifiers associated with the item such as DOI or exam number.</hint>
+					<label>Identifiers</label>
+					<input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+					<hint>If the item has any identification numbers or codes associated with it, please enter them. Examples: DOI 10.1056/NEJMoa1510991, exam number VT5653, URL http://www.johncairns.net/ebook2.htm</hint>
 					<required></required>
 				</field>
-				
+
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>identifier</dc-element>
@@ -761,12 +900,12 @@
 
 		<value-pairs value-pairs-name="common_types" dc-term="type">
 			<pair>
-				<displayed-value>Audio recording</displayed-value>
-				<stored-value>Audio recording</stored-value>
-			</pair>
-			<pair>
 				<displayed-value>Article</displayed-value>
 				<stored-value>Article</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Audio recording</displayed-value>
+				<stored-value>Audio recording</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Book</displayed-value>
@@ -1062,7 +1201,8 @@
 				<stored-value>other</stored-value>
 			</pair>
 		</value-pairs>
-	
+
+		
 	</form-value-pairs>
 
 </input-forms>
