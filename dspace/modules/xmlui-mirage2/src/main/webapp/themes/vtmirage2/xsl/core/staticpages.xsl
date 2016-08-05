@@ -44,7 +44,7 @@
 <ul>
 <li>The work is produced, submitted, or sponsored by Virginia Tech faculty, staff, administrators, alumni, or students.</li>
 <li>The work is related to education, research, service, or extension activities, or the work has historical value to the Virginia Tech community.</li>
-<li>The author/owner must be willing and able to grant Virginia Tech the non-exclusive right to preserve and provide online access to the work. The authors and copyright owners determine if their works will be in VTechWorks exclusively or will made available through additional online platforms. </li>
+<li>The author/owner must be willing and able to grant Virginia Tech the non-exclusive right to preserve and provide online access to the work.</li>
 <li>The complete text, image, audio, or video of the work is stored in VTechWorks, even if the file is not publicly available. VTechWorks is a content repository and does not accept metadata-only records. </li>
 <li>The work is appropriate for inclusion in the Collection to which it is submitted. </li>
 <li>The work exists in a recommended file format that will facilitate long-term access and preservation, although any digital format will be accepted. </li>
@@ -84,17 +84,26 @@
 <li>Works that the depositor does not have the legal right to deposit. </li>
 </ul>
 
-<h2>Copyright, Proxies, and Licensing</h2>
+<h2>Copyright, Delegates, and Licensing</h2>
 
-<p>It is the responsibility of the depositor to ensure that s/he has the legal right to deposit a work in VTechWorks under the terms of copyright law and under the terms of any existing contracts related to the work. Authors of a work automatically own copyright in that work once it exists in a fixed form, but as a condition of publication many journals, publishers, and conference proceedings make contractual restrictions on which version of a published work can be deposited in an institutional repository such as VTechWorks. Authors should therefore not assume that they have the right to deposit their own published work in VTechWorks. See <a href="http://vtechworks.lib.vt.edu/page/help">http://vtechworks.lib.vt.edu/page/help</a> and <a href="http://www.lib.vt.edu/copyright/">http://www.lib.vt.edu/copyright/</a> for help with rights. </p>
-<p>Virginia Tech faculty and students own copyright in the works they have created as described in VT Policy 13000, available at <a href="http://www.policies.vt.edu/13000.pdf">http://www.policies.vt.edu/13000.pdf</a>. According to this policy, for “the traditional results of academic scholarship, i.e., textbooks, literary works, artistic creations and artifacts” -- that is, the kinds of works most commonly deposited  in VTechWorks -- “the IP rights remain with the author(s)” and are not claimed by Virginia Tech. </p>
-<p>For a work with multiple authors, every author owns the copyright to the entire work and therefore may deposit the work in VTechWorks without needing to ask permission of the work’s other authors.</p>
+<p>It is the responsibility of the depositor to ensure that s/he has the legal right to deposit a work in VTechWorks under the terms of copyright law and under the terms of any existing contracts related to the work. In general, but not always, authors of a work automatically own copyright in that work once it exists in a fixed form, but as a condition of publication many journals, publishers, and conference proceedings make contractual restrictions on which version of a published work can be deposited in an institutional repository such as VTechWorks. Authors should therefore not assume that they have the right to deposit their own published work in VTechWorks. See <a href="http://vtechworks.lib.vt.edu/page/help">http://vtechworks.lib.vt.edu/page/help</a> and <a href="http://www.lib.vt.edu/copyright/">http://www.lib.vt.edu/copyright/</a> for help with rights. </p>
+<p>Virginia Tech faculty and students own copyright in the works they have created as described in VT Policy 13000, available at <a href="http://www.policies.vt.edu/13000.pdf">http://www.policies.vt.edu/13000.pdf</a>. According to this policy, for “the traditional results of academic scholarship, i.e., textbooks, literary works, artistic creations and artifacts” -- that is, the kinds of works most commonly deposited  in VTechWorks -- “the IP rights remain with the author(s)” and are not claimed by Virginia Tech. However, if VT authors transfer or relinquish their copyrights to third parties, VT authors might no longer have the right to deposit their own published work in VTechWorks.</p>
+<p>In general, though there may be exceptions, for a work with multiple authors, every author owns the copyright to the entire work and therefore may deposit the work in VTechWorks without needing to ask permission of the work’s other authors.</p>
 <p>Virginia Tech itself owns the copyright in most administrative documents produced by Virginia Tech staff in the normal course of their duties (e.g., reports, policies, news releases); the individual staff member does not usually own the copyright to such material. Such material may be deposited in VTechWorks by any member of the Virginia Tech community. </p>
-<p>Authors may ask others to deposit works in VTechWorks on their behalf, and these depositors shall be considered proxies for the author. VTechWorks staff and Virginia Tech librarians are de facto proxies for any and all members of the Virginia Tech community.</p>
-<p>Proxies who deposit content for authors should make every effort to determine whether the work can legally be deposited in VTechWorks. Proxies need not deposit content if they believe the work should not be deposited because of copyright law or contractual restrictions.</p>
+<p>Authors may ask others to deposit works in VTechWorks on their behalf, and these depositors shall be considered delegates (proxies) for the author. VTechWorks staff and Virginia Tech librarians are de facto delegates for any and all members of the Virginia Tech community.</p>
+<p>Delegates who deposit content for authors should make every effort to determine whether the work can legally be deposited in VTechWorks.</p>
 <p>All depositors must agree to the non-exclusive distribution license given below before VTechWorks will host their works. This license grants Virginia Tech the right to host the work without affecting the author’s right to host the work elsewhere. </p>
-<p>Copyright owners and their proxies may also elect to license their work with a <a href="http://creativecommons.org">Creative Commons</a> license so that members of the public who find the work online can copy it under certain conditions; copyright owners may also donate their work to the public domain in perpetuity by giving it a “CC Zero (CC0)” mark. Some work, such as older publications, government documents, or strictly factual data, might already be in the public domain and therefore have no copyright owner; such work can be given the “Public Domain” mark by the depositor. These options are available as part of the submission process.</p>
-
+<p>Copyright owners and their proxies may also elect to license their work with a <a href="http://creativecommons.org">Creative Commons</a> license so that members of the public who find the work online can copy it under certain conditions; copyright owners may also donate their work to the public domain in perpetuity by giving it a “CC Zero (CC0)” mark. Some works might already be in the public domain and therefore have no copyright owner; such work can be given the “Public Domain” mark by the depositor. These options are available as part of the submission process.
+</p>
+<p>
+For more information about CC Zero, the Public Domain Mark, and Creative Commons licenses, please visit <a href="https://creativecommons.org/">Creative Commons' website</a>.
+</p>
+<p>
+All these and other policies apply to content directly deposited to VTechWorks, to content ingested into VTechWorks via other systems, and to content automatically harvested from other content providers.
+</p>
+<p>
+For more information about copyright and fair use, please visit the United States Copyright Office’s website at <a href="www.copyright.gov">www.copyright.gov</a>.
+</p>
 
 <h2>VTechWorks Distribution License</h2>
 
