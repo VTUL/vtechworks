@@ -69,7 +69,7 @@
         <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (Edition)~" />
         <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
-        <crosswalks:mapping dspace="pubs.patent-number" elements="patent-number" />
+        <crosswalks:mapping dspace="dc.identifier.patentnumber" elements="patent-number" />
         <crosswalks:mapping dspace="pubs.patent-status" elements="patent-status" />
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
         <crosswalks:mapping dspace="pubs.repository-status" elements="repository-status" />
