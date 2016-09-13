@@ -64,7 +64,7 @@
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
         <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url,url" />
-        <crosswalks:mapping dspace="pubs.awarded-date" elements="awarded-date" />
+        <crosswalks:mapping dspace="dc.date.issued" elements="awarded-date" />
         <crosswalks:mapping dspace="dc.contributor.assignee" elements="commissioning-body" />
         <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (Edition)~" />
         <crosswalks:mapping dspace="dc.date.filed" elements="filed-date" />
