@@ -196,6 +196,9 @@
             </xsl:for-each>
 
             <link rel="stylesheet" href="{concat($theme-path, 'styles/main.css')}"/>
+             <!-- include css for video playback -->
+
+            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/video-js.css')}" />
 
             <!-- Add syndication feeds -->
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
@@ -270,12 +273,6 @@
 
             <!-- Modernizr enables HTML5 elements & feature detects -->
             <script src="{concat($theme-path, 'vendor/modernizr/modernizr.js')}">&#160;</script>
-
-            <!-- include css and javascript for video playback -->
-
-            <link type="text/css" rel="stylesheet">
-            <xsl:attribute name="href">http://vjs.zencdn.net/4.12/video-js.css</xsl:attribute>
-            </link>
 
             <!-- Add the title in -->
             <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title'][last()]" />
@@ -899,7 +896,9 @@
                 </xsl:when>
             </xsl:choose>
         </xsl:for-each>
-
+        
+        <!-- add file for video playback -->
+        <script src="{concat($theme-path, 'vendor/videojs/video.js')}">&#160;</script>
         <!-- add setup JS code if this is a choices lookup page -->
         <xsl:if test="dri:body/dri:div[@n='lookup']">
             <xsl:call-template name="choiceLookupPopUpSetup"/>
