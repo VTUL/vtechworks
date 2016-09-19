@@ -794,7 +794,7 @@
     <message key="xmlui.Submission.submit.AccessStep.name_help">A short, descriptive name for the policy (up to 30 characters). May be shown to end users. Example: "Staff-only". Optional but recommended.</message>
     <message key="xmlui.Submission.submit.AccessStep.description">Description</message>
     <message key="xmlui.Submission.submit.AccessStep.reason">Embargo reason</message>
-    <message key="xmlui.Submission.submit.AccessStep.reason_help">The reason you would like the file to remain private for a certain period (embargoed). The embargo reason is not shown anywhere in the public record of the item: it is for administrator use only. Examples: Awaiting publication, Applying for a patent, File contains personally identifiable information.</message>
+    <message key="xmlui.Submission.submit.AccessStep.reason_help">The reason you would like the file to remain private for a certain period (embargoed). The embargo reason is not shown anywhere in the public record of the item: it is for administrator use only. Examples: Awaiting publication, Applying for a patent.</message>
     <message key="xmlui.Submission.submit.AccessStep.submit_add_policy">Confirm Policy &amp; add another</message>
     <message key="xmlui.Submission.submit.AccessStep.list_assigned_groups">Group</message>
     <message key="xmlui.Submission.submit.AccessStep.error_format_date">Error format date</message>
