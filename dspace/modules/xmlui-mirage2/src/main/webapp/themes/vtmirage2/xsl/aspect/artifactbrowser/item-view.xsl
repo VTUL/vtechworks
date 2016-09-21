@@ -45,8 +45,18 @@
  
         <xsl:if test="(./mets:fileSec/mets:fileGrp[@USE='CONTENT']/mets:file[@MIMETYPE='video/mp4']) and (./mets:fileSec/mets:fileGrp[@USE='CONTENT']/mets:file[@MIMETYPE='video/webm'])">
 
-             <!-- V.T. Best guess at aspect ratio of most of our videos -->
-             <video controls="controls" preload="none" style="width:100%; max-width:853px;" width="auto" height="auto" class="video-js vjs-default-skin" data-setup="">
+             <!-- 
+             
+             There is some inline CSS style information here to control
+             width and height of the video viewing area. This is the
+             only template that handles video display, so there's no need
+             to worry about consistency across views, and it's easier
+             to find width/height information here. 
+
+             Virginia Tech - Best guess at aspect ratio of most of our videos 
+             1920 x 1080 converted down to 853x480
+              -->
+             <video controls="controls" preload="none" style="width:100%; max-width:853px; height:480px"  class="video-js vjs-default-skin" data-setup="">
 
                  <xsl:if test="./mets:fileSec/mets:fileGrp[@USE='MOVIEPOSTER']">
                      <xsl:attribute name="poster">
