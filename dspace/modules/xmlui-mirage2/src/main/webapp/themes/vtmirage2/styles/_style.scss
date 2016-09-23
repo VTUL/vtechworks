@@ -62,7 +62,9 @@ white-space:pre-line;
 word-break:break-all;
 width:200px;
 }
-
+.filename-word-wrap {
+    word-wrap:break-word;
+}
 .a-bold {
 font-weight: 900;
 }
