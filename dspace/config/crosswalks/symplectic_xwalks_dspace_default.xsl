@@ -64,12 +64,12 @@
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
         <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url,url" />
-        <crosswalks:mapping dspace="pubs.awarded-date" elements="awarded-date" />
-        <crosswalks:mapping dspace="pubs.commissioning-body" elements="commissioning-body" />
+        <crosswalks:mapping dspace="dc.date.issued" elements="awarded-date" />
+        <crosswalks:mapping dspace="dc.contributor.assignee" elements="commissioning-body" />
         <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (Edition)~" />
-        <crosswalks:mapping dspace="pubs.filed-date" elements="filed-date" />
+        <crosswalks:mapping dspace="dc.date.filed" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
-        <crosswalks:mapping dspace="pubs.patent-number" elements="patent-number" />
+        <crosswalks:mapping dspace="dc.identifier.patentnumber" elements="patent-number" />
         <crosswalks:mapping dspace="pubs.patent-status" elements="patent-status" />
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
         <crosswalks:mapping dspace="pubs.repository-status" elements="repository-status" />
