@@ -157,7 +157,8 @@
 <p>Authors or content creators often embargo their content due to publisher requirements, since many journal publishers require an embargo of anywhere from 6 months to 3 years, or because they wish to publish a book, author a paper based on research data, or apply for patent protection. In such cases, users or their proxies may submit works through the VTechWorks submission form and enter an embargo period of their choice, or, if they have transferred their copyright to a journal publisher, enter an embargo period specified by the journal publisher.</p>
 <p>The screenshot shown below demonstrates shows how to assign an embargo period using the VTechWorks submission form. To keep one’s content files private until a certain date, enter the date on which it should become public. Each file you add can have a different embargo period. As indicated previously, information in the item record such as title, author, and abstract will be public and searchable, and only the associated file(s) will be inaccessible. Use the pop-up calendar to pick a date or type the date in manually. Examples: 2020-04-01 (file will become public on April 1, 2020); 2020-04 (file will become public on April 1, 2020); or 2020 (file will become public on January 1, 2020).</p>
 <p>If you wish, you may also indicate the reason you would like the file to remain private for a certain period - this is helpful for VTechWorks staff who are managing the item. The embargo reason is not shown anywhere in the public record of the item: it is for administrator use only. Examples: Awaiting publication, Applying for a patent.</p>
-<img width="400" height="400" src="{$theme-path}images/embargoContent.png" />
+<img src="{$theme-path}images/embargoContent.png" />
+
 <p>For information about embargoes for items that are not theses or dissertations, e.g., journal articles, presentations, book chapters, etc., please email <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a>. For information about embargo periods involving Virginia Tech theses and dissertations, please contact the Virginia Tech Graduate School at <a href="mailto:grads@vt.edu">grads@vt.edu</a>, or speak to a representative from your academic department.</p>
 <h3>Restricted Content</h3>
 <p>Restricted content includes VTechWorks content whose access is limited to certain VTechWorks users or user groups, such as Virginia Tech faculty, staff, students, and/or campus network users. For information about content that is made private for a designated period of time, see <a href="#embargoedContent">Embargoed Content</a>.</p>
@@ -168,10 +169,12 @@
 <h2>Requesting Access to Restricted Content</h2>
 <p>A significant portion of VTechWorks content is not publicly available to certain VTechWorks users. To elaborate, many pre-2011 Virginia Tech theses and dissertations, most of which are still available in print, are restricted to Virginia Tech faculty, staff, students, and Virginia Tech’s campus network users. As indicated in the <a href="#restrictedEmbargoed">Restricted and Embargoed Content</a> section, if authors of journal articles, presentations, book chapters, and various other content types may decide to restrict access to their works for a certain period of time, they may select the embargo option.</p>
 <p>To release these items publicly, VTechWorks staff must obtain the content creator’s written consent. If you encounter a restricted item that you would like to access, begin by clicking on the item, an example of which is shown below:</p>
-<img width="300" height="100" src="{$theme-path}images/LockedItem.png" />
+<img src="{$theme-path}images/LockedItem.png" />
+
 <p>Clicking on the restricted item will take you to a request form: please fill out the information in this form, specifically your email address. Your response will be sent to VTechWorks staff and we will attempt to contact the item’s creator and ask that he or she release the item. If you have questions about the form or about the process of requesting restricted content, please contact <a href="mailto:vtechworks@vt.edu">vtechworks@vt.edu</a></p>
 <p>If VTechWorks staff cannot locate the item’s author, or if the item’s author does not grant permission to release the digital version of the item, the item can still be requested via InterLibrary Loan. Please contact your local library about its interlibrary loan program.</p>
-<img width="500" height="400" src="{$theme-path}images/RequestItem.png" />
+<img src="{$theme-path}images/RequestItem.png" />
+
 	</xsl:template>
 	
 	<xsl:template name="HelpStaticPage">
