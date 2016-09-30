@@ -56,7 +56,8 @@
              Virginia Tech - Best guess at aspect ratio of most of our videos 
              1920 x 1080 converted down to 853x480
               -->
-             <video controls="controls" preload="auto" width="853" height="480" style="width:100%; max-width:853px" class="video-js" data-setup="">
+             <div id="vtwx-video-player" style="max-width:853px;">
+             <video controls="controls" preload="auto" style="width:100%;" class="vjs-tech" >
 
                  <xsl:if test="./mets:fileSec/mets:fileGrp[@USE='MOVIEPOSTER']">
                      <xsl:attribute name="poster">
@@ -91,6 +92,7 @@
                </xsl:if>
 
               </video>
+              </div>
            <hr />
            </xsl:if>
 
