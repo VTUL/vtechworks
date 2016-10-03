@@ -168,10 +168,6 @@
         <crosswalks:entry elements="CC BY-NC-SA" dspace="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
     </crosswalks:dictionary>
     
-    <crosswalks:dictionary dspace="c-invited" mapped-only="true">
-        <crosswalks:entry elements="true" dspace="Invited publication" />
-    </crosswalks:dictionary>
-    
     </crosswalks:dictionaries>
     
     <!--
