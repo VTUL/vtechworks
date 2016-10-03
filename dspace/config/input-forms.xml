@@ -889,6 +889,10 @@
 				<stored-value>issn</stored-value>
 			</pair>
 			<pair>
+				<displayed-value>ORCID</displayed-value>
+				<stored-value>orcid</stored-value>
+			</pair>
+			<pair>
 				<displayed-value>URL (web link)</displayed-value>
 				<stored-value>url</stored-value>
 			</pair>
@@ -940,12 +944,12 @@
 				<stored-value>Presentation</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Software</displayed-value>
-				<stored-value>Software</stored-value>
-			</pair>
-			<pair>
 				<displayed-value>Report</displayed-value>
 				<stored-value>Report</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Software</displayed-value>
+				<stored-value>Software</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Thesis</displayed-value>
