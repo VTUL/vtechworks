@@ -56,7 +56,8 @@
              Virginia Tech - Best guess at aspect ratio of most of our videos 
              1920 x 1080 converted down to 853x480
               -->
-             <video controls="controls" preload="none" style="width:100%; max-width:853px; height:480px"  class="video-js vjs-default-skin" data-setup="">
+             <div id="vtwx-video-player" style="max-width:853px;">
+             <video controls="controls" preload="auto" style="width:100%;" class="vjs-tech" >
 
                  <xsl:if test="./mets:fileSec/mets:fileGrp[@USE='MOVIEPOSTER']">
                      <xsl:attribute name="poster">
@@ -91,6 +92,7 @@
                </xsl:if>
 
               </video>
+              </div>
            <hr />
            </xsl:if>
 
@@ -613,7 +615,7 @@
     <xsl:template match="mets:file">
         <xsl:param name="context" select="."/>
         <div class="file-wrapper row">
-            <div class="col-xs-6 col-sm-3">
+            <div class="col-xs-6 col-sm-2">
                 <div class="thumbnail">
                     <a class="image-link">
                         <xsl:attribute name="href">
@@ -649,11 +651,11 @@
                         <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-name</i18n:text>
                         <xsl:text>:</xsl:text>
                     </dt>
-                    <dd class="word-break">
+                    <dd class="filename-word-wrap">
                         <xsl:attribute name="title">
                             <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:title"/>
                         </xsl:attribute>
-                        <xsl:value-of select="util:shortenString(mets:FLocat[@LOCTYPE='URL']/@xlink:title, 30, 5)"/>
+                        <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:title"/>
                     </dd>
                 <!-- File size always comes in bytes and thus needs conversion -->
                     <dt>
