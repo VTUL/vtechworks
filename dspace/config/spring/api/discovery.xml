@@ -52,8 +52,8 @@
                <entry key="10919/51287" value-ref="etdConfiguration"/>
                <entry key="10919/18725" value-ref="etdConfiguration"/>
                <entry key="10919/18726" value-ref="etdConfiguration"/>
-               <entry key="10919/52943" value-ref="patentConfiguration"/>
-               <entry key="10919/52944" value-ref="patentConfiguration"/>
+               <entry key="10919/72294" value-ref="patentConfiguration"/>
+               <entry key="10919/72295" value-ref="patentConfiguration"/>
             </map>
         </property>
         <property name="toIgnoreMetadataFields">
@@ -413,7 +413,6 @@
         <!-- When true a "did you mean" example will be displayed, value can be true or false -->
         <property name="spellCheckEnabled" value="true"/>
     </bean>
-  <!-- ANUSHA ADDED START-->
 <bean id="patentConfiguration" class="org.dspace.discovery.configuration.DiscoveryConfiguration" scope="prototype">
         <!--Which sidebar facets are to be displayed-->
         <property name="sidebarFacets">
@@ -513,7 +512,6 @@
         <!-- When true a "did you mean" example will be displayed, value can be true or false -->
         <property name="spellCheckEnabled" value="true"/>   
     </bean>
-    <!-- ANUSHA ADDED END-->
     <!--TagCloud configuration bean for homepage discovery configuration-->
     <bean id="homepageTagCloudFacetConfiguration" class="org.dspace.discovery.configuration.TagCloudFacetConfiguration">
         <!-- Actual configuration of the tagcloud (colors, sorting, etc.) -->
