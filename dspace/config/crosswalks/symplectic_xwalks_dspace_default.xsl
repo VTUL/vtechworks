@@ -74,7 +74,7 @@
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
         <crosswalks:mapping dspace="pubs.repository-status" elements="repository-status" />
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
-        <crosswalks:mapping dspace="dc.extension" format-elements="Extension?: [$c-extension]" />
+        <crosswalks:mapping dspace="dc.description.notes" format-elements="Extension?: [$c-extension]" />
     </crosswalks:mappings>
     
     <!-- Override the boolean mapping template for formatted booleans -->  
