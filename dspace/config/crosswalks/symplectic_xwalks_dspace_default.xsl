@@ -81,7 +81,7 @@
           <xsl:param name="name" />  
           <xsl:param name="repo_field" />  
    
-        <!-- Custom XSL: Only map booleans when they are for a field other than c-invited, or are not equal to true. -->  
+        <!-- Custom XSL: Only map booleans when they are for a field other than c-invited, or are not equal to false. -->  
         <xsl:if test="$name != 'c-invited' or . != 'false'">  
             <xsl:apply-templates select=".">  
                 <xsl:with-param name="name" select="$name" />  
