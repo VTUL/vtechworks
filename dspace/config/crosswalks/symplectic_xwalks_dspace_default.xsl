@@ -52,7 +52,7 @@
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
-        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
+        <crosswalks:mapping dspace="dc.description.version" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type:list(, )] (Peer reviewed?)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-invited] (Invited?)~" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,record-created-at-source-date" />
