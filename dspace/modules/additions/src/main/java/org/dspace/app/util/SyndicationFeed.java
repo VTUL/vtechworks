@@ -316,7 +316,8 @@ public class SyndicationFeed
                     dcDescriptionField != null)
                 {
                     DCModule dc = new DCModuleImpl();
-                    if (dcCreatorField != null)
+                    if (dcCreatorField != null &&
+                            ConfigurationManager.getBooleanProperty("webui.feed.atom.dc.author.show"))
                     {
                         Metadatum dcAuthors[] = item.getMetadataByMetadataString(dcCreatorField);
                         if (dcAuthors.length > 0)
