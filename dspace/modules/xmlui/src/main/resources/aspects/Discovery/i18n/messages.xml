@@ -141,7 +141,11 @@
     <message key="xmlui.Discovery.AbstractSearch.type_etdlevel">Filter by: Thesis Degree Level</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel">Thesis Degree Level</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel_filter">Thesis Degree Level</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>    
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>  
+    <message key="xmlui.Discovery.AbstractSearch.type_assignee">Filter by: Assignee</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_inventor">Filter by: Inventor</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_patenttype">Filter by: Patent Type</message>
+         
 
 
     <message key="xmlui.Discovery.AbstractSearch.startswith">Starts with</message>
