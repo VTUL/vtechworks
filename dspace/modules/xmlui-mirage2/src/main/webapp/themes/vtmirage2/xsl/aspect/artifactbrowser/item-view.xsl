@@ -409,7 +409,6 @@
                     <h5>
                         <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-viewOpen</i18n:text>
                     </h5>
-
                     <xsl:variable name="label-1">
                             <xsl:choose>
                                 <xsl:when test="confman:getProperty('mirage2.item-view.bitstream.href.label.1')">
@@ -441,6 +440,7 @@
                             <xsl:with-param name="title" select="mets:FLocat[@LOCTYPE='URL']/@xlink:title" />
                             <xsl:with-param name="label" select="mets:FLocat[@LOCTYPE='URL']/@xlink:label" />
                             <xsl:with-param name="size" select="@SIZE" />
+                            <xsl:with-param name="id" select="@ID" />
                         </xsl:call-template>
                     </xsl:for-each>
                 </div>
@@ -460,6 +460,7 @@
         <xsl:param name="title" />
         <xsl:param name="label" />
         <xsl:param name="size" />
+        <xsl:param name="id" />
         <!-- display of long file name -->
 		<div class="filename-word-break">
             <a>
@@ -525,6 +526,12 @@
                 <xsl:text>)</xsl:text>
             </a>
         </div>
+        <div>
+            <xsl:variable name="solr-search-url" select="confman:getProperty('solr-statistics', 'server')"/>
+            <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-numDownloads</i18n:text>
+            <xsl:value-of select="document(concat($solr-search-url, '/select?q=id%3A', substring($id, 6), '+AND+type%3A0&amp;rows=0'))/response/result/@numFound"/>
+        </div>
+
     </xsl:template>
 
     <xsl:template match="dim:dim" mode="itemDetailView-DIM">
