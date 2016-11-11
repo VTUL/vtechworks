@@ -242,6 +242,26 @@
                                     </xsl:if>
                                 </xsl:for-each>
                             </xsl:when>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.contributor.inventor'))]">
+                                <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.contributor.inventor'))]/dri:item">
+                                    <xsl:variable name="inventor">
+                                        <xsl:apply-templates select="."/>
+                                    </xsl:variable>
+                                    <span>
+                                        <!--Check authority in the mets document-->
+                                        <xsl:if test="$metsDoc/mets:METS/mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim/dim:field[@element='contributor' and @qualifier='inventor']/@authority">
+                                            <xsl:attribute name="class">
+                                                <xsl:text>ds-dc_contributor_author-authority</xsl:text>
+                                            </xsl:attribute>
+                                        </xsl:if>
+                                        <xsl:apply-templates select="."/>
+                                    </span>
+
+                                    <xsl:if test="count(following-sibling::dri:item) != 0">
+                                        <xsl:text>; </xsl:text>
+                                    </xsl:if>
+                                </xsl:for-each>
+                            </xsl:when>
                             <xsl:otherwise>
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                             </xsl:otherwise>

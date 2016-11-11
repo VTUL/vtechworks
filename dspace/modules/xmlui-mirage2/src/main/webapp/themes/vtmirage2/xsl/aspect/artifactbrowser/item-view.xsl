@@ -292,7 +292,7 @@
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-authors">
-        <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()]">
+        <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()] or dim:field[@element='contributor'][@qualifier='inventor' and descendant::text()] ">
             <div class="simple-item-view-authors item-page-field-wrapper table">
                 <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-author</i18n:text></h5>
                 <xsl:choose>
@@ -308,6 +308,11 @@
                     </xsl:when>
                     <xsl:when test="dim:field[@element='contributor']">
                         <xsl:for-each select="dim:field[@element='contributor']">
+                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when test="dim:field[@element='contributor'][@qualifier='inventor']">
+                        <xsl:for-each select="dim:field[@element='contributor'][@qualifier='inventor']">
                             <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
                         </xsl:for-each>
                     </xsl:when>
@@ -365,7 +370,7 @@
     
     <xsl:template name="itemSummaryView-DIM-date">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
-            <div class="simple-item-view-date word-break item-page-field-wrapper table">
+            <div class="simple-item-view-date word-break item-page-field-wrapper table">             
                 <h5>
                     <i18n:text>xmlui.dri2xhtml.METS-1.0.item-date</i18n:text>
                 </h5>
@@ -374,7 +379,7 @@
                     <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='issued']) != 0">
                         <br/>
                     </xsl:if>
-                </xsl:for-each>
+                </xsl:for-each>               
             </div>
         </xsl:if>
     </xsl:template>
@@ -409,7 +414,6 @@
                     <h5>
                         <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-viewOpen</i18n:text>
                     </h5>
-
                     <xsl:variable name="label-1">
                             <xsl:choose>
                                 <xsl:when test="confman:getProperty('mirage2.item-view.bitstream.href.label.1')">
@@ -441,6 +445,7 @@
                             <xsl:with-param name="title" select="mets:FLocat[@LOCTYPE='URL']/@xlink:title" />
                             <xsl:with-param name="label" select="mets:FLocat[@LOCTYPE='URL']/@xlink:label" />
                             <xsl:with-param name="size" select="@SIZE" />
+                            <xsl:with-param name="id" select="@ID" />
                         </xsl:call-template>
                     </xsl:for-each>
                 </div>
@@ -460,6 +465,7 @@
         <xsl:param name="title" />
         <xsl:param name="label" />
         <xsl:param name="size" />
+        <xsl:param name="id" />
         <!-- display of long file name -->
 		<div class="filename-word-break">
             <a>
@@ -525,6 +531,13 @@
                 <xsl:text>)</xsl:text>
             </a>
         </div>
+        <div>
+            <xsl:variable name="solr-search-url" select="confman:getProperty('solr-statistics', 'server')"/>
+            <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-numDownloads</i18n:text>
+            <xsl:text>: </xsl:text>
+            <xsl:value-of select="document(concat($solr-search-url, '/select?q=id%3A', substring($id, 6), '+AND+type%3A0&amp;rows=0'))/response/result/@numFound"/>
+        </div>
+
     </xsl:template>
 
     <xsl:template match="dim:dim" mode="itemDetailView-DIM">
@@ -720,6 +733,14 @@
                             <xsl:value-of select="util:shortenString(mets:FLocat[@LOCTYPE='URL']/@xlink:label, 30, 5)"/>
                         </dd>
                 </xsl:if>
+                    <dt>
+                        <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-numDownloads</i18n:text>
+                        <xsl:text>: </xsl:text>
+                    </dt>
+                    <dd>
+                        <xsl:variable name="solr-search-url" select="confman:getProperty('solr-statistics', 'server')"/>
+                        <xsl:value-of select="document(concat($solr-search-url, '/select?q=id%3A', substring(@ID, 6), '+AND+type%3A0&amp;rows=0'))/response/result/@numFound"/>
+                    </dd>
                 </dl>
             </div>
 

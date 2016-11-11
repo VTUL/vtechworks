@@ -52,9 +52,9 @@
         <crosswalks:mapping dspace="dc.subject" elements="keywords" />
         <crosswalks:mapping dspace="dc.title" elements="title" />
         <crosswalks:mapping dspace="dc.description.notes" elements="fulltext-comment,notes" />
-        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$publication-status] (Publication status)~" />
+        <crosswalks:mapping dspace="dc.description.version" format-elements="~[$publication-status] (Publication status)~" />
         <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-review-type:list(, )] (Peer reviewed?)~" />
-        <crosswalks:mapping dspace="dc.description.notes" elements="~[c-invited] (invited?)" />
+        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-invited] (Invited?)~" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="addresses,record-created-at-source-date" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$are-files-confidential] (Are files confidential?)" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$confidential] (Confidential?)" />
@@ -74,21 +74,22 @@
         <crosswalks:mapping dspace="pubs.place-of-publication" elements="place-of-publication" />
         <crosswalks:mapping dspace="pubs.repository-status" elements="repository-status" />
         <crosswalks:mapping dspace="pubs.start-date" elements="start-date" />
+        <crosswalks:mapping dspace="dc.description.notes" format-elements="~[$c-extension] (Extension publication?)~" />
     </crosswalks:mappings>
     
-  <!-- Override the boolean mapping template -->
-	<xsl:template match="pubs:boolean">
-		  <xsl:param name="name" />
-		  <xsl:param name="repo_field" />
- 
-		<!-- Custom XSL: Only map booleans when they are for a field other than c-invited, or are not equal to true. -->
-		<xsl:if test="$name != 'c-invited' or . != 'false'">
-			<xsl:apply-templates select="." mode="render_with_dictionary">
-				<xsl:with-param name="dictionary-name" select="$name" />
-				<xsl:with-param name="dictionary-target" select="$repo_field" />
-			</xsl:apply-templates>
-		</xsl:if>
-	</xsl:template>
+    <!-- Override the boolean mapping template for formatted booleans -->  
+    <xsl:template match="pubs:boolean" mode="formatted">  
+          <xsl:param name="name" />  
+          <xsl:param name="repo_field" />  
+   
+        <!-- Custom XSL: Only map booleans when they are for a field other than c-invited, or are not equal to false. -->  
+        <xsl:if test="$name != 'c-invited' or . != 'false'">  
+            <xsl:apply-templates select=".">  
+                <xsl:with-param name="name" select="$name" />  
+                <xsl:with-param name="repo_field" select="$repo_field" />  
+            </xsl:apply-templates>  
+        </xsl:if>  
+    </xsl:template>
     
     <!--
         Object level field mappings
@@ -166,10 +167,6 @@
         <crosswalks:entry elements="CC BY-NC" dspace="http://creativecommons.org/licenses/by-nc/4.0/" />
         <crosswalks:entry elements="CC BY-NC-ND" dspace="http://creativecommons.org/licenses/by-nc-nd/4.0/" />
         <crosswalks:entry elements="CC BY-NC-SA" dspace="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
-    </crosswalks:dictionary>
-    
-    <crosswalks:dictionary dspace="c-invited" mapped-only="true">
-        <crosswalks:entry elements="true" dspace="Invited publication" />
     </crosswalks:dictionary>
     
     </crosswalks:dictionaries>

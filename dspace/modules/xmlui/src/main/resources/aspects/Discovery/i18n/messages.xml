@@ -48,6 +48,12 @@
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_etdlevel">Thesis Degree Level</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
+   	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_patenttype">Patent Type</message>
+   	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_inventor">Inventor</message>
+   	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_assignee">Assignee</message>
+   	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publicationDate">Publication Date</message>
+    
+    
 
     <!-- Site Leve Recently Added Content -->
     <message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Recently Added</message>
@@ -104,6 +110,16 @@
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coverage">Coverage</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.trnumber">Technical Report No.</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.committeemember">Committee Member</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.assignee">Assignee</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.inventor">Inventor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.applicationNumber">Application Number</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.patentNumber">Patent Number</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.filingDate">Filing Date</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.publicationDate">Publication Date</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.usClassPrimary">Primary/U.S. Class</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.usClassOther">Other/U.S. Class</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.cpcClass">CPC Class</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.patenttype">Patent Type</message>
 
     <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Now showing items {0}-{1}</message>
 
@@ -125,7 +141,11 @@
     <message key="xmlui.Discovery.AbstractSearch.type_etdlevel">Filter by: Thesis Degree Level</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel">Thesis Degree Level</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel_filter">Thesis Degree Level</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>  
+    <message key="xmlui.Discovery.AbstractSearch.type_assignee">Filter by: Assignee</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_inventor">Filter by: Inventor</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_patenttype">Filter by: Patent Type</message>
+         
 
 
     <message key="xmlui.Discovery.AbstractSearch.startswith">Starts with</message>
