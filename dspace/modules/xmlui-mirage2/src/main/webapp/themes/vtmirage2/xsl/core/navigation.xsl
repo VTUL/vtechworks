@@ -194,22 +194,19 @@
 	<xsl:template name="addStaticLinks">
 		<a class="list-group-item">
 			<xsl:attribute name="href">
-				<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-				<xsl:text>/page/about</xsl:text>
+				<xsl:text>https://sites.google.com/a/vt.edu/vtechworks-help/home</xsl:text>
 			</xsl:attribute>
 			<xsl:text>About</xsl:text>
 		</a>
 		<a class="list-group-item">
 			<xsl:attribute name="href">
-				<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-				<xsl:text>/page/policies</xsl:text>
+				<xsl:text>https://sites.google.com/a/vt.edu/vtechworks-help/policies</xsl:text>
 			</xsl:attribute>
 			<xsl:text>Policies</xsl:text>
 		</a>
  		<a class="list-group-item">
 			<xsl:attribute name="href">
-				<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-				<xsl:text>/page/help</xsl:text>
+				<xsl:text>https://sites.google.com/a/vt.edu/vtechworks-help/help</xsl:text>
 			</xsl:attribute>
 			<xsl:text>Help</xsl:text>
 		</a>

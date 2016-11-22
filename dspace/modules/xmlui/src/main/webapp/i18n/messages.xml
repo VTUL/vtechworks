@@ -2231,7 +2231,17 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
-        <message key="xmlui.dri2xhtml.METS-1.0.item-trnumber">TR number</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-trnumber">TR number</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-inventor">Inventor</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-datefiled">Filing Date</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-dateissued">Publication Date</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-applicationnumber">Application Number</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-patentnumber">Patent Number</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-uspc">Primary/U.S. Class</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-uspcother">Other/U.S. Class</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-cpc">CPC Class</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-patenttype">Patent Type</message>
+    
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
@@ -2243,6 +2253,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-viewOpen">View/<wbr/>Open</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-access-rights">Read access available for</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-no-files">There are no files associated with this item.</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-numDownloads">Downloads</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.size-bytes">bytes</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Kb</message>
