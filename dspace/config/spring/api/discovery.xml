@@ -52,8 +52,8 @@
                <entry key="10919/51287" value-ref="etdConfiguration"/>
                <entry key="10919/18725" value-ref="etdConfiguration"/>
                <entry key="10919/18726" value-ref="etdConfiguration"/>
-               <entry key="10919/72294" value-ref="patentConfiguration"/>
-               <entry key="10919/72295" value-ref="patentConfiguration"/>
+               <entry key="10919/52943" value-ref="patentConfiguration"/>
+               <entry key="10919/52944" value-ref="patentConfiguration"/>
             </map>
         </property>
         <property name="toIgnoreMetadataFields">

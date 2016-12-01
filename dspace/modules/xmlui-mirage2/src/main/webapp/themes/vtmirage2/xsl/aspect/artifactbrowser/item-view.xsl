@@ -183,6 +183,7 @@
                 </div>
                 <div class="col-sm-8">
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                    <xsl:call-template name="itemSummaryView-DIM-Patent-Info"/>
                     <xsl:call-template name="itemSummaryView-DIM-URI"/>
                     <xsl:call-template name="itemSummaryView-collections"/>
                 </div>
@@ -368,9 +369,33 @@
        </xsl:if>
     </xsl:template>
     
-    <xsl:template name="itemSummaryView-DIM-date">
+<xsl:template name="itemSummaryView-DIM-date">
+<div class="simple-item-view-date word-break item-page-field-wrapper table">
+<xsl:choose>
+        <xsl:when test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'10919/52944/')">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
-            <div class="simple-item-view-date word-break item-page-field-wrapper table">             
+                 <h5>
+                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-datefiled</i18n:text>
+                </h5>
+                <xsl:for-each select="dim:field[@element='date' and @qualifier='filed']">
+                    <xsl:copy-of select="substring(./node(),1,10)"/>
+                    <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='filed']) != 0">
+                        <br/>
+                    </xsl:if>
+                </xsl:for-each>
+
+                <h5>
+                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-dateissued</i18n:text>
+                </h5>
+                <xsl:for-each select="dim:field[@element='date' and @qualifier='issued']">
+                    <xsl:copy-of select="substring(./node(),1,10)"/>
+                    <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='issued']) != 0">
+                        <br/>
+                    </xsl:if>
+                </xsl:for-each>
+        </xsl:if>
+        </xsl:when>
+        <xsl:otherwise>
                 <h5>
                     <i18n:text>xmlui.dri2xhtml.METS-1.0.item-date</i18n:text>
                 </h5>
@@ -379,10 +404,23 @@
                     <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='issued']) != 0">
                         <br/>
                     </xsl:if>
-                </xsl:for-each>               
-            </div>
-        </xsl:if>
-    </xsl:template>
+                </xsl:for-each>
+        </xsl:otherwise>
+</xsl:choose>
+</div>
+</xsl:template>
+
+<xsl:template name="itemSummaryView-DIM-Patent-Info">
+<xsl:if test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'10919/52944/')">
+<div class="simple-item-view-show-full item-page-field-wrapper table">
+<h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-patentnumber</i18n:text>
+</h5>
+<xsl:for-each select="dim:field[@element='identifier' and @qualifier='patentnumber']">
+</xsl:for-each>
+</div>
+</xsl:if>		
+</xsl:template>
 
     <xsl:template name="itemSummaryView-show-full">
         <div class="simple-item-view-show-full item-page-field-wrapper table">
