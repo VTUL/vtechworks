@@ -737,6 +737,11 @@
                     <hr/>
                     <div class="col-xs-7 col-sm-8">
                         <div class="hidden-print">
+                            <p>
+                                If you believe that any material in VTechWorks should be removed, please see our policy and procedure for
+                                <a href="https://sites.google.com/a/vt.edu/vtechworks-help/policies#TOC-Requesting-that-Material-be-Amended-or-Removed">Requesting that Material be Amended or Removed</a>.
+                                All takedown requests will be promptly acknowledged and investigated.
+                            </p>
                              <a href="http://www.vt.edu">
                              Virginia Tech
                              </a>
