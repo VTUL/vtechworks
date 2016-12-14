@@ -194,7 +194,7 @@
 	<xsl:template name="addStaticLinks">
 		<a class="list-group-item">
 			<xsl:attribute name="href">
-				<xsl:text>https://sites.google.com/a/vt.edu/vtechworks-help/home</xsl:text>
+				<xsl:text>https://sites.google.com/a/vt.edu/vtechworks-help/about</xsl:text>
 			</xsl:attribute>
 			<xsl:text>About</xsl:text>
 		</a>
