@@ -103,7 +103,7 @@
         <xsl:variable name="orcid" select="//pubs:people/pubs:person[pubs:id = $elements-id]/pubs:identifiers/pubs:identifier[@scheme = 'orcid']" />
         <!-- If there is an ORCID, display the author name followed by the ORCID in brackets. -->
         <xsl:if test="$orcid != ''">
-          <xsl:apply-templates select="." mode="standard-format" />
+          <xsl:apply-imports />
           <xsl:text> [</xsl:text>
           <xsl:value-of select="$orcid"/>
           <xsl:text>]</xsl:text>
@@ -112,18 +112,9 @@
       </xsl:when>
       <xsl:otherwise>
         <!-- In the case of any other person fields, use the standard format -->
-        <xsl:apply-templates select="." mode="standard-format" />
+        <xsl:apply-imports />
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-
-  <!-- Standard pubs:people/pubs:person formatting copied from symplectic_xwalks_toolkit_fieldtypes.xsl -->
-  <xsl:template match="pubs:people/pubs:person" mode="standard-format">
-    <xsl:value-of select="normalize-space(pubs:last-name)"/>
-    <xsl:if test="(normalize-space(pubs:last-name)!='') and (normalize-space(pubs:initials)!='')">
-      <xsl:text>, </xsl:text>
-    </xsl:if>
-    <xsl:value-of select="normalize-space(pubs:initials)"/>
   </xsl:template>
     
     <!--
