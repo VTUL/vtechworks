@@ -373,7 +373,7 @@
 <div class="simple-item-view-date word-break item-page-field-wrapper table">
 <xsl:choose>
         <!-- Note: Patent collection handle is 10919/72295 on full database -->
-        <xsl:when test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/52980/')">
+        <xsl:when test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/72295/')">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
             <h5>
                 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-datefiled</i18n:text>
@@ -413,7 +413,7 @@
 
 <xsl:template name="itemSummaryView-DIM-Patent-Info">
     <!-- Note: Patent collection handle is 10919/72295 on full database -->
-    <xsl:if test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/52980/')">
+    <xsl:if test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/72295/')">
         <div class="simple-item-view-show-full item-page-field-wrapper table">
             <h5>
                 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-assignee</i18n:text>
