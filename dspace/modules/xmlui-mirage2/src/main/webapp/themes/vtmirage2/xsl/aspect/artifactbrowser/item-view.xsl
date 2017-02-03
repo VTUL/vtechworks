@@ -376,16 +376,6 @@
         <xsl:when test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/72295/')">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
             <h5>
-                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-datefiled</i18n:text>
-            </h5>
-            <xsl:for-each select="dim:field[@element='date' and @qualifier='filed']">
-                    <xsl:copy-of select="substring(./node(),1,10)"/>
-                    <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='filed']) != 0">
-                        <br/>
-                    </xsl:if>
-            </xsl:for-each>
-
-            <h5>
                 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-dateissued</i18n:text>
             </h5>
             <xsl:for-each select="dim:field[@element='date' and @qualifier='issued']">
@@ -393,6 +383,15 @@
                 <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='issued']) != 0">
                     <br/>
                 </xsl:if>
+            </xsl:for-each>
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-datefiled</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='date' and @qualifier='filed']">
+                    <xsl:copy-of select="substring(./node(),1,10)"/>
+                    <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='filed']) != 0">
+                        <br/>
+                    </xsl:if>
             </xsl:for-each>
         </xsl:if>
         </xsl:when>
@@ -416,16 +415,6 @@
     <xsl:if test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/72295/')">
         <div class="simple-item-view-show-full item-page-field-wrapper table">
             <h5>
-                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-assignee</i18n:text>
-            </h5>
-            <xsl:for-each select="dim:field[@element='contributor' and @qualifier='assignee']">
-                <div>
-                    <xsl:copy-of select="./node()"/>
-                </div>
-            </xsl:for-each>
-        </div>
-        <div class="simple-item-view-show-full item-page-field-wrapper table">
-            <h5>
                 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-inventor</i18n:text>
             </h5>
             <xsl:for-each select="dim:field[@element='contributor' and @qualifier='inventor']">
@@ -436,9 +425,9 @@
         </div>
         <div class="simple-item-view-show-full item-page-field-wrapper table">
             <h5>
-                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-applicationnumber</i18n:text>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-assignee</i18n:text>
             </h5>
-            <xsl:for-each select="dim:field[@element='identifier' and @qualifier='applicationnumber']">
+            <xsl:for-each select="dim:field[@element='contributor' and @qualifier='assignee']">
                 <div>
                     <xsl:copy-of select="./node()"/>
                 </div>
@@ -449,6 +438,16 @@
                 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-patentnumber</i18n:text>
             </h5>
             <xsl:for-each select="dim:field[@element='identifier' and @qualifier='patentnumber']">
+                <div>
+                    <xsl:copy-of select="./node()"/>
+                </div>
+            </xsl:for-each>
+        </div>
+        <div class="simple-item-view-show-full item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-applicationnumber</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='identifier' and @qualifier='applicationnumber']">
                 <div>
                     <xsl:copy-of select="./node()"/>
                 </div>
