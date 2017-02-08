@@ -295,8 +295,18 @@
     <xsl:template name="itemSummaryView-DIM-authors">
         <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()] or dim:field[@element='contributor'][@qualifier='inventor' and descendant::text()] ">
             <div class="simple-item-view-authors item-page-field-wrapper table">
-                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-author</i18n:text></h5>
-                <xsl:choose>
+				<h5>
+					<xsl:choose>
+						<xsl:when test="dim:field[@element='contributor'][@qualifier='inventor']">
+							<i18n:text>xmlui.dri2xhtml.METS-1.0.item-inventor</i18n:text>
+						</xsl:when>
+						<xsl:otherwise>
+							<i18n:text>xmlui.dri2xhtml.METS-1.0.item-author</i18n:text>
+						</xsl:otherwise>
+				
+					</xsl:choose>
+				</h5>
+				<xsl:choose>
                     <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
                         <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
                             <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
@@ -413,16 +423,6 @@
 <xsl:template name="itemSummaryView-DIM-Patent-Info">
     <!-- Note: Patent collection handle is 10919/72295 on full database -->
     <xsl:if test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/72295/')">
-        <div class="simple-item-view-show-full item-page-field-wrapper table">
-            <h5>
-                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-inventor</i18n:text>
-            </h5>
-            <xsl:for-each select="dim:field[@element='contributor' and @qualifier='inventor']">
-                <div>
-                    <xsl:copy-of select="./node()"/>
-                </div>
-            </xsl:for-each>
-        </div>
         <div class="simple-item-view-show-full item-page-field-wrapper table">
             <h5>
                 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-assignee</i18n:text>
