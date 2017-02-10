@@ -19,6 +19,9 @@
 		<name-map collection-handle="10919/51287" form-name="omals" />
 		<!-- Added custom describe form to collection "NDLTD", http://vtechworks.lib.vt.edu/handle/10919/18726 -->
 		<name-map collection-handle="10919/18726" form-name="ndltd" />
+		<!-- Custom submission process for VT ETDs, both Masters and Doctoral submissions-->
+		<name-map collection-handle="10919/9291" form-name="vtetd" />
+		<name-map collection-handle="10919/11041" form-name="vtetd" />
 	</form-map>
 
 
@@ -849,9 +852,159 @@
 				-->
 			</page>
 		</form>
+		<!-- Added custom describe form for the VT ETD collections -->
+		<form name="vtetd">
+			<page number="1">
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>author</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Author(s)/Creator(s)</label>
+					<input-type>name</input-type>
+					<hint>Enter the names of the authors of this item.</hint>
+					<required>You must enter the author of this item.</required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>title</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Title</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the title of the work as it appears on the title page or equivalent.</hint>
+					<required>You must enter a main title for this item.</required>
+				</field>				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>date</dc-element>
+					<dc-qualifier>issued</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Date of Issue</label>
+					<input-type>date</input-type>
+					<hint>Please give the date of previous publication or public distribution. You can leave out the day and/or month if they aren't applicable.</hint>
+					<required>You must enter at least the year.</required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>committeechair</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Committee Chair</label>
+					<input-type>name</input-type>
+					<hint>Enter the names of committee chairs of this item.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>committeecochair</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Committee Co-Chair</label>
+					<input-type>name</input-type>
+					<hint>Enter the names of committee co-chairs of this item.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>committeemember</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Committee Members</label>
+					<input-type>name</input-type>
+					<hint>Enter the names of committee members for this item.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>contributor</dc-element>
+					<dc-qualifier>department</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Department</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the contributing academic department of the item.</hint>
+					<required>You must enter a contributor department for this item.</required>
+				</field>
+				
+				
+				<field>
+					<dc-schema>thesis</dc-schema>
+					<dc-element>degree</dc-element>
+					<dc-qualifier>level</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Degree</label>
+					<input-type value-pairs-name="ndltd_degree_levels">dropdown</input-type>
+					<hint>Level of education associated with the document.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>thesis</dc-schema>
+					<dc-element>degree</dc-element>
+					<dc-qualifier>name</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Degree Name</label>
+					<input-type value-pairs-name="vt_degree_names">dropdown</input-type>
+					<hint>Name of the degree associated with the work as it appears within the work. (example: MS, Masters of Science)</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>language</dc-element>
+					<dc-qualifier>iso</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Language</label>
+					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>subject</dc-element>
+					<dc-qualifier></dc-qualifier>
+					<!-- An input-type of twobox MUST be marked as repeatable -->
+					<repeatable>true</repeatable>
+					<label>Subject Keywords</label>
+					<input-type>twobox</input-type>
+					<hint>Enter appropriate subject keywords or phrases.</hint>
+					<required>You must enter appropriate subject keywords or phrases.</required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>abstract</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Abstract</label>
+					<input-type>textarea</input-type>
+					<hint>Enter the full text of the abstract.</hint>
+					<required></required>
+				</field>
+				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>provenance</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Access Status</label>
+					<input-type value-pairs-name="vt_access">dropdown</input-type>
+					<hint></hint>
+					<required>You must select an access status.</required>
+				</field>
+				
+			</page>
+		</form>
 	</form-definitions>
 
-
+	
+	
 	<!-- form-value-pairs populate dropdown and qualdrop-value lists. -->
 	<!-- The form-value-pairs element holds child elements named 'value-pairs' -->
 	<!-- A 'value-pairs' element has a value-pairs-name and a dc-term -->
@@ -1205,6 +1358,78 @@
 				<stored-value>other</stored-value>
 			</pair>
 		</value-pairs>
+		<!--- VT Degree Names -->
+		<value-pairs value-pairs-name="vt_degree_names"
+			dc-term="degree_name">
+			<pair>
+				<displayed-value>select degree name</displayed-value>
+				<stored-value></stored-value>
+			</pair>
+			<pair>
+				<displayed-value>EDD</displayed-value>
+				<stored-value>EDD</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>MA</displayed-value>
+				<stored-value>MA</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>MARCH</displayed-value>
+				<stored-value>MARCH</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>MFA</displayed-value>
+				<stored-value>MFA</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>MLA</displayed-value>
+				<stored-value>MLA</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>MPA</displayed-value>
+				<stored-value>MPA</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>MPIA</displayed-value>
+				<stored-value>MPIA</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>MS</displayed-value>
+				<stored-value>MS</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>MSLFS</displayed-value>
+				<stored-value>MSLFS</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>MURPL</displayed-value>
+				<stored-value>MURPL</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>PHD</displayed-value>
+				<stored-value>PHD</stored-value>
+			</pair>
+		</value-pairs>
+		<value-pairs value-pairs-name="vt_access"
+			dc-term="description_provenance">
+			<pair>
+				<displayed-value>select access status</displayed-value>
+				<stored-value></stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Provide open and immediate access to the ETD</displayed-value>
+				<stored-value>Provide open and immediate access to the ETD</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Restrict access to the ETD for Virginia Tech only for a period of 1 year</displayed-value>
+				<stored-value>Restrict access to the ETD for Virginia Tech only for a period of 1 year</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Withhold all access to the ETD for 1 year</displayed-value>
+				<stored-value>Withhold all access to the ETD for 1 year</stored-value>
+			</pair>
+		</value-pairs>
+		
 
 		
 	</form-value-pairs>
