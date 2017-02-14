@@ -43,6 +43,7 @@
         <crosswalks:mapping dspace="dc.identifier.eissn" elements="eissn" />
         <crosswalks:mapping dspace="dc.identifier.isbn" elements="isbn-10,isbn-13" />
         <crosswalks:mapping dspace="dc.identifier.issn" elements="issn" />
+        <crosswalks:mapping dspace="dc.identifier.orcid" elements="authors" />
         <crosswalks:mapping dspace="dc.language" elements="language" />
         <crosswalks:mapping dspace="dc.publisher" elements="publisher" />
         <crosswalks:mapping dspace="dc.relation.ispartof" elements="name-of-conference,parent-title,series" />
@@ -90,6 +91,31 @@
             </xsl:apply-templates>  
         </xsl:if>  
     </xsl:template>
+
+  <!-- Override person field formatting, so we can add ORCIDs to certain fields -->
+  <xsl:template match="pubs:people/pubs:person">
+    <xsl:param name="name" />
+    <xsl:param name="repo_field" />
+    <xsl:choose>
+      <!-- In the case when a person field is being mapped to the orcid field, use the resolved elements-user ID and look up their ORCID.  -->
+      <xsl:when test="$repo_field = 'dc.identifier.orcid'">
+        <xsl:variable name="elements-id" select="pubs:elements-user/@id" />
+        <xsl:variable name="orcid" select="//pubs:people/pubs:person[pubs:id = $elements-id]/pubs:identifiers/pubs:identifier[@scheme = 'orcid']" />
+        <!-- If there is an ORCID, display the author name followed by the ORCID in brackets. -->
+        <xsl:if test="$orcid != ''">
+          <xsl:apply-imports />
+          <xsl:text> [</xsl:text>
+          <xsl:value-of select="$orcid"/>
+          <xsl:text>]</xsl:text>
+        </xsl:if>
+        <!-- If there is no ORCID, do not output anything. -->
+      </xsl:when>
+      <xsl:otherwise>
+        <!-- In the case of any other person fields, use the standard format -->
+        <xsl:apply-imports />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
     
     <!--
         Object level field mappings

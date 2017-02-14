@@ -796,33 +796,6 @@
             <!-- Check for the custom pages -->
             <xsl:choose>
             	<!-- Add static page contents -->
-                <xsl:when test="starts-with($request-uri, 'page/about')">
-                    <div class="hero-unit">
-                     	<xsl:call-template name="AboutStaticPage"/>
-                    	<!--
-                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.about.title</i18n:text></h1>
-                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.about.content</i18n:text></p>
-                        -->
-                    </div>
-                </xsl:when>
-				<xsl:when test="starts-with($request-uri, 'page/policies')">
-                    <div class="hero-unit">
-                    	<xsl:call-template name="PoliciesStaticPage"/>
-                    	<!--
-                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.pol.title</i18n:text></h1>
-                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.pol.content</i18n:text></p>
-                        -->
-                    </div>
-                </xsl:when>
-				<xsl:when test="starts-with($request-uri, 'page/help')">
-                    <div class="hero-unit">
-                    	<xsl:call-template name="HelpStaticPage"/>
-                    	<!--
-                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.help.title</i18n:text></h1>
-                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.help.content</i18n:text></p>
-                        -->
-                    </div>
-                </xsl:when>
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
                     <xsl:apply-templates />
