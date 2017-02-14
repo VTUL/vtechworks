@@ -456,6 +456,7 @@
     <xsl:template match="dri:field[@id='aspect.general.ChoiceLookupTransformer.field.accept']">
       <xsl:call-template name="choiceLookupButton">
         <xsl:with-param name="onClick" select="'javascript:DSpaceChoicesAcceptOnClick();'"/>
+        <xsl:with-param name="closeAfterClick" select="'true'" />
       </xsl:call-template>
     </xsl:template>
 
@@ -476,7 +477,12 @@
     <!-- button markup: special handling needed because these must not be <input type=submit> -->
     <xsl:template name="choiceLookupButton">
       <xsl:param name="onClick"/>
+      <!-- added closeAfterClick to customize the Accept button to close the window when pressed-->
+      <xsl:param name="closeAfterClick" select="'false'"/>
       <input type="button" onClick="{$onClick}">
+        <xsl:if test="$closeAfterClick = 'true'"> 
+          <xsl:attribute name="data-dismiss">modal</xsl:attribute>
+        </xsl:if>
         <xsl:call-template name="fieldAttributes"/>
         <xsl:attribute name="value">
             <xsl:choose>
