@@ -183,6 +183,7 @@
                 </div>
                 <div class="col-sm-8">
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                    <xsl:call-template name="itemSummaryView-DIM-Patent-Info"/>
                     <xsl:call-template name="itemSummaryView-DIM-URI"/>
                     <xsl:call-template name="itemSummaryView-collections"/>
                 </div>
@@ -294,8 +295,18 @@
     <xsl:template name="itemSummaryView-DIM-authors">
         <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()] or dim:field[@element='contributor'][@qualifier='inventor' and descendant::text()] ">
             <div class="simple-item-view-authors item-page-field-wrapper table">
-                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-author</i18n:text></h5>
-                <xsl:choose>
+				<h5>
+					<xsl:choose>
+						<xsl:when test="dim:field[@element='contributor'][@qualifier='inventor']">
+							<i18n:text>xmlui.dri2xhtml.METS-1.0.item-inventor</i18n:text>
+						</xsl:when>
+						<xsl:otherwise>
+							<i18n:text>xmlui.dri2xhtml.METS-1.0.item-author</i18n:text>
+						</xsl:otherwise>
+				
+					</xsl:choose>
+				</h5>
+				<xsl:choose>
                     <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
                         <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
                             <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
@@ -306,8 +317,8 @@
                             <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
                         </xsl:for-each>
                     </xsl:when>
-                    <xsl:when test="dim:field[@element='contributor']">
-                        <xsl:for-each select="dim:field[@element='contributor']">
+                    <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
+                        <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
                             <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
                         </xsl:for-each>
                     </xsl:when>
@@ -368,9 +379,33 @@
        </xsl:if>
     </xsl:template>
     
-    <xsl:template name="itemSummaryView-DIM-date">
+<xsl:template name="itemSummaryView-DIM-date">
+<div class="simple-item-view-date word-break item-page-field-wrapper table">
+<xsl:choose>
+        <!-- Note: Patent collection handle is 10919/72295 on full database -->
+        <xsl:when test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/72295/')">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
-            <div class="simple-item-view-date word-break item-page-field-wrapper table">             
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-dateissued</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='date' and @qualifier='issued']">
+                <xsl:copy-of select="substring(./node(),1,10)"/>
+                <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='issued']) != 0">
+                    <br/>
+                </xsl:if>
+            </xsl:for-each>
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-datefiled</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='date' and @qualifier='filed']">
+                    <xsl:copy-of select="substring(./node(),1,10)"/>
+                    <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='filed']) != 0">
+                        <br/>
+                    </xsl:if>
+            </xsl:for-each>
+        </xsl:if>
+        </xsl:when>
+        <xsl:otherwise>
                 <h5>
                     <i18n:text>xmlui.dri2xhtml.METS-1.0.item-date</i18n:text>
                 </h5>
@@ -379,10 +414,100 @@
                     <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='issued']) != 0">
                         <br/>
                     </xsl:if>
-                </xsl:for-each>               
-            </div>
-        </xsl:if>
-    </xsl:template>
+                </xsl:for-each>
+        </xsl:otherwise>
+</xsl:choose>
+</div>
+</xsl:template>
+
+<xsl:template name="itemSummaryView-DIM-Patent-Info">
+    <!-- Note: Patent collection handle is 10919/72295 on full database -->
+    <xsl:if test="contains($document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference[@type='DSpace Item']/dri:referenceSet[@type='itemPageSummaryList']/dri:reference/@url,'/handle/10919/72295/')">
+        <div class="simple-item-view-show-full item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-assignee</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='contributor' and @qualifier='assignee']">
+                <div>
+                    <xsl:copy-of select="./node()"/>
+                </div>
+            </xsl:for-each>
+        </div>
+        <div class="simple-item-view-show-full item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-patentnumber</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='identifier' and @qualifier='patentnumber']">
+                <div>
+                    <xsl:copy-of select="./node()"/>
+                </div>
+            </xsl:for-each>
+        </div>
+        <div class="simple-item-view-show-full item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-applicationnumber</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='identifier' and @qualifier='applicationnumber']">
+                <div>
+                    <xsl:copy-of select="./node()"/>
+                </div>
+            </xsl:for-each>
+        </div>
+        <div class="simple-item-view-show-full item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-url</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='identifier' and @qualifier='url']">
+                <div>
+                    <a>
+                        <xsl:attribute name="href"><xsl:value-of select="./node()"/></xsl:attribute>
+                        <xsl:copy-of select="./node()"/>
+                    </a>
+                </div>
+            </xsl:for-each>
+        </div>
+        <div class="simple-item-view-show-full item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-uspc</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='subject' and @qualifier='uspc']">
+                <div>
+                    <xsl:copy-of select="./node()"/>
+                </div>
+            </xsl:for-each>
+        </div>
+        <div class="simple-item-view-show-full item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-uspcother</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='subject' and @qualifier='uspcother']">
+                <div>
+                    <xsl:copy-of select="./node()"/>
+                </div>
+            </xsl:for-each>
+        </div>
+        <div class="simple-item-view-show-full item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-cpc</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='subject' and @qualifier='cpc']">
+                <div>
+                    <xsl:copy-of select="./node()"/>
+                </div>
+            </xsl:for-each>
+        </div>
+        <div class="simple-item-view-show-full item-page-field-wrapper table">
+            <h5>
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-patenttype</i18n:text>
+            </h5>
+            <xsl:for-each select="dim:field[@element='type' and @qualifier='patenttype']">
+                <div>
+                    <xsl:copy-of select="./node()"/>
+                </div>
+            </xsl:for-each>
+        </div>
+    </xsl:if>
+</xsl:template>
 
     <xsl:template name="itemSummaryView-show-full">
         <div class="simple-item-view-show-full item-page-field-wrapper table">
