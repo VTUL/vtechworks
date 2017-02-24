@@ -481,7 +481,12 @@
 				<workflow-editable>true</workflow-editable>
 			</step>
 			
-			<!-- add Non-Interactive Step -->
+			<!-- add Non-Interactive Steps -->
+			
+			<step>
+				<processing-class>org.dspace.submit.step.VTETDProvenanceFix</processing-class>
+				<workflow-editable>false</workflow-editable>
+			</step>
 		
 			<step>
 				<processing-class>org.dspace.submit.step.VTETDNonInteractiveStep</processing-class>

@@ -860,7 +860,7 @@
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>author</dc-qualifier>
 					<repeatable>true</repeatable>
-					<label>Author(s)/Creator(s)</label>
+					<label>Authors</label>
 					<input-type>name</input-type>
 					<hint>Enter the names of the authors of this item.</hint>
 					<required>You must enter the author of this item.</required>
@@ -982,23 +982,77 @@
 					<dc-element>description</dc-element>
 					<dc-qualifier>abstract</dc-qualifier>
 					<repeatable>false</repeatable>
-					<label>Abstract</label>
+					<label>Academic Abstract</label>
 					<input-type>textarea</input-type>
-					<hint>Enter the full text of the abstract.</hint>
-					<required></required>
+					<hint>Enter the full text of the Academic Abstract.</hint>
+					<required>You must enter the Academic Abstract</required>
+				</field>
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>generalabstract</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>General Audience Abstract</label>
+					<input-type>textarea</input-type>
+					<hint>Enter the full text of the General Audience Abstract.</hint>
+					<required>You must enter the General Audience Abstract</required>
 				</field>
 				
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>description</dc-element>
-					<dc-qualifier>provenance</dc-qualifier>
+					<dc-qualifier>provenance1</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Access Status</label>
 					<input-type value-pairs-name="vt_access">dropdown</input-type>
 					<hint></hint>
 					<required>You must select an access status.</required>
 				</field>
-				
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>provenance2</dc-qualifier>
+					<repeatable>false</repeatable>
+					<label>Reason for withholding access</label>
+					<input-type>onebox</input-type>
+					<hint>Please include the reason for withholding access, if selected.</hint>
+					<required></required>
+				</field>
+
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>provenance3</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Name of proxy</label>
+					<input-type>name</input-type>
+					<hint>For any release other than immediate access, the Graduate School requests that you name a proxy to 
+					cover cases such as if the student or committee signing this form becomes inaccessible. Any of the following people (indicated by their names) is 
+					authorized to serve as proxy for changes in availability. Submissions by any of these proxies signing are officially recognized just as if the student and 
+					full committee signed. For example, it is suggested that the committee chair be a proxy.
+					</hint>
+					<required></required>
+				</field>
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>provenance4</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Proxy email address</label>
+					<input-type>onebox</input-type>
+					<hint></hint>
+					<required></required>
+				</field>
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>provenance5</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Copyright clearances obtained</label>
+					<input-type value-pairs-name="copyright_clearance">list</input-type>
+					<hint></hint>
+					<required>You must certify that copyright clearances have been obtained.</required>
+				</field>
 			</page>
 		</form>
 	</form-definitions>
@@ -1411,7 +1465,7 @@
 			</pair>
 		</value-pairs>
 		<value-pairs value-pairs-name="vt_access"
-			dc-term="description_provenance">
+			dc-term="vt_access">
 			<pair>
 				<displayed-value>select access status</displayed-value>
 				<stored-value></stored-value>
@@ -1427,6 +1481,23 @@
 			<pair>
 				<displayed-value>Withhold all access to the ETD for 1 year</displayed-value>
 				<stored-value>Withhold all access to the ETD for 1 year</stored-value>
+			</pair>
+		</value-pairs>
+		<value-pairs value-pairs-name="copyright_clearance"
+			dc-term="copyright_clearance">
+			<pair>
+				<displayed-value>
+				I hereby certify that, if appropriate, I have obtained and submitted with my ETD a 
+				written permission statement from the ower(s) of each third part copyrighted matter to be included 
+				in my thesis or dissertation, allowing distribution as specified above.
+				 I certify that the version I submitted is the same as that approved by my advisory committee.
+				</displayed-value>
+				<stored-value>
+				I hereby certify that, if appropriate, I have obtained and submitted with my ETD a 
+				written permission statement from the ower(s) of each third part copyrighted matter to be included 
+				in my thesis or dissertation, allowing distribution as specified above.
+				 I certify that the version I submitted is the same as that approved by my advisory committee.
+				</stored-value>
 			</pair>
 		</value-pairs>
 		
