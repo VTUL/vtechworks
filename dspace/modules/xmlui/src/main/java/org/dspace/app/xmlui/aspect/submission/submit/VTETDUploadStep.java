@@ -63,7 +63,7 @@ import org.xml.sax.SAXException;
  * @author Scott Phillips
  * @author Tim Donohue (updated for Configurable Submission)
  */
-public class UploadStep extends AbstractSubmissionStep
+public class VTETDUploadStep extends AbstractSubmissionStep
 {
     /** Language Strings for Uploading **/
     protected static final Message T_head =
@@ -149,7 +149,7 @@ public class UploadStep extends AbstractSubmissionStep
     /**
      * Establish our required parameters, abstractStep will enforce these.
      */
-    public UploadStep()
+    public VTETDUploadStep()
     {
         this.requireSubmission = true;
         this.requireStep = true;
