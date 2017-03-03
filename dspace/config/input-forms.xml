@@ -865,6 +865,16 @@
 					<hint>Enter the names of the authors of this item.</hint>
 					<required>You must enter the author of this item.</required>
 				</field>
+				<field>
+					<dc-schema>dc</dc-schema>
+					<dc-element>description</dc-element>
+					<dc-qualifier>provenance</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Author's Email</label>
+					<input-type>onebox</input-type>
+					<hint>Enter the author's email address.</hint>
+					<required>You must enter the author's email address.</required>
+				</field>
 
 				<field>
 					<dc-schema>dc</dc-schema>
@@ -917,9 +927,8 @@
 					<label>Committee Members</label>
 					<input-type>name</input-type>
 					<hint>Enter the names of committee members for this item.</hint>
-					<required></required>
+					<required>You must enter the names of committee members for this item.</required>
 				</field>
-				
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
@@ -927,11 +936,19 @@
 					<repeatable>false</repeatable>
 					<label>Department</label>
 					<input-type>onebox</input-type>
-					<hint>Enter the contributing academic department of the item.</hint>
+					<hint>Enter the contributing academic department of the item. Example: Electrical and Computer Engineering</hint>
 					<required>You must enter a contributor department for this item.</required>
 				</field>
-				
-				
+				<field>
+					<dc-schema>thesis</dc-schema>
+					<dc-element>degree</dc-element>
+					<dc-qualifier>discipline</dc-qualifier>
+					<repeatable>true</repeatable>
+					<label>Subject Discipline</label>
+					<input-type>onebox</input-type>
+					<hint>Enter area of study. Usually, this will be the name of the program. Example: Computer Engineering</hint>
+					<required>You must enter a field of study for this item.</required>
+				</field>
 				<field>
 					<dc-schema>thesis</dc-schema>
 					<dc-element>degree</dc-element>
@@ -940,7 +957,7 @@
 					<label>Degree</label>
 					<input-type value-pairs-name="ndltd_degree_levels">dropdown</input-type>
 					<hint>Level of education associated with the document.</hint>
-					<required></required>
+					<required>You must enter a degree level for this item.</required>
 				</field>
 				
 				<field>
@@ -951,7 +968,7 @@
 					<label>Degree Name</label>
 					<input-type value-pairs-name="vt_degree_names">dropdown</input-type>
 					<hint>Name of the degree associated with the work as it appears within the work. (example: MS, Masters of Science)</hint>
-					<required></required>
+					<required>You must enter a degree name for this item.</required>
 				</field>
 				
 				<field>
@@ -962,7 +979,7 @@
 					<label>Language</label>
 					<input-type value-pairs-name="common_iso_languages">dropdown</input-type>
 					<hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
-					<required></required>
+					<required>You must enter a language for this item.</required>
 				</field>
 
 				<field>
@@ -990,7 +1007,7 @@
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>description</dc-element>
-					<dc-qualifier>generalabstract</dc-qualifier>
+					<dc-qualifier>abstractgeneral</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>General Audience Abstract</label>
 					<input-type>textarea</input-type>

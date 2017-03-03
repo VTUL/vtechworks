@@ -851,6 +851,34 @@
 	<message key="xmlui.Submission.submit.UploadStep.submit_edit">Edit</message>
 	<message key="xmlui.Submission.submit.UploadStep.checksum">File checksum:</message>
 	<message key="xmlui.Submission.submit.UploadStep.submit_remove">Remove selected files</message>
+	
+	<!-- org.dspace.app.xmlui.Submission.submit.VTETDUploadStep -->
+	<message key="xmlui.Submission.submit.VTETDUploadStep.file_help">
+		<p>Please select the files containing your COMPLETE dissertation, supporting data, 
+		and appendices files, including written permission statement from the ower(s) of each 
+		third part copyrighted matter. Please follow the following guidelines when submitting your file:
+		</p>
+		<ul>
+			<li>The disseration file must be in PDF format.</li>
+			<li>
+				Your file MUST be named in the following format: <br/>
+				[Your Last Name]_[Your First Initial]_[Your Middle Initial]_[Doc Type]_[Defense Year] where
+				<ul>
+					<li>
+						Doc type: [T]hesis or [D]issertation
+					</li>
+					<li>
+						Four-digit Year of Defense (ex: 2012)
+					</li>
+					<li>
+						Example: Jane A. Doe, Masters Student, who defended in 2012 would name her file: Doe_JA_T_2012.pdf
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</message>
+	
+	
 
 
 

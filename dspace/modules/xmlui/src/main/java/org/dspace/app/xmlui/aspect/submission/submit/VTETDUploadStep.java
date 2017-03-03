@@ -71,7 +71,7 @@ public class VTETDUploadStep extends AbstractSubmissionStep
     protected static final Message T_file =
             message("xmlui.Submission.submit.UploadStep.file");
     protected static final Message T_file_help =
-            message("xmlui.Submission.submit.UploadStep.file_help");
+            message("xmlui.Submission.submit.VTETDUploadStep.file_help");
     protected static final Message T_file_error =
             message("xmlui.Submission.submit.UploadStep.file_error");
     protected static final Message T_upload_error =

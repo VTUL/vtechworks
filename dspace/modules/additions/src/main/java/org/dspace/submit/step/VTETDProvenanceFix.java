@@ -62,6 +62,14 @@ public class VTETDProvenanceFix extends AbstractProcessingStep
     /** hash of all submission forms details */
     private static DCInputsReader inputsReader = null;
     
+	private String provenanceLabels[] = {
+		"Author: ",
+		"",
+		"",
+		"Proxy: ",
+		"Proxy: ",
+		""
+	};
     /***************************************************************************
      * STATUS / ERROR FLAGS (returned by doProcessing() if an error occurs or
      * additional user interaction may be required)
@@ -195,10 +203,16 @@ public class VTETDProvenanceFix extends AbstractProcessingStep
    protected void addDefaultData(Item item) throws SQLException
    {
        Metadatum[] provField;
+       /* Author email */
+       provField = item.getMetadata("dc", "description", "provenance",Item.ANY);
+       String authorEmail = provenanceLabels[0] + provField[0].value;
+       item.clearMetadata("dc", "description", "provenance", Item.ANY);
+       item.addMetadata("dc", "description", "provenance", "en", authorEmail);
+       
 	   for (int i = 1; i <= 5; ++i) {
-			provField = item.getMetadata("dc", "description", "provenance" + i, "en_US");
+			provField = item.getMetadata("dc", "description", "provenance" + i, Item.ANY);
 			if (provField.length > 0) {
-				item.addMetadata("dc", "description", "provenance", "en_US", provField[0].value);
+				item.addMetadata("dc", "description", "provenance", "en", provenanceLabels[i] + provField[0].value);
 				item.clearMetadata("dc", "description", "provenance" + i, Item.ANY);
 			}
 	   }
