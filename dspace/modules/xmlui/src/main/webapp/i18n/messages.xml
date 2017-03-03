@@ -872,6 +872,7 @@
 					</li>
 					<li>
 						Example: Jane A. Doe, Masters Student, who defended in 2012 would name her file: Doe_JA_T_2012.pdf
+						<br/> Supporting documents can be named with the same prefix. Examples: Doe_JA_T_2012_rights_releases.pdf; Doe_JA_T_2012_IRB_approval.pdf
 					</li>
 				</ul>
 			</li>

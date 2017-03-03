@@ -82,10 +82,6 @@ public class VTETDUploadStep extends AbstractSubmissionStep
     protected static final Message T_virus_error =
             message("xmlui.Submission.submit.UploadStep.virus_error");
 
-    protected static final Message T_description =
-            message("xmlui.Submission.submit.UploadStep.description");
-    protected static final Message T_description_help =
-            message("xmlui.Submission.submit.UploadStep.description_help");
     protected static final Message T_submit_upload =
             message("xmlui.Submission.submit.UploadStep.submit_upload");
     protected static final Message T_head2 =
@@ -242,10 +238,6 @@ public class VTETDUploadStep extends AbstractSubmissionStep
             {
                 file.addError(T_virus_error);
             }
-
-            Text description = upload.addItem().addText("description");
-            description.setLabel(T_description);
-            description.setHelp(T_description_help);
 
             Button uploadSubmit = upload.addItem().addButton("submit_upload");
             uploadSubmit.setValue(T_submit_upload);
