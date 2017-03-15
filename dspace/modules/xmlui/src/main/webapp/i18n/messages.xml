@@ -855,7 +855,7 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.VTETDUploadStep -->
 	<message key="xmlui.Submission.submit.VTETDUploadStep.file_help">
 		<p>Please select the files containing your COMPLETE dissertation, supporting data, 
-		and appendices files, including written permission statement from the ower(s) of each 
+		and appendices files, including written permission statement from the owner(s) of each 
 		third part copyrighted matter. Please follow the following guidelines when submitting your file:
 		</p>
 		<ul>
