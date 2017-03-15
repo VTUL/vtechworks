@@ -65,7 +65,7 @@ public class VTETDProvenanceFix extends AbstractProcessingStep
 	private String provenanceLabels[] = {
 		"Author: ",
 		"",
-		"",
+		"Reason for withholding access: ",
 		"Proxy: ",
 		"Proxy: ",
 		""
