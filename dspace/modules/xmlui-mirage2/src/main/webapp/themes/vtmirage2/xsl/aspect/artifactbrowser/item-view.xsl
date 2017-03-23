@@ -290,6 +290,34 @@
                 </div>
             </div>
         </xsl:if>
+        <xsl:if test="dim:field[@element='description' and @qualifier='abstractgeneral']">
+            <div class="simple-item-view-description item-page-field-wrapper table">
+                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract-general</i18n:text></h5>
+                <!-- Show line break in abstract field. -->
+                <div class="line-break">
+                    <xsl:for-each select="dim:field[@element='description' and @qualifier='abstractgeneral']">
+                        <xsl:choose>
+                            <xsl:when test="node()">
+                                <!-- html encoding for abstracts -->
+                            	<!--
+                                <xsl:copy-of select="node()"/>
+                                -->
+                                <xsl:value-of select="node()" disable-output-escaping="yes" />
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:text>&#160;</xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="count(following-sibling::dim:field[@element='description' and @qualifier='abstract']) != 0">
+                            <div class="spacer">&#160;</div>
+                        </xsl:if>
+                    </xsl:for-each>
+                    <xsl:if test="count(dim:field[@element='description' and @qualifier='abstract']) &gt; 1">
+                        <div class="spacer">&#160;</div>
+                    </xsl:if>
+                </div>
+            </div>
+        </xsl:if>
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-authors">
