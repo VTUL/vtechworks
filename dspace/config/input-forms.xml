@@ -789,7 +789,7 @@
 					<label>Abstract</label>
 					<input-type>textarea</input-type>
 					<hint>Enter a brief summary of the item. Preferred length is a single paragraph or about 300 words, although you may enter an abstract of any length.</hint>
-					<required></required>
+					<required>You must enter an abstract for this item.</required>
 				</field>
 				
 				<field>
