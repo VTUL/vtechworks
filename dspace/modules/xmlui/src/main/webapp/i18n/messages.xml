@@ -856,10 +856,14 @@
 	<message key="xmlui.Submission.submit.VTETDUploadStep.file_help">
 		<p>Please select the files containing your COMPLETE dissertation, supporting data, 
 		and appendices files, including written permission statement from the owner(s) of each 
-		third part copyrighted matter. Please follow the following guidelines when submitting your file:
+		third party copyrighted matter. Do not upload the Graduate School ETD approval form, 
+		Proquest Agreement Form, Survey of Earned Doctorate survey certificate, resume/vita, or 
+		any other document not directly related to your ETD. If you have questions regarding whether 
+		or not to upload a specific item, please contact the Graduate School at grads@vt.edu or 540-231-8636. 
+		Please follow the following guidelines when submitting your file:
 		</p>
 		<ul>
-			<li>The disseration file must be in PDF format.</li>
+			<li>The dissertation file must be in PDF format.</li>
 			<li>
 				Your file MUST be named in the following format: <br/>
 				[Your Last Name]_[Your First Initial]_[Your Middle Initial]_[Doc Type]_[Defense Year] where
