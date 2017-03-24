@@ -789,7 +789,7 @@
 					<label>Abstract</label>
 					<input-type>textarea</input-type>
 					<hint>Enter a brief summary of the item. Preferred length is a single paragraph or about 300 words, although you may enter an abstract of any length.</hint>
-					<required></required>
+					<required>You must enter an abstract for this item.</required>
 				</field>
 				
 				<field>
@@ -859,10 +859,10 @@
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>author</dc-qualifier>
-					<repeatable>true</repeatable>
+					<repeatable>false</repeatable>
 					<label>Authors</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of the authors of this item.</hint>
+					<hint>Enter the names of the author of this item.</hint>
 					<required>You must enter the author of this item.</required>
 				</field>
 				<field>
@@ -901,11 +901,11 @@
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
 					<dc-qualifier>committeechair</dc-qualifier>
-					<repeatable>true</repeatable>
+					<repeatable>false</repeatable>
 					<label>Committee Chair</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of committee chairs of this item.</hint>
-					<required></required>
+					<hint>Enter the name of committee chair of this item.</hint>
+					<required>You must enter the name of the committee chair for this item.</required>
 				</field>
 				
 				<field>
@@ -915,7 +915,7 @@
 					<repeatable>true</repeatable>
 					<label>Committee Co-Chair</label>
 					<input-type>name</input-type>
-					<hint>Enter the names of committee co-chairs of this item.</hint>
+					<hint>Enter the names of committee co-chairs for this item.</hint>
 					<required></required>
 				</field>
 				
