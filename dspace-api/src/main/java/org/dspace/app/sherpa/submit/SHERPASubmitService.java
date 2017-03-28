@@ -72,7 +72,10 @@ public class SHERPASubmitService
             {
                 for (String eIssn : eIssns)
                 {
-                    issns.add(eIssn.trim());
+                    if (eIssn != null)
+                    {
+                        issns.add(eIssn.trim());
+                    }
                 }
             }
         }
