@@ -851,6 +851,39 @@
 	<message key="xmlui.Submission.submit.UploadStep.submit_edit">Edit</message>
 	<message key="xmlui.Submission.submit.UploadStep.checksum">File checksum:</message>
 	<message key="xmlui.Submission.submit.UploadStep.submit_remove">Remove selected files</message>
+	
+	<!-- org.dspace.app.xmlui.Submission.submit.VTETDUploadStep -->
+	<message key="xmlui.Submission.submit.VTETDUploadStep.file_help">
+		<p>Please select the files containing your COMPLETE dissertation, supporting data, 
+		and appendices files, including written permission statement from the owner(s) of each 
+		third party copyrighted matter. Do not upload the Graduate School ETD approval form, 
+		Proquest Agreement Form, Survey of Earned Doctorate survey certificate, resume/vita, or 
+		any other document not directly related to your ETD. If you have questions regarding whether 
+		or not to upload a specific item, please contact the Graduate School at grads@vt.edu or 540-231-8636. 
+		Please follow the following guidelines when submitting your file:
+		</p>
+		<ul>
+			<li>The dissertation file must be in PDF format.</li>
+			<li>
+				Your file MUST be named in the following format: <br/>
+				[Your Last Name]_[Your First Initial]_[Your Middle Initial]_[Doc Type]_[Defense Year] where
+				<ul>
+					<li>
+						Doc type: [T]hesis or [D]issertation
+					</li>
+					<li>
+						Four-digit Year of Defense (ex: 2012)
+					</li>
+					<li>
+						Example: Jane A. Doe, Masters Student, who defended in 2012 would name her file: Doe_JA_T_2012.pdf
+						<br/> Supporting documents can be named with the same prefix. Examples: Doe_JA_T_2012_rights_releases.pdf; Doe_JA_T_2012_IRB_approval.pdf
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</message>
+	
+	
 
 
 
@@ -2226,6 +2259,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Title</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Author</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Abstract</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract-general">General Audience Abstract</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
