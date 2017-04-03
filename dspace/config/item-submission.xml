@@ -326,7 +326,7 @@
 				<heading>submit.progressbar.upload</heading>
 				<processing-class>org.dspace.submit.step.UploadWithEmbargoStep</processing-class>
 				<jspui-binding>org.dspace.app.webui.submit.step.JSPUploadWithEmbargoStep</jspui-binding>
-				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.VTETDUploadStep</xmlui-binding>
+				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.UploadStep</xmlui-binding>
 				<workflow-editable>true</workflow-editable>
 			</step>
 
