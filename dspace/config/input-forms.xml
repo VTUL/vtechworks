@@ -1437,48 +1437,48 @@
 				<stored-value></stored-value>
 			</pair>
 			<pair>
-				<displayed-value>EDD</displayed-value>
-				<stored-value>EDD</stored-value>
+				<displayed-value>Ed.D.</displayed-value>
+				<stored-value>Ed.D.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>MA</displayed-value>
-				<stored-value>MA</stored-value>
+				<displayed-value>M.A.</displayed-value>
+				<stored-value>M.A.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>MARCH</displayed-value>
-				<stored-value>MARCH</stored-value>
+				<displayed-value>M.Arch.</displayed-value>
+				<stored-value>M.Arch.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>MFA</displayed-value>
-				<stored-value>MFA</stored-value>
+				<displayed-value>M.F.A.</displayed-value>
+				<stored-value>M.F.A.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>MLA</displayed-value>
-				<stored-value>MLA</stored-value>
+				<displayed-value>M.L.A.</displayed-value>
+				<stored-value>M.L.A.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>MPA</displayed-value>
-				<stored-value>MPA</stored-value>
+				<displayed-value>M.P.A.</displayed-value>
+				<stored-value>M.P.A.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>MPIA</displayed-value>
-				<stored-value>MPIA</stored-value>
+				<displayed-value>M.P.I.A.</displayed-value>
+				<stored-value>M.P.I.A.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>MS</displayed-value>
-				<stored-value>MS</stored-value>
+				<displayed-value>M.S.</displayed-value>
+				<stored-value>M.S.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>MSLFS</displayed-value>
-				<stored-value>MSLFS</stored-value>
+				<displayed-value>M.S.L.F.S.</displayed-value>
+				<stored-value>M.S.L.F.S.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>MURPL</displayed-value>
-				<stored-value>MURPL</stored-value>
+				<displayed-value>M.U.R.Pl.</displayed-value>
+				<stored-value>M.U.R.Pl.</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>PHD</displayed-value>
-				<stored-value>PHD</stored-value>
+				<displayed-value>Ph.D.</displayed-value>
+				<stored-value>Ph.D.</stored-value>
 			</pair>
 		</value-pairs>
 		<value-pairs value-pairs-name="vt_access"
