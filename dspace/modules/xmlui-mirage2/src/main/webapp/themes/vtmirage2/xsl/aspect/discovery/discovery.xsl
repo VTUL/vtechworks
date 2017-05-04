@@ -182,10 +182,11 @@
                     <h4>
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
-                            	<!--
+
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
-                                -->
-                                <xsl:value-of select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item" disable-output-escaping="yes"/>
+
+                              <!--  <xsl:value-of select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item" disable-output-escaping="yes"/>
+-->
                             </xsl:when>
                             <xsl:otherwise>
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
@@ -274,7 +275,7 @@
                             <span class="publisher">
                             	<xsl:if test="dri:list[@n=(concat($handle, ':dc.publisher'))]">
                                 	<!-- Separates multiple publishers -->
-                                	<!--  
+                                	<!--
                                     <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/>
                                     -->
 									<xsl:for-each select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item">
@@ -288,10 +289,10 @@
                                 	</xsl:for-each>
                                 </xsl:if>
 							</span>
-                                <!--  
+                                <!--
                                 <xsl:text>, </xsl:text>
                                 -->
-                            
+
                             <span class="date">
                                 <xsl:value-of
                                         select="substring(dri:list[@n=(concat($handle, ':dc.date.issued'))]/dri:item,1,10)"/>
@@ -304,7 +305,7 @@
 						<span class="trnumber h4"><small>
 							<xsl:text>, </xsl:text>
 							<xsl:value-of select="dri:list[@n=(concat($handle, ':dc.identifier.trnumber'))]/dri:item"/>
-						</small></span>	
+						</small></span>
                 	</xsl:if>
                     <xsl:choose>
                         <xsl:when test="dri:list[@n=(concat($handle, ':dc.description.abstract'))]/dri:item/dri:hi">
@@ -318,7 +319,22 @@
                             </div>
                         </xsl:when>
                         <xsl:when test="dri:list[@n=(concat($handle, ':fulltext'))]">
-                            <div class="abstract">
+
+
+                          <div>Search term found in file metadata
+                            <btn class="btn btn-primary btn-xs collapsed" data-toggle="collapse">
+                              <xsl:attribute name="data-target">
+                                <xsl:value-of select="concat('#result-', translate($handle,'/','-'))"/>
+                              </xsl:attribute>
+                              <xsl:value-of select="'View Excerpt'"/>
+                            </btn>
+                          </div>
+
+
+                            <div class="abstract collapse">
+                                <xsl:attribute name="id">
+                                  <xsl:value-of select="concat('result-', translate($handle,'/','-'))"/>
+                                </xsl:attribute>
                                 <xsl:for-each select="dri:list[@n=(concat($handle, ':fulltext'))]/dri:item">
                                     <xsl:apply-templates select="."/>
                                     <xsl:text>...</xsl:text>
@@ -472,7 +488,7 @@
         <xsl:text>
             if (!window.DSpace.i18n) {
                 window.DSpace.i18n = {};
-            } 
+            }
             if (!window.DSpace.i18n.discovery) {
                 window.DSpace.i18n.discovery = {};
             }
