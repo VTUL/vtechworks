@@ -762,7 +762,7 @@
 					<dc-schema>thesis</dc-schema>
 					<dc-element>degree</dc-element>
 					<dc-qualifier>discipline</dc-qualifier>
-					<repeatable>true</repeatable>
+					<repeatable>false</repeatable>
 					<label>Subject Discipline</label>
 					<input-type>onebox</input-type>
 					<hint>Enter area of study. Usually, this will be the name of a program or department.</hint>
@@ -943,7 +943,7 @@
 					<dc-schema>thesis</dc-schema>
 					<dc-element>degree</dc-element>
 					<dc-qualifier>discipline</dc-qualifier>
-					<repeatable>true</repeatable>
+					<repeatable>false</repeatable>
 					<label>Subject Discipline</label>
 					<input-type>onebox</input-type>
 					<hint>Enter area of study. Usually, this will be the name of the program. Example: Computer Engineering</hint>
