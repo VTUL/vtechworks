@@ -361,7 +361,7 @@
                         <a href="{$context-path}/" class="navbar-brand">
                         -->
                         <a href="http://www.vt.edu" class="navbar-brand">
-                            <img src="{$theme-path}/images/VT_white_cmyk_invt.png" />
+                            <img alt="Virginia Tech" src="{$theme-path}/images/VT_white_cmyk_invt.png" />
                         </a>
 
 
