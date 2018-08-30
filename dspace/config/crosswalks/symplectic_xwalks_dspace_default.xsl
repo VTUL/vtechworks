@@ -60,13 +60,11 @@
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$are-files-confidential] (Are files confidential?)" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$confidential] (Confidential?)" />
         <crosswalks:mapping dspace="dc.description.provenance" elements="~[$confidential-files-reason] (Reason for confidentiality)" />
-        <crosswalks:mapping dspace="dc.description.sponsorship" elements="funding-acknowledgements,funder-name,funder-reference,institution-reference" />
         <crosswalks:mapping dspace="dc.description.version" elements="version" />
         <crosswalks:mapping dspace="dc.rights" elements="author-licence,publisher-licence" />
         <crosswalks:mapping dspace="dcterms.references" elements="references" />
         <crosswalks:mapping dspace="dc.relation.uri" elements="author-url,publisher-url,url" />
         <crosswalks:mapping dspace="dc.date.issued" elements="awarded-date" />
-        <crosswalks:mapping dspace="dc.contributor.assignee" elements="commissioning-body" />
         <crosswalks:mapping dspace="dc.description.version" format-elements="~[$edition] (Edition)~" />
         <crosswalks:mapping dspace="dc.date.filed" elements="filed-date" />
         <crosswalks:mapping dspace="pubs.finish-date" elements="finish-date" />
