@@ -90,7 +90,7 @@
                         </xsl:attribute>
                         <fieldset>
                             <div class="input-group">
-                                <input class="ds-text-field form-control" type="text" placeholder="xmlui.general.search"
+                                <input class="ds-text-field form-control" aria-label="Search" type="text" placeholder="xmlui.general.search"
                                        i18n:attr="placeholder">
                                     <xsl:attribute name="name">
                                         <xsl:value-of
