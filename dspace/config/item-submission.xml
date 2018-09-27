@@ -247,6 +247,7 @@
 			<!--Step 6 will be to select a Creative Commons License -->
 			<!-- Uncomment this step to allow the user to select a Creative Commons 
 				license -->
+			<!-- Temporarily disabling Creative Commons due to problems - KRG
 			<step>
 				<heading>submit.progressbar.CClicense</heading>
 				<processing-class>org.dspace.submit.step.CCLicenseStep</processing-class>
@@ -254,7 +255,7 @@
 				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.CCLicenseStep</xmlui-binding>
 				<workflow-editable>false</workflow-editable>
 			</step>
-
+                         -->
 			<!--Step 7 will be to Sign off on the License -->
 			<step>
 				<heading>submit.progressbar.license</heading>
@@ -342,6 +343,7 @@
 			<!--Step 6 will be to select a Creative Commons License -->
 			<!-- Uncomment this step to allow the user to select a Creative Commons 
 				license -->
+			<!-- Temporarily disabling Creative Commons due to problems - KRG
 			<step>
 				<heading>submit.progressbar.CClicense</heading>
 				<processing-class>org.dspace.submit.step.CCLicenseStep</processing-class>
@@ -349,7 +351,8 @@
 				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.CCLicenseStep</xmlui-binding>
 				<workflow-editable>false</workflow-editable>
 			</step>
-
+                        -->
+			
 			<!--Step 7 will be to Sign off on the License -->
 			<step>
 				<heading>submit.progressbar.license</heading>
@@ -431,6 +434,7 @@
 			<!--Step 6 will be to select a Creative Commons License -->
 			<!-- Uncomment this step to allow the user to select a Creative Commons 
 				license -->
+			<!-- Temporarily disabling Creative Commons due to problems - KRG
 			<step>
 				<heading>submit.progressbar.CClicense</heading>
 				<processing-class>org.dspace.submit.step.CCLicenseStep</processing-class>
@@ -438,7 +442,8 @@
 				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.CCLicenseStep</xmlui-binding>
 				<workflow-editable>false</workflow-editable>
 			</step>
-
+                        -->
+			
 			<!--Step 7 will be to Sign off on the License -->
 			<step>
 				<heading>submit.progressbar.license</heading>
@@ -524,6 +529,7 @@
 			<!--Step 6 will be to select a Creative Commons License -->
 			<!-- Uncomment this step to allow the user to select a Creative Commons 
 				license -->
+			<!-- Temporarily disabling Creative Commons due to problems - KRG
 			<step>
 				<heading>submit.progressbar.CClicense</heading>
 				<processing-class>org.dspace.submit.step.CCLicenseStep</processing-class>
@@ -531,7 +537,8 @@
 				<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.CCLicenseStep</xmlui-binding>
 				<workflow-editable>false</workflow-editable>
 			</step>
-
+                        -->
+			
 			<!--Step 7 will be to Sign off on the License -->
 			<step>
 				<heading>submit.progressbar.license</heading>
