@@ -1594,7 +1594,10 @@
         release manager.
     -->
     <distributionManagement>
-        <!-- further distribution management is found upstream in the sonatype parent -->
+        <snapshotRepository>
+            <id>vtechworks</id>
+             <url>${env.MAVEN_REPO_URL}/libs-release-local</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <repositories>
