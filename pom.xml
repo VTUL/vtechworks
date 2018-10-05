@@ -1596,7 +1596,7 @@
     <distributionManagement>
         <snapshotRepository>
             <id>vtechworks</id>
-             <url>${env.MAVEN_REPO_URL}/libs-release-local</url>
+             <url>${env.MAVEN_REPO_URL}</url>
         </snapshotRepository>
     </distributionManagement>
 
