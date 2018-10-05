@@ -16,5 +16,3 @@ build:
     - mvn release:prepare -DdryRun=true $MAVEN_OPTS $MAVEN_CLI_OPTS
     - mvn release:prepare -Dresume=false $MAVEN_OPTS $MAVEN_CLI_OPTS
     - mvn release:perform -Dmirage2.on=true $MAVEN_OPTS $MAVEN_CLI_OPTS
-  only:
-    - maven_build
