@@ -1,7 +1,7 @@
 image: maven:latest
 
 variables:
-  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -Pdspace-lni"
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml -Pdspace-lni"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository -Dmirage2.on=true -Djavax.net.ssl.trustStorePassword=changeit -Djava.net.preferIPv4Stack=true"
 
 cache:
