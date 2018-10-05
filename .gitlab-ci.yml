@@ -1,7 +1,7 @@
 image: maven:latest
 
 variables:
-  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -Pdspace-lni"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository -Dmirage2.on=true -Djavax.net.ssl.trustStorePassword=changeit -Djava.net.preferIPv4Stack=true"
 
 cache:
@@ -12,16 +12,9 @@ cache:
 build:
   stage: build
   script:
-    - mvn $MAVEN_CLI_OPTS compile
-
-test:
-  stage: test
-  script:
-    - mvn $MAVEN_CLI_OPTS test
-
-deploy:
-  stage: deploy
-  script:
-    - mvn $MAVEN_CLI_OPTS deploy
+    - mvn install $MAVEN_OPTS $MAVEN_CLI_OPTS
+    - mvn release:prepare -DdryRun=true $MAVEN_OPTS $MAVEN_CLI_OPTS
+    - mvn release:prepare -Dresume=false $MAVEN_OPTS $MAVEN_CLI_OPTS
+    - mvn release:perform -Dmirage2.on=true $MAVEN_OPTS $MAVEN_CLI_OPTS
   only:
     - maven_build
