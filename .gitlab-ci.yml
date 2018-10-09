@@ -12,6 +12,5 @@ cache:
 build:
   stage: build
   script:
-    - mvn clean deploy -Dmaven.test.skip=true -Dmirage2.on=true $MAVEN_OPTS $MAVEN_CLI_OPTS
     - curl -v -u $MAVEN_REPO_USER:$MAVEN_REPO_PASS https://repo.its.lib.vt.edu/repository/vtechworks/org/dspace/dspace-parent/5.9-SNAPSHOT/dspace-parent-5.9-20181009.135733-1.pom --request PUT --data @pom.xml
 
