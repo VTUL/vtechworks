@@ -1615,11 +1615,16 @@
     <distributionManagement>
         <snapshotRepository>
             <id>vtechworks</id>
-             <url>${env.MAVEN_REPO_URL}</url>
+             <url>https://repo.lib.vt.edu/vtechworks/</url>
         </snapshotRepository>
     </distributionManagement>
 
     <repositories>
+        <repository>
+            <id>vtechworks</id>
+            <name>VTechWorks Snapshot Repository</name>
+            <url>https://repo.lib.vt.edu/vtechworks/</url>
+        </repository>
         <repository>
             <id>sonatype-releases</id>
             <name>Sonatype Releases Repository</name>
