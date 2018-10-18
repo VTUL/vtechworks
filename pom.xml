@@ -871,7 +871,7 @@
         <dependency>
             <artifactId>spring-core</artifactId>
             <groupId>org.springframework</groupId>
-            <version>4.3.17</version>
+            <version>4.3.17.RELEASE</version>
         </dependency>
 
         <dependency>
