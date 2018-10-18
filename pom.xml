@@ -1073,7 +1073,7 @@
          </dependency>
          <dependency>
 	        <groupId>org.bouncycastle</groupId>
-	        <artifactId>bcprov-jdk15</artifactId>
+	        <artifactId>bcprov-jdk15on</artifactId>
 	        <version>1.60</version>
 	    </dependency>
 	    <dependency>
