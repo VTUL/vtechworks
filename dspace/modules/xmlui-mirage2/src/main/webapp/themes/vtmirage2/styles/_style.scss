@@ -1,0 +1,76 @@
+/**
+ * The contents of this file are subject to the license and copyright
+ * detailed in the LICENSE and NOTICE files at the root of the source
+ * tree and available online at
+ *
+ * http://www.dspace.org/license/
+ */
+
+/**
+ * You can put your own style in this file.
+ * It will be included in all color schemes
+ */
+
+//example mixin to set the text-selection style
+@mixin selection {
+    ::-moz-selection { @content; }
+    ::selection { @content; }
+}
+
+@include selection {
+    color: white;
+    background: $chicago-maroon;
+}
+
+/* new add */
+.navbar {
+	height: 70px;
+}
+
+.navbar-brand img {
+	height: 50px;
+}
+
+.navbar-toggle {
+padding: 2px;
+}
+
+// Removes word-break class so words don't break in the middle in abstracts 
+
+.ds-table-responsive {
+    @media (max-width: $screen-xs-max) {
+        overflow-x: auto;
+    }
+    .word-break {
+        word-break:break-word;
+    }
+}
+
+.word-break {
+word-break:normal;
+-webkit-hyphens:none;
+-moz-hyphens:none;
+hyphens:none;
+text-align:justify;
+}
+
+.line-break {
+white-space:pre-line;
+}
+
+.filename-word-break {
+word-break:break-all;
+width:200px;
+}
+.filename-word-wrap {
+    word-wrap:break-word;
+}
+.a-bold {
+font-weight: 900;
+}
+
+// Altmetric styles
+
+.altmetric-embed {
+padding-top: 25px;
+}
