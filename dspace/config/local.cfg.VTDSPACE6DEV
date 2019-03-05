@@ -193,15 +193,25 @@ handle.prefix = 10919
 # IP-based authentication/authorization. See authentication-ip.cfg for default configuration.
 #plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.IPAuthentication
 
-# LDAP authentication/authorization. See authentication-ldap.cfg for default configuration.
-#plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.LDAPAuthentication
-
-# Shibboleth authentication/authorization. See authentication-shibboleth.cfg for default configuration.
-#plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.ShibAuthentication
-
-# X.509 certificate authentication. See authentication-x509.cfg for default configuration.
-#plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.X509Authentication
 
 # Authentication by Password (encrypted in DSpace's database). See authentication-password.cfg for default configuration.
 # Enabled by default in authentication.cfg
 #plugin.sequence.org.dspace.authenticate.AuthenticationMethod = org.dspace.authenticate.PasswordAuthentication
+
+##############################################
+# VTECHWORKS CONFIGURATION - COMMON SETTINGS #
+##############################################
+
+# The maximum size in megabytes for an item export
+# Modified to allow Melissa to export BioMed Central
+org.dspace.app.itemexport.max.size = 4096
+
+# Show thumbnails in item lists
+xmlui.theme.mirage.item-list.emphasis = file
+
+# Set the max size of a bitstream that can be served inline
+# On xmlui, a setting of zero allows all sizes
+# This fixed issues where PDFs were not displaying
+# directly in some browsers; it also may be required
+# for inline video playing.
+xmlui.content_disposition_threshold = 0
