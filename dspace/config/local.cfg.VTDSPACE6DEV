@@ -215,3 +215,45 @@ xmlui.theme.mirage.item-list.emphasis = file
 # directly in some browsers; it also may be required
 # for inline video playing.
 xmlui.content_disposition_threshold = 0
+
+# Customize the extra namespaced DC elements added to the item (RSS) or entry
+# (Atom) element.  These let you include individual metadata values in a
+# structured format for easy extraction by the recipient, instead of (or in
+# addition to) appending these values to the Description field.
+## dc:creator value(s)
+
+# alaw 2016-12-12
+webui.feed.item.dc.creator = dc.contributor.author
+# af 2016-12-06
+webui.feed.item.description =  dc.contributor.author, dc.contributor.editor
+webui.feed.item.dc.description = dc.description.abstract
+
+# pg 2016-10-21
+# Boolean option for Atom - don't show dc.creator since author is already present
+webui.feed.atom.dc.author.show = false
+# pg 2016-09-21
+webui.feed.items = 10
+
+
+# Enable items counts in community listings
+# recommend to leave disabled for now.
+# In the past this feature has incurred performance costs
+# webui.strengths.show = true
+
+# Some statistic configurations
+#  should the stats be publicly available?  should be set to false if you only
+# want administrators to access the stats, or you do not intend to generate
+# any
+report.public = true
+# Control if the statistics pages should be only shown to authorized users
+# If enabled, only the administrators for the DSpaceObject will be able to
+# view the statistics.
+# If disabled, anyone with READ permissions on the DSpaceObject will be able
+# to view the statistics.
+#View/download statistics
+#View/download statistics
+authorization.admin.usage=false
+#Search/search result statistics
+authorization.admin.search=false
+#Workflow result statistics
+authorization.admin.workflow=false
