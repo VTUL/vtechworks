@@ -5,6 +5,16 @@
  *
  * http://www.dspace.org/license/
  */
+
+// This file has been modified to support video
+// playback in the VTechWorks repository.
+// 
+// - Byte range logic uncommented
+// - off by one error in byte range logic fixed
+// - byte range headers fixed
+// 
+// Theme support and mime type registry adjustment
+// is also required
 package org.dspace.app.xmlui.cocoon;
 
 import java.io.*;
@@ -694,26 +704,29 @@ public class BitstreamReader extends AbstractReader implements Recyclable
         // viewers are incapable of handling this request. You can
         // uncomment the following lines to turn this feature back on.
 
-//        response.setHeader("Accept-Ranges", "bytes");
-//        String ranges = request.getHeader("Range");
-//        if (ranges != null)
-//        {
-//            try
-//            {
-//                ranges = ranges.substring(ranges.indexOf('=') + 1);
-//                byteRange = new ByteRange(ranges);
-//            }
-//            catch (NumberFormatException e)
-//            {
-//                byteRange = null;
-//                if (response instanceof HttpResponse)
-//                {
-//                    // Respond with status 416 (Request range not
-//                    // satisfiable)
-//                    response.setStatus(416);
-//                }
-//            }
-//        }
+	// KRG turning this feature back on for video playback support
+	// in VTechWorks
+	
+        response.setHeader("Accept-Ranges", "bytes");
+        String ranges = request.getHeader("Range");
+        if (ranges != null)
+        {
+            try
+            {
+                ranges = ranges.substring(ranges.indexOf('=') + 1);
+                byteRange = new ByteRange(ranges);
+            }
+            catch (NumberFormatException e)
+            {
+                byteRange = null;
+                if (response instanceof HttpResponse)
+                {
+                    // Respond with status 416 (Request range not
+                    // satisfiable)
+                    response.setStatus(416);
+                }
+            }
+        }
 
         try
         {
@@ -721,11 +734,18 @@ public class BitstreamReader extends AbstractReader implements Recyclable
             {
                 String entityLength;
                 String entityRange;
+		ByteRange requestedRange = null; // V.T.
+
                 if (this.bitstreamSize != -1)
                 {
                     entityLength = "" + this.bitstreamSize;
-                    entityRange = byteRange.intersection(
-                            new ByteRange(0, this.bitstreamSize)).toString();
+                    /* entityRange = byteRange.intersection(
+                            new ByteRange(0, this.bitstreamSize)).toString(); */
+		    
+		    // this code fixes off by 1 error in commented line above
+		    requestedRange = byteRange.intersection(
+				    new ByteRange(0, this.bitstreamSize - 1));
+		    entityRange = requestedRange.toString();
                 }
                 else
                 {
@@ -733,7 +753,13 @@ public class BitstreamReader extends AbstractReader implements Recyclable
                     entityRange = byteRange.toString();
                 }
 
-                response.setHeader("Content-Range", entityRange + "/" + entityLength);
+                //response.setHeader("Content-Range", entityRange + "/" + entityLength);
+		// V.T. fix for headers
+		response.setHeader("Content-Length", "" + 
+				    requestedRange.length());
+		response.setHeader("Content-Range", 
+				"bytes " + entityRange + "/" + entityLength);
+
                 if (response instanceof HttpResponse)
                 {
                     // Response with status 206 (Partial content)
