@@ -240,7 +240,9 @@ public class CommunityBrowser extends AbstractDSpaceTransformer implements Cache
     {
         Division division = body.addDivision("comunity-browser", "primary");
         division.setHead(T_head);
-        division.addPara(T_select);
+        // remove "Select a community to browse its collections" from home page
+	// Amber, Virginia Tech, 2016-ish
+	// division.addPara(T_select);
 
         Context.Mode originalMode = context.getCurrentMode();
         context.setMode(Context.Mode.READ_ONLY);
