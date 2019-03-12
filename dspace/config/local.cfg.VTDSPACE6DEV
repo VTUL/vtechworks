@@ -257,3 +257,10 @@ authorization.admin.usage=false
 authorization.admin.search=false
 #Workflow result statistics
 authorization.admin.workflow=false
+
+# pg July 2016
+# Number of results to show
+# Note that usage is itemcount.usage corresponds to statistics-home as well
+itemcount.usage = 100
+itemcount.search = 10
+itemcount.workflow = 10
