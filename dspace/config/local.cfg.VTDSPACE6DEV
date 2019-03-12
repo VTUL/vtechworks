@@ -252,8 +252,15 @@ report.public = true
 # to view the statistics.
 #View/download statistics
 #View/download statistics
-authorization.admin.usage=false
+usage-statistics.authorization.admin.usage=false
 #Search/search result statistics
-authorization.admin.search=false
+usage-statistics.authorization.admin.search=false
 #Workflow result statistics
-authorization.admin.workflow=false
+usage-statistics.authorization.admin.workflow=false
+
+# pg July 2016
+# Number of results to show
+# Note that usage is itemcount.usage corresponds to statistics-home as well
+usage-statistics.itemcount.usage = 100
+usage-statistics.itemcount.search = 10
+usage-statistics.itemcount.workflow = 10
