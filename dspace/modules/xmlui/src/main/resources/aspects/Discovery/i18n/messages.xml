@@ -46,7 +46,16 @@
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.type_filter">Content Type</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">Date Issued</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">Date Issued</message>
-    
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Content Type</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_advisor">Committee Chair</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_committeemember">Committee Member</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_etdlevel">Thesis Degree Level</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_patenttype">Patent Type</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_inventor">Inventor</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_assignee">Assignee</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publicationDate">Publication Date</message>    
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_has_content_in_original_bundle">Has File(s)</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.value_has_content_in_original_bundle_true">Yes</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.value_has_content_in_original_bundle_false">No</message>
@@ -96,12 +105,32 @@
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_relation_browse">Browsing by: Relation</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_mime_browse">Browsing by: Mime-Type</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_other_browse">Browsing by: Other Contributor</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_advisor_browse">Browsing by: Advisor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_advisor_browse">Browsing by: Committee Chair</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">Browsing by: Department</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">Browsing by: Issue date</message>
 
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Title</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Date issued</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.keyword">Keyword</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.abstract">Abstract</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.series">Series</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.mime">Mime-Type</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.sponsor">Sponsor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.identifier">Identifier</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Language (ISO)</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coverage">Coverage</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.trnumber">Technical Report No.</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.committeemember">Committee Member</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.assignee">Assignee</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.inventor">Inventor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.applicationNumber">Application Number</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.patentNumber">Patent Number</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.filingDate">Filing Date</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.publicationDate">Publication Date</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.usClassPrimary">Primary/U.S. Class</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.usClassOther">Other/U.S. Class</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.cpcClass">CPC Class</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.patenttype">Patent Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.has_content_in_original_bundle">Has File(s)</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.original_bundle_filenames">Filename</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.original_bundle_descriptions">File description</message>
@@ -115,6 +144,22 @@
     <message key="xmlui.Discovery.AbstractSearch.type_subject">Filter by: Subject</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Subject</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_type">Filter by: Content Type</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Content Type</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type_type">Content Type</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_advisor">Filter by: Committee Chair</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor">Committee Chair</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.advisor_filter">Committee Chair</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_department">Filter by: Department</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.department">Department</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.department_filter">Department</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_etdlevel">Filter by: Thesis Degree Level</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel">Thesis Degree Level</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.etdlevel_filter">Thesis Degree Level</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>  
+    <message key="xmlui.Discovery.AbstractSearch.type_assignee">Filter by: Assignee</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_inventor">Filter by: Inventor</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_patenttype">Filter by: Patent Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>
 
 
