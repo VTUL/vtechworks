@@ -127,13 +127,16 @@ public abstract class RichTextContainer extends TextContainer
      *            (May be null) Special rendering instructions.
      * @param name
      *            (May be null) local identifier
+     * @return xref
+     *            Xref           
      * @throws org.dspace.app.xmlui.wing.WingException passed through.
      */
-    public void addXref(String target, String characters, String rend, String name) throws WingException
+    public Xref addXref(String target, String characters, String rend, String name) throws WingException
     {
     	Xref xref = new Xref(context, target, rend, name);
     	xref.addContent(characters);
     	contents.add(xref);
+	return xref;
     }
 
     /**
