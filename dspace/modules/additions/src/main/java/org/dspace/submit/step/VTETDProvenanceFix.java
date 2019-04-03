@@ -13,6 +13,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.util.List;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
@@ -22,17 +24,9 @@ import org.dspace.app.util.DCInput;
 import org.dspace.app.util.SubmissionInfo;
 import org.dspace.app.util.Util;
 import org.dspace.authorize.AuthorizeException;
-import org.dspace.content.Collection;
-import org.dspace.content.DCDate;
-import org.dspace.content.DCPersonName;
-import org.dspace.content.DCSeriesNumber;
-import org.dspace.content.Metadatum;
-import org.dspace.content.Item;
-import org.dspace.content.MetadataField;
-import org.dspace.content.authority.MetadataAuthorityManager;
-import org.dspace.content.authority.ChoiceAuthorityManager;
+import org.dspace.content.*;
+import org.dspace.content.factory.ContentServiceFactory;
 import org.dspace.content.authority.Choices;
-import org.dspace.core.ConfigurationManager;
 import org.dspace.core.Context;
 import org.dspace.submit.AbstractProcessingStep;
 
@@ -110,6 +104,7 @@ public class VTETDProvenanceFix extends AbstractProcessingStep
      *         doPostProcessing() below! (if STATUS_COMPLETE or 0 is returned,
      *         no errors occurred!)
      */
+    @Override
     public int doProcessing(Context context, HttpServletRequest request,
             HttpServletResponse response, SubmissionInfo subInfo)
             throws ServletException, IOException, SQLException,
@@ -128,14 +123,14 @@ public class VTETDProvenanceFix extends AbstractProcessingStep
         
         // Added Step 4:
         // Add default metadata values
-        addDefaultData(item);
+        addDefaultData(context, item);
 
         // Step 5:
         // Save changes to database
-        subInfo.getSubmissionItem().update();
+         ContentServiceFactory.getInstance().getInProgressSubmissionService(subInfo.getSubmissionItem()).update(context, subInfo.getSubmissionItem());
 
         // commit changes
-        context.commit();
+        context.dispatchEvents();
 
         // completed without errors
         return STATUS_COMPLETE;
@@ -200,20 +195,20 @@ public class VTETDProvenanceFix extends AbstractProcessingStep
     *            the item to update
     * @throws SQLException
     */
-   protected void addDefaultData(Item item) throws SQLException
+   protected void addDefaultData(Context context, Item item) throws SQLException
    {
-       Metadatum[] provField;
+       List<MetadataValue> provField;
        /* Author email */
-       provField = item.getMetadata("dc", "description", "provenance",Item.ANY);
-       String authorEmail = provenanceLabels[0] + provField[0].value;
-       item.clearMetadata("dc", "description", "provenance", Item.ANY);
-       item.addMetadata("dc", "description", "provenance", "en", authorEmail);
+       provField = itemService.getMetadata( item, "dc", "description", "provenance",Item.ANY);
+       String authorEmail = provenanceLabels[0] + provField.get(0).getValue();
+       itemService.clearMetadata(context, item, "dc", "description", "provenance", Item.ANY);
+       itemService.addMetadata(context, item, "dc", "description", "provenance", "en", authorEmail);
        
 	   for (int i = 1; i <= 5; ++i) {
-			provField = item.getMetadata("dc", "description", "provenance" + i, Item.ANY);
-			if (provField.length > 0) {
-				item.addMetadata("dc", "description", "provenance", "en", provenanceLabels[i] + provField[0].value);
-				item.clearMetadata("dc", "description", "provenance" + i, Item.ANY);
+			provField = itemService.getMetadata(item, "dc", "description", "provenance" + i, Item.ANY);
+			if (provField.size() > 0) {
+				itemService.addMetadata(context, item, "dc", "description", "provenance", "en", provenanceLabels[i] + provField.get(0).getValue());
+				itemService.clearMetadata(context, item, "dc", "description", "provenance" + i, Item.ANY);
 			}
 	   }
 	   
