@@ -102,6 +102,8 @@ public class DescribeStep extends AbstractSubmissionStep
 
     private static final Message T_vocabulary_link = message("xmlui.Submission.submit.DescribeStep.controlledvocabulary.link");
 
+    private static final Message T_vocabulary_cabt_link = message("xmlui.Submission.submit.DescribeStep.controlledvocabulary.cabtlink");
+
     protected ItemService itemService = ContentServiceFactory.getInstance().getItemService();
 
     protected ChoiceAuthorityService choiceAuthorityService = ContentAuthorityServiceFactory.getInstance().getChoiceAuthorityService();
@@ -1158,15 +1160,23 @@ public class DescribeStep extends AbstractSubmissionStep
         org.dspace.app.xmlui.wing.element.Item item = form.addItem();
         Text text = item.addText(fieldName, "submit-text");
 
-        if (dcInput.getVocabulary() != null)
-        {
-            String vocabularyUrl = DSpaceServicesFactory.getInstance().getConfigurationService().getProperty("dspace.url");
-            vocabularyUrl += "/JSON/controlled-vocabulary?vocabularyIdentifier=" + dcInput.getVocabulary();
-            //Also hand down the field name so our summoning script knows the field the selected value is to end up in
-            vocabularyUrl += "&metadataFieldName=" + fieldName;
-            item.addXref("vocabulary:" + vocabularyUrl).addContent(T_vocabulary_link);
-        }
+	if(dcInput.getVocabulary() != null)  {
 
+	    if (dcInput.getVocabulary().equals("cabt")) {
+                // Customize "dc.subject.cabt" for OMALS collection
+                String vocabularyUrl = "http://www.cabi.org/cabthesaurus/";
+                String characters = null;
+                item.addXref(vocabularyUrl, characters, null, "blank-browser-link").addContent(T_vocabulary_cabt_link);
+            }
+	    else
+            {
+                String vocabularyUrl = DSpaceServicesFactory.getInstance().getConfigurationService().getProperty("dspace.url");
+                vocabularyUrl += "/JSON/controlled-vocabulary?vocabularyIdentifier=" + dcInput.getVocabulary();
+                //Also hand down the field name so our summoning script knows the field the selected value is to end up in
+                vocabularyUrl += "&metadataFieldName=" + fieldName;
+                item.addXref("vocabulary:" + vocabularyUrl).addContent(T_vocabulary_link);
+            }
+        }
         // Setup the select field
         text.setLabel(dcInput.getLabel());
         text.setHelp(cleanHints(dcInput.getHints()));
