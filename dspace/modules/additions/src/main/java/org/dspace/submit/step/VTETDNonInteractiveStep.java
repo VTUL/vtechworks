@@ -13,6 +13,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.util.List;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
@@ -22,17 +24,10 @@ import org.dspace.app.util.DCInput;
 import org.dspace.app.util.SubmissionInfo;
 import org.dspace.app.util.Util;
 import org.dspace.authorize.AuthorizeException;
-import org.dspace.content.Collection;
-import org.dspace.content.DCDate;
-import org.dspace.content.DCPersonName;
-import org.dspace.content.DCSeriesNumber;
-import org.dspace.content.Metadatum;
-import org.dspace.content.Item;
-import org.dspace.content.MetadataField;
-import org.dspace.content.authority.MetadataAuthorityManager;
-import org.dspace.content.authority.ChoiceAuthorityManager;
+import org.dspace.content.*;
+import org.dspace.content.factory.ContentServiceFactory;
+import org.dspace.services.factory.DSpaceServicesFactory;
 import org.dspace.content.authority.Choices;
-import org.dspace.core.ConfigurationManager;
 import org.dspace.core.Context;
 import org.dspace.submit.AbstractProcessingStep;
 
@@ -101,6 +96,7 @@ public class VTETDNonInteractiveStep extends AbstractProcessingStep
      *         doPostProcessing() below! (if STATUS_COMPLETE or 0 is returned,
      *         no errors occurred!)
      */
+    @Override
     public int doProcessing(Context context, HttpServletRequest request,
             HttpServletResponse response, SubmissionInfo subInfo)
             throws ServletException, IOException, SQLException,
@@ -119,14 +115,14 @@ public class VTETDNonInteractiveStep extends AbstractProcessingStep
         
         // Added Step 4:
         // Add default metadata values
-        addDefaultData(item);
+        addDefaultData(context, item);
 
         // Step 5:
         // Save changes to database
-        subInfo.getSubmissionItem().update();
+        ContentServiceFactory.getInstance().getInProgressSubmissionService(subInfo.getSubmissionItem()).update(context, subInfo.getSubmissionItem());
 
         // commit changes
-        context.commit();
+        context.dispatchEvents();
 
         // completed without errors
         return STATUS_COMPLETE;
@@ -191,31 +187,31 @@ public class VTETDNonInteractiveStep extends AbstractProcessingStep
     *            the item to update
     * @throws SQLException
     */
-   protected void addDefaultData(Item item) throws SQLException
+   protected void addDefaultData(Context context, Item item) throws SQLException
    {
-	   item.clearMetadata("thesis", "degree", "grantor", Item.ANY);
-       item.addMetadata("thesis", "degree", "grantor", "en_US", "Virginia Polytechnic Institute and State University");
+       itemService.clearMetadata(context, item, "thesis", "degree", "grantor", Item.ANY);
+       itemService.addMetadata(context, item, "thesis", "degree", "grantor", "en_US", "Virginia Polytechnic Institute and State University");
 	   
-	   item.clearMetadata("dc", "publisher", null, Item.ANY);
-       item.addMetadata("dc", "publisher", null, "en_US", "Virginia Tech");
+       itemService.clearMetadata(context, item, "dc", "publisher", null, Item.ANY);
+       itemService.addMetadata(context, item, "dc", "publisher", null, "en_US", "Virginia Tech");
        
-       item.clearMetadata("dc", "format", "medium", Item.ANY);
-       item.addMetadata("dc", "format", "medium", "en_US", "ETD");
+       itemService.clearMetadata(context, item, "dc", "format", "medium", Item.ANY);
+       itemService.addMetadata(context, item, "dc", "format", "medium", "en_US", "ETD");
 	   
-	   Metadatum[] degreeName = item.getMetadata("thesis", "degree", "name", "en_US");
-	   if (degreeName.length > 0) {
-		   item.clearMetadata("dc", "description", "degree", Item.ANY);
-		   item.addMetadata("dc", "description", "degree", "en_US", degreeName[0].value);
+	   List<MetadataValue> degreeName = itemService.getMetadata(item, "thesis", "degree", "name", "en_US");
+	   if (degreeName.size() > 0) {
+		   itemService.clearMetadata(context, item, "dc", "description", "degree", Item.ANY);
+		   itemService.addMetadata(context, item, "dc", "description", "degree", "en_US", degreeName.get(0).getValue());
 		}
        
        
-       Metadatum[] degreeLevel = item.getMetadata("thesis", "degree", "level", "en_US");
+       List<MetadataValue> degreeLevel = itemService.getMetadata(item, "thesis", "degree", "level", "en_US");
        String itemType = "Thesis";
-       if (degreeLevel.length > 0 && degreeLevel[0].value.equals("doctoral")) {
+       if (degreeLevel.size() > 0 && degreeLevel.get(0).getValue().equals("doctoral")) {
 			itemType = "Dissertation";
 	   }
-       item.clearMetadata("dc", "type", null, Item.ANY);
-       item.addMetadata("dc", "type", null, "en_US", itemType);
+       itemService.clearMetadata(context,item, "dc", "type", null, Item.ANY);
+       itemService.addMetadata(context, item, "dc", "type", null, "en_US", itemType);
 	   
     
    }
