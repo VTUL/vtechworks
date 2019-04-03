@@ -22,19 +22,12 @@ import org.dspace.app.util.DCInput;
 import org.dspace.app.util.SubmissionInfo;
 import org.dspace.app.util.Util;
 import org.dspace.authorize.AuthorizeException;
-import org.dspace.content.Collection;
-import org.dspace.content.DCDate;
-import org.dspace.content.DCPersonName;
-import org.dspace.content.DCSeriesNumber;
-import org.dspace.content.Metadatum;
-import org.dspace.content.Item;
-import org.dspace.content.MetadataField;
-import org.dspace.content.authority.MetadataAuthorityManager;
-import org.dspace.content.authority.ChoiceAuthorityManager;
+import org.dspace.content.*;
+import org.dspace.content.factory.ContentServiceFactory;
 import org.dspace.content.authority.Choices;
-import org.dspace.core.ConfigurationManager;
 import org.dspace.core.Context;
 import org.dspace.submit.AbstractProcessingStep;
+import org.dspace.services.factory.DSpaceServicesFactory;
 
 /**
  * Non-Interactive step for DSpace submission process. Handles the gathering of
@@ -104,6 +97,7 @@ public class NDLTDNonInteractiveStep extends AbstractProcessingStep
      *         doPostProcessing() below! (if STATUS_COMPLETE or 0 is returned,
      *         no errors occurred!)
      */
+    @Override
     public int doProcessing(Context context, HttpServletRequest request,
             HttpServletResponse response, SubmissionInfo subInfo)
             throws ServletException, IOException, SQLException,
@@ -124,13 +118,13 @@ public class NDLTDNonInteractiveStep extends AbstractProcessingStep
         // Add default metadata values
         
         // dc.description.degree (copy value from thesis.degree.name)
-        item.clearMetadata("dc", "description", "degree", Item.ANY);
-        item.addMetadata("dc", "description", "degree", "en_US", 
-        		item.getMetadataFirstValue("thesis", "degree", "name", Item.ANY));
+        itemService.clearMetadata(context, item, "dc", "description", "degree", Item.ANY);
+        itemService.addMetadata(context, item, "dc", "description", "degree", "en_US", 
+       	itemService.getMetadataFirstValue(item, "thesis", "degree", "name", Item.ANY));
         
         // dc.format.medium
-        item.clearMetadata("dc", "format", "medium", Item.ANY);
-        item.addMetadata("dc", "format", "medium", "en_US", "ETD");
+        itemService.clearMetadata(context, item, "dc", "format", "medium", Item.ANY);
+        itemService.addMetadata(context, item, "dc", "format", "medium", "en_US", "ETD");
         
         /*
          // remove dc.rights, dc.rights.uri
@@ -151,10 +145,10 @@ public class NDLTDNonInteractiveStep extends AbstractProcessingStep
 
         // Step 5:
         // Save changes to database
-        subInfo.getSubmissionItem().update();
+        ContentServiceFactory.getInstance().getInProgressSubmissionService(subInfo.getSubmissionItem()).update(context, subInfo.getSubmissionItem());
 
         // commit changes
-        context.commit();
+        context.dispatchEvents();
 
         // completed without errors
         return STATUS_COMPLETE;
@@ -219,7 +213,7 @@ public class NDLTDNonInteractiveStep extends AbstractProcessingStep
    public static String getDefaultLanguageQualifier()
    {
       String language = "";
-      language = ConfigurationManager.getProperty("default.language");
+      language = DSpaceServicesFactory.getInstance().getConfigurationService().getProperty("default.language");
       if (StringUtils.isEmpty(language))
       {
           language = "en";
