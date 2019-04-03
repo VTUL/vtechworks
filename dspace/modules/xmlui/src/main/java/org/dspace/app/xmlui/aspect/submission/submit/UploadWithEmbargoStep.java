@@ -56,10 +56,13 @@ public class UploadWithEmbargoStep extends UploadStep
     protected static final Message T_virus_error =
         message("xmlui.Submission.submit.UploadWithEmbargoStep.virus_error");
 
+    // remove file description field
+    /*
     protected static final Message T_description = 
         message("xmlui.Submission.submit.UploadWithEmbargoStep.description");
     protected static final Message T_description_help = 
         message("xmlui.Submission.submit.UploadWithEmbargoStep.description_help");
+   */ 
     protected static final Message T_submit_upload = 
         message("xmlui.Submission.submit.UploadWithEmbargoStep.submit_upload");
     protected static final Message T_head2 = 
@@ -72,8 +75,10 @@ public class UploadWithEmbargoStep extends UploadStep
         message("xmlui.Submission.submit.UploadWithEmbargoStep.column2");
     protected static final Message T_column3 = 
         message("xmlui.Submission.submit.UploadWithEmbargoStep.column3");
+    /*
     protected static final Message T_column4 = 
         message("xmlui.Submission.submit.UploadWithEmbargoStep.column4");
+    */
     protected static final Message T_column5 = 
         message("xmlui.Submission.submit.UploadWithEmbargoStep.column5");
     protected static final Message T_column6 = 
@@ -237,11 +242,13 @@ public class UploadWithEmbargoStep extends UploadStep
             {
                 file.addError(T_virus_error);
             }
-	        	
+	    
+            // remove file description field
+	    /*	    
 	        Text description = upload.addItem().addText("description");
 	        description.setLabel(T_description);
 	        description.setHelp(T_description_help);
-
+            */
 
             // if AdvancedAccessPolicy=false: add simpleForm in UploadWithEmbargoStep
             if(!isAdvancedFormEnabled){
@@ -270,7 +277,8 @@ public class UploadWithEmbargoStep extends UploadStep
 	        header.addCellContent(T_column1); // select checkbox
 	        header.addCellContent(T_column2); // file name
 	        header.addCellContent(T_column3); // size
-	        header.addCellContent(T_column4); // description
+	        // remove file description field
+		//header.addCellContent(T_column4); // description
 	        header.addCellContent(T_column5); // format
 	        header.addCellContent(T_column6); // edit button
 	        
@@ -311,7 +319,8 @@ public class UploadWithEmbargoStep extends UploadStep
 	        	
 	            row.addCell().addXref(url,name);
 	            row.addCellContent(bytes + " bytes");
-	            if (desc == null || desc.length() == 0)
+	            /*
+		    if (desc == null || desc.length() == 0)
                 {
                     row.addCellContent(T_unknown_name);
                 }
@@ -319,7 +328,7 @@ public class UploadWithEmbargoStep extends UploadStep
                 {
                     row.addCellContent(desc);
                 }
-	            
+	           */
                 BitstreamFormat format = bitstream.getFormat(context);
 	            if (format == null)
 	            {

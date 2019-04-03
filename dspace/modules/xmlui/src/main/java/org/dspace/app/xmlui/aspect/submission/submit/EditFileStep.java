@@ -56,10 +56,12 @@ public class EditFileStep extends AbstractStep
         message("xmlui.Submission.submit.EditFileStep.head");
     protected static final Message T_file = 
         message("xmlui.Submission.submit.EditFileStep.file");
+    /*
     protected static final Message T_description = 
         message("xmlui.Submission.submit.EditFileStep.description");
     protected static final Message T_description_help = 
         message("xmlui.Submission.submit.EditFileStep.description_help");
+    */
     protected static final Message T_info1 = 
         message("xmlui.Submission.submit.EditFileStep.info1");
     protected static final Message T_format_detected = 
@@ -133,11 +135,13 @@ public class EditFileStep extends AbstractStep
         
         edit.addLabel(T_file);
         edit.addItem().addXref(fileUrl, fileName);
-        
+        // remove file description field
+	/*
         Text description = edit.addItem().addText("description");
         description.setLabel(T_description);
         description.setHelp(T_description_help);
         description.setValue(bitstream.getDescription());
+        */
 
         // if AdvancedAccessPolicy=false: add simmpleFormEmbargo in UploadStep
         boolean isAdvancedFormEnabled= DSpaceServicesFactory.getInstance().getConfigurationService().getBooleanProperty("webui.submission.restrictstep.enableAdvancedForm", false);
