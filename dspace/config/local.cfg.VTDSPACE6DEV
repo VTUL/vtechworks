@@ -264,3 +264,10 @@ usage-statistics.authorization.admin.workflow=false
 usage-statistics.itemcount.usage = 100
 usage-statistics.itemcount.search = 10
 usage-statistics.itemcount.workflow = 10
+
+
+# Whether to display collection and community strengths (i.e. item counts)
+# XMLUI only makes strengths available to themes if this is set to true! 
+# To show strengths in the XMLUI, you also need to create or use a theme which
+# displays them.
+webui.strengths.show = true
