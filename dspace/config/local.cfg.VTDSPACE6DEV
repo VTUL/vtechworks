@@ -116,28 +116,28 @@ db.schema = public
 #mail.server = smtp.example.com
 
 # SMTP mail server authentication username and password (if required)
-#mail.server.username = myusername
-#mail.server.password = mypassword
+mail.server.username =
+mail.server.password =
 
 # SMTP mail server alternate port (defaults to 25)
 #mail.server.port = 25
 
 # From address for mail
 # All mail from the DSpace site will use this 'from' address
-#mail.from.address = dspace-noreply@myu.edu
+mail.from.address = system@vtechworks.lib.vt.edu
 
 # When feedback is submitted via the Feedback form, it is sent to this address
 # Currently limited to one recipient!
-#feedback.recipient = dspace-help@myu.edu
+feedback.recipient = vtechworks@vt.edu
 
 # General site administration (Webmaster) e-mail
-#mail.admin = dspace-help@myu.edu
+mail.admin = vtechworks@vt.edu
 
 # Recipient for server errors and alerts (defaults to mail.admin)
-#alert.recipient = ${mail.admin}
+alert.recipient = ${mail.admin}
 
 # Recipient for new user registration emails (defaults to unspecified)
-#registration.notify =
+registration.notify = ${mail.admin}
 
 
 ########################
@@ -271,3 +271,7 @@ usage-statistics.itemcount.workflow = 10
 # To show strengths in the XMLUI, you also need to create or use a theme which
 # displays them.
 webui.strengths.show = true
+
+
+# Allow upload to MOVIEPOSTER bundle from web UI
+xmlui.bundle.upload = ORIGINAL, METADATA, THUMBNAIL, MOVIEPOSTER, LICENSE, CC-LICENSE
