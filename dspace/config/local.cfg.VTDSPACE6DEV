@@ -270,9 +270,9 @@ report.public = true
 #View/download statistics
 usage-statistics.authorization.admin.usage=false
 #Search/search result statistics
-usage-statistics.authorization.admin.search=false
+usage-statistics.authorization.admin.search=true
 #Workflow result statistics
-usage-statistics.authorization.admin.workflow=false
+usage-statistics.authorization.admin.workflow=true
 
 # pg July 2016
 # Number of results to show
