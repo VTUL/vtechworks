@@ -218,6 +218,14 @@ bulkedit.ignore-on-export = dc.date.accessioned, dc.date.available, \
 # VTECHWORKS CONFIGURATION - COMMON SETTINGS #
 ##############################################
 
+### From dspace.cfg ###
+
+# # Configuration of request-item. Possible values:
+# all - Anonymous users can request an item
+# logged - Login is mandatory to request an item
+# empty/commented out - request-copy not allowed
+request.item.type = logged
+
 # The maximum size in megabytes for an item export
 # Modified to allow Melissa to export BioMed Central
 org.dspace.app.itemexport.max.size = 4096
