@@ -311,3 +311,14 @@ clamav.scan.failfast = true
 # Scan for viruses
 submission-curation.virus-scan = true
 
+
+#------------------------------------------#
+#    curate.cfg module customization       #
+#------------------------------------------#
+# Friendly names for curation tasks to appear in admin UI
+# Also acts as a filter - i.e. tasks not enumerated here can still
+# be invoked on cmd line, etc - just not in UI
+curate.ui.tasknames = profileformats = Profile Bitstream Formats
+curate.ui.tasknames = requiredmetadata = Check for Required Metadata
+curate.ui.tasknames = checklinks = Check Links in Metadata
+curate.ui.tasknames = vscan = Scan for Viruses
