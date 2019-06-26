@@ -30,16 +30,15 @@
 						</list>
 					</property>
 				</bean>
-				<!-- Use the follow if you have the SHERPARoMEOJournalTitle enabled
+				<!-- Use the follow if you have the SHERPARoMEOJournalTitle enabled-->
 				<bean class="org.dspace.app.sherpa.submit.MetadataAuthorityISSNExtractor">
 					<property name="metadataList">
 						<list>
-							<value>dc.title.serial</value> <!-- dc.title.alternative -->
+							<value>dc.title.serial</value>
 						</list>
 					</property>
-				</bean>  -->
+				</bean>
 			</list>
-		</property>	
+		</property>
 	</bean>
-
 </beans>
