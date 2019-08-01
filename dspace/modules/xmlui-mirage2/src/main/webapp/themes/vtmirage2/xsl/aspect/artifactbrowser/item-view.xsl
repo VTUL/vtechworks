@@ -41,7 +41,7 @@
 
     <xsl:template name="itemSummaryView-DIM">
 
-        <!-- V.T. Add HTML for the video in a videojs frame -->
+        <!-- V.T. Add HTML for the video -->
  
         <xsl:if test="(./mets:fileSec/mets:fileGrp[@USE='CONTENT']/mets:file[@MIMETYPE='video/mp4']) and (./mets:fileSec/mets:fileGrp[@USE='CONTENT']/mets:file[@MIMETYPE='video/webm'])">
 
@@ -57,7 +57,7 @@
              1920 x 1080 converted down to 853x480
               -->
              <div id="vtwx-video-player" style="max-width:853px;">
-             <video controls="controls" preload="auto" style="width:100%;" class="vjs-tech" >
+             <video controls="controls" preload="auto" style="width:100%;">
 
                  <xsl:if test="./mets:fileSec/mets:fileGrp[@USE='MOVIEPOSTER']">
                      <xsl:attribute name="poster">
