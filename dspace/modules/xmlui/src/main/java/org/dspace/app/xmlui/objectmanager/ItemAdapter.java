@@ -40,6 +40,11 @@ import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
 import java.util.*;
 
+// Customization from UMD for bitstream downloads on item page
+import org.apache.solr.client.solrj.SolrServerException;
+import org.dspace.statistics.factory.StatisticsServiceFactory;
+import org.dspace.statistics.service.SolrLoggerService;
+
 /**
  * This is an adapter which translates a DSpace item into a METS document
  * following the DSpace METS profile, err well mostly. At least if you use
@@ -93,7 +98,7 @@ public class ItemAdapter extends AbstractAdapter
     protected BundleService bundleService = ContentServiceFactory.getInstance().getBundleService();
     protected BitstreamService bitstreamService = ContentServiceFactory.getInstance().getBitstreamService();
     protected MetadataExposureService metadataExposureService = UtilServiceFactory.getInstance().getMetadataExposureService();
-
+    protected SolrLoggerService solrLoggerService = StatisticsServiceFactory.getInstance().getSolrLoggerService(); //UMD bitstream
 
     /**
      * Construct a new ItemAdapter
@@ -1108,6 +1113,28 @@ public class ItemAdapter extends AbstractAdapter
         String checksum = bitstream.getChecksum();
         long size = bitstream.getSize();
 
+        // UMD bitstream download customization
+        Long views = null;
+        try
+        {
+            String searchId = bitstream.getID().toString();
+            if (bitstream.getLegacyId() != null) {
+                searchId = "(" + searchId + " OR " + bitstream.getLegacyId() + ")";
+            }
+            views = solrLoggerService.queryTotal("id: " + searchId,
+                    "type: " + Constants.BITSTREAM + " AND -isBot:true")
+                    .getCount();
+        }
+        catch (SolrServerException e1)
+        {
+            // Print stacktrace and continue
+            // (Download count will not display)
+            e1.printStackTrace();
+        }
+
+ 
+
+
         // ////////////////////////////////
         // Start the actual file
         attributes = new AttributeMap();
@@ -1127,6 +1154,13 @@ public class ItemAdapter extends AbstractAdapter
         	attributes.put("CHECKSUMTYPE", checksumType);
         }
         attributes.put("SIZE", String.valueOf(size));
+        // UMD bitstream download customization
+        if (views != null)
+        {
+            attributes.put("VIEWS", String.valueOf(views));
+        }
+        
+
         startElement(METS,"file",attributes);
 
 
