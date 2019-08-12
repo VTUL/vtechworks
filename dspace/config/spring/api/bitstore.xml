@@ -8,7 +8,7 @@
         <property name="stores">
             <map>
                 <entry key="0" value-ref="localStore"/>
-                <!--<entry key="1" value-ref="s3Store"/>-->
+                <entry key="1" value-ref="localStore1"/>
             </map>
         </property>
     </bean>
@@ -16,7 +16,9 @@
     <bean name="localStore" class="org.dspace.storage.bitstore.DSBitStoreService" scope="singleton">
         <property name="baseDir" value="${assetstore.dir}"/>
     </bean>
-
+    <bean name="localStore1" class="org.dspace.storage.bitstore.DSBitStoreService" scope="singleton">
+        <property name="baseDir" value="${assetstore.dir}1"/>
+    </bean>
     <bean name="s3Store" class="org.dspace.storage.bitstore.S3BitStoreService" scope="singleton">
         <!-- AWS Security credentials, with policies for specified bucket -->
         <property name="awsAccessKey" value=""/>
