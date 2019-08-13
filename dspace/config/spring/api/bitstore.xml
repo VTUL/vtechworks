@@ -15,7 +15,7 @@
            in our ansible project in the repo_setup tasks of the deploy role.
     
            This setup was intended as a workaround for testing with existing bitstreams by
-           mounting a shared assetstore 0 via NSF on dev and preprod.
+           mounting a shared assetstore 0 via NFS on dev and preprod.
          -->
 
     <bean name="org.dspace.storage.bitstore.BitstreamStorageService" class="org.dspace.storage.bitstore.BitstreamStorageServiceImpl">
