@@ -3,8 +3,23 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-lazy-init="true">
 
+       <!-- This configures the unusual assetstore setup for VTechWorks. 
+            On the LDEs and in production, 
+                 - Assetstore 0 is used for existing bitstreams and for incoming deposits. 
+                 - Assetstore 1 is unused.
+            On shared development and preprod:
+                 - Assetstore 0 is read only and has existing deposits
+                 - Assetstore 1 is used for incoming deposits
+
+           The 'incoming' property of the BitStreamStorageService in this file is parameterized
+           in our ansible project in the repo_setup tasks of the deploy role.
+    
+           This setup was intended as a workaround for testing with existing bitstreams by
+           mounting a shared assetstore 0 via NSF on dev and preprod.
+         -->
+
     <bean name="org.dspace.storage.bitstore.BitstreamStorageService" class="org.dspace.storage.bitstore.BitstreamStorageServiceImpl">
-        <property name="incoming" value="0"/>
+        <property name="incoming" value="{{ assetstore_incoming }}"/>
         <property name="stores">
             <map>
                 <entry key="0" value-ref="localStore"/>
