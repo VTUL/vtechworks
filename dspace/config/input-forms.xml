@@ -1132,8 +1132,12 @@
 				<stored-value>Article</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Audio recording</displayed-value>
-				<stored-value>Audio recording</stored-value>
+				<displayed-value>Article - Refereed</displayed-value>
+				<stored-value>Article - Refereed</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Audio</displayed-value>
+				<stored-value>Audio</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Book</displayed-value>
@@ -1144,8 +1148,8 @@
 				<stored-value>Book chapter</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Dataset</displayed-value>
-				<stored-value>Dataset</stored-value>
+				<displayed-value>Conference proceeding</displayed-value>
+				<stored-value>Conference proceeding</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Dissertation</displayed-value>
@@ -1160,8 +1164,16 @@
 				<stored-value>Learning Object</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Map</displayed-value>
-				<stored-value>Map</stored-value>
+				<displayed-value>Master's project</displayed-value>
+				<stored-value>Master's project</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Periodical</displayed-value>
+				<stored-value>Periodical</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Poster</displayed-value>
+				<stored-value>Poster</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Presentation</displayed-value>
@@ -1172,16 +1184,12 @@
 				<stored-value>Report</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Software</displayed-value>
-				<stored-value>Software</stored-value>
-			</pair>
-			<pair>
 				<displayed-value>Thesis</displayed-value>
 				<stored-value>Thesis</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Video recording</displayed-value>
-				<stored-value>Video recording</stored-value>
+				<displayed-value>Video</displayed-value>
+				<stored-value>Video</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Other</displayed-value>
@@ -1245,6 +1253,10 @@
 			<pair>
 				<displayed-value>Choose a discipline</displayed-value>
 				<stored-value></stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Applied Nutrition and Physical Activity</displayed-value>
+				<stored-value>Applied Nutrition and Physical Activity</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Education</displayed-value>
