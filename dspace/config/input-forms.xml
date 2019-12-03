@@ -488,7 +488,7 @@
 					<label>Item Type</label>
 					<input-type value-pairs-name="common_types">dropdown</input-type>
 					<hint>Select the type(s) of content you are depositing. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" or "COMMAND" key. Examples: Article, Learning Object, Video Recording and Presentation.</hint>
-					<required></required>
+					<required>You must select a type for this item.</required>
 				</field>
 				
 				<field>
@@ -1160,8 +1160,8 @@
 				<stored-value>Image</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Learning Object</displayed-value>
-				<stored-value>Learning Object</stored-value>
+				<displayed-value>Learning object</displayed-value>
+				<stored-value>Learning object</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Master's project</displayed-value>
@@ -1277,18 +1277,6 @@
 			<pair>
 				<displayed-value>Plant Science and Pest Management</displayed-value>
 				<stored-value>Plant Science and Pest Management</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Biosecurity, Bio-regulations, and Public Health (discontinued)</displayed-value>
-				<stored-value>Biosecurity, Bio-regulations, and Public Health</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Education and Leadership Studies (discontinued)</displayed-value>
-				<stored-value>Education and Leadership Studies</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Food Safety (discontinued)</displayed-value>
-				<stored-value>Food Safety</stored-value>
 			</pair>
 		</value-pairs>
 		
