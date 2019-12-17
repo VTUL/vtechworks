@@ -52,8 +52,8 @@
 					<repeatable>true</repeatable>
 					<label>Item Type</label>
 					<input-type value-pairs-name="common_types">dropdown</input-type>
-					<hint>Select the type(s) of content you are depositing. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" or "COMMAND" key. Examples: Article, Learning Object, Video Recording and Presentation. </hint>
-					<required></required>
+					<hint>Select the type(s) of content you are depositing. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" or "COMMAND" key. Examples: Article, Learning Object, Video and Presentation. </hint>
+					<required>You must select a type for this item.</required>
 				</field>
 
 				<field>
@@ -488,7 +488,7 @@
 					<label>Item Type</label>
 					<input-type value-pairs-name="common_types">dropdown</input-type>
 					<hint>Select the type(s) of content you are depositing. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" or "COMMAND" key. Examples: Article, Learning Object, Video Recording and Presentation.</hint>
-					<required></required>
+					<required>You must select a type for this item.</required>
 				</field>
 				
 				<field>
@@ -1132,8 +1132,12 @@
 				<stored-value>Article</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Audio recording</displayed-value>
-				<stored-value>Audio recording</stored-value>
+				<displayed-value>Article - Refereed</displayed-value>
+				<stored-value>Article - Refereed</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Audio</displayed-value>
+				<stored-value>Audio</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Book</displayed-value>
@@ -1144,8 +1148,8 @@
 				<stored-value>Book chapter</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Dataset</displayed-value>
-				<stored-value>Dataset</stored-value>
+				<displayed-value>Conference proceeding</displayed-value>
+				<stored-value>Conference proceeding</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Dissertation</displayed-value>
@@ -1156,12 +1160,20 @@
 				<stored-value>Image</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Learning Object</displayed-value>
-				<stored-value>Learning Object</stored-value>
+				<displayed-value>Learning object</displayed-value>
+				<stored-value>Learning object</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Map</displayed-value>
-				<stored-value>Map</stored-value>
+				<displayed-value>Master's project</displayed-value>
+				<stored-value>Master's project</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Periodical</displayed-value>
+				<stored-value>Periodical</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Poster</displayed-value>
+				<stored-value>Poster</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Presentation</displayed-value>
@@ -1172,16 +1184,12 @@
 				<stored-value>Report</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Software</displayed-value>
-				<stored-value>Software</stored-value>
-			</pair>
-			<pair>
 				<displayed-value>Thesis</displayed-value>
 				<stored-value>Thesis</stored-value>
 			</pair>
 			<pair>
-				<displayed-value>Video recording</displayed-value>
-				<stored-value>Video recording</stored-value>
+				<displayed-value>Video</displayed-value>
+				<stored-value>Video</stored-value>
 			</pair>
 			<pair>
 				<displayed-value>Other</displayed-value>
@@ -1247,6 +1255,10 @@
 				<stored-value></stored-value>
 			</pair>
 			<pair>
+				<displayed-value>Applied Nutrition and Physical Activity</displayed-value>
+				<stored-value>Applied Nutrition and Physical Activity</stored-value>
+			</pair>
+			<pair>
 				<displayed-value>Education</displayed-value>
 				<stored-value>Education</stored-value>
 			</pair>
@@ -1265,18 +1277,6 @@
 			<pair>
 				<displayed-value>Plant Science and Pest Management</displayed-value>
 				<stored-value>Plant Science and Pest Management</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Biosecurity, Bio-regulations, and Public Health (discontinued)</displayed-value>
-				<stored-value>Biosecurity, Bio-regulations, and Public Health</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Education and Leadership Studies (discontinued)</displayed-value>
-				<stored-value>Education and Leadership Studies</stored-value>
-			</pair>
-			<pair>
-				<displayed-value>Food Safety (discontinued)</displayed-value>
-				<stored-value>Food Safety</stored-value>
 			</pair>
 		</value-pairs>
 		
