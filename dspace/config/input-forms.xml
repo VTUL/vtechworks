@@ -119,7 +119,7 @@
 					<repeatable>false</repeatable>
 					<label>Conference Title</label>
 					<input-type>onebox</input-type>
-					<hint>Examples: Modern Language Association Annual Meeting, 2016 IEEE International Symposium on Circuits and Systems, Veterans in Society 2015.</hint>
+					<hint>Examples: Modern Language Association Annual Meeting, 2016 IEEE International Symposium on Circuits and Systems, Veterans in Society 2015</hint>
 					<required></required>
 				</field>
 
@@ -255,7 +255,7 @@
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>relation</dc-element>
-					<dc-qualifier>ispartof</dc-qualifier>
+					<dc-qualifier>episode</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Episode Title</label>
 					<type-bind>Audio, Video</type-bind>
@@ -303,7 +303,7 @@
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
-					<dc-qualifier></dc-qualifier>
+					<dc-qualifier>interviewee</dc-qualifier>
 					<repeatable>true</repeatable>
 					<label>Interviewee(s)</label>
 					<type-bind>Audio, Video</type-bind>
@@ -315,7 +315,7 @@
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>contributor</dc-element>
-					<dc-qualifier></dc-qualifier>
+					<dc-qualifier>interviewer</dc-qualifier>
 					<repeatable>true</repeatable>
 					<label>Interviewer(s)</label>
 					<type-bind>Audio, Video</type-bind>
@@ -351,7 +351,7 @@
 				<field>
 					<dc-schema>dc</dc-schema>
 					<dc-element>description</dc-element>
-					<dc-qualifier>notes</dc-qualifier>
+					<dc-qualifier>transcript</dc-qualifier>
 					<repeatable>false</repeatable>
 					<label>Transcription</label>
 					<type-bind>Audio, Video</type-bind>
