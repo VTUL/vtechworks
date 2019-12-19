@@ -189,19 +189,19 @@ public class OMALSNonInteractiveStep extends AbstractProcessingStep
    {
 	   // dc.description.degree, dc.publisher, thesis.degree.name, thesis.degree.level, thesis.degree.grantor
        itemService.clearMetadata(context, item, "dc", "description", "degree", Item.ANY);
-       itemService.addMetadata(context, item, "dc", "description", "degree", "en_US", "MALS");
+       itemService.addMetadata(context, item, "dc", "description", "degree", "en", "MALS");
 	   
        itemService.clearMetadata(context, item, "dc", "publisher", null, Item.ANY);
-       itemService.addMetadata(context, item, "dc", "publisher", null, "en_US", "Virginia Tech");
+       itemService.addMetadata(context, item, "dc", "publisher", null, "en", "Virginia Tech");
        
        itemService.clearMetadata(context, item, "thesis", "degree", "name", Item.ANY);
-       itemService.addMetadata(context, item, "thesis", "degree", "name", "en_US", "Master of Agricultural and Life Sciences");
+       itemService.addMetadata(context, item, "thesis", "degree", "name", "en", "Master of Agricultural and Life Sciences");
        
        itemService.clearMetadata(context, item, "thesis", "degree", "level", Item.ANY);
-       itemService.addMetadata(context, item, "thesis", "degree", "level", "en_US", "masters");
+       itemService.addMetadata(context, item, "thesis", "degree", "level", "en", "masters");
        
        itemService.clearMetadata(context, item, "thesis", "degree", "grantor", Item.ANY);
-       itemService.addMetadata(context, item, "thesis", "degree", "grantor", "en_US", "Virginia Polytechnic Institute and State University");
+       itemService.addMetadata(context, item, "thesis", "degree", "grantor", "en", "Virginia Polytechnic Institute and State University");
        
        /*
 	   // remove dc.rights, dc.rights.uri
