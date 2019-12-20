@@ -787,7 +787,7 @@
         </property>
         <property name="facetLimit" value="5"/>
         <property name="sortOrderSidebar" value="COUNT"/>
-        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="VALUE"/>
     </bean> 
     
     <bean id="searchFilterAuthor" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
@@ -800,7 +800,7 @@
         </property>
         <property name="facetLimit" value="5"/>
         <property name="sortOrderSidebar" value="COUNT"/>
-        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="VALUE"/>
     </bean>
 
     <bean id="searchFilterDepartment" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
@@ -813,7 +813,7 @@
         </property>
         <property name="facetLimit" value="5"/>
         <property name="sortOrderSidebar" value="COUNT"/>
-        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="VALUE"/>
     </bean>
 
     <bean id="searchFilterEtdlevel" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
@@ -825,7 +825,7 @@
         </property>
         <property name="facetLimit" value="5"/>
         <property name="sortOrderSidebar" value="COUNT"/>
-        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="VALUE"/>
     </bean>
 
     <bean id="searchFilterIssued" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
@@ -853,7 +853,7 @@
         </property>
         <property name="facetLimit" value="5"/>
         <property name="sortOrderSidebar" value="COUNT"/>
-        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="VALUE"/>
         <property name="splitter" value="::"/>
     </bean>
 
@@ -865,7 +865,7 @@
             </list>
         </property>
         <property name="sortOrderSidebar" value="COUNT"/>
-        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="VALUE"/>
         <property name="facetLimit" value="5"/>
     </bean>
     
@@ -877,7 +877,7 @@
             </list>
         </property>
         <property name="sortOrderSidebar" value="COUNT"/>
-        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="VALUE"/>
         <property name="facetLimit" value="5"/>
     </bean>
 
@@ -889,7 +889,7 @@
             </list>
         </property>
         <property name="sortOrderSidebar" value="COUNT"/>
-        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="VALUE"/>
         <property name="facetLimit" value="5"/>
     </bean>
  
@@ -901,7 +901,7 @@
             </list>
         </property>
         <property name="sortOrderSidebar" value="COUNT"/>
-        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="VALUE"/>
         <property name="facetLimit" value="5"/>
     </bean>
    

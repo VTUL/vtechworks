@@ -685,10 +685,9 @@
             </a>
         </div>
         <div>
-            <xsl:variable name="solr-search-url" select="confman:getProperty('solr-statistics', 'server')"/>
             <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-numDownloads</i18n:text>
             <xsl:text>: </xsl:text>
-            <xsl:value-of select="document(concat($solr-search-url, '/select?q=id%3A', substring($id, 6), '+AND+type%3A0&amp;rows=0'))/response/result/@numFound"/>
+            <xsl:value-of select="@VIEWS"/>
         </div>
 
     </xsl:template>
@@ -891,8 +890,7 @@
                         <xsl:text>: </xsl:text>
                     </dt>
                     <dd>
-                        <xsl:variable name="solr-search-url" select="confman:getProperty('solr-statistics', 'server')"/>
-                        <xsl:value-of select="document(concat($solr-search-url, '/select?q=id%3A', substring(@ID, 6), '+AND+type%3A0&amp;rows=0'))/response/result/@numFound"/>
+                        <xsl:value-of select="@VIEWS"/>
                     </dd>
                 </dl>
             </div>
