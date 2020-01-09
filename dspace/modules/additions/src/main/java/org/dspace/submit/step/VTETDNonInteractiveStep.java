@@ -190,28 +190,28 @@ public class VTETDNonInteractiveStep extends AbstractProcessingStep
    protected void addDefaultData(Context context, Item item) throws SQLException
    {
        itemService.clearMetadata(context, item, "thesis", "degree", "grantor", Item.ANY);
-       itemService.addMetadata(context, item, "thesis", "degree", "grantor", "en_US", "Virginia Polytechnic Institute and State University");
+       itemService.addMetadata(context, item, "thesis", "degree", "grantor", "en", "Virginia Polytechnic Institute and State University");
 	   
        itemService.clearMetadata(context, item, "dc", "publisher", null, Item.ANY);
-       itemService.addMetadata(context, item, "dc", "publisher", null, "en_US", "Virginia Tech");
+       itemService.addMetadata(context, item, "dc", "publisher", null, "en", "Virginia Tech");
        
        itemService.clearMetadata(context, item, "dc", "format", "medium", Item.ANY);
-       itemService.addMetadata(context, item, "dc", "format", "medium", "en_US", "ETD");
+       itemService.addMetadata(context, item, "dc", "format", "medium", "en", "ETD");
 	   
-	   List<MetadataValue> degreeName = itemService.getMetadata(item, "thesis", "degree", "name", "en_US");
+	   List<MetadataValue> degreeName = itemService.getMetadata(item, "thesis", "degree", "name", "en");
 	   if (degreeName.size() > 0) {
 		   itemService.clearMetadata(context, item, "dc", "description", "degree", Item.ANY);
-		   itemService.addMetadata(context, item, "dc", "description", "degree", "en_US", degreeName.get(0).getValue());
+		   itemService.addMetadata(context, item, "dc", "description", "degree", "en", degreeName.get(0).getValue());
 		}
        
        
-       List<MetadataValue> degreeLevel = itemService.getMetadata(item, "thesis", "degree", "level", "en_US");
+       List<MetadataValue> degreeLevel = itemService.getMetadata(item, "thesis", "degree", "level", "en");
        String itemType = "Thesis";
        if (degreeLevel.size() > 0 && degreeLevel.get(0).getValue().equals("doctoral")) {
 			itemType = "Dissertation";
 	   }
        itemService.clearMetadata(context,item, "dc", "type", null, Item.ANY);
-       itemService.addMetadata(context, item, "dc", "type", null, "en_US", itemType);
+       itemService.addMetadata(context, item, "dc", "type", null, "en", itemType);
 	   
     
    }
