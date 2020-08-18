@@ -742,7 +742,9 @@
       <extension>epub</extension>
     </bitstream-type>
 
-<bitstream-type>
+<<<<<<< HEAD
+    <bitstream-type>
+>>>>>>> Enable text indexing of WebVTT caption files
       <mimetype>video/mp4</mimetype>
       <short_description>MP4 Container</short_description>
       <description>MP4 Container format for video files</description>
@@ -751,7 +753,9 @@
       <extension>m4v</extension>
       <extension>mp4</extension>
     </bitstream-type>
+<<<<<<< HEAD
 
+>>>>>>> Enable text indexing of WebVTT caption files
     <bitstream-type>
       <mimetype>video/webm</mimetype>
       <short_description>webm video</short_description>
@@ -760,7 +764,9 @@
       <internal>false</internal>
       <extension>webm</extension>
     </bitstream-type>
+<<<<<<< HEAD
 
+>>>>>>> Enable text indexing of WebVTT caption files
     <bitstream-type>
       <mimetype>text/vtt</mimetype>
       <short_description>WebVTT caption file</short_description>
