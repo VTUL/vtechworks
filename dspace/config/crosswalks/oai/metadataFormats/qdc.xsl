@@ -26,6 +26,9 @@
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='title']/doc:element/doc:field[@name='value']">
 				<dc:title><xsl:value-of select="." /></dc:title>
 			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='title']/doc:element[@name='alternative']/doc:field[@name='value']">
+				<dcterms:alternative><xsl:value-of select="." /></dcterms:alternative>
+			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='creator']/doc:element/doc:field[@name='value']">
 				<dc:creator>
 					<xsl:value-of select="." />
@@ -36,12 +39,52 @@
 					<xsl:value-of select="." />
 				</dc:creator>
 			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name!='author']/doc:element/doc:field[@name='value']">
-				<dc:contributor>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name='inventor']/doc:element/doc:field[@name='value']">
+				<dc:creator>
 					<xsl:value-of select="." />
-				</dc:contributor>
+				</dc:creator>
+			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name='photographer']/doc:element/doc:field[@name='value']">
+				<dc:creator>
+					<xsl:value-of select="." />
+				</dc:creator>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element/doc:field[@name='value']">
+				<dc:subject>
+					<xsl:value-of select="." />
+				</dc:subject>
+			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element[@name='cabt']/doc:field[@name='value']">
+				<dc:subject>
+					<xsl:value-of select="." />
+				</dc:subject>
+			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element[@name='cpc']/doc:field[@name='value']">
+				<dc:subject>
+					<xsl:value-of select="." />
+				</dc:subject>
+			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element[@name='lcsh']/doc:field[@name='value']">
+				<dc:subject>
+					<xsl:value-of select="." />
+				</dc:subject>
+			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element[@name='mesh']/doc:field[@name='value']">
+				<dc:subject>
+					<xsl:value-of select="." />
+				</dc:subject>
+			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element[@name='other']/doc:field[@name='value']">
+				<dc:subject>
+					<xsl:value-of select="." />
+				</dc:subject>
+			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element[@name='uspc']/doc:field[@name='value']">
+				<dc:subject>
+					<xsl:value-of select="." />
+				</dc:subject>
+			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element[@name='uspcother']/doc:field[@name='value']">
 				<dc:subject>
 					<xsl:value-of select="." />
 				</dc:subject>
@@ -52,19 +95,9 @@
 				</dcterms:abstract>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='date']/doc:element[@name='available']/doc:element/doc:field[@name='value']">
-				<dcterms:dateAccepted>
-					<xsl:value-of select="." />
-				</dcterms:dateAccepted>
-			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='date']/doc:element[@name='available']/doc:element/doc:field[@name='value']">
 				<dcterms:available>
 					<xsl:value-of select="." />
 				</dcterms:available>
-			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='date']/doc:element[@name='available']/doc:element/doc:field[@name='value']">
-				<dcterms:created>
-					<xsl:value-of select="." />
-				</dcterms:created>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='date']/doc:element[@name='issued']/doc:element/doc:field[@name='value']">
 				<dcterms:issued>
@@ -76,30 +109,20 @@
 					<xsl:value-of select="." />
 				</dc:type>
 			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element/doc:element/doc:field[@name='value']">
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='uri']/doc:element/doc:field[@name='value']">
 				<dc:identifier>
 					<xsl:value-of select="." />
 				</dc:identifier>
+			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='language']/doc:element/doc:field[@name='value']">
+				<dc:language>
+					<xsl:value-of select="." />
+				</dc:language>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='language']/doc:element/doc:element/doc:field[@name='value']">
 				<dc:language>
 					<xsl:value-of select="." />
 				</dc:language>
-			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='relation']/doc:element/doc:element/doc:field[@name='value']">
-				<dc:relation>
-					<xsl:value-of select="." />
-				</dc:relation>
-			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='relation']/doc:element/doc:field[@name='value']">
-				<dc:relation>
-					<xsl:value-of select="." />
-				</dc:relation>
-			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='rights']/doc:element/doc:element/doc:field[@name='value']">
-				<dc:rights>
-					<xsl:value-of select="." />
-				</dc:rights>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='rights']/doc:element/doc:field[@name='value']">
 				<dc:rights>
@@ -111,35 +134,15 @@
 					<xsl:value-of select="." />
 				</dc:format>
 			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='coverage']/doc:element/doc:field[@name='value']">
-				<dc:coverage>
-					<xsl:value-of select="." />
-				</dc:coverage>
-			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='coverage']/doc:element/doc:element/doc:field[@name='value']">
-				<dc:coverage>
-					<xsl:value-of select="." />
-				</dc:coverage>
-			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='publisher']/doc:element/doc:field[@name='value']">
 				<dc:publisher>
 					<xsl:value-of select="." />
 				</dc:publisher>
 			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='publisher']/doc:element/doc:element/doc:field[@name='value']">
-				<dc:publisher>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='format']/doc:element[@name='extent']/doc:element/doc:field[@name='value']">
+				<dcterms:extent>
 					<xsl:value-of select="." />
-				</dc:publisher>
-			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='source']/doc:element/doc:field[@name='value']">
-				<dc:source>
-					<xsl:value-of select="." />
-				</dc:source>
-			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='source']/doc:element/doc:element/doc:field[@name='value']">
-				<dc:source>
-					<xsl:value-of select="." />
-				</dc:source>
+				</dcterms:extent>
 			</xsl:for-each>
 		</qdc:qualifieddc>
 	</xsl:template>
