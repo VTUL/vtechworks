@@ -81,7 +81,7 @@
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='doi']">
 				<dc:identifier>
-					doi:<xsl:value-of select="substring-after(doc:element/doc:field[@name='value'],'https://doi.org')" />
+					doi:<xsl:value-of select="substring-after(doc:element/doc:field[@name='value'],'https://doi.org/')" />
 				</dc:identifier>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='eissn']/doc:element/doc:field[@name='value']">
