@@ -80,29 +80,19 @@
 				</dcterms:bibliographicCitation>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='doi']">
-				<dc:identifier>
-					doi:<xsl:value-of select="substring-after(doc:element/doc:field[@name='value'],'https://doi.org/')" />
-				</dc:identifier>
+				<dc:identifier>doi:<xsl:value-of select="substring-after(doc:element/doc:field[@name='value'],'https://doi.org/')" /></dc:identifier>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='eissn']/doc:element/doc:field[@name='value']">
-				<dc:identifier>
-					EISSN:<xsl:value-of select="." />
-				</dc:identifier>
+				<dc:identifier>EISSN:<xsl:value-of select="." /></dc:identifier>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='isbn']/doc:element/doc:field[@name='value']">
-				<dc:identifier>
-					ISBN:<xsl:value-of select="." />
-				</dc:identifier>
+				<dc:identifier>ISBN:<xsl:value-of select="." /></dc:identifier>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='issn']/doc:element/doc:field[@name='value']">
-				<dc:identifier>
-					ISSN:<xsl:value-of select="." />
-				</dc:identifier>
+				<dc:identifier>ISSN:<xsl:value-of select="." /></dc:identifier>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='patentnumber']/doc:element/doc:field[@name='value']">
-				<dc:identifier>
-					USPN:<xsl:value-of select="." />
-				</dc:identifier>
+				<dc:identifier>USPN:<xsl:value-of select="." /></dc:identifier>
 			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='uri']/doc:element/doc:field[@name='value']">
 				<dc:identifier>
