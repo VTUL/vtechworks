@@ -134,6 +134,11 @@
 					<xsl:value-of select="." />
 				</dc:rights>
 			</xsl:for-each>
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='rights']/doc:element[@name='uri']/doc:element/doc:field[@name='value']">
+				<dcterms:license>
+					<xsl:value-of select="." />
+				</dcterms:license>
+			</xsl:for-each>
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element/doc:field[@name='value']">
 				<dc:subject>
 					<xsl:value-of select="." />
