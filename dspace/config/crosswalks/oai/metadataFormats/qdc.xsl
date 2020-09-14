@@ -184,13 +184,6 @@
 					<xsl:value-of select="." />
 				</dc:type>
 			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='bundles']/doc:element[@name='bundle']">
-				<xsl:if test="doc:field[@name='name']/text() = 'THUMBNAIL'">
-					<dc:identifier>
-						<xsl:value-of select="doc:element[@name='bitstreams']/doc:element[@name='bitstream']/doc:field[@name='url']" />
-					</dc:identifier>
-				</xsl:if>
-			</xsl:for-each>
 		</qdc:qualifieddc>
 	</xsl:template>
 </xsl:stylesheet>
