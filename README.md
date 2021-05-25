@@ -1,6 +1,6 @@
 
 # DSpace customized for [VTechWorks](https://vtechworks.lib.vt.edu/)
-University Libraries, Virginia Tech
+[University Libraries](https://lib.vt.edu/), [Virginia Tech](https://vt.edu/)
 
 [![Build Status](https://travis-ci.org/DSpace/DSpace.png?branch=master)](https://travis-ci.org/DSpace/DSpace)
 
