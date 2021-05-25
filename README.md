@@ -1,5 +1,6 @@
 
-# DSpace
+# DSpace customized for [VTechWorks](https://vtechworks.lib.vt.edu/)
+hosted by the University Libraries at Virginia Tech
 
 [![Build Status](https://travis-ci.org/DSpace/DSpace.png?branch=master)](https://travis-ci.org/DSpace/DSpace)
 
