@@ -123,10 +123,15 @@
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterType" />          
                 <ref bean="searchFilterAbstract" />
-                <ref bean="searchFilterSeries" />
+                <ref bean="searchFilterCallnumber" />
                 <ref bean="searchFilterIdentifier" />
-                <ref bean="searchFilterSponsor" />
+                <ref bean="searchFilterJournalTitle" />
                 <ref bean="searchFilterLanguage" />
+                <ref bean="searchFilterPublisher" />
+                <ref bean="searchFilterRights" />
+                <ref bean="searchFilterSponsor" />
+                <ref bean="searchFilterSeries" />
+                <ref bean="searchFilterVersion" />
                 <ref bean="searchFilterTrnumber" />
                 <ref bean="searchFilterDepartment" />
                 <ref bean="searchFilterAdvisor" />
@@ -245,10 +250,15 @@
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterType" />          
                 <ref bean="searchFilterAbstract" />
-                <ref bean="searchFilterSeries" />
+                <ref bean="searchFilterCallnumber" />
                 <ref bean="searchFilterIdentifier" />
-                <ref bean="searchFilterSponsor" />
+                <ref bean="searchFilterJournalTitle" />
                 <ref bean="searchFilterLanguage" />
+                <ref bean="searchFilterPublisher" />
+                <ref bean="searchFilterRights" />
+                <ref bean="searchFilterSponsor" />
+                <ref bean="searchFilterSeries" />
+                <ref bean="searchFilterVersion" />
                 <ref bean="searchFilterTrnumber" />
                 <ref bean="searchFilterDepartment" />
                 <ref bean="searchFilterAdvisor" />
@@ -337,14 +347,16 @@
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
+                <ref bean="searchFilterType" />
+                <ref bean="searchFilterAbstract" />
+                <ref bean="searchFilterCallnumber" />
+                <ref bean="searchFilterIdentifier" />
+                <ref bean="searchFilterLanguage" />
+                <ref bean="searchFilterRights" />
                 <ref bean="searchFilterDepartment" />
                 <ref bean="searchFilterAdvisor" />
                 <ref bean="searchFilterCommitteemember" />
                 <ref bean="searchFilterEtdlevel" />
-                <ref bean="searchFilterType" />
-                <ref bean="searchFilterAbstract" />
-                <ref bean="searchFilterIdentifier" />
-                <ref bean="searchFilterLanguage" />
                 <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterFileNameInOriginalBundle" />
                 <ref bean="searchFilterFileDescriptionInOriginalBundle" />
@@ -636,6 +648,15 @@
         </property>
     </bean>
 
+    <bean id="searchFilterCallnumber" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="callnumber"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.subject.lcc</value>
+            </list>
+        </property>
+    </bean>
+
     <bean id="searchFilterCommitteemember" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
         <property name="indexFieldName" value="committeemember"/>
         <property name="metadataFields">
@@ -663,6 +684,15 @@
         </property>
     </bean>
 
+    <bean id="searchFilterJournaltitle" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="journaltitle"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.title.serial</value>
+            </list>
+        </property>
+    </bean>
+
     <bean id="searchFilterLanguage" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
         <property name="indexFieldName" value="language"/>
         <property name="metadataFields">
@@ -678,6 +708,25 @@
         <property name="metadataFields">
             <list>
                 <value>dc.format.mimetype</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="searchFilterPublisher" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="publisher"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.publisher</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="searchFilterRights" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="rights"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.rights</value>
+                <value>dc.rights.uri</value>
             </list>
         </property>
     </bean>
@@ -717,6 +766,15 @@
         <property name="metadataFields">
             <list>
                 <value>dc.identifier.trnumber</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="searchFilterVersion" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="version"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.description.version</value>
             </list>
         </property>
     </bean>
@@ -777,7 +835,7 @@
 
     <!--Search filter facet configuration beans-->
     <bean id="searchFilterAdvisor" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
-        <property name="indexFieldName" value="advisor"/>
+        <property name="indexFieldName" value="committee chair"/>
         <property name="metadataFields">
             <list>
                 <value>dc.contributor.committeechair</value>
