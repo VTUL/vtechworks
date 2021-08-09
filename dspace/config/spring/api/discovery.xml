@@ -125,7 +125,7 @@
                 <ref bean="searchFilterAbstract" />
                 <ref bean="searchFilterCallnumber" />
                 <ref bean="searchFilterIdentifier" />
-                <ref bean="searchFilterJournalTitle" />
+                <ref bean="searchFilterJournaltitle" />
                 <ref bean="searchFilterLanguage" />
                 <ref bean="searchFilterPublisher" />
                 <ref bean="searchFilterRights" />
@@ -252,7 +252,7 @@
                 <ref bean="searchFilterAbstract" />
                 <ref bean="searchFilterCallnumber" />
                 <ref bean="searchFilterIdentifier" />
-                <ref bean="searchFilterJournalTitle" />
+                <ref bean="searchFilterJournaltitle" />
                 <ref bean="searchFilterLanguage" />
                 <ref bean="searchFilterPublisher" />
                 <ref bean="searchFilterRights" />
