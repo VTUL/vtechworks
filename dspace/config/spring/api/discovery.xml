@@ -835,7 +835,7 @@
 
     <!--Search filter facet configuration beans-->
     <bean id="searchFilterAdvisor" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
-        <property name="indexFieldName" value="committee chair"/>
+        <property name="indexFieldName" value="committeechair"/>
         <property name="metadataFields">
             <list>
                 <value>dc.contributor.committeechair</value>
