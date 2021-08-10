@@ -51,7 +51,6 @@
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_committeemember">Committee Member</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_etdlevel">Thesis Degree Level</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_patenttype">Patent Type</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_inventor">Inventor</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_assignee">Assignee</message>
@@ -87,6 +86,7 @@
 
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
 
+    <!-- Titles of Browsing by results, e.g. https://vtechworks.lib.vt.edu/browse?type=dateissued -->
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Browsing by: Author</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Browsing by: Title</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Browsing by: Subject</message>
@@ -109,15 +109,21 @@
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">Browsing by: Department</message>
     <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">Browsing by: Issue date</message>
 
+    <!-- Advanced Search Filter Names in drop down list, e.g. https://vtechworks.lib.vt.edu/discover -->
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Title</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Date issued</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.keyword">Keyword</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.abstract">Abstract</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.series">Series</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.mime">Mime-Type</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.sponsor">Sponsor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.callnumber">Call Number</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.identifier">Identifier</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.journaltitle">Journal Title</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Language (ISO)</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.publisher">Publisher</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.rights">Rights</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.sponsor">Sponsor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.series">Series</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.version">Version</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.mime">Mime-Type</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.coverage">Coverage</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.trnumber">Technical Report No.</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.committeemember">Committee Member</message>
@@ -138,6 +144,7 @@
 
     <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Now showing items {0}-{1}</message>
 
+    <!-- Advanced Search Filter Names that are also Facets and Facet Results title -->
     <message key="xmlui.Discovery.AbstractSearch.type_author">Filter by: Author</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Author</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">Author</message>
@@ -160,8 +167,6 @@
     <message key="xmlui.Discovery.AbstractSearch.type_assignee">Filter by: Assignee</message>
     <message key="xmlui.Discovery.AbstractSearch.type_inventor">Filter by: Inventor</message>
     <message key="xmlui.Discovery.AbstractSearch.type_patenttype">Filter by: Patent Type</message>
-    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Date Issued</message>
-
 
     <message key="xmlui.Discovery.AbstractSearch.startswith">Starts with</message>
     <message key="xmlui.Discovery.AbstractSearch.startswith.help">Or enter first few letters:</message>
