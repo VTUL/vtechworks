@@ -89,6 +89,13 @@
                             <groupId>org.dspace</groupId>
                             <artifactId>dspace-jspui</artifactId>
                             <type>war</type>
+                            <excludes>
+                                <!--
+                                   keep lang web.xml from overiding xmlui
+                                -->
+
+                                <exclude>WEB-INF/classes/**</exclude>
+                            </excludes>
                         </overlay>
                     </overlays>
                 </configuration>
@@ -102,6 +109,13 @@
     </build>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.atmire</groupId>
+            <artifactId>atmire-statistics-exporter-api</artifactId>
+            <version>1.0.0</version>
+            <type>jar</type>
+        </dependency>
 
         <dependency>
             <groupId>org.dspace.modules</groupId>
