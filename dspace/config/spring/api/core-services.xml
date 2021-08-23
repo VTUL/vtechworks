@@ -105,6 +105,8 @@
     <bean class="org.dspace.workflowbasic.BasicWorkflowItemServiceImpl"/>
     <bean class="org.dspace.workflowbasic.BasicWorkflowServiceImpl"/>
 
+    <bean class="com.atmire.statistics.export.OpenURLTrackerLoggerServiceImpl"/>
+
     <!--Configurable workflow services, uncomment the xml workflow beans below to enable the configurable workflow-->
     <!--<bean class="org.dspace.xmlworkflow.storedcomponents.ClaimedTaskServiceImpl"/>
     <bean class="org.dspace.xmlworkflow.storedcomponents.CollectionRoleServiceImpl"/>

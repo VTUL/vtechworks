@@ -44,6 +44,7 @@
 
     <!--Basic workflow services, comment or remove when switching to the configurable workflow -->
     <bean id="workflowServiceFactory" class="org.dspace.workflowbasic.factory.BasicWorkflowServiceFactoryImpl"/>
+    <bean id="openURLTrackerLoggerServiceFactory" class="com.atmire.statistics.export.factory.OpenURLTrackerLoggerServiceFactoryImpl"/>
     <!--Configurable workflow services, uncomment to enable-->
     <!--<bean id="workflowServiceFactory" class="org.dspace.xmlworkflow.factory.XmlWorkflowServiceFactoryImpl"/>-->
 
