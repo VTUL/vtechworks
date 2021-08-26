@@ -3,7 +3,7 @@
 <body>
 <div id="file.news.div.news" n="news" rend="primary">
 <head>VTechWorks</head>
-<p>VTechWorks provides global access to Virginia Tech scholarship. VTechWorks includes journal articles, books, theses, dissertations, conference papers, slide presentations, technical reports, working papers, administrative documents, videos, images, and more by faculty, students, and staff. Write <xref target="mailto:vtechworks@vt.edu">vtechworks@vt.edu</xref rend="a-ul"> to get help adding your content to VTechWorks.  Read an <xref target="https://vtnews.vt.edu/articles/2019/08/univlib-VTechWorks.html" rend="a-ul>article about VTechWorks</xref> or visit the <xref target="https://blogs.lt.vt.edu/openvt/" rend="a-ul">Open@VT blog</xref> to learn about current VTechWorks activities.</p> 
+<p>VTechWorks provides global access to Virginia Tech scholarship. VTechWorks includes journal articles, books, theses, dissertations, conference papers, slide presentations, technical reports, working papers, administrative documents, videos, images, and more by faculty, students, and staff. Write <xref target="mailto:vtechworks@vt.edu" rend="a-ul">vtechworks@vt.edu</xref> to get help adding your content to VTechWorks.  Read an <xref target="https://vtnews.vt.edu/articles/2019/08/univlib-VTechWorks.html" rend="a-ul">article about VTechWorks</xref> or visit the <xref target="https://blogs.lt.vt.edu/openvt/" rend="a-ul">Open@VT blog</xref> to learn about current VTechWorks activities.</p> 
 
 <p>Want to publish a standalone dataset? Visit <xref target="https://data.lib.vt.edu/" rend="a-ul">Virginia Tech Data Repository</xref>.</p>
 
