@@ -25,7 +25,6 @@
          as a dependency in most other modules in [src]/dspace/modules -->
     <modules>
         <module>additions</module>
-        <module>atmire-statistics-exporter</module>
     </modules>
 
     <!-- 
