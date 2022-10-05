@@ -121,7 +121,7 @@
 <script type="text/javascript">
 	var jQ = jQuery.noConflict();
 	jQ(document).ready(function() {
-		jQ( "#spellCheckQuery").click(function(){
+		jQ( "#spellCheckQuery").on("click", function(){
 			jQ("#query").val(jQ(this).attr('data-spell'));
 			jQ("#main-query-submit").click();
 		});
@@ -147,7 +147,7 @@
 									tmp_val = item.displayedValue;
 								}
 								return {
-									label: item.displayedValue + " (" + item.count + ")",
+									label: escapeHtml(item.displayedValue) + " (" + item.count + ")",
 									value: tmp_val
 								};
 							}))			
@@ -159,6 +159,11 @@
 	function validateFilters() {
 		return document.getElementById("filterquery").value.length > 0;
 	}
+	// Generic HTML escape utility
+	var escapeHtml = s => (s + '').replace(/[&<>"']/g, m => ({
+		'&': '&amp;', '<': '&lt;', '>': '&gt;',
+		'"': '&quot;', "'": '&#39;'
+	})[m]);
 </script>		
 </c:set>
 
@@ -168,7 +173,7 @@
 
 <h2><fmt:message key="jsp.search.title"/></h2>
 
-<div class="discovery-search-form panel panel-default">
+<div class="discovery-search-form panel panel-default row">
     <%-- Controls for a repeat search --%>
 	<div class="discovery-query panel-heading">
     <form action="simple-search" method="get">
@@ -204,7 +209,7 @@
         <input type="text" size="50" id="query" name="query" value="<%= (query==null ? "" : Utils.addEntities(query)) %>"/>
         <input type="submit" id="main-query-submit" class="btn btn-primary" value="<fmt:message key="jsp.general.go"/>" />
 <% if (StringUtils.isNotBlank(spellCheckQuery)) {%>
-	<p class="lead"><fmt:message key="jsp.search.didyoumean"><fmt:param><a id="spellCheckQuery" data-spell="<%= Utils.addEntities(spellCheckQuery) %>" href="#"><%= spellCheckQuery %></a></fmt:param></fmt:message></p>
+	<p class="lead"><fmt:message key="jsp.search.didyoumean"><fmt:param><a id="spellCheckQuery" data-spell="<%= Utils.addEntities(spellCheckQuery) %>" href="#"><%= Utils.addEntities(spellCheckQuery) %></a></fmt:param></fmt:message></p>
 <% } %>                  
         <input type="hidden" value="<%= rpp %>" name="rpp" />
         <input type="hidden" value="<%= Utils.addEntities(sortedBy) %>" name="sort_by" />
@@ -470,7 +475,7 @@ else if( qResults != null)
 
 %>
 <hr/>
-<div class="discovery-result-pagination row container">
+<div class="discovery-result-pagination row">
 <%
 	long lastHint = qResults.getStart()+qResults.getMaxResults() <= qResults.getTotalSearchResults()?
 	        qResults.getStart()+qResults.getMaxResults():qResults.getTotalSearchResults();
@@ -539,7 +544,7 @@ else if( qResults != null)
 	</ul>
 <!-- give a content to the div -->
 </div>
-<div class="discovery-result-results">
+<div class="discovery-result-results row">
 <% if (communities.size() > 0 ) { %>
     <div class="panel panel-info">
     <div class="panel-heading"><fmt:message key="jsp.search.results.comhits"/></div>

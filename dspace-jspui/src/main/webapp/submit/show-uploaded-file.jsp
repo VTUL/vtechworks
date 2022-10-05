@@ -123,12 +123,12 @@
             </tr>
             <tr>
                 <td headers="t1" class="evenRowOddCol">
-                	<a href="<%= request.getContextPath() %>/retrieve/<%= bitstream.getID() %>/<%= org.dspace.app.webui.util.UIUtil.encodeBitstreamName(bitstream.getName()) %>" target="_blank"><%= bitstream.getName() %></a>
+                	<a href="<%= request.getContextPath() %>/retrieve/<%= bitstream.getID() %>/<%= org.dspace.app.webui.util.UIUtil.encodeBitstreamName(bitstream.getName()) %>" target="_blank" rel="noopener"><%= bitstream.getName() %></a>
                 	<%-- <input type="submit" name="submit_remove_<%= bitstream.getID() %>" value="Click here if this is the wrong file"> --%>
 					<input class="btn btn-danger pull-right" type="submit" name="submit_remove_<%= bitstream.getID() %>" value="<fmt:message key="jsp.submit.show-uploaded-file.click2.button"/>" />
                 </td>
                 <td headers="t2" class="evenRowEvenCol"><fmt:message key="jsp.submit.show-uploaded-file.size-in-bytes">
-                    <fmt:param><fmt:formatNumber><%= bitstream.getSize() %></fmt:formatNumber></fmt:param>
+                    <fmt:param><fmt:formatNumber><%= bitstream.getSizeBytes() %></fmt:formatNumber></fmt:param>
                 </fmt:message></td>
                 <td headers="t3" class="evenRowOddCol">
                     <%= bitstream.getFormatDescription(context) %>

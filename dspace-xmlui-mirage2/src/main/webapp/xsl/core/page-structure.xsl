@@ -268,12 +268,9 @@
             </script>
 
             <xsl:text disable-output-escaping="yes">&lt;!--[if lt IE 9]&gt;
-                &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/html5shiv/dist/html5shiv.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
-                &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/respond/dest/respond.min.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
+            &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'scripts/html5shiv.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
+            &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'scripts/respond.min.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
                 &lt;![endif]--&gt;</xsl:text>
-
-            <!-- Modernizr enables HTML5 elements & feature detects -->
-            <script src="{concat($theme-path, 'vendor/modernizr/modernizr.js')}">&#160;</script>
 
             <!-- Add the title in -->
             <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title'][last()]" />
@@ -298,8 +295,14 @@
             </xsl:if>
 
             <!-- Add all Google Scholar Metadata values -->
-            <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[substring(@element, 1, 9) = 'citation_']">
-                <meta name="{@element}" content="{.}"></meta>
+            <!-- this is done in text, by design, because disabling output escaping is not allowed on attributes-->
+            <!-- while it is necessary to ensure that author names with special characters pass unescaped-->
+            <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[substring(@element, 1, 9) = 'citation_']" >
+                <xsl:text disable-output-escaping="yes">&lt;meta name="</xsl:text>
+                <xsl:value-of select="@element" />
+                <xsl:text disable-output-escaping="yes">" content="</xsl:text>
+                <xsl:value-of select="." disable-output-escaping="yes" />
+                <xsl:text disable-output-escaping="yes">" /&gt;&#xa;</xsl:text>
             </xsl:for-each>
 
             <!-- Add MathJAX JS library to render scientific formulas-->
@@ -702,7 +705,7 @@
                     <hr/>
                     <div class="col-xs-7 col-sm-8">
                         <div>
-                            <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2016&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
+                            <a href="http://www.dspace.org/" target="_blank" rel="noopener">DSpace software</a> copyright&#160;&#169;&#160;2002-2022&#160; <a href="http://lyrasis.org/" target="_blank" rel="noopener">LYRASIS</a>
                         </div>
                         <div class="hidden-print">
                             <a>
@@ -728,7 +731,7 @@
                         <div class="pull-right">
                             <span class="theme-by">Theme by&#160;</span>
                             <br/>
-                            <a title="Atmire NV" target="_blank" href="http://atmire.com">
+                            <a title="Atmire NV" target="_blank" rel="noopener" href="http://atmire.com">
                                 <img alt="Atmire NV" src="{concat($theme-path, 'images/atmire-logo-small.svg')}"/>
                             </a>
                         </div>

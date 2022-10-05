@@ -279,7 +279,7 @@ public class UploadWithEmbargoStep extends UploadStep
                 UUID id = bitstream.getID();
 	        	String name = bitstream.getName();
 	        	String url = makeBitstreamLink(item, bitstream);
-	        	long bytes = bitstream.getSize();
+	        	long bytes = bitstream.getSizeBytes();
 	        	String desc = bitstream.getDescription();
 	        	String algorithm = bitstream.getChecksumAlgorithm();
 	        	String checksum = bitstream.getChecksum();
@@ -333,13 +333,13 @@ public class UploadWithEmbargoStep extends UploadStep
 	            	cell.addContent(" ");
 	            	switch (support)
 	            	{
-	            	case 1:
-	            		cell.addContent(T_supported);
+	            	case BitstreamFormat.KNOWN:
+                        cell.addContent(T_known);
 	            		break;
-	            	case 2:
-	            		cell.addContent(T_known);
+	            	case BitstreamFormat.SUPPORTED:
+                        cell.addContent(T_supported);
 	            		break;
-	            	case 3:
+	            	case BitstreamFormat.UNKNOWN:
 	            		cell.addContent(T_unsupported);
 	            		break;
 	            	}

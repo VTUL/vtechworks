@@ -984,6 +984,12 @@ public class ItemAdapter extends AbstractAdapter
         }
     }
 
+    @Override
+    public boolean isAuthorized() throws SQLException
+    {
+        return authorizeService.authorizeActionBoolean(context, item, Constants.READ);
+    }
+
 
     /**
      * Checks which Bundles of current item a user has requested.
@@ -1106,7 +1112,7 @@ public class ItemAdapter extends AbstractAdapter
         }
         String checksumType = bitstream.getChecksumAlgorithm();
         String checksum = bitstream.getChecksum();
-        long size = bitstream.getSize();
+        long size = bitstream.getSizeBytes();
 
         // ////////////////////////////////
         // Start the actual file
