@@ -1248,9 +1248,18 @@
 				<stored-value></stored-value>
 			</pair>
 			<pair>
+				<displayed-value>Agribusiness</displayed-value>
+				<stored-value>Agribusiness</stored-value>
+			</pair>
+			<pair>
+				<displayed-value>Applied Animal Behavior and Welfare</displayed-value>
+				<stored-value>Applied Animal Behavior and Welfare</stored-value>
+			</pair>
+			<pair>
 				<displayed-value>Applied Nutrition and Physical Activity</displayed-value>
 				<stored-value>Applied Nutrition and Physical Activity</stored-value>
 			</pair>
+
 			<pair>
 				<displayed-value>Education</displayed-value>
 				<stored-value>Education</stored-value>
