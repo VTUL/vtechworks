@@ -7,7 +7,6 @@
     http://www.dspace.org/license/
 
 -->
-
 <!--
     Main structure of the page, determines where
     header, footer, body, navigation are structurally rendered.
@@ -880,6 +879,15 @@
 
         <!-- Add a google analytics script if the key is present -->
         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
+            <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8047PYYTQ6"></script>
+<script><xsl:text>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8047PYYTQ6');
+</xsl:text>
+</script>
             <script><xsl:text>
                   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
