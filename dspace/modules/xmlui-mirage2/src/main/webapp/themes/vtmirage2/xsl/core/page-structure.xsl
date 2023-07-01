@@ -7,7 +7,6 @@
     http://www.dspace.org/license/
 
 -->
-
 <!--
     Main structure of the page, determines where
     header, footer, body, navigation are structurally rendered.
@@ -331,24 +330,6 @@
 
             <!-- Add Altmetric support -->
 			<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'>&#160;</script>
-			
-			<!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//matomo-dev.cloud.lib.vt.edu/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '2']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="//matomo-dev.cloud.lib.vt.edu/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Matomo Code -->
         </head>
     </xsl:template>
 
@@ -898,6 +879,15 @@
 
         <!-- Add a google analytics script if the key is present -->
         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
+            <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8047PYYTQ6"></script>
+<script><xsl:text>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8047PYYTQ6');
+</xsl:text>
+</script>
             <script><xsl:text>
                   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
